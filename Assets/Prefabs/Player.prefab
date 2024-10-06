@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 1856129533111618862}
   - component: {fileID: 4004944892389013156}
   - component: {fileID: -3657109322286029522}
+  - component: {fileID: 8976204399363911932}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -730,6 +731,24 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8976204399363911932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4780633370198621073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b66f377fb7ad984589d24e65354931f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  afterImageDuration: 1
+  afterImageInterval: 0.1
+  poolSize: 10
+  meshDefault: {fileID: 4780633370198621073}
+  afterMaterial: {fileID: 2100000, guid: 673557615c277e54692b034e0a1e4fb6, type: 2}
+  container: {fileID: 0}
 --- !u!1 &7261930984988719095
 GameObject:
   m_ObjectHideFlags: 0
