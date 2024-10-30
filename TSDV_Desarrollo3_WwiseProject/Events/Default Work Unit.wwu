@@ -14,6 +14,12 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="SA_EV_Lv0_MX_Menu_Main" ID="{E2DA7671-8DDF-49FC-8104-4E8F3F2AC9C1}">
+					<ChildrenList>
+						<Action Name="" ID="{9AB71131-4609-4AB8-88CF-0D4500AF3407}" ShortID="439214638"/>
+					</ChildrenList>
+				</Event>
+				<Event Name="SA_EV_Lv1_MX_GamePlay" ID="{C76AE9AB-1EC7-4CAD-8C30-568832956152}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

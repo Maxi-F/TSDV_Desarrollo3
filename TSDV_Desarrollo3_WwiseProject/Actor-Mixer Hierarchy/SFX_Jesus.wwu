@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F060A375-A346-4535-A35F-31DC7B315A5D}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="SFX_Jesus" ID="{F060A375-A346-4535-A35F-31DC7B315A5D}" PersistMode="Standalone"/>
+	</AudioObjects>
+</WwiseDocument>
