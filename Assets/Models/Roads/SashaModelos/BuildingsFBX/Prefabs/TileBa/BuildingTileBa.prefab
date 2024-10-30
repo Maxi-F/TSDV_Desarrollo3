@@ -336,6 +336,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: db677166cfa05de4799f46f01ddd18da, type: 2}
+    - target: {fileID: -4921194083525621045, guid: 75e19c59a6041ee4cbc6dac5ccbd5676, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 75e19c59a6041ee4cbc6dac5ccbd5676, type: 3}
       propertyPath: m_Name
       value: Ba
@@ -344,6 +348,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6de1a8d7a377ed14f91c00dc38274363, type: 2}
+    - target: {fileID: 4069889279706658253, guid: 75e19c59a6041ee4cbc6dac5ccbd5676, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

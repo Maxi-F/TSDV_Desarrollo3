@@ -52,7 +52,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: fdb3eff643ea1074eb488672eca683e1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 15f1bb81ca75cec49ade462b19cc3ef1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -110,7 +110,7 @@ Material:
     - _LightScale: 1
     - _Metallic: 0
     - _OcclusionStrength: 1
-    - _Opacity: 0.381
+    - _Opacity: 0.587
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -129,10 +129,10 @@ Material:
     - _EmisiveColor: {r: 0.735849, g: 0.6629583, b: 0.6629583, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightOffset: {r: 0.16, g: -0.44, b: 0, a: 0}
-    - _LightTiling: {r: 0.8, g: 0.25, b: 0, a: 0}
+    - _LightTiling: {r: 0.52, g: 0.25, b: 0, a: 0}
     - _PatternColor: {r: 0.1703005, g: 0.16415983, b: 0.2924528, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _Tiling: {r: 5, g: 5, b: 0, a: 0}
+    - _Tiling: {r: 10, g: 10, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &448851204484171988
 MonoBehaviour:
