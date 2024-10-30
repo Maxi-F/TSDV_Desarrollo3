@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{D44615AD-DA43-4A91-A8D5-9FB23EFAF91E}">
 					<ObjectInclusionList>
-						<ObjectRef Name="ALVA_MX" ID="{F758E8A5-2BDB-4DD3-8531-1495B5EE2679}" WorkUnitID="{F758E8A5-2BDB-4DD3-8531-1495B5EE2679}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="JJ_Mx" ID="{43BAF8DC-FD8A-46C4-AFDF-D0E6F40B9270}" WorkUnitID="{43BAF8DC-FD8A-46C4-AFDF-D0E6F40B9270}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SFX_JP" ID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

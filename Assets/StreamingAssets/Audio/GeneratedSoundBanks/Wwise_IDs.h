@@ -13,8 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID ALVA_EVENT = 205479888U;
-        static const AkUniqueID START_JP_TEST = 4229234019U;
+        static const AkUniqueID SA_EV_LV0_MX_MENU_MAIN = 1724583484U;
+        static const AkUniqueID SA_EV_LV1_MX_GAMEPLAY = 3130449108U;
     } // namespace EVENTS
 
     namespace BANKS
