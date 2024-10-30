@@ -20,6 +20,17 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="SA_EV_Lv1_MX_GamePlay" ID="{C76AE9AB-1EC7-4CAD-8C30-568832956152}"/>
+				<Event Name="Alva_Event" ID="{DE04A452-470D-4972-B436-30FE38A31211}">
+					<ChildrenList>
+						<Action Name="" ID="{AA3682CC-C308-4E4A-8290-9793DF8D8D56}" ShortID="653708088">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="klauzinho - ventanales (oneshot⃰)" ID="{45D04E2F-7961-49B6-855F-EA7C76AE92F0}" WorkUnitID="{F758E8A5-2BDB-4DD3-8531-1495B5EE2679}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
