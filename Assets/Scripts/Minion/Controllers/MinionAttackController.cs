@@ -56,7 +56,6 @@ namespace Minion.Controllers
         public void Exit()
         {
             _isAttacking = false;
-            minionAgent.SetIsNotInAttackState();
         }
 
         private void OnTriggerEnter(Collider other)

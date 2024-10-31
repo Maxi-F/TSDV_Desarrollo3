@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.maxif.objectpool": "1.0.0",
+    "com.maxif.objectpool": "1.1.0",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.feature.development": "1.0.1",
     "com.unity.inputsystem": "1.7.0",

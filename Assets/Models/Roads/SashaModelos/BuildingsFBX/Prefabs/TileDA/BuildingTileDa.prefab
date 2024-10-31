@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3055371969424522430}
+  - component: {fileID: 8139290973525636041}
   m_Layer: 0
   m_Name: BuildingTileDa
   m_TagString: Untagged
@@ -34,6 +35,19 @@ Transform:
   - {fileID: 6127620662341902555}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8139290973525636041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7056392519599511567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ced771af8b50f4492fdd1b6addca5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallName: CornerD
 --- !u!1 &7582108163473286196
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,6 +292,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3055371969424522430}
     m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 2b35ea5774c63674abc9db46640fb6ba, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2b35ea5774c63674abc9db46640fb6ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

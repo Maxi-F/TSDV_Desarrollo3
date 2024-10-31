@@ -552,29 +552,31 @@ MonoBehaviour:
   inputHandler: {fileID: 11400000, guid: 4902f51743585ca40aec021ece06aa06, type: 2}
   animationHandler: {fileID: 977276183979043023}
   onPlayerDeath: {fileID: 11400000, guid: 1609b932e078810448a25604c23359d3, type: 2}
+  onTransitionToMovementEnded: {fileID: 11400000, guid: b159ad61c320d9d4da6cc1a8e06a8084, type: 2}
   onCinematicStarted: {fileID: 11400000, guid: b711b8f3d88f6614bb9d23a652188ca8, type: 2}
   onCinematicFinished: {fileID: 11400000, guid: 83f6a3608cca1b64a9e546fae228e30e, type: 2}
   meleeWeapon: {fileID: 4645382247631583565}
+  attackBufferSeconds: 0.5
   attackCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
+      inSlope: 0.011760016
+      outSlope: 0.011760016
+      tangentMode: 0
+      weightedMode: 3
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.4887005
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
+      inSlope: -0.0057468414
+      outSlope: -0.0057468414
+      tangentMode: 0
+      weightedMode: 1
+      inWeight: 0.5
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -583,7 +585,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   attackDuration: 1.25
-  attackCoolDown: 0.1
+  attackExitPercentage: 0.66
+  doubleAttackExitPercentage: 0.7
 --- !u!114 &1856129533111618862
 MonoBehaviour:
   m_ObjectHideFlags: 0

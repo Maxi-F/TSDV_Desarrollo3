@@ -101,8 +101,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fc21b43b81670e54c98f9094d840013a, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 75ee726ffbd437549a0e5bca572f5a55, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -667,6 +667,7 @@ MonoBehaviour:
   slider: {fileID: 3773848267877794157}
   shouldStartHided: 0
   onTakeDamage: {fileID: 11400000, guid: 41331d8fc0079ac47bec86270d050339, type: 2}
+  onSumHealth: {fileID: 0}
   onResetDamage: {fileID: 0}
   onInitializeSlider: {fileID: 0}
 --- !u!1 &7583453860486606742
@@ -914,7 +915,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2f24c60d773efef40b039806cb494e16, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 44a3558b07a3fa9418569088b13c5400, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1278,6 +1279,7 @@ MonoBehaviour:
   canTakeDamage: 1
   onDeathEvent: {fileID: 11400000, guid: 36bbe8a4a81fcf74da11d75999d01f40, type: 2}
   onTakeDamageEvent: {fileID: 11400000, guid: 41331d8fc0079ac47bec86270d050339, type: 2}
+  onSumHealthEvent: {fileID: 0}
   onResetPointsEvent: {fileID: 0}
   onInitializeHealthEvent: {fileID: 0}
   onInitializeMaxHealthEvent: {fileID: 0}

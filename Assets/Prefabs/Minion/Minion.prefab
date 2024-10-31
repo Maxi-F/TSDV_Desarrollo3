@@ -315,6 +315,7 @@ MonoBehaviour:
   slider: {fileID: 5135750954969982833}
   shouldStartHided: 0
   onTakeDamage: {fileID: 0}
+  onSumHealth: {fileID: 0}
   onResetDamage: {fileID: 0}
   onInitializeSlider: {fileID: 0}
 --- !u!1 &3481237237909825566
@@ -1094,7 +1095,6 @@ MonoBehaviour:
   model: {fileID: 249958372189316127}
   healthPoints: {fileID: 5575126865424349212}
   onMinionDeletedEvent: {fileID: 11400000, guid: 7767544c749c3594abcb1520bca52614, type: 2}
-  onMinionAttackedEvent: {fileID: 11400000, guid: eb9504e07a181c74e80867e1fcde1d18, type: 2}
   idleEvents:
     onEnter:
       m_PersistentCalls:
@@ -1116,19 +1116,7 @@ MonoBehaviour:
         m_Calls: []
     onExit:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 4389868529216407606}
-          m_TargetAssemblyTypeName: Minion.Controllers.MinionIdleController, Assembly-CSharp
-          m_MethodName: Exit
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
   moveEvents:
     onEnter:
       m_PersistentCalls:
@@ -1332,6 +1320,7 @@ MonoBehaviour:
   canTakeDamage: 1
   onDeathEvent: {fileID: 0}
   onTakeDamageEvent: {fileID: 11400000, guid: d7c92d4ecc5578245b7e8d6eca51d765, type: 2}
+  onSumHealthEvent: {fileID: 0}
   onResetPointsEvent: {fileID: 0}
   onInitializeHealthEvent: {fileID: 0}
   onInitializeMaxHealthEvent: {fileID: 11400000, guid: 8dd2cf95881f9294b8af19fe69792246, type: 2}
@@ -1423,8 +1412,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  minionConfig: {fileID: 11400000, guid: 0a4091bb2b815e646b3a1f5e68314944, type: 2}
-  onMinionWantsToAttack: {fileID: 11400000, guid: a6854f84a0adb75498a2c9cf2c71c69a, type: 2}
 --- !u!114 &154755272736235517
 MonoBehaviour:
   m_ObjectHideFlags: 0

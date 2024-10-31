@@ -28,11 +28,16 @@ public class PlayerAnimationHandler : MonoBehaviour
 
     public void StartAttackAnimation()
     {
-        _animator.SetTrigger(Attack);
+        _animator.SetBool(Attack, true);
     }
 
     public void SetAttackProgress(float progress)
     {
         _animator.SetFloat(AttackProgress, progress);
+    }
+    
+    public void EndAttackAnimation()
+    {
+        _animator.SetBool(Attack, false);
     }
 }

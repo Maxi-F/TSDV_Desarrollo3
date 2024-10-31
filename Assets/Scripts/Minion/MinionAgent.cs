@@ -4,6 +4,7 @@ using Events.ScriptableObjects;
 using FSM;
 using Health;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Minion
 {
@@ -15,7 +16,6 @@ namespace Minion
 
         [Header("Events")]
         [SerializeField] private MinionAgentEventChannelSO onMinionDeletedEvent;
-        [SerializeField] private MinionAgentEventChannelSO onMinionAttackedEvent;
 
         [Header("Internal Events")]
         [SerializeField] private ActionEventsWrapper idleEvents;
@@ -23,8 +23,9 @@ namespace Minion
         [SerializeField] private ActionEventsWrapper chargeAttackEvents;
         [SerializeField] private ActionEventsWrapper attackEvents;
         [SerializeField] private ActionEventsWrapper fallbackEvents;
-
+        
         private GameObject _player;
+        private List<State> _attackStates;
         private State _idleState;
         private State _moveState;
         private State _chargeAttackState;
@@ -37,11 +38,6 @@ namespace Minion
             healthPoints?.ResetHitPoints();
 
             base.OnDisable();
-        }
-
-        public void SetIsNotInAttackState()
-        {
-            onMinionAttackedEvent?.RaiseEvent(this);
         }
 
         public GameObject GetPlayer()
@@ -111,6 +107,13 @@ namespace Minion
             Transition attackToIdle = new Transition(_attackState, _idleState);
             _attackState.AddTransition(attackToIdle);
 
+            _attackStates = new List<State>()
+            {
+                _moveState,
+                _chargeAttackState,
+                _attackState,
+            };
+                
             return new List<State>
                 ()
                 {
@@ -166,6 +169,21 @@ namespace Minion
             else if(currentState == _attackState)
                 Debug.Log("Attack");
                 
+        }
+
+        public bool IsInAttackState()
+        {
+            return _attackStates.Contains(Fsm.GetCurrentState());
+        }
+
+        public bool IsInIdleState()
+        {
+            return Fsm.GetCurrentState() == _idleState;
+        }
+
+        public void StartAttacking()
+        {
+            ChangeStateToMove();
         }
     }
 }
