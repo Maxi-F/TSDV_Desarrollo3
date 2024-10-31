@@ -15,7 +15,7 @@ in a written agreement between you and Audiokinetic Inc.
 Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
-﻿#if (UNITY_STANDALONE_WIN && !UNITY_EDITOR) || UNITY_EDITOR_WIN
+﻿#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN || UNITY_WSA
 public partial class AkCommonUserSettings
 {
 	partial void SetSampleRate(AkPlatformInitSettings settings)
@@ -63,7 +63,7 @@ public class AkWindowsSettings : AkWwiseInitializationSettings.PlatformSettings
 
 		public override void CopyTo(AkPlatformInitSettings settings)
 		{
-#if (UNITY_STANDALONE_WIN && !UNITY_EDITOR) || UNITY_EDITOR_WIN
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN || UNITY_WSA
 			settings.uMaxSystemAudioObjects = MaxSystemAudioObjects;
 #endif
 		}

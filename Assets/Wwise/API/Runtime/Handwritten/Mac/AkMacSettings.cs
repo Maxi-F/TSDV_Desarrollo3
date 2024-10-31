@@ -15,7 +15,7 @@ in a written agreement between you and Audiokinetic Inc.
 Copyright (c) 2024 Audiokinetic Inc.
 *******************************************************************************/
 
-﻿#if (UNITY_STANDALONE_OSX && !UNITY_EDITOR) || UNITY_EDITOR_OSX
+﻿#if (UNITY_STANDALONE_OSX && !UNITY_EDITOR) || (UNITY_EDITOR_OSX && !UNITY_STANDALONE_WIN)
 public partial class AkCommonUserSettings
 {
 	partial void SetSampleRate(AkPlatformInitSettings settings)
@@ -51,7 +51,7 @@ public class AkMacSettings : AkWwiseInitializationSettings.PlatformSettings
 		
 		public override void CopyTo(AkPlatformInitSettings settings)
 		{
-#if (UNITY_STANDALONE_OSX && !UNITY_EDITOR) || UNITY_EDITOR_OSX
+#if (UNITY_STANDALONE_OSX && !UNITY_EDITOR) || (UNITY_EDITOR_OSX && !UNITY_STANDALONE_WIN)
 			settings.uNumSpatialAudioPointSources = NumSpatialAudioPointSources;
 			settings.bVerboseSystemOutput = VerboseSystemOutput;
 #endif
