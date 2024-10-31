@@ -4,6 +4,7 @@ using Events;
 using Events.ScriptableObjects;
 using Managers;
 using UnityEngine;
+using AK;
 
 namespace Scenes
 {
@@ -13,7 +14,8 @@ namespace Scenes
         [Tooltip("Current scene name")] [SerializeField] private string sceneName;
         [Tooltip("Optional scenes to activate with the current scene")] [SerializeField] private string[] optionalScenes = new string[] {};
         [SerializeField] private bool setAsActiveOnBoot = false;
-
+        [SerializeField] private string initMusic;
+        
         [Header("events")] 
         [SerializeField] private StringEventChannelSo onLoadSceneEvent;
         [SerializeField] private StringEventChannelSo onUnloadSceneEvent;
@@ -34,6 +36,9 @@ namespace Scenes
             {
                 StartCoroutine(SetSceneAsActiveScene());
             }
+            
+            if(!string.IsNullOrEmpty(initMusic))
+                AkSoundEngine.PostEvent(initMusic, gameObject);
             
             SubscribeToActions();
             HandleCanvasEvents(true);
