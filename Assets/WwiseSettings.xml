@@ -4,15 +4,15 @@
   <GenerateSoundBanksAsPreBuildStep>false</GenerateSoundBanksAsPreBuildStep>
   <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
   <CreatedPicker>true</CreatedPicker>
-  <CreateWwiseGlobal>true</CreateWwiseGlobal>
+  <CreateWwiseGlobal>false</CreateWwiseGlobal>
   <CreateWwiseListener>true</CreateWwiseListener>
   <ObjectReferenceAutoCleanup>true</ObjectReferenceAutoCleanup>
   <LoadSoundEngineInEditMode>true</LoadSoundEngineInEditMode>
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <WwiseInstallationPathMac />
-  <WwiseInstallationPathWindows>D:\Software\Wwise\Wwise2023.1.7.8574</WwiseInstallationPathWindows>
-  <WwiseProjectPath>../TSDV_Desarrollo3_WwiseProject/TSDV_Desarrollo3_WwiseProject.wproj</WwiseProjectPath>
+  <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise2023.1.7.8574</WwiseInstallationPathWindows>
+  <WwiseProjectPath>../../Under-Runner/TSDV_Desarrollo3_WwiseProject/TSDV_Desarrollo3_WwiseProject.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>
   <WaapiIP>127.0.0.1</WaapiIP>
