@@ -109,7 +109,7 @@ namespace Player
 
         private void HandleDash()
         {
-            if (!CanDash() || _isPlayerInCinematic)
+            if (!CanDash() || _isPlayerInCinematic || pauseData.isPaused)
                 return;
 
             if (_dashCoroutine != null)
@@ -183,7 +183,7 @@ namespace Player
             while (timeInCooldown <= dashCoolDown)
             {
                 onDashRechargeEvent.RaiseEvent(timeInCooldown);
-                yield return null;
+                yield return new WaitWhile(() => pauseData.isPaused);
                 timeInCooldown += Time.unscaledDeltaTime;
             }
 
