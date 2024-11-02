@@ -48,6 +48,7 @@ namespace LevelManagement
         private IEnumerator HandleStartGameplay()
         {
             HandleResetGameplay();
+            RemoveSkipHandler();
             yield return null;
         }
 
@@ -66,13 +67,19 @@ namespace LevelManagement
             onEnemyDeathEvent?.onEvent.RemoveListener(HandleFinish);
             onResetGameplayEvent?.onEvent.RemoveListener(HandleResetGameplay);
             onEnemyDamageEvent?.onIntEvent.RemoveListener(HandleNextPhase);
-            onPlayerDeathEvent?.onEvent.RemoveListener(HandlePlayerDeath);
-            inputHandler?.onPlayerAttack.RemoveListener(SkipCinematic);
+            onPlayerDeathEvent?.onEvent.RemoveListener(HandlePlayerDeath); 
+            RemoveSkipHandler();
             inputHandler?.onSkipSequence.RemoveListener(HandleSkipLevel);
         }
         
         private void HandleSkipLevel()
         {
+            if (_actualLoopConfig == null || _startCoroutine != null)
+            {
+                Debug.Log("NOT SKIPPING");
+                return;
+            }
+            
             levelLoopManager.StopSequence();
             NextLevel();
             
@@ -85,8 +92,16 @@ namespace LevelManagement
             if(_startCoroutine != null)
                 StopCoroutine(_startCoroutine);
 
+            _startCoroutine = null;
+
             _startLevelSequence.SkipCinematic();
             HandleResetGameplay();
+            
+            RemoveSkipHandler();
+        }
+
+        private void RemoveSkipHandler()
+        {
             inputHandler?.onPlayerAttack.RemoveListener(SkipCinematic);
         }
 
