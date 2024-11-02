@@ -58,6 +58,7 @@ namespace LevelManagement
             onEnemyDamageEvent?.onIntEvent.AddListener(HandleNextPhase);
             onPlayerDeathEvent?.onEvent.AddListener(HandlePlayerDeath);
             inputHandler?.onPlayerAttack.AddListener(SkipCinematic);
+            inputHandler?.onSkipSequence.AddListener(HandleSkipLevel);
         }
 
         private void OnDisable()
@@ -67,8 +68,18 @@ namespace LevelManagement
             onEnemyDamageEvent?.onIntEvent.RemoveListener(HandleNextPhase);
             onPlayerDeathEvent?.onEvent.RemoveListener(HandlePlayerDeath);
             inputHandler?.onPlayerAttack.RemoveListener(SkipCinematic);
+            inputHandler?.onSkipSequence.RemoveListener(HandleSkipLevel);
         }
         
+        private void HandleSkipLevel()
+        {
+            levelLoopManager.StopSequence();
+            NextLevel();
+            
+            if(_actualLoopConfig == null) 
+                HandleFinish();
+        }
+
         private void SkipCinematic()
         {
             if(_startCoroutine != null)
@@ -89,20 +100,25 @@ namespace LevelManagement
         {
             if (hitPointsLeft < _actualLoopConfig.bossData.hitPointsToNextPhase)
             {
-                _loopConfigIndex++;
-                SetActualLoop();
-                if (_actualLoopConfig != null)
-                    levelLoopManager.StartLevelSequence(_actualLoopConfig);
-                else
-                    levelLoopManager.StopSequence();
+                NextLevel();
             }
         }
 
+        private void NextLevel()
+        {
+            _loopConfigIndex++;
+            SetActualLoop();
+            if (_actualLoopConfig != null)
+                levelLoopManager.StartLevelSequence(_actualLoopConfig);
+            else
+                levelLoopManager.StopSequence();
+        }
+        
         private void SetActualLoop()
         {
             if (_loopConfigIndex >= loopConfigs.Count)
             {
-                Debug.LogError("Loop index more than count");
+                Debug.LogWarning("Loop index more than count");
                 _actualLoopConfig = null;
                 return;
             }

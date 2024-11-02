@@ -87,6 +87,7 @@ namespace LevelManagement.Sequences
         {
             obstaclesSpawner.gameObject.SetActive(true);
             onProgressBarActiveEvent?.RaiseEvent(true);
+            onProgressBarChangeEvent?.RaiseEvent(0);
             _isObstacleSystemDisabled = false;
 
             yield return null;
