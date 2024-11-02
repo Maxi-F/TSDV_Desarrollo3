@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Events;
 using Events.ScriptableObjects;
 using Health;
+using Input;
 using LevelManagement.Sequences;
 using UnityEngine;
 using Utils;
@@ -19,6 +20,8 @@ namespace LevelManagement
         [SerializeField] private HealthPoints playerHealthPoints;
         [SerializeField] private HealthPoints bossHealthPoints;
         [SerializeField] private String creditsScene = "Credits";
+
+        [Header("Inputs")] [SerializeField] private InputHandlerSO inputHandler;
         
         [Header("Events")]
         [SerializeField] private IntEventChannelSO onEnemyDamageEvent;
@@ -31,12 +34,15 @@ namespace LevelManagement
         
         private int _loopConfigIndex;
         private LevelLoopSO _actualLoopConfig;
+        private StartLevelSequence _startLevelSequence;
+        private Coroutine _startCoroutine;
         
         private void Start()
         {
-            Sequence sequence = GetComponent<StartLevelSequence>().GetStartSequence();
+            _startLevelSequence = GetComponent<StartLevelSequence>();
+            Sequence sequence = _startLevelSequence.GetStartSequence();
             sequence.AddPostAction(HandleStartGameplay());
-            StartCoroutine(sequence.Execute());
+            _startCoroutine = StartCoroutine(sequence.Execute());
         }
 
         private IEnumerator HandleStartGameplay()
@@ -51,6 +57,7 @@ namespace LevelManagement
             onResetGameplayEvent?.onEvent.AddListener(HandleResetGameplay);
             onEnemyDamageEvent?.onIntEvent.AddListener(HandleNextPhase);
             onPlayerDeathEvent?.onEvent.AddListener(HandlePlayerDeath);
+            inputHandler?.onPlayerAttack.AddListener(SkipCinematic);
         }
 
         private void OnDisable()
@@ -59,6 +66,17 @@ namespace LevelManagement
             onResetGameplayEvent?.onEvent.RemoveListener(HandleResetGameplay);
             onEnemyDamageEvent?.onIntEvent.RemoveListener(HandleNextPhase);
             onPlayerDeathEvent?.onEvent.RemoveListener(HandlePlayerDeath);
+            inputHandler?.onPlayerAttack.RemoveListener(SkipCinematic);
+        }
+        
+        private void SkipCinematic()
+        {
+            if(_startCoroutine != null)
+                StopCoroutine(_startCoroutine);
+
+            _startLevelSequence.SkipCinematic();
+            HandleResetGameplay();
+            inputHandler?.onPlayerAttack.RemoveListener(SkipCinematic);
         }
 
         private void HandlePlayerDeath()

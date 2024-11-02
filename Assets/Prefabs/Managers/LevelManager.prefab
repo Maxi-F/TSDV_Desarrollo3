@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9200447392731979298}
   - component: {fileID: 7147819174927887729}
   - component: {fileID: 4072355942097122109}
+  - component: {fileID: 4611192124218542088}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -53,7 +54,9 @@ MonoBehaviour:
   playerHealthPoints: {fileID: 0}
   bossHealthPoints: {fileID: 0}
   creditsScene: Credits
+  inputHandler: {fileID: 11400000, guid: 4902f51743585ca40aec021ece06aa06, type: 2}
   onEnemyDamageEvent: {fileID: 11400000, guid: 41331d8fc0079ac47bec86270d050339, type: 2}
+  onEnemyDeathEvent: {fileID: 11400000, guid: 36bbe8a4a81fcf74da11d75999d01f40, type: 2}
   onPlayerDeathEvent: {fileID: 11400000, guid: 1609b932e078810448a25604c23359d3, type: 2}
   onTryAgainCanvasEvent: {fileID: 11400000, guid: 45952cb3995e2054ea77145faefe979e, type: 2}
   onResetGameplayEvent: {fileID: 11400000, guid: ab870950ec2b0124da9411e0e9f8faa6, type: 2}
@@ -77,10 +80,38 @@ MonoBehaviour:
   - {fileID: 0}
   player: {fileID: 0}
   playersVelocity: 10
-  otherPlayersEndZPosition: 70
+  otherPlayersEndZPosition: 44
   playerInitZPosition: 1.15
-  onStartCinematicCanvas: {fileID: 0}
-  onEndCinematicCanvas: {fileID: 0}
-  onCinematicCanvasFinishedAnimation: {fileID: 0}
+  onCinematicStartEvent: {fileID: 11400000, guid: 49bed95fec698814188e97e4aef4801b, type: 2}
+  onCinematicPlayerLockStart: {fileID: 11400000, guid: b711b8f3d88f6614bb9d23a652188ca8, type: 2}
+  onCinematicPlayerLockFinished: {fileID: 11400000, guid: 83f6a3608cca1b64a9e546fae228e30e, type: 2}
+  onStartCinematicCanvas: {fileID: 11400000, guid: f342628a186bcbe4e929001b50ef74a0, type: 2}
+  onEndCinematicCanvas: {fileID: 11400000, guid: 68da0e8aef79f8041932fb582d16cfcb, type: 2}
+  onCinematicCanvasFinishedAnimation: {fileID: 11400000, guid: 2948d17a0f181ff4b9eb0ce82353b1c2, type: 2}
   onGameplayUICanvasEvent: {fileID: 11400000, guid: 320bab34c80c172448a6c8a73219b3fd, type: 2}
-  onCinematicUICanvasEvent: {fileID: 0}
+  onCinematicUICanvasEvent: {fileID: 11400000, guid: 89b54cb7a8c4db445b3626518651b589, type: 2}
+  onCinematicEnded: {fileID: 11400000, guid: 9f9b493eaa207164b9413b5af5fee35b, type: 2}
+--- !u!114 &4611192124218542088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6871600551922401870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d49a9e69a1efd474bad5bab3f8767b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerVelocity: 10
+  finishZPosition: 44
+  creditsScene: Credits
+  onCinematicStartEvent: {fileID: 11400000, guid: 49bed95fec698814188e97e4aef4801b, type: 2}
+  onCinematicPlayerLockStart: {fileID: 11400000, guid: b711b8f3d88f6614bb9d23a652188ca8, type: 2}
+  onStartCinematicCanvas: {fileID: 11400000, guid: f342628a186bcbe4e929001b50ef74a0, type: 2}
+  onEndCinematicCanvas: {fileID: 11400000, guid: 68da0e8aef79f8041932fb582d16cfcb, type: 2}
+  onCinematicCanvasFinishedAnimation: {fileID: 11400000, guid: 2948d17a0f181ff4b9eb0ce82353b1c2, type: 2}
+  onGameplayUICanvasEvent: {fileID: 11400000, guid: 320bab34c80c172448a6c8a73219b3fd, type: 2}
+  onCinematicUICanvasEvent: {fileID: 11400000, guid: 89b54cb7a8c4db445b3626518651b589, type: 2}
+  onChangeSceneEvent: {fileID: 11400000, guid: 354db69ebeb57ea4bae77a4710ebb339, type: 2}
