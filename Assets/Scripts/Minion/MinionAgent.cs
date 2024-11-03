@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Events.ScriptableObjects;
 using FSM;
@@ -11,7 +12,9 @@ namespace Minion
     public class MinionAgent : Agent
     {
         [SerializeField] private GameObject model;
-
+        [SerializeField] private GameObject aimLine;
+        [SerializeField] private GameObject canvas;
+        [SerializeField] private float deathTimeOffset;
         [SerializeField] private HealthPoints healthPoints;
 
         [Header("Events")]
@@ -31,7 +34,17 @@ namespace Minion
         private State _chargeAttackState;
         private State _attackState;
         private State _fallbackState;
+        private Coroutine _dieCoroutine;
 
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            model.gameObject.SetActive(true);
+            aimLine.gameObject.SetActive(true);
+            canvas.gameObject.SetActive(true);
+            
+            Fsm.Enable();
+        }
 
         protected override void OnDisable()
         {
@@ -146,7 +159,22 @@ namespace Minion
         public void Die()
         {
             if (healthPoints.CurrentHp <= 0)
-                onMinionDeletedEvent?.RaiseEvent(this);
+            {
+                if(_dieCoroutine != null)
+                    StopCoroutine(_dieCoroutine);
+                
+                _dieCoroutine = StartCoroutine(DieCoroutine());
+            }
+        }
+
+        private IEnumerator DieCoroutine()
+        {
+            model.gameObject.SetActive(false);
+            Fsm.Disable();
+            canvas.gameObject.SetActive(false);
+            aimLine.gameObject.SetActive(false);
+            yield return new WaitForSeconds(deathTimeOffset);
+            onMinionDeletedEvent?.RaiseEvent(this);
         }
 
         public GameObject GetModel()

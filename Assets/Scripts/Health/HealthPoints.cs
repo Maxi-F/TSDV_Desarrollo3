@@ -13,7 +13,6 @@ namespace Health
         [SerializeField] private bool canTakeDamage = true;
 
         [Header("events")]
-        [SerializeField] private UnityEvent onHit;
         [SerializeField] private VoidEventChannelSO onDeathEvent;
         [SerializeField] private IntEventChannelSO onTakeDamageEvent;
         [SerializeField] private IntEventChannelSO onSumHealthEvent;
@@ -23,6 +22,7 @@ namespace Health
         [SerializeField] private VoidEventChannelSO onDamageAvoidedEvent;
 
         [Header("Internal events")]
+        [SerializeField] private UnityEvent onHit;
         [SerializeField] private UnityEvent onInternalDeathEvent;
         [SerializeField] private UnityEvent<int> onInternalResetEvent;
         [SerializeField] private UnityEvent<int> onInternalTakeDamageEvent;
