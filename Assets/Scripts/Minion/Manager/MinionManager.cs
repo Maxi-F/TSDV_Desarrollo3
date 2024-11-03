@@ -41,7 +41,7 @@ namespace Minion.Manager
         {
             onMinionDeletedEvent?.onTypedEvent.RemoveListener(HandleDeletedEvent);
             onGameplayEndEvent?.onEvent.RemoveListener(RemoveAllMinions);
-            StopCoroutine(_spawnCoroutine);
+            StopSpawnCoroutine();
         }
 
         private void Update()
@@ -50,6 +50,12 @@ namespace Minion.Manager
             {
                 HandleNewMinionToAttack();
             }
+        }
+
+        private void StopSpawnCoroutine()
+        {
+            if(_spawnCoroutine != null)
+                StopCoroutine(_spawnCoroutine);
         }
 
         private void HandleNewMinionToAttack()
@@ -123,6 +129,7 @@ namespace Minion.Manager
         public void Clear()
         {
             RemoveAllMinions();
+            StopSpawnCoroutine();
         }
 
         public void SetupManager(MinionsData levelConfigMinionsData)

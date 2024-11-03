@@ -108,6 +108,78 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: fef1fd6b-8a59-4a11-af06-f1220fcac7f4
     m_ActionName: TopDownCombat/Attack[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 89756b0d-22e6-4ab5-96b4-38cd5398e182
+    m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e65622e2-38c3-4ee7-9a94-0be712980227
+    m_ActionName: UI/Submit[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f82ffa96-fd15-42af-a622-e8aff4c716bf
+    m_ActionName: UI/Cancel[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d59d7699-c8f0-415c-b845-eeba6647ce97
+    m_ActionName: UI/Point[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b51c94a9-972e-4b3c-900f-b54dff2f51f5
+    m_ActionName: UI/Click[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6b62272a-bda7-43c5-9229-f4c59cac1066
+    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a8df53c1-0c51-41ce-9623-fda4ff4971e4
+    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d7361787-5832-4adc-9f3e-1178c8230c2b
+    m_ActionName: UI/RightClick[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2c859a99-fff6-4f25-bebb-ea61037084b5
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b9381f63-5372-444c-9c00-1d2891c9a053
+    m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 4902f51743585ca40aec021ece06aa06, type: 2}
+        m_TargetAssemblyTypeName: Input.InputHandlerSO, Assembly-CSharp
+        m_MethodName: HandlePause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: fc4cb448-4178-4d36-a709-222cb17a3991
+    m_ActionName: TopDownCombat/OpenPause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 4902f51743585ca40aec021ece06aa06, type: 2}
+        m_TargetAssemblyTypeName: Input.InputHandlerSO, Assembly-CSharp
+        m_MethodName: HandleSkipSequence
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 600776b7-dd49-4135-9a79-31d6a82216c9
+    m_ActionName: TopDownCombat/SkipSequence[/Keyboard/f1]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: TopDownCombat

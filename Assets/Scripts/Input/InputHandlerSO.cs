@@ -12,7 +12,8 @@ namespace Input
         public UnityEvent onPauseToggle;
         public UnityEvent onPlayerDashStarted;
         public UnityEvent onPlayerDashFinished;
-
+        public UnityEvent onSkipSequence;
+        
         public void HandleMovement(InputAction.CallbackContext context)
         {
             Vector2 dir = context.ReadValue<Vector2>();
@@ -39,6 +40,12 @@ namespace Input
         {
             if(context.started)
                 onPauseToggle?.Invoke();
+        }
+
+        public void HandleSkipSequence(InputAction.CallbackContext context)
+        {
+            if(context.started)
+                onSkipSequence?.Invoke();
         }
     }
 }

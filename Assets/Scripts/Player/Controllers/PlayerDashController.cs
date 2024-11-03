@@ -39,6 +39,8 @@ namespace Player
         [SerializeField] private VoidEventChannelSO onDashUsedEvent;
         [SerializeField] private Vector3EventChannelSO onDashMovementEvent;
         [SerializeField] private VoidEventChannelSO onDamageAvoidedEvent;
+        [SerializeField] private VoidEventChannelSO onCinematicFinished;
+        [SerializeField] private VoidEventChannelSO onCinematicStarted;
         
         private PlayerMovementController _movementController;
         private HealthPoints _healthPoints;
@@ -53,6 +55,7 @@ namespace Player
         private Bounds _playerColliderBounds;
         private bool _hasAvoidedSomething;
         private bool _hasActivatedFastCooldown;
+        private bool _isPlayerInCinematic;
         private Coroutine _cooldownCoroutine;
         
         private void Awake()
@@ -66,15 +69,29 @@ namespace Player
             base.OnEnable();
             _hasAvoidedSomething = false;
             _playerColliderBounds = playerCollider.bounds;
-            
+
+            onCinematicStarted?.onEvent.AddListener(HandlePlayerInCinematic);
+            onCinematicFinished?.onEvent.AddListener(HandlePlayerOutOfCinematic);
             onDamageAvoidedEvent?.onEvent.AddListener(HandleDamageAvoided);
             inputHandler.onPlayerDashStarted.AddListener(HandleDash);
         }
 
         private void OnDisable()
         {
+            onCinematicStarted?.onEvent.RemoveListener(HandlePlayerInCinematic);
+            onCinematicFinished?.onEvent.RemoveListener(HandlePlayerOutOfCinematic);
             onDamageAvoidedEvent?.onEvent.AddListener(HandleDamageAvoided);
             inputHandler.onPlayerDashStarted.RemoveListener(HandleDash);
+        }
+
+        private void HandlePlayerInCinematic()
+        {
+            _isPlayerInCinematic = true;
+        }
+
+        private void HandlePlayerOutOfCinematic()
+        {
+            _isPlayerInCinematic = false;
         }
 
         private void HandleDamageAvoided()
@@ -92,7 +109,7 @@ namespace Player
 
         private void HandleDash()
         {
-            if (!CanDash())
+            if (!CanDash() || _isPlayerInCinematic || pauseData.isPaused)
                 return;
 
             if (_dashCoroutine != null)
@@ -166,7 +183,7 @@ namespace Player
             while (timeInCooldown <= dashCoolDown)
             {
                 onDashRechargeEvent.RaiseEvent(timeInCooldown);
-                yield return null;
+                yield return new WaitWhile(() => pauseData.isPaused);
                 timeInCooldown += Time.unscaledDeltaTime;
             }
 

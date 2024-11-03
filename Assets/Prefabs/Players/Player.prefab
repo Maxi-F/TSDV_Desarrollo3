@@ -504,6 +504,8 @@ MonoBehaviour:
   onDashUsedEvent: {fileID: 11400000, guid: 314cc26a951a7f445b33baca6dc46fc9, type: 2}
   onDashMovementEvent: {fileID: 11400000, guid: bbb7d509b23dc6e44a57ecc08ccba7b3, type: 2}
   onDamageAvoidedEvent: {fileID: 11400000, guid: 4f9416a5c19eeda4e9b3e6a791d2b357, type: 2}
+  onCinematicFinished: {fileID: 11400000, guid: 9f9b493eaa207164b9413b5af5fee35b, type: 2}
+  onCinematicStarted: {fileID: 11400000, guid: 49bed95fec698814188e97e4aef4801b, type: 2}
 --- !u!114 &6481343404815373606
 MonoBehaviour:
   m_ObjectHideFlags: 0

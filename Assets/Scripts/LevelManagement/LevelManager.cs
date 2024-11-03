@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Events;
 using Events.ScriptableObjects;
 using Health;
+using Input;
 using LevelManagement.Sequences;
 using UnityEngine;
 using Utils;
@@ -19,6 +20,8 @@ namespace LevelManagement
         [SerializeField] private HealthPoints playerHealthPoints;
         [SerializeField] private HealthPoints bossHealthPoints;
         [SerializeField] private String creditsScene = "Credits";
+
+        [Header("Inputs")] [SerializeField] private InputHandlerSO inputHandler;
         
         [Header("Events")]
         [SerializeField] private IntEventChannelSO onEnemyDamageEvent;
@@ -31,17 +34,21 @@ namespace LevelManagement
         
         private int _loopConfigIndex;
         private LevelLoopSO _actualLoopConfig;
+        private StartLevelSequence _startLevelSequence;
+        private Coroutine _startCoroutine;
         
         private void Start()
         {
-            Sequence sequence = GetComponent<StartLevelSequence>().GetStartSequence();
+            _startLevelSequence = GetComponent<StartLevelSequence>();
+            Sequence sequence = _startLevelSequence.GetStartSequence();
             sequence.AddPostAction(HandleStartGameplay());
-            StartCoroutine(sequence.Execute());
+            _startCoroutine = StartCoroutine(sequence.Execute());
         }
 
         private IEnumerator HandleStartGameplay()
         {
             HandleResetGameplay();
+            RemoveSkipHandler();
             yield return null;
         }
 
@@ -51,6 +58,8 @@ namespace LevelManagement
             onResetGameplayEvent?.onEvent.AddListener(HandleResetGameplay);
             onEnemyDamageEvent?.onIntEvent.AddListener(HandleNextPhase);
             onPlayerDeathEvent?.onEvent.AddListener(HandlePlayerDeath);
+            inputHandler?.onPlayerAttack.AddListener(SkipCinematic);
+            inputHandler?.onSkipSequence.AddListener(HandleSkipLevel);
         }
 
         private void OnDisable()
@@ -58,7 +67,42 @@ namespace LevelManagement
             onEnemyDeathEvent?.onEvent.RemoveListener(HandleFinish);
             onResetGameplayEvent?.onEvent.RemoveListener(HandleResetGameplay);
             onEnemyDamageEvent?.onIntEvent.RemoveListener(HandleNextPhase);
-            onPlayerDeathEvent?.onEvent.RemoveListener(HandlePlayerDeath);
+            onPlayerDeathEvent?.onEvent.RemoveListener(HandlePlayerDeath); 
+            RemoveSkipHandler();
+            inputHandler?.onSkipSequence.RemoveListener(HandleSkipLevel);
+        }
+        
+        private void HandleSkipLevel()
+        {
+            if (_actualLoopConfig == null || _startCoroutine != null)
+            {
+                Debug.Log("NOT SKIPPING");
+                return;
+            }
+            
+            levelLoopManager.StopSequence();
+            NextLevel();
+            
+            if(_actualLoopConfig == null) 
+                HandleFinish();
+        }
+
+        private void SkipCinematic()
+        {
+            if(_startCoroutine != null)
+                StopCoroutine(_startCoroutine);
+
+            _startCoroutine = null;
+
+            _startLevelSequence.SkipCinematic();
+            HandleResetGameplay();
+            
+            RemoveSkipHandler();
+        }
+
+        private void RemoveSkipHandler()
+        {
+            inputHandler?.onPlayerAttack.RemoveListener(SkipCinematic);
         }
 
         private void HandlePlayerDeath()
@@ -71,20 +115,25 @@ namespace LevelManagement
         {
             if (hitPointsLeft < _actualLoopConfig.bossData.hitPointsToNextPhase)
             {
-                _loopConfigIndex++;
-                SetActualLoop();
-                if (_actualLoopConfig != null)
-                    levelLoopManager.StartLevelSequence(_actualLoopConfig);
-                else
-                    levelLoopManager.StopSequence();
+                NextLevel();
             }
         }
 
+        private void NextLevel()
+        {
+            _loopConfigIndex++;
+            SetActualLoop();
+            if (_actualLoopConfig != null)
+                levelLoopManager.StartLevelSequence(_actualLoopConfig);
+            else
+                levelLoopManager.StopSequence();
+        }
+        
         private void SetActualLoop()
         {
             if (_loopConfigIndex >= loopConfigs.Count)
             {
-                Debug.LogError("Loop index more than count");
+                Debug.LogWarning("Loop index more than count");
                 _actualLoopConfig = null;
                 return;
             }

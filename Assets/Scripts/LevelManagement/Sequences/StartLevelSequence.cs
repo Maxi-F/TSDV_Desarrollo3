@@ -53,6 +53,21 @@ namespace LevelManagement.Sequences
 
             return startSequence;
         }
+        
+        public void SkipCinematic()
+        {
+            onCinematicPlayerLockFinished?.RaiseEvent();
+            player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y,
+                playerInitZPosition);
+            onGameplayUICanvasEvent?.RaiseEvent(true);
+            onCinematicUICanvasEvent?.RaiseEvent(false);
+            onCinematicEnded?.RaiseEvent();
+            
+            foreach (var otherPlayer in otherPlayers)
+            {
+                otherPlayer.SetActive(false);
+            }
+        }
 
         private IEnumerator RaiseStartCinematicEvent()
         {
