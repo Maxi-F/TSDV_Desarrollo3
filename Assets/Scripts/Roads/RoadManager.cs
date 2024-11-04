@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Events;
@@ -10,8 +11,12 @@ namespace Roads
         [SerializeField] private GameObject startingLastRoad;
         [SerializeField] private int initRoadCount = 7;
         [SerializeField] private int maxRoads = 7;
-        [SerializeField] private Vector3 roadsInitVelocity = new Vector3(0f, 0f, -20f);
         [SerializeField] private List<GameObject> initRoads;
+        
+        [Header("Roads velocity config")]
+        [SerializeField] private Vector3 roadsInitVelocity = new Vector3(0f, 0f, -20f);
+        [SerializeField] private AnimationCurve roadsAccelerationCurve;
+        [SerializeField] private float accelerationDuration;
         
         [Header("Events")]
         [SerializeField] private GameObjectEventChannelSO onRoadDeleteTriggerEvent;
@@ -59,8 +64,27 @@ namespace Roads
 
         public void HandleNewVelocity(Vector3 velocity)
         {
-            _roadsVelocity = velocity;
-            onNewVelocityEvent?.RaiseEvent(velocity);
+            StartCoroutine(HandleVelocityCoroutine(velocity));
+        }
+
+        private IEnumerator HandleVelocityCoroutine(Vector3 endVelocity)
+        {
+            float timer = 0;
+            Vector3 actualVelocity = _roadsVelocity;
+            float startingTime = Time.time;
+
+            while (timer < accelerationDuration)
+            {
+                timer = Time.time - startingTime;
+
+                float velocityTime = roadsAccelerationCurve.Evaluate(timer / accelerationDuration);
+                _roadsVelocity = Vector3.Lerp(actualVelocity, endVelocity, velocityTime);
+                onNewVelocityEvent?.RaiseEvent(_roadsVelocity);
+                yield return null;
+            }
+
+            _roadsVelocity = endVelocity;
+            onNewVelocityEvent?.RaiseEvent(_roadsVelocity);
         }
 
         private void HandleDeleteRoad(GameObject road)
