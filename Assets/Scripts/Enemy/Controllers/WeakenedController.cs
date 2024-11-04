@@ -28,6 +28,7 @@ public class WeakenedController : EnemyController
     [SerializeField] private IntEventChannelSO onEnemyDamageEvent;
 
     [Header("Movement Properties")]
+    [SerializeField] private float weakenedStartDelay;
     [SerializeField] private float weakenedMoveDuration;
     [SerializeField] private float recoverMoveDuration;
 
@@ -38,28 +39,42 @@ public class WeakenedController : EnemyController
         shieldController.SetActiveMaterial();
 
         onEnemyDeathEvent?.onEvent.AddListener(HandleDeath);
+        onEnemyDamageEvent?.onEvent.AddListener(HandleDamage);
     }
 
     private void OnDisable()
     {
-        onEnemyDamageEvent?.onEvent.RemoveListener(HandleDeath);
+        onEnemyDeathEvent?.onEvent.RemoveListener(HandleDeath);
+        onEnemyDamageEvent?.onEvent.RemoveListener(HandleDamage);
     }
 
     private void HandleDeath()
     {
-        gameObject.SetActive(false);
+        animationHandler.StartDeath();
+        //gameObject.SetActive(false);
+    }
+
+    private void HandleDamage()
+    {
+        animationHandler.ReceiveHit();
     }
 
     public void HandleDefensesDown()
     {
         Sequence weakenedSequence = new Sequence();
+        weakenedSequence.AddPreAction(PlayWeakenedAnimation());
         weakenedSequence.AddPreAction(ToggleShield(false));
         weakenedSequence.AddPreAction(MoveTo(enemyConfig.defaultPosition, enemyConfig.weakenedPosition, weakenedMoveDuration));
         weakenedSequence.SetAction(ReactivateShield());
         weakenedSequence.AddPostAction(ToggleShield(true));
-        weakenedSequence.AddPostAction(MoveTo(enemyConfig.weakenedPosition, enemyConfig.defaultPosition, recoverMoveDuration));
 
         StartCoroutine(weakenedSequence.Execute());
+    }
+
+    private IEnumerator PlayWeakenedAnimation()
+    {
+        animationHandler.StartWeakened();
+        yield return new WaitForSeconds(weakenedStartDelay);
     }
 
     private IEnumerator ReactivateShield()
@@ -78,6 +93,8 @@ public class WeakenedController : EnemyController
         if (isActive)
         {
             shieldController.ResetShield();
+            animationHandler.Recover();
+            yield return MoveTo(enemyConfig.weakenedPosition, enemyConfig.defaultPosition, recoverMoveDuration);
             enemyAgent.ChangeStateToIdle();
         }
 
@@ -86,6 +103,7 @@ public class WeakenedController : EnemyController
 
     private IEnumerator MoveTo(Vector3 startingPos, Vector3 target, float duration)
     {
+        yield return new WaitForSeconds(weakenedStartDelay);
         float timer = 0;
         float startingTime = Time.time;
 
