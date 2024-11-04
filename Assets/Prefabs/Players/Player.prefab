@@ -585,6 +585,13 @@ MonoBehaviour:
   maxHealth: 100
   initHealth: 100
   canTakeDamage: 1
+  onDeathEvent: {fileID: 11400000, guid: 1609b932e078810448a25604c23359d3, type: 2}
+  onTakeDamageEvent: {fileID: 11400000, guid: 703652f7737657e41ba9437afd9a0117, type: 2}
+  onSumHealthEvent: {fileID: 11400000, guid: a9a6f490798423f4594ceb6a0672f7f9, type: 2}
+  onResetPointsEvent: {fileID: 11400000, guid: d276143688fe85f45bce528b1753dd72, type: 2}
+  onInitializeHealthEvent: {fileID: 0}
+  onInitializeMaxHealthEvent: {fileID: 11400000, guid: 36c9d30be97db6f4e8dfd2b5eba408c4, type: 2}
+  onDamageAvoidedEvent: {fileID: 11400000, guid: 4f9416a5c19eeda4e9b3e6a791d2b357, type: 2}
   onHit:
     m_PersistentCalls:
       m_Calls:
@@ -600,13 +607,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onDeathEvent: {fileID: 11400000, guid: 1609b932e078810448a25604c23359d3, type: 2}
-  onTakeDamageEvent: {fileID: 11400000, guid: 703652f7737657e41ba9437afd9a0117, type: 2}
-  onSumHealthEvent: {fileID: 11400000, guid: a9a6f490798423f4594ceb6a0672f7f9, type: 2}
-  onResetPointsEvent: {fileID: 11400000, guid: d276143688fe85f45bce528b1753dd72, type: 2}
-  onInitializeHealthEvent: {fileID: 0}
-  onInitializeMaxHealthEvent: {fileID: 11400000, guid: 36c9d30be97db6f4e8dfd2b5eba408c4, type: 2}
-  onDamageAvoidedEvent: {fileID: 11400000, guid: 4f9416a5c19eeda4e9b3e6a791d2b357, type: 2}
   onInternalDeathEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -915,7 +915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4021103657954561941, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
       propertyPath: cameraShake.enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4021103657954561942, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
       propertyPath: m_LocalPosition.x
