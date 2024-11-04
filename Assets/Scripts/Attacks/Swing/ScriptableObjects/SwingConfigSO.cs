@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "SwingConfig", menuName = "Enemy/Attacks/SwingConfig", order = 0)]
 public class SwingConfigSO : ScriptableObject
@@ -14,6 +15,11 @@ public class SwingConfigSO : ScriptableObject
     [Header("Swing Configuration")]
     public float swingDuration = 1.4f;
     public AnimationCurve swingCurve;
-    public float startingDegreesY;
-    public float finishingDegreesY;
+
+    [Range(0.0f, 1.0f)]
+    public float startingValue;
+    [Range(0.0f, 1.0f)]
+    public float finishingValue;
+    
+    public bool shouldRecoverRight;
 }

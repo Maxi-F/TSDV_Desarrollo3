@@ -5,11 +5,11 @@ public class EnemyAnimationHandler : MonoBehaviour
 {
     private Animator _animator;
 
-    private static readonly int laserBlend = Animator.StringToHash("BlendLaser");
     private static readonly int bombThrow = Animator.StringToHash("BombThrow");
     private static readonly int attackUp = Animator.StringToHash("AttackUp");
     private static readonly int leftRecover = Animator.StringToHash("LeftRecovery");
     private static readonly int rightRecover = Animator.StringToHash("RightRecovery");
+    private static readonly int laserBlend = Animator.StringToHash("BlendLaser");
     private static readonly int startLaser = Animator.StringToHash("StartLaser");
 
     private void Awake()
