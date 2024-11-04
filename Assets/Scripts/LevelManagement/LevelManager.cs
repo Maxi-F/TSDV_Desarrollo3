@@ -40,7 +40,7 @@ namespace LevelManagement
         private void Start()
         {
             _startLevelSequence = GetComponent<StartLevelSequence>();
-            Sequence sequence = _startLevelSequence.GetStartSequence();
+            Sequence sequence = _startLevelSequence.GetStartSequence(loopConfigs[0].roadData);
             sequence.AddPostAction(HandleStartGameplay());
             _startCoroutine = StartCoroutine(sequence.Execute());
         }
