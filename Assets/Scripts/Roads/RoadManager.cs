@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using Events;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 namespace Roads
 {
@@ -11,7 +13,6 @@ namespace Roads
         [SerializeField] private GameObject startingLastRoad;
         [SerializeField] private int initRoadCount = 7;
         [SerializeField] private int maxRoads = 7;
-        [SerializeField] private List<GameObject> initRoads;
         
         [Header("Roads velocity config")]
         [SerializeField] private Vector3 roadsInitVelocity = new Vector3(0f, 0f, -20f);
@@ -28,19 +29,15 @@ namespace Roads
         private List<GameObject> _roads = new List<GameObject>();
         private Vector3 _roadsVelocity;
         private GameObject _lastRoad;
-
+        private GameObject _settedInitRoads;
+        private Coroutine _velocityCoroutine;
+        
         public void OnEnable()
         {
             _roadsVelocity = roadsInitVelocity;
             _roadCount = initRoadCount;
             _lastRoad = startingLastRoad;
             _roads = new List<GameObject>();
-            
-            foreach (var initRoad in initRoads)
-            {
-                initRoad.SetActive(true);
-                _roads.Add(initRoad);
-            }
             
             HandleNewVelocity(roadsInitVelocity);
             onNewRoadManagerVelocity?.onVectorEvent.AddListener(HandleNewVelocity);
@@ -64,7 +61,10 @@ namespace Roads
 
         public void HandleNewVelocity(Vector3 velocity)
         {
-            StartCoroutine(HandleVelocityCoroutine(velocity));
+            if(_velocityCoroutine != null)
+                StopCoroutine(_velocityCoroutine);
+            
+            _velocityCoroutine = StartCoroutine(HandleVelocityCoroutine(velocity));
         }
 
         private IEnumerator HandleVelocityCoroutine(Vector3 endVelocity)
@@ -76,7 +76,7 @@ namespace Roads
             while (timer < accelerationDuration)
             {
                 timer = Time.time - startingTime;
-
+                
                 float velocityTime = roadsAccelerationCurve.Evaluate(timer / accelerationDuration);
                 _roadsVelocity = Vector3.Lerp(actualVelocity, endVelocity, velocityTime);
                 onNewVelocityEvent?.RaiseEvent(_roadsVelocity);
