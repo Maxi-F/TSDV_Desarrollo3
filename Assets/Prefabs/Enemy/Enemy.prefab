@@ -1282,7 +1282,7 @@ MonoBehaviour:
   onHit:
     m_PersistentCalls:
       m_Calls: []
-  onDeathEvent: {fileID: 11400000, guid: 36bbe8a4a81fcf74da11d75999d01f40, type: 2}
+  onDeathEvent: {fileID: 11400000, guid: 327ac645fb6013d48b235af4479a3c05, type: 2}
   onTakeDamageEvent: {fileID: 11400000, guid: 41331d8fc0079ac47bec86270d050339, type: 2}
   onSumHealthEvent: {fileID: 0}
   onResetPointsEvent: {fileID: 0}
@@ -1322,12 +1322,10 @@ MonoBehaviour:
   shieldActive: 1
   timeToReactivateShield: 4
   timeToStartReactivatingShield: 2
+  onEnemyShouldDieEvent: {fileID: 11400000, guid: 327ac645fb6013d48b235af4479a3c05, type: 2}
   onEnemyDeathEvent: {fileID: 11400000, guid: 36bbe8a4a81fcf74da11d75999d01f40, type: 2}
   onEnemyParriedEvent: {fileID: 11400000, guid: 2560c5f78509b5141b8e058e758dd606, type: 2}
   onEnemyDamageEvent: {fileID: 11400000, guid: 41331d8fc0079ac47bec86270d050339, type: 2}
-  weakenedStartDelay: 0.5
-  weakenedMoveDuration: 2
-  recoverMoveDuration: 1.75
 --- !u!114 &3084234489356656795
 MonoBehaviour:
   m_ObjectHideFlags: 0

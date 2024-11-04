@@ -23,14 +23,10 @@ public class WeakenedController : EnemyController
     [SerializeField] private float timeToStartReactivatingShield = 2.0f;
 
     [Header("Events")]
+    [SerializeField] private VoidEventChannelSO onEnemyShouldDieEvent;
     [SerializeField] private VoidEventChannelSO onEnemyDeathEvent;
     [SerializeField] private EventChannelSO<bool> onEnemyParriedEvent;
     [SerializeField] private IntEventChannelSO onEnemyDamageEvent;
-
-    [Header("Movement Properties")]
-    [SerializeField] private float weakenedStartDelay;
-    [SerializeField] private float weakenedMoveDuration;
-    [SerializeField] private float recoverMoveDuration;
 
     private void OnEnable()
     {
@@ -38,21 +34,24 @@ public class WeakenedController : EnemyController
         shieldController.SetActive(true);
         shieldController.SetActiveMaterial();
 
-        onEnemyDeathEvent?.onEvent.AddListener(HandleDeath);
+        onEnemyShouldDieEvent?.onEvent.AddListener(HandleDeath);
         onEnemyDamageEvent?.onEvent.AddListener(HandleDamage);
     }
 
     private void OnDisable()
     {
-        onEnemyDeathEvent?.onEvent.RemoveListener(HandleDeath);
+        onEnemyShouldDieEvent?.onEvent.RemoveListener(HandleDeath);
         onEnemyDamageEvent?.onEvent.RemoveListener(HandleDamage);
     }
 
     private void HandleDeath()
     {
+        Sequence deathSequence = new Sequence();
+        deathSequence.SetAction(BossDeath());
         animationHandler.StartDeath();
-        //gameObject.SetActive(false);
+        StartCoroutine(deathSequence.Execute());
     }
+
 
     private void HandleDamage()
     {
@@ -64,7 +63,7 @@ public class WeakenedController : EnemyController
         Sequence weakenedSequence = new Sequence();
         weakenedSequence.AddPreAction(PlayWeakenedAnimation());
         weakenedSequence.AddPreAction(ToggleShield(false));
-        weakenedSequence.AddPreAction(MoveTo(enemyConfig.defaultPosition, enemyConfig.weakenedPosition, weakenedMoveDuration));
+        weakenedSequence.AddPreAction(MoveTo(enemyConfig.defaultPosition, enemyConfig.weakenedPosition, enemyConfig.weakenedMoveDuration));
         weakenedSequence.SetAction(ReactivateShield());
         weakenedSequence.AddPostAction(ToggleShield(true));
 
@@ -74,7 +73,7 @@ public class WeakenedController : EnemyController
     private IEnumerator PlayWeakenedAnimation()
     {
         animationHandler.StartWeakened();
-        yield return new WaitForSeconds(weakenedStartDelay);
+        yield return new WaitForSeconds(enemyConfig.weakenedStartDelay);
     }
 
     private IEnumerator ReactivateShield()
@@ -94,7 +93,7 @@ public class WeakenedController : EnemyController
         {
             shieldController.ResetShield();
             animationHandler.Recover();
-            yield return MoveTo(enemyConfig.weakenedPosition, enemyConfig.defaultPosition, recoverMoveDuration);
+            yield return MoveTo(enemyConfig.weakenedPosition, enemyConfig.defaultPosition, enemyConfig.recoverMoveDuration);
             enemyAgent.ChangeStateToIdle();
         }
 
@@ -103,7 +102,7 @@ public class WeakenedController : EnemyController
 
     private IEnumerator MoveTo(Vector3 startingPos, Vector3 target, float duration)
     {
-        yield return new WaitForSeconds(weakenedStartDelay);
+        yield return new WaitForSeconds(enemyConfig.weakenedStartDelay);
         float timer = 0;
         float startingTime = Time.time;
 
@@ -115,5 +114,13 @@ public class WeakenedController : EnemyController
         }
 
         movementController.SetOriginalY();
+    }
+
+    private IEnumerator BossDeath()
+    {
+        animationHandler.StartDeath();
+        yield return new WaitForSeconds(enemyConfig.deathAnimationDelay);
+        yield return MoveTo(transform.position, enemyConfig.deathTargetPosition,enemyConfig.deathMovementDuration );
+        onEnemyDeathEvent?.RaiseEvent();
     }
 }

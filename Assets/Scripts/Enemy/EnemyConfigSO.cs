@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Enemy
 {
@@ -7,5 +8,15 @@ namespace Enemy
     {
         public Vector3 defaultPosition;
         public Vector3 weakenedPosition;
+
+        [Header("Movement Properties")]
+        public float weakenedStartDelay;
+        public float weakenedMoveDuration;
+        public float recoverMoveDuration;
+        
+        [Header("Death Properties")]
+        public float deathAnimationDelay;
+        public float deathMovementDuration;
+        public Vector3 deathTargetPosition;
     }
 }
