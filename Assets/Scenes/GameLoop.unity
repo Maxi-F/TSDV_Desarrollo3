@@ -344,7 +344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 673461572015972428, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.56
+      value: 60.43
       objectReference: {fileID: 0}
     - target: {fileID: 673461572015972428, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1892,9 +1892,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1839552625}
     - target: {fileID: 7147819174927887729, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
+      propertyPath: onEnemyLeftEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 4eccd1b235bb84a40ac8ca3371247ebd, type: 2}
+    - target: {fileID: 7147819174927887729, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
       propertyPath: playerHealthPoints
       value: 
       objectReference: {fileID: 1059696746}
+    - target: {fileID: 7147819174927887729, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
+      propertyPath: onEnemyShouldLeaveEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 1f421373e2afbde429cd720ecda18428, type: 2}
     - target: {fileID: 9200447392731979298, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

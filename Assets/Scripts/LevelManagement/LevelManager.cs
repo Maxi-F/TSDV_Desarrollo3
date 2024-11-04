@@ -22,21 +22,23 @@ namespace LevelManagement
         [SerializeField] private String creditsScene = "Credits";
 
         [Header("Inputs")] [SerializeField] private InputHandlerSO inputHandler;
-        
+
         [Header("Events")]
         [SerializeField] private IntEventChannelSO onEnemyDamageEvent;
+        [SerializeField] private VoidEventChannelSO onEnemyShouldLeaveEvent;
+        [SerializeField] private VoidEventChannelSO onEnemyLeftEvent;
 
         [SerializeField] private VoidEventChannelSO onEnemyDeathEvent;
         [SerializeField] private VoidEventChannelSO onPlayerDeathEvent;
         [SerializeField] private BoolEventChannelSO onTryAgainCanvasEvent;
         [SerializeField] private VoidEventChannelSO onResetGameplayEvent;
         [SerializeField] private StringEventChannelSo onOpenSceneEvent;
-        
+
         private int _loopConfigIndex;
         private LevelLoopSO _actualLoopConfig;
         private StartLevelSequence _startLevelSequence;
         private Coroutine _startCoroutine;
-        
+
         private void Start()
         {
             _startLevelSequence = GetComponent<StartLevelSequence>();
@@ -57,6 +59,7 @@ namespace LevelManagement
             onEnemyDeathEvent?.onEvent.AddListener(HandleFinish);
             onResetGameplayEvent?.onEvent.AddListener(HandleResetGameplay);
             onEnemyDamageEvent?.onIntEvent.AddListener(HandleNextPhase);
+            onEnemyLeftEvent?.onEvent.AddListener(NextLevel);
             onPlayerDeathEvent?.onEvent.AddListener(HandlePlayerDeath);
             inputHandler?.onPlayerAttack.AddListener(SkipCinematic);
             inputHandler?.onSkipSequence.AddListener(HandleSkipLevel);
@@ -67,11 +70,12 @@ namespace LevelManagement
             onEnemyDeathEvent?.onEvent.RemoveListener(HandleFinish);
             onResetGameplayEvent?.onEvent.RemoveListener(HandleResetGameplay);
             onEnemyDamageEvent?.onIntEvent.RemoveListener(HandleNextPhase);
-            onPlayerDeathEvent?.onEvent.RemoveListener(HandlePlayerDeath); 
+            onEnemyLeftEvent?.onEvent.RemoveListener(NextLevel);
+            onPlayerDeathEvent?.onEvent.RemoveListener(HandlePlayerDeath);
             RemoveSkipHandler();
             inputHandler?.onSkipSequence.RemoveListener(HandleSkipLevel);
         }
-        
+
         private void HandleSkipLevel()
         {
             if (_actualLoopConfig == null || _startCoroutine != null)
@@ -79,24 +83,24 @@ namespace LevelManagement
                 Debug.Log("NOT SKIPPING");
                 return;
             }
-            
+
             levelLoopManager.StopSequence();
             NextLevel();
-            
-            if(_actualLoopConfig == null) 
+
+            if (_actualLoopConfig == null)
                 HandleFinish();
         }
 
         private void SkipCinematic()
         {
-            if(_startCoroutine != null)
+            if (_startCoroutine != null)
                 StopCoroutine(_startCoroutine);
 
             _startCoroutine = null;
 
             _startLevelSequence.SkipCinematic();
             HandleResetGameplay();
-            
+
             RemoveSkipHandler();
         }
 
@@ -110,12 +114,12 @@ namespace LevelManagement
             onTryAgainCanvasEvent?.RaiseEvent(true);
             levelLoopManager.StopSequence();
         }
-        
+
         private void HandleNextPhase(int hitPointsLeft)
         {
             if (hitPointsLeft < _actualLoopConfig.bossData.hitPointsToNextPhase)
             {
-                NextLevel();
+                onEnemyShouldLeaveEvent?.RaiseEvent();
             }
         }
 
@@ -128,7 +132,7 @@ namespace LevelManagement
             else
                 levelLoopManager.StopSequence();
         }
-        
+
         private void SetActualLoop()
         {
             if (_loopConfigIndex >= loopConfigs.Count)
@@ -137,14 +141,14 @@ namespace LevelManagement
                 _actualLoopConfig = null;
                 return;
             }
-            
+
             _actualLoopConfig = loopConfigs[_loopConfigIndex];
         }
 
         private void HandleFinish()
         {
             levelLoopManager.StopSequence();
-            
+
             Sequence sequence = GetComponent<EndLevelSequence>().GetEndSequence();
             StartCoroutine(sequence.Execute());
         }
@@ -154,7 +158,7 @@ namespace LevelManagement
             _loopConfigIndex = 0;
             playerHealthPoints.ResetHitPoints();
             bossHealthPoints.ResetHitPoints();
-            
+
             SetActualLoop();
             levelLoopManager.StartLevelSequence(_actualLoopConfig);
         }

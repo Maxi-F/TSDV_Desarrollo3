@@ -1118,6 +1118,74 @@ MonoBehaviour:
     onExit:
       m_PersistentCalls:
         m_Calls: []
+  appearEvents:
+    onEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4860931461339575274}
+          m_TargetAssemblyTypeName: Enemy.EnemyMovementController, Assembly-CSharp
+          m_MethodName: SetInitialPosition
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 4860931461339575274}
+          m_TargetAssemblyTypeName: Enemy.EnemyMovementController, Assembly-CSharp
+          m_MethodName: MoveIntoScreen
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    onUpdate:
+      m_PersistentCalls:
+        m_Calls: []
+    onExit:
+      m_PersistentCalls:
+        m_Calls: []
+  leaveEvents:
+    onEnter:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2011814886892266701}
+          m_TargetAssemblyTypeName: Health.HealthPoints, Assembly-CSharp
+          m_MethodName: SetCanTakeDamage
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 4860931461339575274}
+          m_TargetAssemblyTypeName: Enemy.EnemyMovementController, Assembly-CSharp
+          m_MethodName: MoveOutOfScreen
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    onUpdate:
+      m_PersistentCalls:
+        m_Calls: []
+    onExit:
+      m_PersistentCalls:
+        m_Calls: []
   weakenedEvents:
     onEnter:
       m_PersistentCalls:
@@ -1327,6 +1395,7 @@ MonoBehaviour:
   onEnemyDeathEvent: {fileID: 11400000, guid: 36bbe8a4a81fcf74da11d75999d01f40, type: 2}
   onEnemyParriedEvent: {fileID: 11400000, guid: 2560c5f78509b5141b8e058e758dd606, type: 2}
   onEnemyDamageEvent: {fileID: 11400000, guid: 41331d8fc0079ac47bec86270d050339, type: 2}
+  onEnemyShouldLeaveEvent: {fileID: 11400000, guid: 1f421373e2afbde429cd720ecda18428, type: 2}
 --- !u!114 &3084234489356656795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1421,9 +1490,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42edcadc0f8549d4a9fef95c6dca8c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAgent: {fileID: 3623727221341694570}
+  animationHandler: {fileID: 8345590865920702549}
   enemyConfig: {fileID: 11400000, guid: 3e495b6192997ef46978af1453840058, type: 2}
-  minMaxYMovement: {x: 0, y: 0.5}
-  distanceToChangeDirection: 0.2
+  onEnemyLeftEvent: {fileID: 11400000, guid: 4eccd1b235bb84a40ac8ca3371247ebd, type: 2}
+  movementDelay: 0.75
 --- !u!1001 &1094134541066028378
 PrefabInstance:
   m_ObjectHideFlags: 0

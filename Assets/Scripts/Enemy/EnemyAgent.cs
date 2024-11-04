@@ -11,6 +11,8 @@ public class EnemyAgent : Agent
 
     [Header("Internal Events")]
     [SerializeField] private ActionEventsWrapper idleEvents;
+    [SerializeField] private ActionEventsWrapper appearEvents;
+    [SerializeField] private ActionEventsWrapper leaveEvents;
     [SerializeField] private ActionEventsWrapper weakenedEvents;
     [SerializeField] private ActionEventsWrapper laserEvents;
     [SerializeField] private ActionEventsWrapper bombThrowEvents;
@@ -18,6 +20,8 @@ public class EnemyAgent : Agent
     [SerializeField] private ActionEventsWrapper debrisThrowEvents;
 
     private State _idleState;
+    private State _appearState;
+    private State _leaveState;
     private State _weakenedState;
     private State _laserState;
     private State _bombThrowState;
@@ -27,6 +31,16 @@ public class EnemyAgent : Agent
     public void ChangeStateToIdle()
     {
         Fsm.ChangeState(_idleState);
+    }
+
+    public void ChangeStateToAppear()
+    {
+        Fsm.ChangeState(_appearState);
+    }
+
+    public void ChangeStateToLeave()
+    {
+        Fsm.ChangeState(_leaveState);
     }
 
     public void ChangeStateToWeakened()
@@ -62,6 +76,16 @@ public class EnemyAgent : Agent
         _idleState.EnterAction += idleEvents.ExecuteOnEnter;
         _idleState.UpdateAction += idleEvents.ExecuteOnUpdate;
         _idleState.ExitAction += idleEvents.ExecuteOnExit;
+
+        _appearState = new State();
+        _appearState.EnterAction += appearEvents.ExecuteOnEnter;
+        _appearState.UpdateAction += appearEvents.ExecuteOnUpdate;
+        _appearState.ExitAction += appearEvents.ExecuteOnExit;
+
+        _leaveState = new State();
+        _leaveState.EnterAction += leaveEvents.ExecuteOnEnter;
+        _leaveState.UpdateAction += leaveEvents.ExecuteOnUpdate;
+        _leaveState.ExitAction += leaveEvents.ExecuteOnExit;
 
         _weakenedState = new State();
         _weakenedState.EnterAction += weakenedEvents.ExecuteOnEnter;
@@ -119,16 +143,27 @@ public class EnemyAgent : Agent
         Transition weakenedToIdleTransition = new Transition(_weakenedState, _idleState);
         _weakenedState.AddTransition(weakenedToIdleTransition);
 
+        Transition appearToIdleTransition = new Transition(_appearState, _idleState);
+        _appearState.AddTransition(appearToIdleTransition);
+
+        Transition leaveToAppearTransition = new Transition(_appearState, _idleState);
+        _leaveState.AddTransition(leaveToAppearTransition);
+
+        Transition weakenedToLeaveTransition = new Transition(_weakenedState, _leaveState);
+        _weakenedState.AddTransition(weakenedToLeaveTransition);
+
         #endregion
 
         return new List<State>()
         {
+            _appearState,
             _idleState,
             _weakenedState,
             _laserState,
             _bombThrowState,
             _bombParryState,
-            _debrisThrowState
+            _debrisThrowState,
+            _leaveState
         };
     }
 }
