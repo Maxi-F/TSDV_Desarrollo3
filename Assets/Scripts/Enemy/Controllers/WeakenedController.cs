@@ -22,6 +22,9 @@ public class WeakenedController : EnemyController
     [SerializeField] private float timeToReactivateShield = 4.0f;
     [SerializeField] private float timeToStartReactivatingShield = 2.0f;
 
+    [Header("Health canvas")]
+    [SerializeField] private GameObject healthCanvas;
+
     [Header("Events")]
     [SerializeField] private VoidEventChannelSO onEnemyShouldDieEvent;
     [SerializeField] private VoidEventChannelSO onEnemyDeathEvent;
@@ -119,8 +122,9 @@ public class WeakenedController : EnemyController
     private IEnumerator BossDeath()
     {
         animationHandler.StartDeath();
+        healthCanvas.SetActive(false);
         yield return new WaitForSeconds(enemyConfig.deathAnimationDelay);
-        yield return MoveTo(transform.position, enemyConfig.deathTargetPosition,enemyConfig.deathMovementDuration );
+        yield return MoveTo(transform.position, enemyConfig.deathTargetPosition, enemyConfig.deathMovementDuration);
         onEnemyDeathEvent?.RaiseEvent();
     }
 }

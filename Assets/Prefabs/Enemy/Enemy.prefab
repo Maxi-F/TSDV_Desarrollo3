@@ -1322,6 +1322,7 @@ MonoBehaviour:
   shieldActive: 1
   timeToReactivateShield: 4
   timeToStartReactivatingShield: 2
+  healthCanvas: {fileID: 7684290515642440472}
   onEnemyShouldDieEvent: {fileID: 11400000, guid: 327ac645fb6013d48b235af4479a3c05, type: 2}
   onEnemyDeathEvent: {fileID: 11400000, guid: 36bbe8a4a81fcf74da11d75999d01f40, type: 2}
   onEnemyParriedEvent: {fileID: 11400000, guid: 2560c5f78509b5141b8e058e758dd606, type: 2}
