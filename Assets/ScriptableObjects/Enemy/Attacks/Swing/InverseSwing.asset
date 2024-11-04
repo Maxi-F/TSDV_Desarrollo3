@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 040a7c3b5eca9434ab578aa91bde1738, type: 3}
-  m_Name: BaseSwing
+  m_Name: InverseSwing
   m_EditorClassIdentifier: 
   growDuration: 0.6
   laserGrowCurve:
@@ -66,5 +66,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  startingDegreesY: 0
-  finishingDegreesY: 180
+  startingValue: 0
+  finishingValue: 1
+  shouldRecoverRight: 1

@@ -22,14 +22,15 @@ public class WeakenedController : EnemyController
     [SerializeField] private float timeToReactivateShield = 4.0f;
     [SerializeField] private float timeToStartReactivatingShield = 2.0f;
 
+    [Header("Health canvas")]
+    [SerializeField] private GameObject healthCanvas;
+
     [Header("Events")]
+    [SerializeField] private VoidEventChannelSO onEnemyShouldDieEvent;
     [SerializeField] private VoidEventChannelSO onEnemyDeathEvent;
     [SerializeField] private EventChannelSO<bool> onEnemyParriedEvent;
     [SerializeField] private IntEventChannelSO onEnemyDamageEvent;
-
-    [Header("Movement Properties")]
-    [SerializeField] private float weakenedMoveDuration;
-    [SerializeField] private float recoverMoveDuration;
+    [SerializeField] private VoidEventChannelSO onEnemyShouldLeaveEvent;
 
     private void OnEnable()
     {
@@ -37,29 +38,53 @@ public class WeakenedController : EnemyController
         shieldController.SetActive(true);
         shieldController.SetActiveMaterial();
 
-        onEnemyDeathEvent?.onEvent.AddListener(HandleDeath);
+        onEnemyShouldDieEvent?.onEvent.AddListener(HandleDeath);
+        onEnemyDamageEvent?.onEvent.AddListener(HandleDamage);
+        onEnemyShouldLeaveEvent?.onEvent.AddListener(HandleLeave);
     }
 
     private void OnDisable()
     {
-        onEnemyDamageEvent?.onEvent.RemoveListener(HandleDeath);
+        onEnemyShouldDieEvent?.onEvent.RemoveListener(HandleDeath);
+        onEnemyDamageEvent?.onEvent.RemoveListener(HandleDamage);
+        onEnemyShouldLeaveEvent?.onEvent.RemoveListener(HandleLeave);
     }
 
     private void HandleDeath()
     {
-        gameObject.SetActive(false);
+        Sequence deathSequence = new Sequence();
+        deathSequence.SetAction(BossDeath());
+        animationHandler.StartDeath();
+        StartCoroutine(deathSequence.Execute());
+    }
+
+
+    private void HandleDamage()
+    {
+        animationHandler.ReceiveHit();
+    }
+
+    private void HandleLeave()
+    {
+        enemyAgent.ChangeStateToLeave();
     }
 
     public void HandleDefensesDown()
     {
         Sequence weakenedSequence = new Sequence();
+        weakenedSequence.AddPreAction(PlayWeakenedAnimation());
         weakenedSequence.AddPreAction(ToggleShield(false));
-        weakenedSequence.AddPreAction(MoveTo(enemyConfig.defaultPosition, enemyConfig.weakenedPosition, weakenedMoveDuration));
+        weakenedSequence.AddPreAction(movementController.MoveTo(enemyConfig.defaultPosition, enemyConfig.weakenedPosition, enemyConfig.weakenedMoveDuration));
         weakenedSequence.SetAction(ReactivateShield());
         weakenedSequence.AddPostAction(ToggleShield(true));
-        weakenedSequence.AddPostAction(MoveTo(enemyConfig.weakenedPosition, enemyConfig.defaultPosition, recoverMoveDuration));
 
         StartCoroutine(weakenedSequence.Execute());
+    }
+
+    private IEnumerator PlayWeakenedAnimation()
+    {
+        animationHandler.StartWeakened();
+        yield return new WaitForSeconds(enemyConfig.weakenedStartDelay);
     }
 
     private IEnumerator ReactivateShield()
@@ -78,24 +103,21 @@ public class WeakenedController : EnemyController
         if (isActive)
         {
             shieldController.ResetShield();
+            animationHandler.Recover();
+            yield return movementController.MoveTo(enemyConfig.weakenedPosition, enemyConfig.defaultPosition, enemyConfig.recoverMoveDuration);
             enemyAgent.ChangeStateToIdle();
         }
 
         yield break;
     }
 
-    private IEnumerator MoveTo(Vector3 startingPos, Vector3 target, float duration)
+
+    private IEnumerator BossDeath()
     {
-        float timer = 0;
-        float startingTime = Time.time;
-
-        while (timer < duration)
-        {
-            timer = Time.time - startingTime;
-            transform.position = Vector3.Lerp(startingPos, target, timer / duration);
-            yield return null;
-        }
-
-        movementController.SetOriginalY();
+        animationHandler.StartDeath();
+        healthCanvas.SetActive(false);
+        yield return new WaitForSeconds(enemyConfig.deathAnimationDelay);
+        yield return movementController.MoveTo(transform.position, enemyConfig.deathTargetPosition, enemyConfig.deathMovementDuration);
+        onEnemyDeathEvent?.RaiseEvent();
     }
 }

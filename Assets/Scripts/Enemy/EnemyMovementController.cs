@@ -1,50 +1,67 @@
 using System;
+using System.Collections;
+using Events;
+using Health;
 using UnityEngine;
 
 namespace Enemy
 {
-    public class EnemyMovementController : MonoBehaviour
+    public class EnemyMovementController : EnemyController
     {
         [SerializeField] private EnemyConfigSO enemyConfig;
-        [SerializeField] private Vector2 minMaxYMovement;
-        [SerializeField] private float distanceToChangeDirection = 0.2f;
+        [SerializeField] private VoidEventChannelSO onEnemyLeftEvent;
+        [SerializeField] private float movementDelay;
 
-        private float _originalY;
+        private Coroutine _moveCoroutine;
 
-        private bool _shouldGoDown = false;
-
-        private void OnEnable()
+        public void SetInitialPosition()
         {
-            SetOriginalY();
+            transform.position = enemyConfig.offScreenPosition;
         }
 
-        void Update()
+        public void MoveIntoScreen()
         {
-            Vector3 newPosition = GetHoverPosition();
+            if (_moveCoroutine != null)
+                StopCoroutine(_moveCoroutine);
 
-            transform.position = newPosition;
+            _moveCoroutine = StartCoroutine(MoveIntoScreenCoroutine());
         }
 
-        Vector3 GetHoverPosition()
+        public void MoveOutOfScreen()
         {
-            float minPosition = _originalY + minMaxYMovement.x;
-            float maxPosition = _originalY + minMaxYMovement.y;
+            if (_moveCoroutine != null)
+                StopCoroutine(_moveCoroutine);
 
-
-            if (Mathf.Abs(transform.position.y - minPosition) < distanceToChangeDirection)
-                _shouldGoDown = false;
-            else if (Mathf.Abs(transform.position.y - maxPosition) < distanceToChangeDirection)
-                _shouldGoDown = true;
-
-            Vector3 currentPos = transform.position;
-            float targetY = _shouldGoDown ? minPosition : maxPosition;
-
-            return Vector3.Lerp(currentPos, new Vector3(currentPos.x, targetY, currentPos.z), Time.deltaTime);
+            _moveCoroutine = StartCoroutine(MoveOutOfScreenCoroutine());
         }
 
-        public void SetOriginalY()
+        private IEnumerator MoveIntoScreenCoroutine()
         {
-            _originalY = transform.position.y;
+            yield return MoveTo(enemyConfig.offScreenPosition, enemyConfig.defaultPosition, enemyConfig.appearingDuration);
+            enemyAgent.ChangeStateToIdle();
+        }
+
+        private IEnumerator MoveOutOfScreenCoroutine()
+        {
+            animationHandler.Recover();
+            yield return new WaitForSeconds(movementDelay);
+            yield return MoveTo(enemyConfig.weakenedPosition, enemyConfig.offScreenPosition, enemyConfig.leavingDuration);
+            onEnemyLeftEvent?.RaiseEvent();
+            enemyAgent.ChangeStateToIdle();
+        }
+
+        public IEnumerator MoveTo(Vector3 startingPos, Vector3 target, float duration)
+        {
+            yield return new WaitForSeconds(enemyConfig.weakenedStartDelay);
+            float timer = 0;
+            float startingTime = Time.time;
+
+            while (timer < duration)
+            {
+                timer = Time.time - startingTime;
+                transform.position = Vector3.Lerp(startingPos, target, timer / duration);
+                yield return null;
+            }
         }
     }
 }
