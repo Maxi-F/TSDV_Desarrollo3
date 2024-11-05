@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3368593757220267117}
   - component: {fileID: -1475557799984793086}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BuildingTileBa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 5305600720864896742}
   - component: {fileID: 8425248840330221259}
   - component: {fileID: 3744940754613494025}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 8849927312052282106}
   - component: {fileID: 9030370727792276733}
   - component: {fileID: 906745506573859809}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,14 +336,26 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: db677166cfa05de4799f46f01ddd18da, type: 2}
+    - target: {fileID: -4921194083525621045, guid: 75e19c59a6041ee4cbc6dac5ccbd5676, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 75e19c59a6041ee4cbc6dac5ccbd5676, type: 3}
       propertyPath: m_Name
       value: Ba
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 75e19c59a6041ee4cbc6dac5ccbd5676, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1202525173051748033, guid: 75e19c59a6041ee4cbc6dac5ccbd5676, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6de1a8d7a377ed14f91c00dc38274363, type: 2}
+    - target: {fileID: 4069889279706658253, guid: 75e19c59a6041ee4cbc6dac5ccbd5676, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
