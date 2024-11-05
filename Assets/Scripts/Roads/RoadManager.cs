@@ -1,7 +1,10 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using Events;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 namespace Roads
 {
@@ -10,8 +13,11 @@ namespace Roads
         [SerializeField] private GameObject startingLastRoad;
         [SerializeField] private int initRoadCount = 7;
         [SerializeField] private int maxRoads = 7;
+        
+        [Header("Roads velocity config")]
         [SerializeField] private Vector3 roadsInitVelocity = new Vector3(0f, 0f, -20f);
-        [SerializeField] private List<GameObject> initRoads;
+        [SerializeField] private AnimationCurve roadsAccelerationCurve;
+        [SerializeField] private float accelerationDuration;
         
         [Header("Events")]
         [SerializeField] private GameObjectEventChannelSO onRoadDeleteTriggerEvent;
@@ -23,19 +29,15 @@ namespace Roads
         private List<GameObject> _roads = new List<GameObject>();
         private Vector3 _roadsVelocity;
         private GameObject _lastRoad;
-
+        private GameObject _settedInitRoads;
+        private Coroutine _velocityCoroutine;
+        
         public void OnEnable()
         {
             _roadsVelocity = roadsInitVelocity;
             _roadCount = initRoadCount;
             _lastRoad = startingLastRoad;
             _roads = new List<GameObject>();
-            
-            foreach (var initRoad in initRoads)
-            {
-                initRoad.SetActive(true);
-                _roads.Add(initRoad);
-            }
             
             HandleNewVelocity(roadsInitVelocity);
             onNewRoadManagerVelocity?.onVectorEvent.AddListener(HandleNewVelocity);
@@ -59,8 +61,30 @@ namespace Roads
 
         public void HandleNewVelocity(Vector3 velocity)
         {
-            _roadsVelocity = velocity;
-            onNewVelocityEvent?.RaiseEvent(velocity);
+            if(_velocityCoroutine != null)
+                StopCoroutine(_velocityCoroutine);
+            
+            _velocityCoroutine = StartCoroutine(HandleVelocityCoroutine(velocity));
+        }
+
+        private IEnumerator HandleVelocityCoroutine(Vector3 endVelocity)
+        {
+            float timer = 0;
+            Vector3 actualVelocity = _roadsVelocity;
+            float startingTime = Time.time;
+
+            while (timer < accelerationDuration)
+            {
+                timer = Time.time - startingTime;
+                
+                float velocityTime = roadsAccelerationCurve.Evaluate(timer / accelerationDuration);
+                _roadsVelocity = Vector3.Lerp(actualVelocity, endVelocity, velocityTime);
+                onNewVelocityEvent?.RaiseEvent(_roadsVelocity);
+                yield return null;
+            }
+
+            _roadsVelocity = endVelocity;
+            onNewVelocityEvent?.RaiseEvent(_roadsVelocity);
         }
 
         private void HandleDeleteRoad(GameObject road)

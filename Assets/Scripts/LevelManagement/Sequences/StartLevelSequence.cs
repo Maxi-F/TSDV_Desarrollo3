@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Linq;
+using Camera;
 using Events;
 using Events.ScriptableObjects;
+using LevelManagement.Sequences.Data;
 using Player;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -14,20 +16,24 @@ namespace LevelManagement.Sequences
     {
         [SerializeField] private GameObject[] otherPlayers;
         [SerializeField] private GameObject player;
-        [SerializeField] private float playersVelocity;
-        [SerializeField] private float otherPlayersEndZPosition;
-        [SerializeField] private float playerInitZPosition;
-
-        [Header("Events")] [SerializeField] private VoidEventChannelSO onCinematicStartEvent;
+        [SerializeField] private StartLevelSO startLevelConfig;
+        
+        [Header("Cinematic Events")] 
+        [SerializeField] private VoidEventChannelSO onCinematicStartEvent;
         [SerializeField] private VoidEventChannelSO onCinematicPlayerLockStart;
         [SerializeField] private VoidEventChannelSO onCinematicPlayerLockFinished;
         [SerializeField] private VoidEventChannelSO onStartCinematicCanvas;
         [SerializeField] private VoidEventChannelSO onEndCinematicCanvas;
         [SerializeField] private VoidEventChannelSO onCinematicCanvasFinishedAnimation;
-        [SerializeField] private BoolEventChannelSO onGameplayUICanvasEvent;
         [SerializeField] private BoolEventChannelSO onCinematicUICanvasEvent;
         [SerializeField] private VoidEventChannelSO onCinematicEnded;
 
+        [Header("Gameplay Events")]
+        [SerializeField] private BoolEventChannelSO onGameplayUICanvasEvent;
+
+        [SerializeField] private Vector3EventChannelSO onNewRoadsVelocity;
+        [SerializeField] private CameraDataChannelSO onCameraMovementEvent;
+        
         private bool _isCinematicCanvasAnimating;
 
         private void OnEnable()
@@ -41,10 +47,11 @@ namespace LevelManagement.Sequences
             onGameplayUICanvasEvent?.RaiseEvent(false);
         }
 
-        public Sequence GetStartSequence()
+        public Sequence GetStartSequence(RoadData roadData)
         {
             Sequence startSequence = new Sequence();
 
+            startSequence.AddPreAction(StartRoads(roadData));
             startSequence.AddPreAction(RaiseStartCinematicEvent());
             startSequence.AddPreAction(HandleStartCinematicCanvas());
             startSequence.AddPreAction(MoveOtherPlayers());
@@ -53,12 +60,27 @@ namespace LevelManagement.Sequences
 
             return startSequence;
         }
-        
+
+        private IEnumerator StartRoads(RoadData roadData)
+        {
+            if (startLevelConfig.isFirstGameplay)
+            {
+                onNewRoadsVelocity?.RaiseEvent(roadData.roadVelocity);
+                onCameraMovementEvent?.RaiseEvent(startLevelConfig.startCameraData);
+                startLevelConfig.isFirstGameplay = false;
+                yield return new WaitForSeconds(startLevelConfig.startCameraData.timeToRotate);
+            }
+            else
+            {
+                yield return null;
+            }
+        }
+
         public void SkipCinematic()
         {
             onCinematicPlayerLockFinished?.RaiseEvent();
             player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y,
-                playerInitZPosition);
+                startLevelConfig.playerInitZPosition);
             onGameplayUICanvasEvent?.RaiseEvent(true);
             onCinematicUICanvasEvent?.RaiseEvent(false);
             onCinematicEnded?.RaiseEvent();
@@ -80,9 +102,9 @@ namespace LevelManagement.Sequences
         {
             player.SetActive(true);
             
-            while (player.transform.position.z < playerInitZPosition)
+            while (player.transform.position.z < startLevelConfig.playerInitZPosition)
             {
-                player.transform.position += new Vector3(0, 0, playersVelocity) * Time.deltaTime;
+                player.transform.position += new Vector3(0, 0, startLevelConfig.playersVelocity) * Time.deltaTime;
                 yield return null;
             }
 
@@ -100,9 +122,9 @@ namespace LevelManagement.Sequences
             {
                 foreach (var otherPlayer in otherPlayers)
                 {
-                    otherPlayer.transform.position += new Vector3(0, 0, playersVelocity) * Time.deltaTime;
+                    otherPlayer.transform.position += new Vector3(0, 0, startLevelConfig.playersVelocity) * Time.deltaTime;
 
-                    if (otherPlayer.transform.position.z > otherPlayersEndZPosition)
+                    if (otherPlayer.transform.position.z > startLevelConfig.otherPlayersEndZPosition)
                     {
                         otherPlayer.SetActive(false);
                     }

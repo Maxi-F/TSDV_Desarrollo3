@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f177de65993fb546a55c2310371e56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: -40}
+  velocity: {x: 0, y: 0, z: 0}
   road: {fileID: 5641430324039006998}
   onNewVelocity: {fileID: 11400000, guid: 1e327bfbe0d547b49bb2ca3a9cba1d2f, type: 2}
 --- !u!114 &5507654012310656772
