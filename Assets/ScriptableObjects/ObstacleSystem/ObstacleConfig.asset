@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: ObstacleConfig
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 5681849922222461501, guid: 3dbc3ab4d26536149bafa22531e00aed, type: 3}
   - {fileID: 4250984852401542567, guid: 264d1f94f6e70034a895125e1d40329c, type: 3}
+  - {fileID: 4250984852401542567, guid: 5f2a575dac9c50c4985b3658fbaa9bbc, type: 3}
+  - {fileID: 4250984852401542567, guid: 5eed27e3f5c46ce4c9b02653c592a0ff, type: 3}
+  - {fileID: 4250984852401542567, guid: 6cf262a126698364a85ff723644a0554, type: 3}
+  - {fileID: 4250984852401542567, guid: 62f0fe8bc85178d4fa38b09d4be63b0e, type: 3}
