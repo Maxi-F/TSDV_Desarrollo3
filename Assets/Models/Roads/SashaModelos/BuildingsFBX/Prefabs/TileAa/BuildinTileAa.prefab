@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3133095786765687396}
   - component: {fileID: 7798789260717561102}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BuildinTileAa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 9191702867149309494}
   - component: {fileID: 8539252194131892121}
   - component: {fileID: 3087121116130616662}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 7006522212927675068}
   - component: {fileID: 1898798188431235330}
   - component: {fileID: 7022155736604669447}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,10 +339,22 @@ PrefabInstance:
     - target: {fileID: -4136295109283330465, guid: f9b2a3d835e9fb3409e818266bcd2d43, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a9df5cb45ae4a9e48a05cfdda467df1e, type: 2}
+      objectReference: {fileID: 2100000, guid: db677166cfa05de4799f46f01ddd18da, type: 2}
     - target: {fileID: 919132149155446097, guid: f9b2a3d835e9fb3409e818266bcd2d43, type: 3}
       propertyPath: m_Name
       value: Aa
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f9b2a3d835e9fb3409e818266bcd2d43, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542995778179648697, guid: f9b2a3d835e9fb3409e818266bcd2d43, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7394270084740173700, guid: f9b2a3d835e9fb3409e818266bcd2d43, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,0 +1,222 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7419785211981852115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5887589533053457835}
+  m_Layer: 0
+  m_Name: Rompibles_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5887589533053457835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7419785211981852115}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7290006970154995276}
+  - {fileID: 6864986102267575972}
+  - {fileID: 3042202019845787000}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &296080594964353831
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5887589533053457835}
+    m_Modifications:
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.701
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.03999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9995072
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.03139192
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -3.598
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904847891139962964, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_Name
+      value: Barrera_SciFi (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+--- !u!4 &3042202019845787000 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+  m_PrefabInstance: {fileID: 296080594964353831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1687382041004946611
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5887589533053457835}
+    m_Modifications:
+    - target: {fileID: 2235253019419078436, guid: bdc1f07c0bc12e040862b793e89e5161, type: 3}
+      propertyPath: m_Name
+      value: Lampara_SciFi
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233010790912555775, guid: bdc1f07c0bc12e040862b793e89e5161, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.937
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233010790912555775, guid: bdc1f07c0bc12e040862b793e89e5161, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233010790912555775, guid: bdc1f07c0bc12e040862b793e89e5161, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.486
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233010790912555775, guid: bdc1f07c0bc12e040862b793e89e5161, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233010790912555775, guid: bdc1f07c0bc12e040862b793e89e5161, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233010790912555775, guid: bdc1f07c0bc12e040862b793e89e5161, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233010790912555775, guid: bdc1f07c0bc12e040862b793e89e5161, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233010790912555775, guid: bdc1f07c0bc12e040862b793e89e5161, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233010790912555775, guid: bdc1f07c0bc12e040862b793e89e5161, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233010790912555775, guid: bdc1f07c0bc12e040862b793e89e5161, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bdc1f07c0bc12e040862b793e89e5161, type: 3}
+--- !u!4 &7290006970154995276 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8233010790912555775, guid: bdc1f07c0bc12e040862b793e89e5161, type: 3}
+  m_PrefabInstance: {fileID: 1687382041004946611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8171400378902388987
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5887589533053457835}
+    m_Modifications:
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.055999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99999917
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0012924423
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.148
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904847891139962964, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+      propertyPath: m_Name
+      value: Barrera_SciFi
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+--- !u!4 &6864986102267575972 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3324766091554512479, guid: 7ff2705d98960fe46bf11fb3c7fc891c, type: 3}
+  m_PrefabInstance: {fileID: 8171400378902388987}
+  m_PrefabAsset: {fileID: 0}
