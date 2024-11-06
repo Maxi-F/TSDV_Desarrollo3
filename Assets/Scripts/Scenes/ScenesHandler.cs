@@ -36,9 +36,12 @@ namespace Scenes
             {
                 StartCoroutine(SetSceneAsActiveScene());
             }
-            
-            if(!string.IsNullOrEmpty(initMusic))
+
+            if (!string.IsNullOrEmpty(initMusic))
+            {
+                AkSoundEngine.StopAll();
                 AkSoundEngine.PostEvent(initMusic, gameObject);
+            }
             
             SubscribeToActions();
             HandleCanvasEvents(true);
