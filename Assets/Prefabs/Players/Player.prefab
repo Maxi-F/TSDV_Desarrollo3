@@ -732,8 +732,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776b1d4e506446c46a5b0cda99f086b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cloneDuration: 0.1
-  timeBetweenInstances: 0.025
+  cloneDuration: 0.25
+  timeBetweenInstances: 0.04
   offset: {x: 0, y: -1, z: 0}
 --- !u!1 &7261930984988719095
 GameObject:

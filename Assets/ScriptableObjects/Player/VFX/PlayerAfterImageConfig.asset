@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7066945ae3f54b5fbfd6b4de465a5c51, type: 3}
   m_Name: PlayerAfterImageConfig
   m_EditorClassIdentifier: 
-  defaultMesh: {fileID: 7416696082052646234, guid: 307923de71b833449b055d96f2c19d72, type: 3}
+  defaultMesh: {fileID: 6465259910225085085, guid: 91ec944f45a4f7942b827a049186d86a, type: 3}
   defaultMaterial: {fileID: 2100000, guid: de5cf0a8fac9d154490ac894e6e70848, type: 2}
