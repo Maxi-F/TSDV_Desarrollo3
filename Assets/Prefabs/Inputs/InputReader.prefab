@@ -180,6 +180,40 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 600776b7-dd49-4135-9a79-31d6a82216c9
     m_ActionName: TopDownCombat/SkipSequence[/Keyboard/f1]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 80e377593c74edf4f94fc87a74c09ad1, type: 2}
+        m_TargetAssemblyTypeName: Events.ScriptableObjects.EventChannelSO`1[[System.Boolean,
+          mscorlib
+        m_MethodName: RaiseEvent
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_ActionId: 9d046628-20f2-479f-9179-527a34470688
+    m_ActionName: TopDownCombat/logs[/Keyboard/f2]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 80e377593c74edf4f94fc87a74c09ad1, type: 2}
+        m_TargetAssemblyTypeName: Events.ScriptableObjects.EventChannelSO`1[[System.Boolean,
+          mscorlib
+        m_MethodName: RaiseEvent
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e3b40258-7512-4624-ab9b-e4fb60826b0a
+    m_ActionName: TopDownCombat/closeLogs[/Keyboard/f3]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: TopDownCombat

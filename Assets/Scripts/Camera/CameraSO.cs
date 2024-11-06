@@ -9,11 +9,5 @@ namespace Camera
         public Vector3 eulerRotation;
         public AnimationCurve curve;
         public float timeToRotate;
-        public Quaternion Rotation { get; private set; }
-
-        private void OnValidate()
-        {
-            Rotation = Quaternion.Euler(eulerRotation);
-        }
     }
 }
