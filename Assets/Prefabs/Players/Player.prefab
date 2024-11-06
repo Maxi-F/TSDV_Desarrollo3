@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 4004944892389013156}
   - component: {fileID: -3657109322286029522}
   - component: {fileID: 8569875037951016330}
+  - component: {fileID: 4892114609088342519}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -352,6 +353,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 4892114609088342519}
+          m_TargetAssemblyTypeName: VFX.AfterImage.CustomTrail, Assembly-CSharp
+          m_MethodName: StartSpawn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     onUpdate:
       m_PersistentCalls:
         m_Calls: []
@@ -362,6 +375,18 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: Player.PlayerMovementController, Assembly-CSharp
           m_MethodName: ToggleMoveability
           m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 4892114609088342519}
+          m_TargetAssemblyTypeName: VFX.AfterImage.CustomTrail, Assembly-CSharp
+          m_MethodName: StopSpawn
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -695,6 +720,21 @@ MonoBehaviour:
   dashController: {fileID: 4699157676241342615}
   onPlayerDeathEvent: {fileID: 11400000, guid: 1609b932e078810448a25604c23359d3, type: 2}
   onGameplayResetEvent: {fileID: 11400000, guid: ab870950ec2b0124da9411e0e9f8faa6, type: 2}
+--- !u!114 &4892114609088342519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4780633370198621073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 776b1d4e506446c46a5b0cda99f086b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloneDuration: 0.25
+  timeBetweenInstances: 0.04
+  offset: {x: 0, y: -1, z: 0}
 --- !u!1 &7261930984988719095
 GameObject:
   m_ObjectHideFlags: 0
