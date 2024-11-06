@@ -9,7 +9,7 @@ namespace Camera
     {
         [SerializeField] private CameraDataChannelSO onCameraMovementEvent;
 
-        private Coroutine movementCoroutine;
+        private Coroutine _movementCoroutine;
         private void OnEnable()
         {
             onCameraMovementEvent?.onTypedEvent.AddListener(HandleCameraMovement);
@@ -22,10 +22,10 @@ namespace Camera
 
         private void HandleCameraMovement(CameraSO cameraData)
         {
-             if(movementCoroutine != null)
-                 StopCoroutine(movementCoroutine);
+             if(_movementCoroutine != null)
+                 StopCoroutine(_movementCoroutine);
 
-             movementCoroutine = StartCoroutine(HandleMovementCoroutine(cameraData));
+             _movementCoroutine = StartCoroutine(HandleMovementCoroutine(cameraData));
         }
 
         private IEnumerator HandleMovementCoroutine(CameraSO cameraData)
@@ -33,17 +33,18 @@ namespace Camera
             float timer = 0;
             float startTime = Time.time;
             Quaternion startRotation = gameObject.transform.rotation;
+            Quaternion endRotation = Quaternion.Euler(cameraData.eulerRotation);
             
             while (timer < cameraData.timeToRotate)
             {
                 timer = Time.time - startTime;
 
                 float rotationTime = cameraData.curve.Evaluate(timer / cameraData.timeToRotate);
-                gameObject.transform.rotation = Quaternion.Slerp(startRotation, cameraData.Rotation, rotationTime);
+                gameObject.transform.rotation = Quaternion.Slerp(startRotation, endRotation, rotationTime);
                 yield return null;
             }
 
-            gameObject.transform.rotation = cameraData.Rotation;
+            gameObject.transform.rotation = endRotation;
         }
     }
 }

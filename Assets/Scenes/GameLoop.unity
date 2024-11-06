@@ -1740,14 +1740,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1059696745}
     - target: {fileID: 4072355942097122109, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
-      propertyPath: startLevelConfig
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f12f6003f84b9b4292871d310b6bed6, type: 2}
-    - target: {fileID: 4072355942097122109, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
-      propertyPath: onNewRoadsVelocity
-      value: 
-      objectReference: {fileID: 11400000, guid: 21efa5342df3fb84ab0e65389176d7cf, type: 2}
-    - target: {fileID: 4072355942097122109, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
       propertyPath: otherPlayers.Array.data[0]
       value: 
       objectReference: {fileID: 386285595}
@@ -1780,17 +1772,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1839552625}
     - target: {fileID: 7147819174927887729, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
-      propertyPath: onEnemyLeftEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: 4eccd1b235bb84a40ac8ca3371247ebd, type: 2}
-    - target: {fileID: 7147819174927887729, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
       propertyPath: playerHealthPoints
       value: 
       objectReference: {fileID: 1059696746}
-    - target: {fileID: 7147819174927887729, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
-      propertyPath: onEnemyShouldLeaveEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: 1f421373e2afbde429cd720ecda18428, type: 2}
     - target: {fileID: 9200447392731979298, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
