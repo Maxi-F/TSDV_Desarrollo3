@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &205283441020035002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6763992835044990979}
+  - component: {fileID: 7725874648439704258}
+  m_Layer: 0
+  m_Name: CreditsUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6763992835044990979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205283441020035002}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4238111351280355359}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7725874648439704258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205283441020035002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d47cae5f80711f5478cff56987ca5f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 4258374264763788351}
+  onHandleCanvas: {fileID: 11400000, guid: e7676ad47c100c94da09b7900522c394, type: 2}
 --- !u!1001 &5181195363312059950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8,26 +55,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6763992835044990979}
     m_Modifications:
-    - target: {fileID: 5299912400473223612, guid: 0480a80dfd2dd9545b4270ddc4cc802d, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5299912400473223612, guid: 0480a80dfd2dd9545b4270ddc4cc802d, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5299912400473223612, guid: 0480a80dfd2dd9545b4270ddc4cc802d, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5299912400473223612, guid: 0480a80dfd2dd9545b4270ddc4cc802d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7158691463283287954, guid: 0480a80dfd2dd9545b4270ddc4cc802d, type: 3}
-      propertyPath: creditLayout
-      value: 
-      objectReference: {fileID: 5446115934513637018, guid: 43205ccfbeb548c45803e55d286f66f6, type: 3}
     - target: {fileID: 9007064494470654481, guid: 0480a80dfd2dd9545b4270ddc4cc802d, type: 3}
       propertyPath: m_Name
       value: CreditsUICanvas
@@ -126,78 +153,4 @@ RectTransform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9007064494470654481, guid: 0480a80dfd2dd9545b4270ddc4cc802d, type: 3}
   m_PrefabInstance: {fileID: 5181195363312059950}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &7124638905442882983
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 713855008196009829, guid: 4d702725c5beb9141b61bc96d7cdda0e, type: 3}
-      propertyPath: canvas
-      value: 
-      objectReference: {fileID: 4258374264763788351}
-    - target: {fileID: 713855008196009829, guid: 4d702725c5beb9141b61bc96d7cdda0e, type: 3}
-      propertyPath: onHandleCanvas
-      value: 
-      objectReference: {fileID: 11400000, guid: e7676ad47c100c94da09b7900522c394, type: 2}
-    - target: {fileID: 4539992308312782244, guid: 4d702725c5beb9141b61bc96d7cdda0e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539992308312782244, guid: 4d702725c5beb9141b61bc96d7cdda0e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539992308312782244, guid: 4d702725c5beb9141b61bc96d7cdda0e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539992308312782244, guid: 4d702725c5beb9141b61bc96d7cdda0e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539992308312782244, guid: 4d702725c5beb9141b61bc96d7cdda0e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539992308312782244, guid: 4d702725c5beb9141b61bc96d7cdda0e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539992308312782244, guid: 4d702725c5beb9141b61bc96d7cdda0e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539992308312782244, guid: 4d702725c5beb9141b61bc96d7cdda0e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539992308312782244, guid: 4d702725c5beb9141b61bc96d7cdda0e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4539992308312782244, guid: 4d702725c5beb9141b61bc96d7cdda0e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6919390937095146013, guid: 4d702725c5beb9141b61bc96d7cdda0e, type: 3}
-      propertyPath: m_Name
-      value: CreditsUI
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 5447950828684077841, guid: 4d702725c5beb9141b61bc96d7cdda0e, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4539992308312782244, guid: 4d702725c5beb9141b61bc96d7cdda0e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4238111351280355359}
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4d702725c5beb9141b61bc96d7cdda0e, type: 3}
---- !u!4 &6763992835044990979 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4539992308312782244, guid: 4d702725c5beb9141b61bc96d7cdda0e, type: 3}
-  m_PrefabInstance: {fileID: 7124638905442882983}
   m_PrefabAsset: {fileID: 0}
