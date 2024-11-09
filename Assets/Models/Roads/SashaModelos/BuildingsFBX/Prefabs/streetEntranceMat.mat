@@ -123,7 +123,7 @@ Material:
     - _LightScale: 1
     - _Metallic: 0
     - _OcclusionStrength: 1
-    - _Opacity: 0.404
+    - _Opacity: 0.24
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -137,13 +137,13 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.5722232, g: 0.58351153, b: 0.7264151, a: 1}
+    - _BaseColor: {r: 0.44103774, g: 0.46783876, b: 0.5, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmisiveColor: {r: 0.8980392, g: 0.7647059, b: 0.16470589, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightOffset: {r: -0.4, g: 0.15, b: 0, a: 0}
     - _LightTiling: {r: 0.13, g: 0.4, b: 0, a: 0}
-    - _PatternColor: {r: 0, g: 0, b: 0, a: 1}
+    - _PatternColor: {r: 0.031098353, g: 0.02002492, b: 0.09433961, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _Tiling: {r: 10.9, g: 7.5, b: 0, a: 0}
+    - _Tiling: {r: 14, g: 7, b: 0, a: 0}
   m_BuildTextureStacks: []

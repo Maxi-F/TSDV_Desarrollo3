@@ -19,6 +19,18 @@ public class TESTPROTAGONIST : MonoBehaviour
     }
     public void Hit()
     {
-        anim.SetTrigger("Attack");
+        anim.SetBool("Attack",anim.GetBool("Attack"));
+    }
+    public void GetHit()
+    {
+        anim.SetTrigger("GetHit");
+    }
+    public void Death()
+    {
+        anim.SetTrigger("Death");
+    }
+    public void Victory()
+    {
+        anim.SetTrigger("Victory");
     }
 }
