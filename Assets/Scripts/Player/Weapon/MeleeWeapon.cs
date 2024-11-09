@@ -45,6 +45,11 @@ namespace Player.Weapon
                 hittedEnemies.Add(other);
             }
         }
+        
+        public void SetIsInteractive(bool value)
+        {
+            gameObject.SetActive(value);
+        }
 
         public void ResetHittedEnemiesBuffer()
         {

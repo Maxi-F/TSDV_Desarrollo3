@@ -545,6 +545,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseData: {fileID: 11400000, guid: 050aabf23c6e8a747ba6431bbbb165f5, type: 2}
   inputHandler: {fileID: 11400000, guid: 4902f51743585ca40aec021ece06aa06, type: 2}
+  attackOnPercentage: 0.25
+  attackOffPercentage: 0.47
   animationHandler: {fileID: 977276183979043023}
   onPlayerDeath: {fileID: 11400000, guid: 1609b932e078810448a25604c23359d3, type: 2}
   onTransitionToMovementEnded: {fileID: 11400000, guid: b159ad61c320d9d4da6cc1a8e06a8084, type: 2}
@@ -824,7 +826,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7261930984988719095}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 599a25e765b2d7247bd907c200970536, type: 3}
   m_Name: 
