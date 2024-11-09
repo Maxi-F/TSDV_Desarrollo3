@@ -13,7 +13,7 @@ namespace Player.Weapon
 
         [SerializeField] private int damage;
 
-        private List<Collider> hittedEnemies = new List<Collider>();
+        private List<Collider> _hittedEnemies = new List<Collider>();
 
         private void OnDisable()
         {
@@ -22,27 +22,22 @@ namespace Player.Weapon
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!this.enabled || hittedEnemies.Contains(other))
+            if(other.gameObject.name.Contains("Minion"))
+                Debug.Log($"MeleeWeapon. ENABLED: {this.enabled}, HITTED ENEMIES: {_hittedEnemies.Contains(other)}, OTHER: {other.gameObject.name}");
+            
+            if (!this.enabled || _hittedEnemies.Contains(other) || other.CompareTag("Player"))
                 return;
-
-            if (other.transform.CompareTag("Deflectable"))
+            
+            if (other.transform.TryGetComponent<IDeflectable>(out IDeflectable deflectableInterface))
             {
-                if (other.transform.TryGetComponent<IDeflectable>(out IDeflectable deflectableInterface))
-                {
-                    deflectableInterface.Deflect(enemy);
-                }
-
-                hittedEnemies.Add(other);
+                deflectableInterface.Deflect(enemy);
+                _hittedEnemies.Add(other);
             }
-
-            if (other.transform.CompareTag("Enemy"))
+            
+            if (other.transform.TryGetComponent<ITakeDamage>(out ITakeDamage takeDamageInterface))
             {
-                if (other.transform.TryGetComponent<ITakeDamage>(out ITakeDamage takeDamageInterface))
-                {
-                    takeDamageInterface.TryTakeDamage(damage);
-                }
-
-                hittedEnemies.Add(other);
+                takeDamageInterface.TryTakeDamage(damage);
+                _hittedEnemies.Add(other);
             }
         }
         
@@ -53,7 +48,7 @@ namespace Player.Weapon
 
         public void ResetHittedEnemiesBuffer()
         {
-            hittedEnemies.Clear();
+            _hittedEnemies.Clear();
         }
     }
 }

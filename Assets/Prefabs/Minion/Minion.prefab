@@ -992,7 +992,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3429272450400946337}
-  - component: {fileID: 6283988101934533380}
   - component: {fileID: 938812201743576552}
   - component: {fileID: 5575126865424349212}
   - component: {fileID: 4310436236341836283}
@@ -1002,6 +1001,7 @@ GameObject:
   - component: {fileID: 4870043625586772548}
   - component: {fileID: 1977581406877134975}
   - component: {fileID: 4097841218994226417}
+  - component: {fileID: 218238986806074504}
   m_Layer: 6
   m_Name: Minion
   m_TagString: Enemy
@@ -1028,27 +1028,6 @@ Transform:
   - {fileID: 5381591709375069483}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6283988101934533380
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9068004531541268373}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1.5874913, z: 1}
-  m_Center: {x: 0, y: 0.08457911, z: 0}
 --- !u!114 &938812201743576552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1499,6 +1478,29 @@ MonoBehaviour:
   prepareAttack: PREPARE_ATTACK
   attack: ATTACK
   getHit: GET_HIT
+--- !u!136 &218238986806074504
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9068004531541268373}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.1869524
+  m_Height: 2.3739047
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.14638615, z: -0.020092249}
 --- !u!1001 &156423546122773842
 PrefabInstance:
   m_ObjectHideFlags: 0

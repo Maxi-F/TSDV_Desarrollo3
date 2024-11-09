@@ -8,6 +8,7 @@ using Managers;
 using Player.Weapon;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Player
 {
@@ -34,6 +35,9 @@ namespace Player
         [SerializeField] private VoidEventChannelSO onPlayerDeath;
         [SerializeField] private VoidEventChannelSO onTransitionToMovementEnded;
 
+        [Header("Internal Events")] 
+        [SerializeField] private UnityEvent onPlayerAttack;
+        
         [Header("Initial Sequence Events")]
         [SerializeField] private VoidEventChannelSO onCinematicStarted;
         [SerializeField] private VoidEventChannelSO onCinematicFinished;
@@ -156,6 +160,7 @@ namespace Player
                 if (!hasAttackBeenEnabled && timer / attackDuration > attackOnPercentage)
                 {
                     meleeWeapon.SetIsInteractive(true);
+                    onPlayerAttack?.Invoke();
                     hasAttackBeenEnabled = true;
                 }
                 
