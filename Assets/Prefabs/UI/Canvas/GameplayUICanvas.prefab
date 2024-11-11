@@ -602,10 +602,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 74f5c7c6fffca9544a7f67f033a45c28, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 1
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -1850,7 +1850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6001333156768450283
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2513,7 +2513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6817119745754848713
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2923,7 +2923,7 @@ MonoBehaviour:
   onDashUsedEvent: {fileID: 11400000, guid: 314cc26a951a7f445b33baca6dc46fc9, type: 2}
   onDashRechargeEvent: {fileID: 11400000, guid: 3e281a7f78b52ac4ca6dfe9670c23833, type: 2}
   onDashRechargedEvent: {fileID: 11400000, guid: b24f4335f7210144ebd127ad26fa2a6f, type: 2}
-  slider: {fileID: 6328272922997612744}
+  fillImage: {fileID: 5859318341659691027}
 --- !u!1 &8513998505742254546
 GameObject:
   m_ObjectHideFlags: 0
