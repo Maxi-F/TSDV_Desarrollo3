@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Maximiliano Feldman
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3b5859e672d24d54eaf8d4e3962a6907, type: 2}
-  m_sharedMaterial: {fileID: -6738979220624707452, guid: 3b5859e672d24d54eaf8d4e3962a6907, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2876907ea033fb64b93ac245aeda3246, type: 2}
+  m_sharedMaterial: {fileID: 6039627650596267113, guid: 2876907ea033fb64b93ac245aeda3246, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

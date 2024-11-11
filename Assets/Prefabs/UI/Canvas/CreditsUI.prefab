@@ -248,6 +248,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e7676ad47c100c94da09b7900522c394, type: 2}
     - target: {fileID: 3293962740127555508, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293962740127555508, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ecf0d37cf3efcb54691a1897a936836c, type: 3}
+    - target: {fileID: 3293962740127555508, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6efa63a041611144f8bdce4775a40848, type: 3}
+    - target: {fileID: 3293962740127555508, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6efa63a041611144f8bdce4775a40848, type: 3}
+    - target: {fileID: 3293962740127555508, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
@@ -284,9 +300,17 @@ PrefabInstance:
       value: 29.84
       objectReference: {fileID: 0}
     - target: {fileID: 3738226892593517375, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2876907ea033fb64b93ac245aeda3246, type: 2}
+    - target: {fileID: 3738226892593517375, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
       propertyPath: m_fontSizeMax
       value: 29.84
       objectReference: {fileID: 0}
+    - target: {fileID: 3738226892593517375, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6039627650596267113, guid: 2876907ea033fb64b93ac245aeda3246, type: 2}
     - target: {fileID: 3739996199882316302, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
       propertyPath: m_Name
       value: ButtonBoolEventRaisers
@@ -371,6 +395,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8711979573160300282, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711979573160300282, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 68f04147020efd149b2050ee6fac90a5, type: 3}
     m_RemovedComponents:
     - {fileID: -1636917302789261743, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
     - {fileID: -4578300575884163404, guid: 52cdce4984584f34daddcada32e3f602, type: 3}

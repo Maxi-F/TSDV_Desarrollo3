@@ -163,6 +163,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 2507226813360853581}
     m_Modifications:
     - target: {fileID: 3293962740127555508, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293962740127555508, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ecf0d37cf3efcb54691a1897a936836c, type: 3}
+    - target: {fileID: 3293962740127555508, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6efa63a041611144f8bdce4775a40848, type: 3}
+    - target: {fileID: 3293962740127555508, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6efa63a041611144f8bdce4775a40848, type: 3}
+    - target: {fileID: 3293962740127555508, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -202,6 +218,22 @@ PrefabInstance:
       propertyPath: m_text
       value: Back to Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 3738226892593517375, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3738226892593517375, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2876907ea033fb64b93ac245aeda3246, type: 2}
+    - target: {fileID: 3738226892593517375, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3738226892593517375, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6039627650596267113, guid: 2876907ea033fb64b93ac245aeda3246, type: 2}
     - target: {fileID: 3739996199882316302, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
       propertyPath: m_Name
       value: BackToMenu
@@ -286,6 +318,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8711979573160300282, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711979573160300282, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 68f04147020efd149b2050ee6fac90a5, type: 3}
     m_RemovedComponents:
     - {fileID: -4578300575884163404, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
     - {fileID: -1636917302789261743, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
@@ -306,6 +346,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2507226813360853581}
     m_Modifications:
+    - target: {fileID: 1791678586913664359, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293962740127555508, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3293962740127555508, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aadde1d28134e824c8e601a64b53f5c5, type: 3}
+    - target: {fileID: 3293962740127555508, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ed9511d5762362847abadfb11df0160a, type: 3}
+    - target: {fileID: 3293962740127555508, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ed9511d5762362847abadfb11df0160a, type: 3}
     - target: {fileID: 3293962740127555508, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -352,6 +412,18 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 3738226892593517375, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_fontSize
+      value: 71
+      objectReference: {fileID: 0}
+    - target: {fileID: 3738226892593517375, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2876907ea033fb64b93ac245aeda3246, type: 2}
+    - target: {fileID: 3738226892593517375, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6039627650596267113, guid: 2876907ea033fb64b93ac245aeda3246, type: 2}
     - target: {fileID: 3739996199882316302, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
       propertyPath: m_Name
       value: TryAgain
@@ -436,6 +508,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8711979573160300282, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8711979573160300282, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 68f04147020efd149b2050ee6fac90a5, type: 3}
     m_RemovedComponents:
     - {fileID: -4578300575884163404, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
     - {fileID: -1636917302789261743, guid: 52cdce4984584f34daddcada32e3f602, type: 3}
