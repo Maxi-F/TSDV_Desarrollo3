@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MinionSpawnerTestLoopConfig
   m_EditorClassIdentifier: 
   spawnBounds: {fileID: 11400000, guid: 0cd70dbec5e60324ab8d0c7e1a758b09, type: 2}
-  minionsToSpawn: 1000
+  minionsToSpawn: 1
   timeBetweenSpawns: 1
