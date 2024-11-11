@@ -17,7 +17,8 @@ public class WeakenedController : EnemyController
     [SerializeField] private ShieldController shieldController;
     [SerializeField] private EnemyMovementController movementController;
     [SerializeField] private bool shieldActive;
-
+    [SerializeField] private ParticleSystem damageParticles;
+    
     [Header("ShieldProperties")]
     [SerializeField] private float timeToReactivateShield = 4.0f;
     [SerializeField] private float timeToStartReactivatingShield = 2.0f;
@@ -61,6 +62,7 @@ public class WeakenedController : EnemyController
 
     private void HandleDamage()
     {
+        damageParticles.Play();
         animationHandler.ReceiveHit();
     }
 
