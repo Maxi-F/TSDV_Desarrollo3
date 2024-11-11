@@ -19,7 +19,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _BaseColor
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -111,7 +111,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Opacity: 0.7
+    - _Opacity: 0.19
     - _Opacity_1: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -127,12 +127,12 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.19855823, g: 0.31038892, b: 0.4339623, a: 1}
+    - _BaseColor: {r: 0.11650052, g: 0.21100618, b: 0.3207547, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightOffset: {r: -0.12, g: 0.02, b: 0, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
-    - _PatternColor: {r: 0.2025187, g: 0.25505802, b: 0.38679248, a: 0}
+    - _PatternColor: {r: 0.061721254, g: 0.11479663, b: 0.1792453, a: 0}
     - _PatternColor_1: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tiling: {r: 4, g: 2, b: 0, a: 0}
