@@ -9,16 +9,30 @@ namespace ObstacleSystem
     public class ObstaclesCollision : MonoBehaviour
     {
         [SerializeField] private int collisionDamage;
-        [SerializeField] private GameObjectEventChannelSO onObstacleTriggeredEvent;
+        [SerializeField] private ObstacleDestroy obstacleDestroyer;
+
+        private bool _canTrigger;
+
+        private void OnEnable()
+        {
+            _canTrigger = true;
+        }
 
         private void OnTriggerEnter(Collider other)
         {
+            if (!_canTrigger) return;
+            
             if (other.CompareTag("Player"))
             {
                 other.TryGetComponent<ITakeDamage>(out ITakeDamage playerHealth);
                 if (playerHealth.TryTakeDamage(collisionDamage))
-                    onObstacleTriggeredEvent.RaiseEvent(gameObject);
+                    obstacleDestroyer.DestroyObstacle();
             }
+        }
+
+        public void SetCanTrigger(bool value)
+        {
+            _canTrigger = value;
         }
     }
 }

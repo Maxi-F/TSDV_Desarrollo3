@@ -34,7 +34,8 @@ namespace Player
         [Header("Events")] 
         [SerializeField] private VoidEventChannelSO onPlayerDeath;
         [SerializeField] private VoidEventChannelSO onTransitionToMovementEnded;
-
+        [SerializeField] private VoidEventChannelSO onGameplayResetEvent;
+        
         [Header("Internal Events")] 
         [SerializeField] private UnityEvent onPlayerAttack;
         
@@ -67,7 +68,8 @@ namespace Player
             onCinematicStarted.onEvent.AddListener(DisableAttack);
             onCinematicFinished.onEvent.AddListener(EnableAttack);
             onTransitionToMovementEnded.onEvent.AddListener(HandleTransitionToMovementEnded);
-            onPlayerDeath.onEvent.AddListener(EnableAttack);
+            onPlayerDeath.onEvent.AddListener(DisableAttack);
+            onGameplayResetEvent.onEvent.AddListener(EnableAttack);
         }
 
         private void OnDisable()
@@ -77,7 +79,8 @@ namespace Player
             onTransitionToMovementEnded.onEvent.RemoveListener(HandleTransitionToMovementEnded);
             onCinematicStarted.onEvent.RemoveListener(DisableAttack);
             onCinematicFinished.onEvent.RemoveListener(EnableAttack);
-            onPlayerDeath.onEvent.RemoveListener(EnableAttack);
+            onPlayerDeath.onEvent.RemoveListener(DisableAttack);
+            onGameplayResetEvent.onEvent.RemoveListener(EnableAttack);
         }
          
         private void HandleTransitionToMovementEnded()

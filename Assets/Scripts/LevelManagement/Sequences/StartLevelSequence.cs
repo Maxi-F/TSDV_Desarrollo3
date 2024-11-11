@@ -57,7 +57,7 @@ namespace LevelManagement.Sequences
             startSequence.AddPreAction(MoveOtherPlayers());
             startSequence.SetAction(MovePlayerToMiddle());
             startSequence.AddPostAction(HandleStopCinematicCanvas());
-
+            
             return startSequence;
         }
 

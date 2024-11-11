@@ -614,6 +614,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 977276183979043023, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
+      propertyPath: onGameplayResetEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: ab870950ec2b0124da9411e0e9f8faa6, type: 2}
     - target: {fileID: 4645382247631583565, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
       propertyPath: enemy
       value: 
@@ -1775,6 +1779,26 @@ PrefabInstance:
       propertyPath: playerHealthPoints
       value: 
       objectReference: {fileID: 1059696746}
+    - target: {fileID: 7147819174927887729, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
+      propertyPath: loopConfigs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147819174927887729, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
+      propertyPath: loopConfigs.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e4e70fa8cf8c3be4cb4196d776da27c6, type: 2}
+    - target: {fileID: 7147819174927887729, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
+      propertyPath: loopConfigs.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: ba7b00b469716784ea42c2693e0acc6f, type: 2}
+    - target: {fileID: 7147819174927887729, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
+      propertyPath: loopConfigs.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0c0a4a3b8792776478d27d8d450f575d, type: 2}
+    - target: {fileID: 7147819174927887729, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
+      propertyPath: loopConfigs.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0c0a4a3b8792776478d27d8d450f575d, type: 2}
     - target: {fileID: 9200447392731979298, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1893,38 +1917,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObstaclesSpawner
       objectReference: {fileID: 0}
-    - target: {fileID: 3591356576662942099, guid: 800cbe1a710fdb94fa4f38ba4942d228, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972917326989590876, guid: 800cbe1a710fdb94fa4f38ba4942d228, type: 3}
-      propertyPath: mapBounds
-      value: 
-      objectReference: {fileID: 11400000, guid: ec9fc6062f1b51d4596422a3e4f7f265, type: 2}
-    - target: {fileID: 3972917326989590876, guid: 800cbe1a710fdb94fa4f38ba4942d228, type: 3}
-      propertyPath: obstaclePrefab
-      value: 
-      objectReference: {fileID: 4250984852401542567, guid: 264d1f94f6e70034a895125e1d40329c, type: 3}
-    - target: {fileID: 3972917326989590876, guid: 800cbe1a710fdb94fa4f38ba4942d228, type: 3}
-      propertyPath: onObstacleDestroyed
-      value: 
-      objectReference: {fileID: 11400000, guid: f1b6a34449833df43ab719979c9e2d13, type: 2}
-    - target: {fileID: 3972917326989590876, guid: 800cbe1a710fdb94fa4f38ba4942d228, type: 3}
-      propertyPath: onObstacleTriggeredEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: 7106f5096e05ed54685959ed962a6d12, type: 2}
-    - target: {fileID: 3972917326989590876, guid: 800cbe1a710fdb94fa4f38ba4942d228, type: 3}
-      propertyPath: obstaclesPrefabs.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3972917326989590876, guid: 800cbe1a710fdb94fa4f38ba4942d228, type: 3}
-      propertyPath: obstaclesPrefabs.Array.data[0]
-      value: 
-      objectReference: {fileID: 5681849922222461501, guid: 3dbc3ab4d26536149bafa22531e00aed, type: 3}
-    - target: {fileID: 3972917326989590876, guid: 800cbe1a710fdb94fa4f38ba4942d228, type: 3}
-      propertyPath: obstaclesPrefabs.Array.data[1]
-      value: 
-      objectReference: {fileID: 4250984852401542567, guid: 264d1f94f6e70034a895125e1d40329c, type: 3}
     - target: {fileID: 8056459542030068338, guid: 800cbe1a710fdb94fa4f38ba4942d228, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
