@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: FirstLoopConfig
   m_EditorClassIdentifier: 
   obstacleData:
-    obstaclesDuration: 20
+    obstaclesDuration: 6
     obstacleCooldown: 0.25
+    timeToWarn: 4
     minDistance: 1
   roadData:
     roadVelocity: {x: 0, y: 0, z: -25}
