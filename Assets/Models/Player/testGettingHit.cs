@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class testGettingHit : MonoBehaviour
 {
-    float timer = 0;
+    /*float timer = 0;
     [SerializeField] Animator animator;
     // Start is called before the first frame update
     void Start()
@@ -24,5 +24,5 @@ public class testGettingHit : MonoBehaviour
             animator.SetTrigger("GetHit");
             timer = 0;
         }
-    }
+    }*/
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5d40059aa2b1d4749946d84e6d41f40e
+guid: 9217ed9b5022d7e43a94046deca15b2f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,11 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: laserIzq
-      takeName: laserIzq
-      internalID: 2017875628140167046
-      firstFrame: 274
-      lastFrame: 295
+      name: LaserDown
+      takeName: LaserDown
+      internalID: -6727724436471874878
+      firstFrame: 264
+      lastFrame: 279
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -59,8 +59,8 @@ ModelImporter:
       events: []
       transformMask: []
       maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 274
+      maskSource: {fileID: 31900000, guid: 69280e6d44856534fa1fd70213330fd7, type: 2}
+      additiveReferencePoseFrame: 264
     isReadable: 0
   meshes:
     lODScreenPercentages: []
