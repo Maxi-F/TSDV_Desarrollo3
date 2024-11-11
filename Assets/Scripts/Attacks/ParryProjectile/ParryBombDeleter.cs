@@ -2,39 +2,37 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace ObstacleSystem
+namespace Attacks.ParryProjectile
 {
-    public class ObstacleDestroy : MonoBehaviour
+    public class ParryBombDeleter : MonoBehaviour
     {
-        [SerializeField] private ParticleSystem destroyParticles;
+        [SerializeField] private GameObject destroyParticleObject;
         [SerializeField] private float destroyParticlesSeconds;
         [SerializeField] private GameObject model;
-        [SerializeField] private ObstacleEventCaller eventCaller;
+        [SerializeField] private ParryBomb parryBomb;
         
-        private ObstaclesCollision _obstaclesCollission;
         private Coroutine _destroyCoroutine;
         
         private void OnEnable()
         {
-            _obstaclesCollission ??= GetComponent<ObstaclesCollision>();
             model.gameObject.SetActive(true);
         }
 
-        public void DestroyObstacle()
+        public void HandleDelete()
         {
             if(_destroyCoroutine != null)
                 StopCoroutine(_destroyCoroutine);
 
+            parryBomb.IsActive = false;
             _destroyCoroutine = StartCoroutine(DestroyObstacleCoroutine());
         }
 
         private IEnumerator DestroyObstacleCoroutine()
         {
             model.gameObject.SetActive(false);
-            destroyParticles.Play();
-            _obstaclesCollission.SetCanTrigger(false);
+            destroyParticleObject.gameObject.SetActive(true);
             yield return new WaitForSeconds(destroyParticlesSeconds);
-            eventCaller.HandleEvent();
+            gameObject.SetActive(false);
         }
     }
 }

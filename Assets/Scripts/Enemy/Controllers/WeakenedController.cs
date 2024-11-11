@@ -107,8 +107,6 @@ public class WeakenedController : EnemyController
             yield return movementController.MoveTo(enemyConfig.weakenedPosition, enemyConfig.defaultPosition, enemyConfig.recoverMoveDuration);
             enemyAgent.ChangeStateToIdle();
         }
-
-        yield break;
     }
 
 

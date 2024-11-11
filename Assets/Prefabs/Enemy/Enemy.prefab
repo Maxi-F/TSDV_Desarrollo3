@@ -1347,9 +1347,6 @@ MonoBehaviour:
   maxHealth: 100
   initHealth: 100
   canTakeDamage: 1
-  onHit:
-    m_PersistentCalls:
-      m_Calls: []
   onDeathEvent: {fileID: 11400000, guid: 327ac645fb6013d48b235af4479a3c05, type: 2}
   onTakeDamageEvent: {fileID: 11400000, guid: 41331d8fc0079ac47bec86270d050339, type: 2}
   onSumHealthEvent: {fileID: 0}
@@ -1357,6 +1354,9 @@ MonoBehaviour:
   onInitializeHealthEvent: {fileID: 0}
   onInitializeMaxHealthEvent: {fileID: 0}
   onDamageAvoidedEvent: {fileID: 0}
+  onHit:
+    m_PersistentCalls:
+      m_Calls: []
   onInternalDeathEvent:
     m_PersistentCalls:
       m_Calls: []
