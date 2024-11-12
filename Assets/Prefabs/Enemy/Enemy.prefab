@@ -3692,9 +3692,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5377419343457228640, guid: dfc5195c4544a1d4394b32ac4835c586, type: 3}
+      propertyPath: m_Value
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5377419343457228640, guid: dfc5195c4544a1d4394b32ac4835c586, type: 3}
+      propertyPath: m_MaxValue
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5641453237638201680, guid: dfc5195c4544a1d4394b32ac4835c586, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784268590145646223, guid: dfc5195c4544a1d4394b32ac4835c586, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784268590145646223, guid: dfc5195c4544a1d4394b32ac4835c586, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8825371486301107936, guid: dfc5195c4544a1d4394b32ac4835c586, type: 3}
       propertyPath: m_AnchorMax.x
