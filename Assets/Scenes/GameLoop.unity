@@ -458,7 +458,7 @@ PrefabInstance:
       objectReference: {fileID: 1059696745}
     - target: {fileID: 4678668245326787109, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4678668245326787109, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
       propertyPath: attacksBeforeParryCanExecute
@@ -476,9 +476,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4678668245326787109, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
-    - {fileID: 6771036244692420438, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6797202327773222759, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
     m_AddedGameObjects: []

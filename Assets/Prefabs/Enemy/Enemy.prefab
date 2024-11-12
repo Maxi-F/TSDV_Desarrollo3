@@ -247,7 +247,7 @@ Transform:
   - {fileID: 4876554321072833674}
   - {fileID: 7242222450462948032}
   - {fileID: 4757184891433056929}
-  - {fileID: 7903280043631287249}
+  - {fileID: 7940952758382068670}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!54 &519372446761695302
@@ -606,7 +606,7 @@ MonoBehaviour:
   damageParticles: {fileID: 5513419528269011322}
   timeToReactivateShield: 4
   timeToStartReactivatingShield: 2
-  healthCanvas: {fileID: 7684290515642440472}
+  healthCanvas: {fileID: 7582351639916528503}
   onEnemyShouldDieEvent: {fileID: 11400000, guid: 327ac645fb6013d48b235af4479a3c05, type: 2}
   onEnemyDeathEvent: {fileID: 11400000, guid: 36bbe8a4a81fcf74da11d75999d01f40, type: 2}
   onEnemyParriedEvent: {fileID: 11400000, guid: 2560c5f78509b5141b8e058e758dd606, type: 2}
@@ -3709,13 +3709,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfc5195c4544a1d4394b32ac4835c586, type: 3}
---- !u!1 &7684290515642440472 stripped
+--- !u!1 &7582351639916528503 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1713309334333691258, guid: dfc5195c4544a1d4394b32ac4835c586, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1466797875320327445, guid: dfc5195c4544a1d4394b32ac4835c586, type: 3}
   m_PrefabInstance: {fileID: 9035047967921753698}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &7903280043631287249 stripped
+--- !u!224 &7940952758382068670 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1210596465853126067, guid: dfc5195c4544a1d4394b32ac4835c586, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1391926969143315932, guid: dfc5195c4544a1d4394b32ac4835c586, type: 3}
   m_PrefabInstance: {fileID: 9035047967921753698}
   m_PrefabAsset: {fileID: 0}

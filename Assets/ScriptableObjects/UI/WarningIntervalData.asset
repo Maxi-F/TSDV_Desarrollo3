@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0710e210fee0f544780d5967d9acf1df, type: 3}
   m_Name: WarningIntervalData
   m_EditorClassIdentifier: 
-  duration: 4
-  intervalSeconds: 0.3
+  duration: 6
+  intervalSeconds: 0.5
