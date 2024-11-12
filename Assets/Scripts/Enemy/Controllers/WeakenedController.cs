@@ -68,6 +68,7 @@ public class WeakenedController : EnemyController
 
     private void HandleLeave()
     {
+        ActivateShield();
         enemyAgent.ChangeStateToLeave();
     }
 
@@ -97,6 +98,14 @@ public class WeakenedController : EnemyController
         shieldController.SetActiveMaterial();
     }
 
+    private void ActivateShield()
+    {
+        healthPoints.SetCanTakeDamage(false);
+        shieldController.SetActive(true);
+        shieldController.ResetShield();
+        shieldController.SetActiveMaterial();
+    }
+
     private IEnumerator ToggleShield(bool isActive)
     {
         healthPoints.SetCanTakeDamage(!isActive);
@@ -110,7 +119,6 @@ public class WeakenedController : EnemyController
             enemyAgent.ChangeStateToIdle();
         }
     }
-
 
     private IEnumerator BossDeath()
     {
