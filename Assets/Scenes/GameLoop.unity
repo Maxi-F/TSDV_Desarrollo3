@@ -420,6 +420,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 840522403494077163, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
+      propertyPath: animationPivot
+      value: 
+      objectReference: {fileID: 324373035}
     - target: {fileID: 1431231735111881198, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
       propertyPath: onInitializeSlider
       value: 
@@ -431,6 +435,14 @@ PrefabInstance:
     - target: {fileID: 3120035166251398144, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
       propertyPath: shieldActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3623727221341694570, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
+      propertyPath: bombThrowEvents.onExit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3623727221341694570, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
+      propertyPath: bombThrowEvents.onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3623727221341694570, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
       propertyPath: debrisThrowEvents.onExit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -445,8 +457,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1059696745}
     - target: {fileID: 4678668245326787109, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678668245326787109, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
       propertyPath: attacksBeforeParryCanExecute
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729209335015210498, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8961736479340173517, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
       propertyPath: m_Name
@@ -456,12 +476,19 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4678668245326787109, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
+    - {fileID: 6771036244692420438, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
     m_RemovedGameObjects:
     - {fileID: 6797202327773222759, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
+--- !u!1 &324373035 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3977821645255416462, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
+  m_PrefabInstance: {fileID: 324373034}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &386285593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1781,20 +1808,20 @@ PrefabInstance:
       objectReference: {fileID: 1059696746}
     - target: {fileID: 7147819174927887729, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
       propertyPath: loopConfigs.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7147819174927887729, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
       propertyPath: loopConfigs.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: e4e70fa8cf8c3be4cb4196d776da27c6, type: 2}
+      objectReference: {fileID: 11400000, guid: d7ad325c770b317429af3c8ca6dca62e, type: 2}
     - target: {fileID: 7147819174927887729, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
       propertyPath: loopConfigs.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: ba7b00b469716784ea42c2693e0acc6f, type: 2}
+      objectReference: {fileID: 11400000, guid: e4e70fa8cf8c3be4cb4196d776da27c6, type: 2}
     - target: {fileID: 7147819174927887729, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
       propertyPath: loopConfigs.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: 0c0a4a3b8792776478d27d8d450f575d, type: 2}
+      objectReference: {fileID: 11400000, guid: ba7b00b469716784ea42c2693e0acc6f, type: 2}
     - target: {fileID: 7147819174927887729, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
       propertyPath: loopConfigs.Array.data[3]
       value: 

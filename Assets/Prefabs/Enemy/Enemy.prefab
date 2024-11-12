@@ -984,12 +984,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPivot: {fileID: 5982544777939341962}
-  animationPivot: {fileID: 9183920298279998389}
+  animationPivot: {fileID: 0}
   laserObject: {fileID: 5948675016384544887}
   swingConfigSo:
   - {fileID: 11400000, guid: 5ded94f39775e2d45b3c8ec6bc876b42, type: 2}
   - {fileID: 11400000, guid: 8b7b550851ce2b6419cac2257606d710, type: 2}
-  animationHandler: {fileID: 8345590865920702549}
+  animationHandler: {fileID: 4802755985576399635}
 --- !u!1 &8961736479340173517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,7 +1383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAgent: {fileID: 3623727221341694570}
-  animationHandler: {fileID: 8345590865920702549}
+  animationHandler: {fileID: 4802755985576399635}
   enemyConfig: {fileID: 11400000, guid: 3e495b6192997ef46978af1453840058, type: 2}
   healthPoints: {fileID: 2011814886892266701}
   shieldController: {fileID: 5362483775112485171}
@@ -1425,7 +1425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAgent: {fileID: 3623727221341694570}
-  animationHandler: {fileID: 8345590865920702549}
+  animationHandler: {fileID: 4802755985576399635}
   parryProjectile: {fileID: 3647964052860360875, guid: 48bea42002bf10540a71e54ce9228159, type: 3}
   player: {fileID: 0}
   offset: {x: 0, y: 0, z: -2}
@@ -1459,7 +1459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAgent: {fileID: 3623727221341694570}
-  animationHandler: {fileID: 8345590865920702549}
+  animationHandler: {fileID: 4802755985576399635}
   onHandleAttack: {fileID: 11400000, guid: b7beabe1d50e1c046bb77491b247d49b, type: 2}
   onFinishSpawningBlocks: {fileID: 11400000, guid: cfa0964e0735edd48b4aa4868148bc0c, type: 2}
   initialDelay: 1
@@ -1476,7 +1476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAgent: {fileID: 3623727221341694570}
-  animationHandler: {fileID: 8345590865920702549}
+  animationHandler: {fileID: 4802755985576399635}
   swing: {fileID: 840522403494077163}
   laserAttackMaterial: {fileID: 2100000, guid: 03b28fbc54a14fa4bb978cdc5c17b1f5, type: 2}
   initialDelay: 2
@@ -1493,7 +1493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAgent: {fileID: 3623727221341694570}
-  animationHandler: {fileID: 8345590865920702549}
+  animationHandler: {fileID: 4802755985576399635}
   enemyConfig: {fileID: 11400000, guid: 3e495b6192997ef46978af1453840058, type: 2}
   onEnemyLeftEvent: {fileID: 11400000, guid: 4eccd1b235bb84a40ac8ca3371247ebd, type: 2}
   movementDelay: 0.75
@@ -4182,37 +4182,32 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2408785328672719193, guid: 861b2a8bc9d9ed7458a191169b2724af, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 7577974954210117730, guid: 861b2a8bc9d9ed7458a191169b2724af, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8345590865920702549}
+      addedObject: {fileID: 4802755985576399635}
   m_SourcePrefab: {fileID: 100100000, guid: 861b2a8bc9d9ed7458a191169b2724af, type: 3}
---- !u!1 &3774342924459566041 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2408785328672719193, guid: 861b2a8bc9d9ed7458a191169b2724af, type: 3}
-  m_PrefabInstance: {fileID: 1516747265251615360}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8345590865920702549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3774342924459566041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d44749b7ad18834c9c487dd2e15a552, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &4876554321072833674 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6242430861257434634, guid: 861b2a8bc9d9ed7458a191169b2724af, type: 3}
   m_PrefabInstance: {fileID: 1516747265251615360}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &9183920298279998389 stripped
+--- !u!1 &8946103276938357474 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7673930631728116021, guid: 861b2a8bc9d9ed7458a191169b2724af, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7577974954210117730, guid: 861b2a8bc9d9ed7458a191169b2724af, type: 3}
   m_PrefabInstance: {fileID: 1516747265251615360}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4802755985576399635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8946103276938357474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d44749b7ad18834c9c487dd2e15a552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8885124470365935314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4348,8 +4343,39 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7224047336677681653, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3718743897505068768}
   m_SourcePrefab: {fileID: 100100000, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
+--- !u!1 &2237925515850514215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7224047336677681653, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
+  m_PrefabInstance: {fileID: 8885124470365935314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3718743897505068768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2237925515850514215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!4 &5513419528269011268 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4021103657954561942, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}

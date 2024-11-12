@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5d40059aa2b1d4749946d84e6d41f40e
+guid: 6c3b9231b6210f44a863bbac082aa39f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,11 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: laserIzq
-      takeName: laserIzq
-      internalID: 2017875628140167046
-      firstFrame: 274
-      lastFrame: 295
+      name: LaserUp
+      takeName: LaserUp
+      internalID: 576181874070147698
+      firstFrame: 247
+      lastFrame: 262
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -59,8 +59,8 @@ ModelImporter:
       events: []
       transformMask: []
       maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 274
+      maskSource: {fileID: 31900000, guid: 69280e6d44856534fa1fd70213330fd7, type: 2}
+      additiveReferencePoseFrame: 247
     isReadable: 0
   meshes:
     lODScreenPercentages: []

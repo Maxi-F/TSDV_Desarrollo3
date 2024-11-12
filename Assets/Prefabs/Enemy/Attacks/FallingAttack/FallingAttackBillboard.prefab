@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7360055294922511000}
   m_Layer: 0
-  m_Name: FallingAttack
+  m_Name: FallingAttackBillboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
