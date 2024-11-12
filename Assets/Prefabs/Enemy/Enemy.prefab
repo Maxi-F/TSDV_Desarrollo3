@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPivot: {fileID: 5982544777939341962}
-  animationPivot: {fileID: 0}
+  animationPivot: {fileID: 3977821645255416462}
   laserObject: {fileID: 5948675016384544887}
   swingConfigSo:
   - {fileID: 11400000, guid: 5ded94f39775e2d45b3c8ec6bc876b42, type: 2}
@@ -229,7 +229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &673461572015972428
 Transform:
   m_ObjectHideFlags: 0
@@ -461,7 +461,7 @@ MonoBehaviour:
     onEnter:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 4678668245326787109}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -479,7 +479,7 @@ MonoBehaviour:
     onExit:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 4678668245326787109}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -517,7 +517,7 @@ MonoBehaviour:
     onEnter:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 4729209335015210498}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -535,7 +535,7 @@ MonoBehaviour:
     onExit:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 4729209335015210498}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
           m_MethodName: set_enabled
           m_Mode: 6
@@ -567,7 +567,7 @@ MonoBehaviour:
   onSumHealthEvent: {fileID: 0}
   onResetPointsEvent: {fileID: 0}
   onInitializeHealthEvent: {fileID: 0}
-  onInitializeMaxHealthEvent: {fileID: 0}
+  onInitializeMaxHealthEvent: {fileID: 11400000, guid: 5c98859185b5c154494d750854e45614, type: 2}
   onDamageAvoidedEvent: {fileID: 0}
   onHit:
     m_PersistentCalls:
@@ -602,7 +602,7 @@ MonoBehaviour:
   healthPoints: {fileID: 2011814886892266701}
   shieldController: {fileID: 5362483775112485171}
   movementController: {fileID: 4860931461339575274}
-  shieldActive: 1
+  shieldActive: 0
   damageParticles: {fileID: 5513419528269011322}
   timeToReactivateShield: 4
   timeToStartReactivatingShield: 2
@@ -643,7 +643,7 @@ MonoBehaviour:
   parryProjectile: {fileID: 3647964052860360875, guid: 48bea42002bf10540a71e54ce9228159, type: 3}
   player: {fileID: 0}
   offset: {x: 0, y: 0, z: -2}
-  attacksBeforeParryCanExecute: 3
+  attacksBeforeParryCanExecute: 0
   firstForces:
   - startImpulse: {x: -12, y: 0, z: -5}
     angularForce: {x: 20, y: 0, z: 0}
@@ -693,6 +693,7 @@ MonoBehaviour:
   animationHandler: {fileID: 4802755985576399635}
   swing: {fileID: 840522403494077163}
   laserAttackMaterial: {fileID: 2100000, guid: 03b28fbc54a14fa4bb978cdc5c17b1f5, type: 2}
+  preAttackDelay: 0.4
   initialDelay: 2
 --- !u!114 &4860931461339575274
 MonoBehaviour:
@@ -3400,6 +3401,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 4802755985576399635}
   m_SourcePrefab: {fileID: 100100000, guid: 861b2a8bc9d9ed7458a191169b2724af, type: 3}
+--- !u!1 &3977821645255416462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2465894707902887950, guid: 861b2a8bc9d9ed7458a191169b2724af, type: 3}
+  m_PrefabInstance: {fileID: 1516747265251615360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4876554321072833674 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6242430861257434634, guid: 861b2a8bc9d9ed7458a191169b2724af, type: 3}
@@ -3694,7 +3700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5377419343457228640, guid: dfc5195c4544a1d4394b32ac4835c586, type: 3}
       propertyPath: m_Value
-      value: 90
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5377419343457228640, guid: dfc5195c4544a1d4394b32ac4835c586, type: 3}
       propertyPath: m_MaxValue
@@ -3706,11 +3712,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8784268590145646223, guid: dfc5195c4544a1d4394b32ac4835c586, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8784268590145646223, guid: dfc5195c4544a1d4394b32ac4835c586, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8825371486301107936, guid: dfc5195c4544a1d4394b32ac4835c586, type: 3}
       propertyPath: m_AnchorMax.x
