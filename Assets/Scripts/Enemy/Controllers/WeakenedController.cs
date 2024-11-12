@@ -68,7 +68,7 @@ public class WeakenedController : EnemyController
 
     private void HandleLeave()
     {
-        ActivateSield();
+        ActivateShield();
         enemyAgent.ChangeStateToLeave();
     }
 
@@ -98,7 +98,7 @@ public class WeakenedController : EnemyController
         shieldController.SetActiveMaterial();
     }
 
-    private void ActivateSield()
+    private void ActivateShield()
     {
         healthPoints.SetCanTakeDamage(false);
         shieldController.SetActive(true);
