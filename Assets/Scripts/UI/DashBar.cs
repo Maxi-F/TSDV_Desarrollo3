@@ -9,11 +9,11 @@ namespace UI
         [SerializeField] private VoidEventChannelSO onDashUsedEvent;
         [SerializeField] private FloatEventChannelSO onDashRechargeEvent;
         [SerializeField] private VoidEventChannelSO onDashRechargedEvent;
-        [SerializeField] private Slider slider;
+        [SerializeField] private Image fillImage;
         
         private void OnEnable()
         {
-            slider.value = 1;
+            fillImage.fillAmount = 1;
             
             onDashUsedEvent.onEvent.AddListener(HandleDashUsed);
             onDashRechargedEvent.onEvent.AddListener(HandleDashRecharged);
@@ -30,17 +30,17 @@ namespace UI
         
         private void HandleDashRecharge(float percentage)
         {
-            slider.value = percentage;
+            fillImage.fillAmount = percentage;
         }
         
         private void HandleDashRecharged()
         {
-            slider.value = 1;
+            fillImage.fillAmount = 1;
         }
 
         private void HandleDashUsed()
         {
-            slider.value = 0;
+            fillImage.fillAmount = 0;
         }
     }
 }
