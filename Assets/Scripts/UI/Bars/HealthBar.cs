@@ -59,7 +59,6 @@ namespace UI.Bars
         
         public void HandleTakeDamage(int currentHealth)
         {
-            Debug.Log($"here? {currentHealth}");
             if (!_wasTriggered)
             {
                 slider.gameObject.SetActive(true);
