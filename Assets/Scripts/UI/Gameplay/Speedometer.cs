@@ -74,7 +74,6 @@ namespace UI.Gameplay
 
         private void HandleMovement(Vector2 movement)
         {
-            Debug.Log(movement);
             if (movement.y < 0)
             {
                 if(_speedometerState != SpeedometerValues.Downwards)
