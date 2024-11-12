@@ -759,6 +759,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameplayUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7250830342406322309, guid: 4cef017080308ce47b26c03ad4d2b108, type: 3}
+      propertyPath: flickDuration
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250830342406322309, guid: 4cef017080308ce47b26c03ad4d2b108, type: 3}
+      propertyPath: movementDuration
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250830342406322309, guid: 4cef017080308ce47b26c03ad4d2b108, type: 3}
+      propertyPath: multiplierFromRoads
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250830342406322309, guid: 4cef017080308ce47b26c03ad4d2b108, type: 3}
+      propertyPath: intervalSecondsRange.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250830342406322309, guid: 4cef017080308ce47b26c03ad4d2b108, type: 3}
+      propertyPath: intervalSecondsRange.y
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

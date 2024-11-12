@@ -163,6 +163,7 @@ namespace ObstacleSystem
             if (_spawnedObstacles == null) return;
             foreach (var spawnedObstacle in _spawnedObstacles.ToList())
             {
+                if(spawnedObstacle == null) continue;
                 DeleteObstacle(spawnedObstacle);
             }
         }

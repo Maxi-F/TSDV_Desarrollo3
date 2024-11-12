@@ -1212,9 +1212,9 @@ MonoBehaviour:
   m_fontSize: 100
   m_fontSizeBase: 100
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 100
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1423,9 +1423,9 @@ MonoBehaviour:
   m_fontSize: 20
   m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 20
   m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -1803,6 +1803,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1635215393990639379}
+  - component: {fileID: 3256626329075529637}
   m_Layer: 5
   m_Name: Speedometer
   m_TagString: Untagged
@@ -1831,6 +1832,74 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 271.81, y: 186}
   m_Pivot: {x: 1, y: 0}
+--- !u!114 &3256626329075529637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5932552531730230659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01ef206e6c7d2624f99b1f39f02ceccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiplierFromRoads: -7
+  intervalSecondsRange: {x: 0.5, y: 2}
+  flickDuration: 0.1
+  downwardsValue:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: -10
+      outSlope: -10
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: -10
+      inSlope: -10
+      outSlope: -10
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  upwardsValue:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 10
+      outSlope: 10
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 10
+      inSlope: 10
+      outSlope: 10
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  movementDuration: 1
+  text: {fileID: 1876097537717926706}
+  onNewRoadsVelocityEvent: {fileID: 11400000, guid: 1e327bfbe0d547b49bb2ca3a9cba1d2f, type: 2}
+  inputHandler: {fileID: 11400000, guid: 4902f51743585ca40aec021ece06aa06, type: 2}
+  pauseData: {fileID: 11400000, guid: 050aabf23c6e8a747ba6431bbbb165f5, type: 2}
 --- !u!1 &5945041438210384587
 GameObject:
   m_ObjectHideFlags: 0
