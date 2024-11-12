@@ -106,11 +106,11 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _LightOpacity: 1
+    - _LightOpacity: 0.854
     - _LightScale: 1
     - _Metallic: 0
     - _OcclusionStrength: 1
-    - _Opacity: 0.587
+    - _Opacity: 0.26
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -129,11 +129,11 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmisiveColor: {r: 0.735849, g: 0.6629583, b: 0.6629583, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LightOffset: {r: 0.16, g: -0.44, b: 0, a: 0}
-    - _LightTiling: {r: 0.52, g: 0.25, b: 0, a: 0}
+    - _LightOffset: {r: 0.16, g: -0.64, b: 0, a: 0}
+    - _LightTiling: {r: 0.22, g: 0.21, b: 0, a: 0}
     - _PatternColor: {r: 0.1703005, g: 0.16415983, b: 0.2924528, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _Tiling: {r: 10, g: 10, b: 0, a: 0}
+    - _Tiling: {r: 5.38, g: 8, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &448851204484171988
 MonoBehaviour:

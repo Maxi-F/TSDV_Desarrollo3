@@ -129,11 +129,11 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmisiveColor: {r: 0.735849, g: 0.6629583, b: 0.6629583, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LightOffset: {r: -0.57, g: 0.35, b: 0, a: 0}
-    - _LightTiling: {r: 0.62, g: 0.25, b: 0, a: 0}
-    - _PatternColor: {r: 0.1703005, g: 0.16415983, b: 0.2924528, a: 0}
+    - _LightOffset: {r: 2.44, g: -0.73, b: 0, a: 0}
+    - _LightTiling: {r: 0.18, g: 0.33, b: 0, a: 0}
+    - _PatternColor: {r: 0.29681382, g: 0.31767678, b: 0.5471698, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _Tiling: {r: 5, g: 5, b: 0, a: 0}
+    - _Tiling: {r: 4.81, g: 10.9, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &448851204484171988
 MonoBehaviour:
