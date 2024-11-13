@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Obstaculos
-  m_Shader: {fileID: -6465566751694194690, guid: b97ff11de31b43241a258afd3e6dc8f0, type: 3}
+  m_Name: Obstaculos_Lit
+  m_Shader: {fileID: -6465566751694194690, guid: 5710c5850cbd24b439cab62a83ed733c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -137,7 +137,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AddColor: {r: 0, g: 0, b: 0, a: 0}
-    - _BaseColor: {r: 0.80896187, g: 0.80651474, b: 0.8679245, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmisiveColor: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
