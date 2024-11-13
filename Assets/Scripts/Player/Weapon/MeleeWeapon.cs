@@ -22,9 +22,6 @@ namespace Player.Weapon
 
         private void OnTriggerEnter(Collider other)
         {
-            if(other.gameObject.name.Contains("Minion"))
-                Debug.Log($"MeleeWeapon. ENABLED: {this.enabled}, HITTED ENEMIES: {_hittedEnemies.Contains(other)}, OTHER: {other.gameObject.name}");
-            
             if (!this.enabled || _hittedEnemies.Contains(other) || other.CompareTag("Player"))
                 return;
             

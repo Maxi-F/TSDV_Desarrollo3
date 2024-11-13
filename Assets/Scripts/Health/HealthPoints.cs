@@ -39,14 +39,21 @@ namespace Health
         }
 
         private bool _isInvincible = false;
+        private bool _hasBeenDead = false;
 
         public int CurrentHp { get; private set; }
 
         void Start()
         {
             CurrentHp = initHealth;
+            _hasBeenDead = false;
             onInitializeHealthEvent?.RaiseEvent(CurrentHp);
             RaiseInitMaxHpEvent();
+        }
+
+        private void OnEnable()
+        {
+            _hasBeenDead = false;
         }
 
         private void OnDestroy()
@@ -70,6 +77,7 @@ namespace Health
 
         public void ResetHitPoints()
         {
+            _hasBeenDead = false;
             CurrentHp = maxHealth;
             onResetPointsEvent?.RaiseEvent(CurrentHp);
             onInternalResetEvent?.Invoke(CurrentHp);
@@ -87,8 +95,9 @@ namespace Health
             CurrentHp -= damage;
             
             
-            if (IsDead())
+            if (IsDead() && !_hasBeenDead)
             {
+                _hasBeenDead = true;
                 onDeathEvent?.RaiseEvent();
                 onInternalDeathEvent?.Invoke();
             }
