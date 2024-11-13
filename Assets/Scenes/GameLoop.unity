@@ -577,10 +577,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 977276183979043023, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
-      propertyPath: onGameplayResetEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: ab870950ec2b0124da9411e0e9f8faa6, type: 2}
     - target: {fileID: 4645382247631583565, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
       propertyPath: enemy
       value: 
@@ -1674,6 +1670,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1059696745}
+    - target: {fileID: 4611192124218542088, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
+      propertyPath: onEndCinematicStartEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f8d28c603b3630498fa10a1ec4a8949, type: 2}
     - target: {fileID: 6871600551922401870, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
       propertyPath: m_Name
       value: LevelManager

@@ -1,6 +1,7 @@
 using System.Collections;
 using Events;
 using Health;
+using Player.Animation;
 using UnityEngine;
 
 namespace Player
