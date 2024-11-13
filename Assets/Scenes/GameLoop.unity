@@ -646,6 +646,14 @@ PrefabInstance:
       propertyPath: enemy
       value: 
       objectReference: {fileID: 1224237589}
+    - target: {fileID: 4699157676241342615, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
+      propertyPath: onCinematicStarted
+      value: 
+      objectReference: {fileID: 11400000, guid: b711b8f3d88f6614bb9d23a652188ca8, type: 2}
+    - target: {fileID: 4699157676241342615, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
+      propertyPath: onCinematicFinished
+      value: 
+      objectReference: {fileID: 11400000, guid: 83f6a3608cca1b64a9e546fae228e30e, type: 2}
     - target: {fileID: 4780633370198621073, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1779,6 +1787,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1059696745}
+    - target: {fileID: 4611192124218542088, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
+      propertyPath: onPlayerLockEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: b711b8f3d88f6614bb9d23a652188ca8, type: 2}
     - target: {fileID: 4611192124218542088, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
       propertyPath: onEndCinematicStartEvent
       value: 

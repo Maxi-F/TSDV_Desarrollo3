@@ -15,6 +15,7 @@ namespace Scenes
         [Tooltip("Optional scenes to activate with the current scene")] [SerializeField] private string[] optionalScenes = new string[] {};
         [SerializeField] private bool setAsActiveOnBoot = false;
         [SerializeField] private string initMusic;
+        [SerializeField] private float initMusicVolume;
         
         [Header("events")] 
         [SerializeField] private StringEventChannelSo onLoadSceneEvent;
