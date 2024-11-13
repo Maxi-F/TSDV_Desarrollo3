@@ -65,6 +65,7 @@ namespace LevelManagement.Sequences
         {
             if (startLevelConfig.isFirstGameplay)
             {
+                onCinematicPlayerLockStart?.RaiseEvent();
                 onNewRoadsVelocity?.RaiseEvent(roadData.roadVelocity);
                 onCameraMovementEvent?.RaiseEvent(startLevelConfig.startCameraData);
                 startLevelConfig.isFirstGameplay = false;

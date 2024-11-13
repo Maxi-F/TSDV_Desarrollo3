@@ -883,8 +883,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.22621436, y: 0.032242935, z: 0.19726242}
-  m_Center: {x: -0.075050704, y: 0.00076461217, z: 0.0013695363}
+  m_Size: {x: 0.22621436, y: 0.05293989, z: 0.19726242}
+  m_Center: {x: -0.075050704, y: 0.00009241818, z: 0.0013694366}
 --- !u!54 &3264810219008562671
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3235,6 +3235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationConfig: {fileID: 11400000, guid: 68e84a2ede4a0ca429e7d7b7e44e6f4b, type: 2}
+  onWinEvent: {fileID: 11400000, guid: 2f8d28c603b3630498fa10a1ec4a8949, type: 2}
 --- !u!4 &6162128592664561225 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5946353160783561920, guid: 307923de71b833449b055d96f2c19d72, type: 3}

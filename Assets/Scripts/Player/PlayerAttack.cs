@@ -5,6 +5,7 @@ using System.Linq;
 using Events;
 using Input;
 using Managers;
+using Player.Animation;
 using Player.Weapon;
 using Unity.Mathematics;
 using UnityEngine;
