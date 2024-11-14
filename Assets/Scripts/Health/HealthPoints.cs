@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Events;
 using Unity.Mathematics;
 using UnityEngine;
@@ -8,6 +9,9 @@ namespace Health
 {
     public class HealthPoints : MonoBehaviour, ITakeDamage
     {
+        [SerializeField]private float timeScaleDivision = 20;
+        [SerializeField] private float hitFrameTime = 0.1f;
+        [SerializeField] private float timeUntilFrameActivate = 0.1f;
         [SerializeField] private int maxHealth = 100;
         [SerializeField] private int initHealth = 100;
         [SerializeField] private bool canTakeDamage = true;
@@ -93,8 +97,8 @@ namespace Health
             }
 
             CurrentHp -= damage;
-            
-            
+
+            StartCoroutine(StunTime());
             if (IsDead() && !_hasBeenDead)
             {
                 _hasBeenDead = true;
@@ -110,6 +114,15 @@ namespace Health
 
             return true;
         }
+
+        public IEnumerator StunTime()
+        {
+            yield return new WaitForSecondsRealtime(timeUntilFrameActivate);
+            Time.timeScale /= timeScaleDivision;
+            yield return new WaitForSecondsRealtime(hitFrameTime);
+            Time.timeScale = 1;
+        }
+
 
         public bool IsDead()
         {

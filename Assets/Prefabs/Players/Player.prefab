@@ -565,8 +565,8 @@ MonoBehaviour:
   onDashUsedEvent: {fileID: 11400000, guid: 314cc26a951a7f445b33baca6dc46fc9, type: 2}
   onDashMovementEvent: {fileID: 11400000, guid: bbb7d509b23dc6e44a57ecc08ccba7b3, type: 2}
   onDamageAvoidedEvent: {fileID: 11400000, guid: 4f9416a5c19eeda4e9b3e6a791d2b357, type: 2}
-  onCinematicFinished: {fileID: 11400000, guid: 9f9b493eaa207164b9413b5af5fee35b, type: 2}
-  onCinematicStarted: {fileID: 11400000, guid: 49bed95fec698814188e97e4aef4801b, type: 2}
+  onCinematicFinished: {fileID: 11400000, guid: 83f6a3608cca1b64a9e546fae228e30e, type: 2}
+  onCinematicStarted: {fileID: 11400000, guid: b711b8f3d88f6614bb9d23a652188ca8, type: 2}
 --- !u!114 &6481343404815373606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,6 +661,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04cb3bb3ce8700649b43a4c9b6a29908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeScaleDivision: 20
+  hitFrameTime: 0.1
+  timeUntilFrameActivate: 0.1
   maxHealth: 100
   initHealth: 100
   canTakeDamage: 1
@@ -698,6 +701,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Utils.RumbleController, Assembly-CSharp
+        m_MethodName: StartRumble
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: c642b6837413f3242af9467e4efa39e5, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Utils.RumbleControllerData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onInternalDeathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -720,6 +735,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Utils.RumbleController, Assembly-CSharp
+        m_MethodName: StartRumble
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: c642b6837413f3242af9467e4efa39e5, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Utils.RumbleControllerData, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
