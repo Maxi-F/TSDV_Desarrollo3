@@ -9,12 +9,13 @@ namespace Health
 {
     public class HealthPoints : MonoBehaviour, ITakeDamage
     {
-        [SerializeField]private float timeScaleDivision = 20;
+        [SerializeField] private float timeScaleDivision = 20;
         [SerializeField] private float hitFrameTime = 0.1f;
         [SerializeField] private float timeUntilFrameActivate = 0.1f;
         [SerializeField] private int maxHealth = 100;
         [SerializeField] private int initHealth = 100;
         [SerializeField] private bool canTakeDamage = true;
+        [SerializeField] private bool shouldFreeze = false;
 
         [Header("events")]
         [SerializeField] private VoidEventChannelSO onDeathEvent;
@@ -31,7 +32,7 @@ namespace Health
         [SerializeField] private UnityEvent<int> onInternalResetEvent;
         [SerializeField] private UnityEvent<int> onInternalTakeDamageEvent;
         [SerializeField] private UnityEvent<int> onInternalInitializeMaxHealthEvent;
-        
+
         public int MaxHealth
         {
             get { return maxHealth; }
@@ -98,7 +99,9 @@ namespace Health
 
             CurrentHp -= damage;
 
-            StartCoroutine(StunTime());
+            if (shouldFreeze)
+                StartCoroutine(StunTime());
+            
             if (IsDead() && !_hasBeenDead)
             {
                 _hasBeenDead = true;

@@ -668,6 +668,7 @@ MonoBehaviour:
   maxHealth: 100
   initHealth: 100
   canTakeDamage: 1
+  shouldFreeze: 1
   onDeathEvent: {fileID: 11400000, guid: 1609b932e078810448a25604c23359d3, type: 2}
   onTakeDamageEvent: {fileID: 11400000, guid: 703652f7737657e41ba9437afd9a0117, type: 2}
   onSumHealthEvent: {fileID: 11400000, guid: a9a6f490798423f4594ceb6a0672f7f9, type: 2}
