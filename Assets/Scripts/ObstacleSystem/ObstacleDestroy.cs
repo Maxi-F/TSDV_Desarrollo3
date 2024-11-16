@@ -22,6 +22,8 @@ namespace ObstacleSystem
 
         public void DestroyObstacle()
         {
+            if (!gameObject.activeInHierarchy) return;
+
             if(_destroyCoroutine != null)
                 StopCoroutine(_destroyCoroutine);
 

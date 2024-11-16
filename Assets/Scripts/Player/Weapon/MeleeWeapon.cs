@@ -8,12 +8,19 @@ namespace Player.Weapon
 {
     public class MeleeWeapon : MonoBehaviour
     {
+        private const string Name = "Attack";
         [Header("Enemy")]
         [SerializeField] private GameObject enemy;
 
         [SerializeField] private int damage;
+        [SerializeField] private Animator animation;
 
         private List<Collider> _hittedEnemies = new List<Collider>();
+
+        private void OnEnable()
+        {
+            animation.SetTrigger(Name);
+        }
 
         private void OnDisable()
         {
