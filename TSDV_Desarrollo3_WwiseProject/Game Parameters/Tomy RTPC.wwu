@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E67C0F54-52A1-4539-96BE-663B4CCE34BB}" SchemaVersion="119">
+	<GameParameters>
+		<WorkUnit Name="Tomy RTPC" ID="{E67C0F54-52A1-4539-96BE-663B4CCE34BB}" PersistMode="Standalone"/>
+	</GameParameters>
+</WwiseDocument>

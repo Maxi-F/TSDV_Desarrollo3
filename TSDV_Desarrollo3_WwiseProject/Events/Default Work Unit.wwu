@@ -3,7 +3,7 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{8D5748B0-01A1-4537-803B-3895EEF4F562}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="SA_EV_Lv0_MX_Menu_Main" ID="{E2DA7671-8DDF-49FC-8104-4E8F3F2AC9C1}">
+				<Event Name="SA_Lv0_EV_MX_Menu_Main" ID="{E2DA7671-8DDF-49FC-8104-4E8F3F2AC9C1}">
 					<ChildrenList>
 						<Action Name="" ID="{9AB71131-4609-4AB8-88CF-0D4500AF3407}" ShortID="439214638">
 							<ReferenceList>
@@ -14,7 +14,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="SA_EV_Lv1_MX_GamePlay" ID="{C76AE9AB-1EC7-4CAD-8C30-568832956152}">
+				<Event Name="SA_Lv1_EV_MX_GamePlay" ID="{C76AE9AB-1EC7-4CAD-8C30-568832956152}">
 					<ChildrenList>
 						<Action Name="" ID="{EDD895C1-9AD9-42A3-AE07-4B6050515227}" ShortID="344299344">
 							<ReferenceList>
@@ -25,6 +25,50 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="SA_Lv1_EV_UI_Buttons_Main" ID="{AF0FD82E-7075-407B-A992-4451A9AFC2EF}"/>
+				<Event Name="SA_Lv1_EV_Sword_Whoosh" ID="{9E050181-9575-41B4-81F2-4DC4D17ACFBE}"/>
+				<Event Name="SA_Lv1_EV_Player1_Bike_Initial_Dash" ID="{03F6D999-A5D1-40CD-ADD6-A5E31899938A}"/>
+				<Event Name="SA_Lv1_EV_Obj_Destroy_Fence" ID="{5380C743-C4DD-498D-A08C-072D6E537DDC}"/>
+				<Event Name="SA_Lv1_EV_Obj_Destroy_Generic" ID="{1BBB5BF7-C09E-4346-92F7-C064B67A3F21}"/>
+				<Event Name="SA_Lv1_EV_Player1_Bike_Initial_Engine" ID="{A292B1E4-6837-422D-82E0-417F0EA2BEAF}"/>
+				<Event Name="SA_Lv1_EV_Player1_Healing" ID="{0F2386C9-A81C-4905-9230-45F7BADC9E23}"/>
+				<Event Name="SA_Lv1_EV_Player1_Die_Explotion" ID="{3E97C542-E811-42B3-A527-78D09EF3D4EF}"/>
+				<Event Name="SA_Lv1_EV_Minion_Engine" ID="{AE4267BE-4E3A-471E-90A6-72CC55DE27F0}"/>
+				<Event Name="SA_Lv1_EV_Minion_Blade" ID="{B06F20D5-5B42-41A9-A149-328E413C28F4}"/>
+				<Event Name="SA_Lv1_EV_Minion_Attack_Dash" ID="{66AAA07B-330D-4B5D-A625-0A0CE65AC523}"/>
+				<Event Name="SA_Lv1_EV_Minion_LaserPoint" ID="{0A52CFDB-77FC-4A3B-9878-D7BE9315BF43}"/>
+				<Event Name="SA_Lv1_EV_Minion_Damage_Explode" ID="{D390C099-E958-4D6B-97C3-23505193747A}"/>
+				<Event Name="SA_Lv1_EV_Minion_Damage_Impact" ID="{A228EB4E-B4F0-4E88-AA40-F01A1880CB6C}"/>
+				<Event Name="SA_Lv1_EV_Minion_Damage_Weak" ID="{93C824AE-D5AF-4FF3-8CBD-F7805B5D8144}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Bike_Engine" ID="{98977FE4-BDEA-4532-B346-102BDE0D1D20}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Bike_Engine_Weak" ID="{06576E3B-DD7A-4917-A525-058F4832E4A8}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Damage_SwordHit" ID="{60F1F7DC-9313-4EBD-8030-3804D8D6AA84}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Damage_Die_Explotion" ID="{32842BA4-9E41-478A-AF59-E47F8DA111FF}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Bike_Engine_Escape" ID="{9FFBCB14-33EB-46CC-9547-41169B381333}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Movement_Swing" ID="{657E4587-05A1-4734-A4C1-D91B2626AB4B}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Attack_Laser_On" ID="{0FC500CB-287A-471A-9136-A5B5A3EFD3D5}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Shield_On" ID="{DEBB8350-228B-408C-9C4A-F1CAA4F0CAF1}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Shield_Off" ID="{8B6BE4AB-C035-4D6E-979D-79225B8C2B81}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Attack_Laser_Off" ID="{B57CF0A6-F259-4C46-8DB1-62E0B9156138}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Attack_Laser_Hover" ID="{3351C885-BF3D-4089-9286-8A17B5FC25EA}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Attack_Laser_Burn" ID="{F97DD7C4-54A7-454C-8696-1BCDD6CFFA3D}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Attack_Launcher_Plasma" ID="{8A553341-BE7C-42A1-8F4E-10CEE172D5BB}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Attack_Launcher_Explotions" ID="{1612A7E0-D52B-4F68-9B2E-AC999B6F8389}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Attack_Debris" ID="{4C9AD5C8-0C27-45DB-A06F-B9427C46D06B}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Attack_Debris_Break" ID="{965B5360-C6F5-4E09-8123-C884B0F6AE99}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Attack_Bomb_Out" ID="{2530A09D-9089-47B7-9046-7B34DCB3F401}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Attack_Bomb_Player_Hit" ID="{F3490A39-A194-462F-87CD-2A8619E13800}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Attack_Bomb_Boss_Hit" ID="{B4C11D7E-3D9A-4904-AE6D-D9FB77B13640}"/>
+				<Event Name="SA_Lv1_EV_DX_UI_Warning" ID="{8EB8397B-4B62-46D1-B74D-3E55A311B31A}"/>
+				<Event Name="SA_Lv1_EV_DX_Player1_Attack" ID="{F111E325-1259-4C96-81B6-6D3C7492190B}"/>
+				<Event Name="SA_Lv1_EV_DX_Player1_Hurt" ID="{0274D93C-13BB-43B9-AEE8-3E5679536CAC}"/>
+				<Event Name="SA_Lv1_EV_DX_Player1_Die" ID="{BC55EA74-A51A-40D4-B981-BBAE7A5842E2}"/>
+				<Event Name="SA_Lv1_EV_UI_Text_Typing" ID="{C386068A-3C12-4B2D-81EC-C1B84EE3E23F}"/>
+				<Event Name="SA_Lv1_Player1_Damage_Hit" ID="{ACD713BB-D0CF-4DC2-8E16-67E16C9B91D8}"/>
+				<Event Name="SA_Lv1_EV_DX_Bosslv1_Die" ID="{E03DC371-EC24-4C24-9328-3F5E408B7B46}"/>
+				<Event Name="SA_Lv1_EV_DX_Bosslv1_Hurt" ID="{252E8E06-9091-4E99-9EBA-5000218ACBA6}"/>
+				<Event Name="SA_Lv1_EV_AX_City" ID="{A3851E11-219D-4100-B5D3-BCB5CE322C50}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Attack_Bomb_A_Tick" ID="{480A5378-0A24-4EA0-BCFD-8B799686E684}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

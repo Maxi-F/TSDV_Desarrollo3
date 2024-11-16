@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{42788DE9-D6A2-4E6F-8C21-F8D2A514E982}" SchemaVersion="119">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{42788DE9-D6A2-4E6F-8C21-F8D2A514E982}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{42788DE9-D6A2-4E6F-8C21-F8D2A514E982}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="SA_Lv1_ST_AX_City" ID="{7E7A585A-D872-4541-83D9-931CC5E3134B}">
+					<ChildrenList>
+						<State Name="None" ID="{6F49448A-B2E1-49B9-BF83-F04DD367D196}"/>
+						<State Name="Night" ID="{44C2F0A8-4E46-4FB3-8062-C96A1C47CBEE}"/>
+						<State Name="Rain" ID="{3BE00568-7F13-464B-92D8-C0FB84132EB5}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>
