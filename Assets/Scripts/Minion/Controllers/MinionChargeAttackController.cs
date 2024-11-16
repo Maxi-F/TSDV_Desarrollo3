@@ -51,6 +51,7 @@ namespace Minion.Controllers
             float barProgress = minionConfig.chargeAttackData.chargeCurve.Evaluate(timer / minionConfig.chargeAttackData.duration);
             Vector3 aimPosition = Vector3.Lerp(transform.position, transform.position + _dir.normalized * minionConfig.chargeAttackData.length, barProgress);
             _aimLine.SetPosition(1, aimPosition);
+            LookAtTarget();
         }
 
         private IEnumerator AttackCoroutine()
