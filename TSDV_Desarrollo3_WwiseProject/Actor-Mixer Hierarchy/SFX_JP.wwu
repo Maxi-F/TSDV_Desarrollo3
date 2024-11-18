@@ -1,6 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}" SchemaVersion="119">
 	<AudioObjects>
-		<WorkUnit Name="SFX_JP" ID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}" PersistMode="Standalone"/>
+		<WorkUnit Name="SFX_JP" ID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}" PersistMode="Standalone">
+			<ChildrenList>
+				<BlendContainer Name="UI" ID="{85375028-D27E-4573-AE92-51969D662A50}" ShortID="615991362">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="UI_Main" ID="{062A2628-3654-4E70-98B7-28E5E427177F}" ShortID="281165564">
+							<PropertyList>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{DC1DF11D-6AE0-49C1-A44E-4BEA649CA064}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="632"/>
+													<Property Name="Min" Type="Real64" Value="-631"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Spray" ID="{E0AC6EA5-CE98-4047-AB82-6CB55AA5EF92}" ShortID="189279171">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6AE6CC1A-057C-4853-81B9-B93BCDB1BDE8}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="632"/>
+															<Property Name="Min" Type="Real64" Value="-632"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Spray" ID="{21DE5D03-2DE7-4EC3-B2AE-5CAC490F42A8}" ShortID="525885686">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Spray" ID="{888A5AE1-87C0-4AAF-8B33-A422B98D043A}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\UI\Spray.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="95426226"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Spray" ID="{888A5AE1-87C0-4AAF-8B33-A422B98D043A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Switch" ID="{6F83D765-EA4C-472D-86CB-A388D17A77CE}" ShortID="770152399">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{A6652AC2-5275-4F0C-8844-6AE32C6E1B11}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="631"/>
+															<Property Name="Min" Type="Real64" Value="-632"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Switch" ID="{BE3F2726-A004-45FD-B874-29D36354BDF6}" ShortID="33506263">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Switch" ID="{601FEAFA-EBFD-4CE7-85FF-7A908A717C96}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\UI\Switch.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="282359985"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Switch" ID="{601FEAFA-EBFD-4CE7-85FF-7A908A717C96}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Tone" ID="{294E2DA0-7012-4CF8-92DE-05C42F11F625}" ShortID="282069129">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{61F2985D-2D8F-47F7-BBE2-BA0E6CD77910}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Tone" ID="{51B2679F-810B-4BB7-B268-DEBC336B8D00}" ShortID="11479808">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tone" ID="{58D246DB-8E25-4A86-B6B2-9433627AD45F}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\UI\Tone.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="677247885"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tone" ID="{58D246DB-8E25-4A86-B6B2-9433627AD45F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{6CF4C0A5-BBFA-4CE4-9157-879606B4FC89}" ShortID="303575856">
+												<ReferenceList>
+													<Reference Name="Effect">
+														<Custom CreatedFrom="{180A35FE-BF4E-4BCD-8D7F-872B580E55EC}">
+															<Effect Name="Phone_Booth (Custom)" ID="{FA1F44E8-5ADD-4F5E-AD73-69887BCFB602}" ShortID="163727979" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+																<PropertyList>
+																	<Property Name="DecayTime" Type="Real32" Value="0.3"/>
+																	<Property Name="Density" Type="Real32" Value="32"/>
+																	<Property Name="DryLevel" Type="Real32" Value="-3"/>
+																	<Property Name="ERLevel" Type="Real32" Value="-10"/>
+																	<Property Name="ERPattern" Type="int32" Value="27"/>
+																	<Property Name="Filter1Freq" Type="Real32" Value="590"/>
+																	<Property Name="Filter1Gain" Type="Real32" Value="-5"/>
+																	<Property Name="Filter1InsertPos" Type="int32" Value="2"/>
+																	<Property Name="Filter2Freq" Type="Real32" Value="6450"/>
+																	<Property Name="Filter2Gain" Type="Real32" Value="8.5"/>
+																	<Property Name="Filter3Freq" Type="Real32" Value="8440"/>
+																	<Property Name="HFDamping" Type="Real32" Value="3.4"/>
+																	<Property Name="PreDelay" Type="Real32" Value="8"/>
+																	<Property Name="Quality" Type="int32" Value="6"/>
+																	<Property Name="ReverbLevel" Type="Real32" Value="-26"/>
+																	<Property Name="RoomShape" Type="Real32" Value="28"/>
+																	<Property Name="RoomSize" Type="Real32" Value="-13"/>
+																	<Property Name="StereoWidth" Type="Real32" Value="28"/>
+																</PropertyList>
+															</Effect>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</BlendContainer>
+					</ChildrenList>
+				</BlendContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

@@ -25,7 +25,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="SA_Lv1_EV_UI_Buttons_Main" ID="{AF0FD82E-7075-407B-A992-4451A9AFC2EF}"/>
+				<Event Name="SA_Lv1_EV_UI_Buttons_Main" ID="{AF0FD82E-7075-407B-A992-4451A9AFC2EF}">
+					<ChildrenList>
+						<Action Name="" ID="{C0ED8C10-E7E1-490F-A43F-1E23363CBBD3}" ShortID="577232135">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Main" ID="{062A2628-3654-4E70-98B7-28E5E427177F}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="SA_Lv1_EV_Sword_Whoosh" ID="{9E050181-9575-41B4-81F2-4DC4D17ACFBE}"/>
 				<Event Name="SA_Lv1_EV_Player1_Bike_Initial_Dash" ID="{03F6D999-A5D1-40CD-ADD6-A5E31899938A}"/>
 				<Event Name="SA_Lv1_EV_Obj_Destroy_Fence" ID="{5380C743-C4DD-498D-A08C-072D6E537DDC}"/>
