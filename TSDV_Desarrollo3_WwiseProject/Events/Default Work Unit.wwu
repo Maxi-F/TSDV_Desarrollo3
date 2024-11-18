@@ -79,7 +79,27 @@
 				<Event Name="SA_Lv1_EV_DX_Bosslv1_Hurt" ID="{252E8E06-9091-4E99-9EBA-5000218ACBA6}"/>
 				<Event Name="SA_Lv1_EV_AX_City" ID="{A3851E11-219D-4100-B5D3-BCB5CE322C50}"/>
 				<Event Name="SA_Lv1_EV_BossLv1_Attack_Bomb_A_Tick" ID="{480A5378-0A24-4EA0-BCFD-8B799686E684}"/>
-				<Event Name="SA_Lv1_EV_DX_CX_Intro" ID="{FEBC5567-73BD-46D8-A48A-508751E791B7}"/>
+				<Event Name="SA_Lv1_EV_DX_CX_Intro" ID="{FEBC5567-73BD-46D8-A48A-508751E791B7}">
+					<ChildrenList>
+						<Action Name="" ID="{2F60055C-8365-4AA1-882D-73C5E38CF3C1}" ShortID="237945654">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="A_SFX_CX_Narration_Intro" ID="{4D3DACE5-D3E2-4A4C-84BC-F4599C9D00B4}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{54C7FA5E-9857-4781-A2BA-D745ED1A89C9}" ShortID="479660029">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dx_Cx_Intro" ID="{F61CD296-2B49-4B38-93D0-815CFC011CEF}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

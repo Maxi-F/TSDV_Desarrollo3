@@ -497,6 +497,409 @@
 						</BlendContainer>
 					</ChildrenList>
 				</BlendContainer>
+				<ActorMixer Name="Dx_Cx_Intro" ID="{F61CD296-2B49-4B38-93D0-815CFC011CEF}" ShortID="494322670">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="A_SFX_CX_Narration_Intro" ID="{4D3DACE5-D3E2-4A4C-84BC-F4599C9D00B4}" ShortID="231886734">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="A_SFX_CX_Narration_Intro" ID="{1206D0B8-27A5-4127-870B-FECC0E2F5305}">
+									<Language>SFX</Language>
+									<AudioFile>SFX_JP\DX\A_SFX_CX_Narration_Intro.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="740595115"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="A_SFX_CX_Narration_Intro" ID="{1206D0B8-27A5-4127-870B-FECC0E2F5305}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="Weapons" ID="{C286ADFB-1CE8-4A8B-80A5-1DBFB6F02B3C}" ShortID="356557532">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="Bat Neon" ID="{5B8D40A3-C7E5-4205-8CAF-7CA0452AD1D3}" ShortID="45653976">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Swoosh" ID="{5FBA3E9B-4692-4573-9749-A25D32C0D945}" ShortID="45831868">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{05C204C2-74B1-437C-BF01-C6915D5B0839}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="600"/>
+															<Property Name="Min" Type="Real64" Value="-600"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Player1_Bat_Whoosh01" ID="{5AF6AB55-6E6E-437B-90CC-909E6DB92136}" ShortID="387990588">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player1_Bat_Whoosh01" ID="{1798C428-F26A-4E28-AE90-249D915A4F70}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\SFX\Weapons\Bat\Player1_Bat_Whoosh01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="881845188"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player1_Bat_Whoosh01" ID="{1798C428-F26A-4E28-AE90-249D915A4F70}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player1_Bat_Whoosh02" ID="{EF30DD52-8C62-477A-9687-9720E4D0FFA5}" ShortID="223159361">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player1_Bat_Whoosh02" ID="{A7BE99EE-FE1A-445A-BF3A-0E1B9AB91699}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\SFX\Weapons\Bat\Player1_Bat_Whoosh02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="865186219"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player1_Bat_Whoosh02" ID="{A7BE99EE-FE1A-445A-BF3A-0E1B9AB91699}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player1_Bat_Whoosh03" ID="{66608288-EC6D-445F-9F64-B57A229008AC}" ShortID="972773834">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player1_Bat_Whoosh03" ID="{E7037AD0-88E8-4489-97A3-E9A8F39C803B}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\SFX\Weapons\Bat\Player1_Bat_Whoosh03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="941534455"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player1_Bat_Whoosh03" ID="{E7037AD0-88E8-4489-97A3-E9A8F39C803B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player1_Bat_Whoosh04" ID="{130E6BF4-26B2-4386-8E23-904A8227E710}" ShortID="487272994">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player1_Bat_Whoosh04" ID="{B9E1FDAF-BFEC-4911-AD50-57B47390F19A}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\SFX\Weapons\Bat\Player1_Bat_Whoosh04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="842688716"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player1_Bat_Whoosh04" ID="{B9E1FDAF-BFEC-4911-AD50-57B47390F19A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Crush" ID="{C6BB29AA-2867-402B-8DB3-F511B035B3AD}" ShortID="870285844">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{93FD9755-04DD-4BCB-B73A-2EF41618402D}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Player1_Bat_Crush01" ID="{468B1FCC-7E31-4042-9671-30D064384DE8}" ShortID="18431565">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player1_Bat_Crush01" ID="{C35B4FE9-8A19-4DD7-A4B0-6E2D634C2D6A}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\SFX\Weapons\Bat\Player1_Bat_Crush01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="632048658"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player1_Bat_Crush01" ID="{C35B4FE9-8A19-4DD7-A4B0-6E2D634C2D6A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player1_Bat_Crush02" ID="{41F6267D-31A8-447B-8D98-D293C0AF54EE}" ShortID="241141172">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player1_Bat_Crush02" ID="{EC72A750-CED1-42BB-8360-2236E0808C26}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\SFX\Weapons\Bat\Player1_Bat_Crush02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="838675821"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player1_Bat_Crush02" ID="{EC72A750-CED1-42BB-8360-2236E0808C26}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player1_Bat_Crush03" ID="{C6B5EE97-1800-4485-94CF-5456B100324C}" ShortID="997992956">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player1_Bat_Crush03" ID="{0AC14F4B-26A5-43DE-B785-C5E88ACE7D67}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\SFX\Weapons\Bat\Player1_Bat_Crush03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="224817229"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player1_Bat_Crush03" ID="{0AC14F4B-26A5-43DE-B785-C5E88ACE7D67}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player1_Bat_Crush04" ID="{5C211279-0705-4757-9624-0C5843B8A9BC}" ShortID="265629545">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player1_Bat_Crush04" ID="{1970D197-4104-4184-ACC2-731E86BE6FFE}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\SFX\Weapons\Bat\Player1_Bat_Crush04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="102299655"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player1_Bat_Crush04" ID="{1970D197-4104-4184-ACC2-731E86BE6FFE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Neon" ID="{F71D402B-7E2A-4D40-8605-8688C1FF87AF}" ShortID="297269805">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{688658BF-A19C-4141-92F7-11E6E1C1E075}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Player1_Bat_Neon01" ID="{B4BE1657-430F-4B9F-BCD1-59179508E5BA}" ShortID="237895931">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player1_Bat_Neon01" ID="{76CE1B43-6300-437D-B13E-2C7CB0BCA9DB}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\SFX\Weapons\Bat\Player1_Bat_Neon01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="829349053"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player1_Bat_Neon01" ID="{76CE1B43-6300-437D-B13E-2C7CB0BCA9DB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player1_Bat_Neon02" ID="{4C06179E-3769-4A94-AC08-C98A18B6F324}" ShortID="1049361887">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player1_Bat_Neon02" ID="{3B9057D4-4691-4CA5-A1BB-AE5AEA2387A7}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\SFX\Weapons\Bat\Player1_Bat_Neon02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1011025348"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player1_Bat_Neon02" ID="{3B9057D4-4691-4CA5-A1BB-AE5AEA2387A7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player1_Bat_Neon03" ID="{7D7F9E19-1732-43F7-B57F-86E961966611}" ShortID="682009215">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player1_Bat_Neon03" ID="{3B2CA4B5-027B-4913-80E1-845DA504DA9D}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\SFX\Weapons\Bat\Player1_Bat_Neon03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="537952344"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player1_Bat_Neon03" ID="{3B2CA4B5-027B-4913-80E1-845DA504DA9D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player1_Bat_Neon04" ID="{84379C8F-D5E0-4B18-A326-2AA889EFDBE5}" ShortID="294099052">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player1_Bat_Neon04" ID="{E58D7066-7AC4-4117-A30D-9A22A64E1736}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\SFX\Weapons\Bat\Player1_Bat_Neon04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="662026586"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player1_Bat_Neon04" ID="{E58D7066-7AC4-4117-A30D-9A22A64E1736}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
