@@ -79,6 +79,7 @@
 				<Event Name="SA_Lv1_EV_DX_Bosslv1_Hurt" ID="{252E8E06-9091-4E99-9EBA-5000218ACBA6}"/>
 				<Event Name="SA_Lv1_EV_AX_City" ID="{A3851E11-219D-4100-B5D3-BCB5CE322C50}"/>
 				<Event Name="SA_Lv1_EV_BossLv1_Attack_Bomb_A_Tick" ID="{480A5378-0A24-4EA0-BCFD-8B799686E684}"/>
+				<Event Name="SA_Lv1_EV_DX_CX_Intro" ID="{FEBC5567-73BD-46D8-A48A-508751E791B7}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
