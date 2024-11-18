@@ -608,7 +608,6 @@ MonoBehaviour:
   movementController: {fileID: 4860931461339575274}
   shieldActive: 0
   damageParticles: {fileID: 5513419528269011322}
-  timeToReactivateShield: 4
   timeToStartReactivatingShield: 2
   healthCanvas: {fileID: 7582351639916528503}
   onEnemyShouldDieEvent: {fileID: 11400000, guid: 327ac645fb6013d48b235af4479a3c05, type: 2}
@@ -724,6 +723,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 673461572015972428}
     m_Modifications:
+    - target: {fileID: 676752699411342913, guid: d43615b12d6a40d4faec0d162fbb550c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1168559037796139576, guid: d43615b12d6a40d4faec0d162fbb550c, type: 3}
       propertyPath: m_Name
       value: Shield
@@ -736,6 +739,26 @@ PrefabInstance:
       propertyPath: _healthPoints
       value: 
       objectReference: {fileID: 3269783526113023923}
+    - target: {fileID: 4991249550616943721, guid: d43615b12d6a40d4faec0d162fbb550c, type: 3}
+      propertyPath: blinkSequenceDuration
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991249550616943721, guid: d43615b12d6a40d4faec0d162fbb550c, type: 3}
+      propertyPath: blinkCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991249550616943721, guid: d43615b12d6a40d4faec0d162fbb550c, type: 3}
+      propertyPath: blinkCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991249550616943721, guid: d43615b12d6a40d4faec0d162fbb550c, type: 3}
+      propertyPath: blinkCurve.m_Curve.Array.data[0].value
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991249550616943721, guid: d43615b12d6a40d4faec0d162fbb550c, type: 3}
+      propertyPath: blinkCurve.m_Curve.Array.data[1].value
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 7759332051241287578, guid: d43615b12d6a40d4faec0d162fbb550c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.2802813
@@ -788,6 +811,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8953151706161569965, guid: d43615b12d6a40d4faec0d162fbb550c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 673557615c277e54692b034e0a1e4fb6, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
