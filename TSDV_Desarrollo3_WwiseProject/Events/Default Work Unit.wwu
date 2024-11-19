@@ -130,6 +130,58 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_A_Mx_Todo_95_Bpm_V1A" ID="{DFA90515-08A0-4BE9-BE31-37D6CC82D898}">
+					<ChildrenList>
+						<Action Name="" ID="{BF3348AC-3673-423E-87FB-5731011C6EE4}" ShortID="366766201">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Credits" ID="{A599708C-4733-4611-B2FB-3E69E1F82331}" WorkUnitID="{EBE969E9-6BC0-45F9-9276-B9A5674CF30C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{34E50666-4AE5-4019-B9A0-8D6147658361}" ShortID="827367004">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="A_Mx_Todo_95_Bpm_V1A" ID="{1C7AB2C0-D97D-4CA7-A667-1E9701CBA287}" WorkUnitID="{43BAF8DC-FD8A-46C4-AFDF-D0E6F40B9270}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Pause_A_Mx_Todo_95_Bpm_V1A" ID="{42707287-7446-40A5-9E7E-8FEF36D09E09}">
+					<ChildrenList>
+						<Action Name="" ID="{4ADA2BCC-2DCF-4254-BAE6-E43EE6E1892D}" ShortID="533569206">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="26"/>
+								<Property Name="Lowpass" Type="int16" Value="60"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="A_Mx_Todo_95_Bpm_V1A" ID="{1C7AB2C0-D97D-4CA7-A667-1E9701CBA287}" WorkUnitID="{43BAF8DC-FD8A-46C4-AFDF-D0E6F40B9270}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UnPause_A_Mx_Todo_95_Bpm_V1A" ID="{F55F5C19-BE67-4E03-9AB1-DF5C6313B178}">
+					<ChildrenList>
+						<Action Name="" ID="{D236336E-D4D5-42A0-A8FF-F408864AA33C}" ShortID="852791721">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="27"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="A_Mx_Todo_95_Bpm_V1A" ID="{1C7AB2C0-D97D-4CA7-A667-1E9701CBA287}" WorkUnitID="{43BAF8DC-FD8A-46C4-AFDF-D0E6F40B9270}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
