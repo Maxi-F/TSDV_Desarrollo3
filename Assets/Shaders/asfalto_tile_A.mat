@@ -111,7 +111,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Opacity: 0.19
+    - _Opacity: 0.052
     - _Opacity_1: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -127,7 +127,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.11650052, g: 0.21100618, b: 0.3207547, a: 1}
+    - _BaseColor: {r: 0.145905, g: 0.24241035, b: 0.355, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightOffset: {r: -0.12, g: 0.02, b: 0, a: 0}
