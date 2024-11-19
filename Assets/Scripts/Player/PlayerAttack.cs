@@ -5,9 +5,11 @@ using System.Linq;
 using Events;
 using Input;
 using Managers;
+using Player.Animation;
 using Player.Weapon;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Player
 {
@@ -22,13 +24,22 @@ namespace Player
         [SerializeField] private PauseSO pauseData;
         [SerializeField] private InputHandlerSO inputHandler;
 
+        [Header("Attack Animation time percentages")] 
+        [SerializeField] private float attackOnPercentage = 0.16f;
+
+        [SerializeField] private float attackOffPercentage = 0.47f;
+        
         [Header("Animation Handler")]
         [SerializeField] private PlayerAnimationHandler animationHandler;
 
         [Header("Events")] 
         [SerializeField] private VoidEventChannelSO onPlayerDeath;
         [SerializeField] private VoidEventChannelSO onTransitionToMovementEnded;
-
+        [SerializeField] private VoidEventChannelSO onGameplayResetEvent;
+        
+        [Header("Internal Events")] 
+        [SerializeField] private UnityEvent onPlayerAttack;
+        
         [Header("Initial Sequence Events")]
         [SerializeField] private VoidEventChannelSO onCinematicStarted;
         [SerializeField] private VoidEventChannelSO onCinematicFinished;
@@ -52,12 +63,14 @@ namespace Player
             _attackInputActions = new List<AttackInputAction>();
             _hasTransitionToMovementEnded = true;
             _canAttack = true;
+            meleeWeapon.SetIsInteractive(false);
             inputHandler.onPlayerAttack.AddListener(HandleAttack);
 
             onCinematicStarted.onEvent.AddListener(DisableAttack);
             onCinematicFinished.onEvent.AddListener(EnableAttack);
             onTransitionToMovementEnded.onEvent.AddListener(HandleTransitionToMovementEnded);
-            onPlayerDeath.onEvent.AddListener(EnableAttack);
+            onPlayerDeath.onEvent.AddListener(DisableAttack);
+            onGameplayResetEvent.onEvent.AddListener(EnableAttack);
         }
 
         private void OnDisable()
@@ -67,8 +80,10 @@ namespace Player
             onTransitionToMovementEnded.onEvent.RemoveListener(HandleTransitionToMovementEnded);
             onCinematicStarted.onEvent.RemoveListener(DisableAttack);
             onCinematicFinished.onEvent.RemoveListener(EnableAttack);
-            onPlayerDeath.onEvent.RemoveListener(EnableAttack);
+            onPlayerDeath.onEvent.RemoveListener(DisableAttack);
+            onGameplayResetEvent.onEvent.RemoveListener(EnableAttack);
         }
+         
         private void HandleTransitionToMovementEnded()
         {
             _hasTransitionToMovementEnded = true;
@@ -132,22 +147,29 @@ namespace Player
         
         private IEnumerator AttackCoroutine()
         {
-            meleeWeapon.enabled = true;
             float startTime = Time.time;
             animationHandler.StartAttackAnimation();
             _hasTransitionToMovementEnded = false;
 
             bool isExiting = false;
             bool isEndingAttack = false;
+            bool hasAttackBeenEnabled = false;
             float timer = 0;
             while (!isExiting)
             {
                 timer = Time.time - startTime;
                 float percentage = timer / attackDuration;
                 animationHandler.SetAttackProgress(attackCurve.Evaluate(percentage));
+
+                if (!hasAttackBeenEnabled && timer / attackDuration > attackOnPercentage)
+                {
+                    meleeWeapon.SetIsInteractive(true);
+                    onPlayerAttack?.Invoke();
+                    hasAttackBeenEnabled = true;
+                }
                 
-                if (meleeWeapon.enabled && timer / attackDuration > 0.5f)
-                    meleeWeapon.enabled = false;
+                if (hasAttackBeenEnabled && timer / attackDuration > attackOffPercentage)
+                    meleeWeapon.SetIsInteractive(false);
                 
                 if(percentage > attackExitPercentage && !HasBufferedAttack())
                 {
@@ -158,8 +180,8 @@ namespace Player
                 if (!isEndingAttack && percentage > doubleAttackExitPercentage && HasBufferedAttack())
                 {
                     ClearAttackBuffer();
+                    hasAttackBeenEnabled = false;
                     animationHandler.RestartAttackAnimation();
-                    meleeWeapon.enabled = true;
                     startTime = Time.time;
                 }
                 
@@ -171,7 +193,6 @@ namespace Player
                 yield return null;
             }
             
-            meleeWeapon.enabled = false;
             yield return new WaitUntil(() => _hasTransitionToMovementEnded);
             _canAttack = true;
         }

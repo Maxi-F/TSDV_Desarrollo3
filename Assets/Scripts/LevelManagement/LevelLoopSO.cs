@@ -9,6 +9,7 @@ namespace LevelManagement
     {
         public float obstaclesDuration;
         public float obstacleCooldown;
+        public float timeToWarn = 4.0f;
         public float minDistance;
     }
 

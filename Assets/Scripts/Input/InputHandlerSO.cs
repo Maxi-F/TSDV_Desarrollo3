@@ -13,6 +13,12 @@ namespace Input
         public UnityEvent onPlayerDashStarted;
         public UnityEvent onPlayerDashFinished;
         public UnityEvent onSkipSequence;
+        public UnityEvent onNavigation;
+
+        public void HandleNavigation(InputAction.CallbackContext context)
+        {
+            onNavigation?.Invoke();
+        }
         
         public void HandleMovement(InputAction.CallbackContext context)
         {
