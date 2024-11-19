@@ -21,17 +21,27 @@ MonoBehaviour:
     - Maximiliano Feldman
     - Nicolas Laure
     imagePrefab: {fileID: 0}
+  - title: ' '
+    members: []
+    imagePrefab: {fileID: 0}
   - title: Art
     members:
     - Nicolas Holzinger
     - Fabrizzio Morandi
     - Sasha Szychowski
     imagePrefab: {fileID: 0}
+  - title: ' '
+    members: []
+    imagePrefab: {fileID: 0}
   - title: Audio
     members:
+    - Alvaro Pedro Cornaggia
     - Juan Montoya (ZIA)
     - Jesus Rangel
     - Tomas Vial
+    imagePrefab: {fileID: 0}
+  - title: ' '
+    members: []
     imagePrefab: {fileID: 0}
   - title: QA
     members:
@@ -41,12 +51,18 @@ MonoBehaviour:
     - Valentina Lanus
     - Federico Javier Loriente Pinto
     imagePrefab: {fileID: 0}
+  - title: ' '
+    members: []
+    imagePrefab: {fileID: 0}
   - title: Other assets used
     members:
     - VFXs - Cartoon FX Remaster Free - Jean Moreno
     - Font - Gemunu Libre - Mooniak
     - 'Font - The Battle Continues - Chris Hansen '
     - Font - HVD Peace Font - HVD Fonts
+    imagePrefab: {fileID: 0}
+  - title: ' '
+    members: []
     imagePrefab: {fileID: 0}
   - title: This game
     members: []
@@ -68,6 +84,9 @@ MonoBehaviour:
     - Eugenio Taboada
     - Nazareno Rivero
     - Lucia Patetta
+    imagePrefab: {fileID: 0}
+  - title: ' '
+    members: []
     imagePrefab: {fileID: 0}
   - title: Teaching Assistants
     members:
