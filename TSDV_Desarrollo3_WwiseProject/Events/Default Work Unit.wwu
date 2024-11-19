@@ -80,8 +80,28 @@
 				<Event Name="SA_Lv1_EV_BossLv1_Attack_Bomb_Player_Hit" ID="{F3490A39-A194-462F-87CD-2A8619E13800}"/>
 				<Event Name="SA_Lv1_EV_BossLv1_Attack_Bomb_Boss_Hit" ID="{B4C11D7E-3D9A-4904-AE6D-D9FB77B13640}"/>
 				<Event Name="SA_Lv1_EV_DX_UI_Warning" ID="{8EB8397B-4B62-46D1-B74D-3E55A311B31A}"/>
-				<Event Name="SA_Lv1_EV_DX_Player1_Attack" ID="{F111E325-1259-4C96-81B6-6D3C7492190B}"/>
-				<Event Name="SA_Lv1_EV_DX_Player1_Hurt" ID="{0274D93C-13BB-43B9-AEE8-3E5679536CAC}"/>
+				<Event Name="SA_Lv1_EV_DX_Player1_Attack" ID="{F111E325-1259-4C96-81B6-6D3C7492190B}">
+					<ChildrenList>
+						<Action Name="" ID="{AB4769C6-EEB2-4212-9FDD-78B40D9B3289}" ShortID="178119409">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DX Attack Bat" ID="{166E5A91-E310-4338-AC67-4E87F78A133A}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SA_Lv1_EV_DX_Player1_Hurt" ID="{0274D93C-13BB-43B9-AEE8-3E5679536CAC}">
+					<ChildrenList>
+						<Action Name="" ID="{CD02AC28-80C8-4A79-88B0-9989B7D3E060}" ShortID="759112831">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DX Hurt Objects" ID="{65B5E1FA-43DF-4B00-80D5-BD720ACAC88E}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="SA_Lv1_EV_DX_Player1_Die" ID="{BC55EA74-A51A-40D4-B981-BBAE7A5842E2}"/>
 				<Event Name="SA_Lv1_EV_UI_Text_Typing" ID="{C386068A-3C12-4B2D-81EC-C1B84EE3E23F}"/>
 				<Event Name="SA_Lv1_Player1_Damage_Hit" ID="{ACD713BB-D0CF-4DC2-8E16-67E16C9B91D8}"/>

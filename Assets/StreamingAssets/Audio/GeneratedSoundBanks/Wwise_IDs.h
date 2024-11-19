@@ -15,6 +15,8 @@ namespace AK
     {
         static const AkUniqueID SA_LV0_EV_MX_MENU_MAIN = 3137054506U;
         static const AkUniqueID SA_LV1_EV_DX_CX_INTRO = 401201879U;
+        static const AkUniqueID SA_LV1_EV_DX_PLAYER1_ATTACK = 3455697998U;
+        static const AkUniqueID SA_LV1_EV_DX_PLAYER1_HURT = 926986689U;
         static const AkUniqueID SA_LV1_EV_MX_GAMEPLAY = 3937289600U;
         static const AkUniqueID SA_LV1_EV_PLAYER1_BIKE_INITIAL_DASH = 29769706U;
         static const AkUniqueID SA_LV1_EV_UI_BUTTONS_MAIN = 3778692734U;
