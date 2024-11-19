@@ -28,6 +28,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -495,6 +500,62 @@
 								</ObjectList>
 							</ObjectLists>
 						</BlendContainer>
+						<BlendContainer Name="Alert" ID="{25F69C16-C99B-488B-B10D-4A2ED076EE13}" ShortID="905970048">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="DX_Alert_Warning" ID="{9AB3445E-86A9-479D-8D8B-D4715733E645}" ShortID="763171831">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DX_Alert_Warning" ID="{DAAEA338-B7CC-4A8C-8A29-43B3FD715B99}">
+											<Language>SFX</Language>
+											<AudioFile>SFX_JP\DX\Computer\DX_Alert_Warning.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="164828003"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DX_Alert_Warning" ID="{DAAEA338-B7CC-4A8C-8A29-43B3FD715B99}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SFX_UI_Alert" ID="{6DC7FFEA-4DAA-4915-9ADA-C3B8B66D7A34}" ShortID="362100726">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_UI_Alert" ID="{4A033230-38DB-4FB5-8FE9-2D3BF78E9E33}">
+											<Language>SFX</Language>
+											<AudioFile>SFX_JP\DX\Computer\SFX_UI_Alert.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="630207491"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SFX_UI_Alert" ID="{4A033230-38DB-4FB5-8FE9-2D3BF78E9E33}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
 					</ChildrenList>
 				</BlendContainer>
 				<ActorMixer Name="Dx_Cx_Intro" ID="{F61CD296-2B49-4B38-93D0-815CFC011CEF}" ShortID="494322670">
@@ -508,6 +569,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="A_SFX_CX_Narration_Intro" ID="{4D3DACE5-D3E2-4A4C-84BC-F4599C9D00B4}" ShortID="231886734">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1488,6 +1556,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1498,7 +1571,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Player1_Dx_Attack_Bat01" ID="{122F7300-3C96-4B57-A0F2-3261DB61D975}" ShortID="791295600">
+								<Sound Name="DX_Player1_Attack_Bat_01" ID="{B5769702-C2D5-4734-BE27-E6D4B329E05D}" ShortID="212853190">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1508,19 +1581,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Attack_Bat01" ID="{9F793D20-E07E-40CB-BF38-BD0ECA8F15BD}">
+										<AudioFileSource Name="DX_Player1_Attack_Bat_01" ID="{E32A669D-93C5-4CF5-B709-36D97A5EE782}">
 											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Attack_Bat01.wav</AudioFile>
+											<AudioFile>SFX_JP\DX\Player 1\Attack Bat\DX_Player1_Attack_Bat_01.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="1016386652"/>
+												<MediaID ID="158729369"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Attack_Bat01" ID="{9F793D20-E07E-40CB-BF38-BD0ECA8F15BD}" Platform="Linked"/>
+										<ActiveSource Name="DX_Player1_Attack_Bat_01" ID="{E32A669D-93C5-4CF5-B709-36D97A5EE782}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Player1_Dx_Attack_Bat02" ID="{A086AE39-D125-4916-B93A-0C6C93B30012}" ShortID="521551577">
+								<Sound Name="DX_Player1_Attack_Bat_02" ID="{316BF6CC-5AEF-4786-9A12-2543E5D6A0F7}" ShortID="474585687">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1530,19 +1603,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Attack_Bat02" ID="{057A9DCF-A4DF-4567-B978-5B2B620F7F7B}">
+										<AudioFileSource Name="DX_Player1_Attack_Bat_02" ID="{C8A4AB03-21FA-4514-AADE-0E2992739B75}">
 											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Attack_Bat02.wav</AudioFile>
+											<AudioFile>SFX_JP\DX\Player 1\Attack Bat\DX_Player1_Attack_Bat_02.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="59735683"/>
+												<MediaID ID="627131599"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Attack_Bat02" ID="{057A9DCF-A4DF-4567-B978-5B2B620F7F7B}" Platform="Linked"/>
+										<ActiveSource Name="DX_Player1_Attack_Bat_02" ID="{C8A4AB03-21FA-4514-AADE-0E2992739B75}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Player1_Dx_Attack_Bat03" ID="{ED855F05-F0E4-41FF-BAF7-BE9A113CCE60}" ShortID="765685899">
+								<Sound Name="DX_Player1_Attack_Bat_03" ID="{07FE7107-402F-4D35-9402-72932583D153}" ShortID="840528792">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1552,19 +1625,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Attack_Bat03" ID="{431F6297-E283-4B29-9DCE-3606C860760B}">
+										<AudioFileSource Name="DX_Player1_Attack_Bat_03" ID="{0CBEF907-A92E-4952-BA8E-B3CC02EA3213}">
 											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Attack_Bat03.wav</AudioFile>
+											<AudioFile>SFX_JP\DX\Player 1\Attack Bat\DX_Player1_Attack_Bat_03.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="809266844"/>
+												<MediaID ID="774954748"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Attack_Bat03" ID="{431F6297-E283-4B29-9DCE-3606C860760B}" Platform="Linked"/>
+										<ActiveSource Name="DX_Player1_Attack_Bat_03" ID="{0CBEF907-A92E-4952-BA8E-B3CC02EA3213}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Player1_Dx_Attack_Bat04" ID="{DCF5F76A-E760-434C-9748-DAF03FC6871F}" ShortID="659051651">
+								<Sound Name="DX_Player1_Attack_Bat_04" ID="{7E750B63-8E62-4BD1-B4BD-EB52788F426E}" ShortID="230935036">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1574,19 +1647,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Attack_Bat04" ID="{C5801816-5073-45C9-810A-9218FA5B4CE3}">
+										<AudioFileSource Name="DX_Player1_Attack_Bat_04" ID="{940686CA-9736-46E5-86CA-887024380372}">
 											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Attack_Bat04.wav</AudioFile>
+											<AudioFile>SFX_JP\DX\Player 1\Attack Bat\DX_Player1_Attack_Bat_04.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="180860140"/>
+												<MediaID ID="583244248"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Attack_Bat04" ID="{C5801816-5073-45C9-810A-9218FA5B4CE3}" Platform="Linked"/>
+										<ActiveSource Name="DX_Player1_Attack_Bat_04" ID="{940686CA-9736-46E5-86CA-887024380372}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Player1_Dx_Attack_Bat05" ID="{5AEBCFCE-2DA6-45B3-89AC-67720C6244E6}" ShortID="682215961">
+								<Sound Name="DX_Player1_Attack_Bat_05" ID="{5E4C658E-67BA-4A96-B209-16C02028ACA8}" ShortID="48153932">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1596,19 +1669,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Attack_Bat05" ID="{5665923B-A784-49A1-967C-7623076C9225}">
+										<AudioFileSource Name="DX_Player1_Attack_Bat_05" ID="{DDCF6DA8-E110-40C5-946D-3E15D529F7C6}">
 											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Attack_Bat05.wav</AudioFile>
+											<AudioFile>SFX_JP\DX\Player 1\Attack Bat\DX_Player1_Attack_Bat_05.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="156352431"/>
+												<MediaID ID="891240666"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Attack_Bat05" ID="{5665923B-A784-49A1-967C-7623076C9225}" Platform="Linked"/>
+										<ActiveSource Name="DX_Player1_Attack_Bat_05" ID="{DDCF6DA8-E110-40C5-946D-3E15D529F7C6}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Player1_Dx_Attack_Bat06" ID="{BEC873CA-C785-4616-B4AF-D588A1972FA8}" ShortID="938602777">
+								<Sound Name="DX_Player1_Attack_Bat_06" ID="{BD3FD2F6-3522-48ED-8BFD-AE31AF3EF41F}" ShortID="634635955">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1618,19 +1691,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Attack_Bat06" ID="{FCAD7F66-1AF3-4364-B7DC-F96D87FF8DFF}">
+										<AudioFileSource Name="DX_Player1_Attack_Bat_06" ID="{C93B98A5-7CF8-4837-984D-4D5736075E48}">
 											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Attack_Bat06.wav</AudioFile>
+											<AudioFile>SFX_JP\DX\Player 1\Attack Bat\DX_Player1_Attack_Bat_06.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="487566102"/>
+												<MediaID ID="928279854"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Attack_Bat06" ID="{FCAD7F66-1AF3-4364-B7DC-F96D87FF8DFF}" Platform="Linked"/>
+										<ActiveSource Name="DX_Player1_Attack_Bat_06" ID="{C93B98A5-7CF8-4837-984D-4D5736075E48}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Player1_Dx_Attack_Bat07" ID="{85519487-7D2B-405D-92F3-9A7620552DEF}" ShortID="653061505">
+								<Sound Name="DX_Player1_Attack_Bat_07" ID="{8F9D6B7E-A02E-438B-B6FA-C1385E5A4790}" ShortID="1062241506">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1640,19 +1713,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Attack_Bat07" ID="{81DE1EC5-8F92-44CE-B26A-B1712B7F681B}">
+										<AudioFileSource Name="DX_Player1_Attack_Bat_07" ID="{0415DC6B-9069-4A1B-AB41-A82D8662AEE0}">
 											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Attack_Bat07.wav</AudioFile>
+											<AudioFile>SFX_JP\DX\Player 1\Attack Bat\DX_Player1_Attack_Bat_07.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="135473821"/>
+												<MediaID ID="24261072"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Attack_Bat07" ID="{81DE1EC5-8F92-44CE-B26A-B1712B7F681B}" Platform="Linked"/>
+										<ActiveSource Name="DX_Player1_Attack_Bat_07" ID="{0415DC6B-9069-4A1B-AB41-A82D8662AEE0}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Player1_Dx_Attack_Bat08" ID="{CF1D97BA-6C04-45CE-9953-A2EF191C612B}" ShortID="604009327">
+								<Sound Name="DX_Player1_Attack_Bat_08" ID="{F8F38957-7957-4FB0-9CE4-9247E3CF688B}" ShortID="425819389">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1662,19 +1735,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Attack_Bat08" ID="{832C3C56-E31E-486E-9644-465F7DE6AB09}">
+										<AudioFileSource Name="DX_Player1_Attack_Bat_08" ID="{5BAA1278-CCB5-4CFB-A7F4-96B7F59D2A92}">
 											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Attack_Bat08.wav</AudioFile>
+											<AudioFile>SFX_JP\DX\Player 1\Attack Bat\DX_Player1_Attack_Bat_08.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="797180326"/>
+												<MediaID ID="378302298"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Attack_Bat08" ID="{832C3C56-E31E-486E-9644-465F7DE6AB09}" Platform="Linked"/>
+										<ActiveSource Name="DX_Player1_Attack_Bat_08" ID="{5BAA1278-CCB5-4CFB-A7F4-96B7F59D2A92}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Player1_Dx_Attack_Bat09" ID="{65ABAEEF-C0B8-4311-9143-11CC30F122EF}" ShortID="517949613">
+								<Sound Name="DX_Player1_Attack_Bat_09" ID="{3E88EAF5-EBFE-4529-B628-83E4AFC5D677}" ShortID="946857738">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1684,60 +1757,16 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Attack_Bat09" ID="{64ED147C-C76C-46D0-968F-37CFEBEE376C}">
+										<AudioFileSource Name="DX_Player1_Attack_Bat_09" ID="{1358ECEB-F195-453D-82CA-C937F31F497D}">
 											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Attack_Bat09.wav</AudioFile>
+											<AudioFile>SFX_JP\DX\Player 1\Attack Bat\DX_Player1_Attack_Bat_09.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="924452203"/>
+												<MediaID ID="895367639"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Attack_Bat09" ID="{64ED147C-C76C-46D0-968F-37CFEBEE376C}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Player1_Dx_Attack_Bat10" ID="{67CE8806-7A61-45A5-8394-30C0DBEF70B7}" ShortID="1025343393">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Attack_Bat10" ID="{C677C3EA-66B3-4AB1-B525-54030BFAFD2E}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Attack_Bat10.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1000827047"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Attack_Bat10" ID="{C677C3EA-66B3-4AB1-B525-54030BFAFD2E}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Player1_Dx_Attack_Bat11" ID="{02AA03BC-0DEF-4CC3-A19F-89920BB6B0A7}" ShortID="201567010">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Attack_Bat11" ID="{9B28B204-99A5-4D32-8EF0-0A206B01360D}">
-											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Attack_Bat11.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="500838481"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Attack_Bat11" ID="{9B28B204-99A5-4D32-8EF0-0A206B01360D}" Platform="Linked"/>
+										<ActiveSource Name="DX_Player1_Attack_Bat_09" ID="{1358ECEB-F195-453D-82CA-C937F31F497D}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
@@ -1751,6 +1780,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1761,7 +1795,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Player1_Dx_Hurt01" ID="{757A1A8F-14DD-44F3-A457-7A09B68FCD61}" ShortID="222603065">
+								<Sound Name="DX_Player1_Hurt_01" ID="{60BA4FAC-B9D8-41B0-B36E-477653621BB2}" ShortID="109370941">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1771,19 +1805,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Hurt01" ID="{0C6536A2-B2D9-4337-83A5-0400D86BCF33}">
+										<AudioFileSource Name="DX_Player1_Hurt_01" ID="{69BB8F33-0D6C-4A1E-8658-77A6C26A3DA6}">
 											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Hurt01.wav</AudioFile>
+											<AudioFile>SFX_JP\DX\Player 1\Hurt\DX_Player1_Hurt_01.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="433653634"/>
+												<MediaID ID="426981325"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Hurt01" ID="{0C6536A2-B2D9-4337-83A5-0400D86BCF33}" Platform="Linked"/>
+										<ActiveSource Name="DX_Player1_Hurt_01" ID="{69BB8F33-0D6C-4A1E-8658-77A6C26A3DA6}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Player1_Dx_Hurt02" ID="{AEFFE400-DB53-4578-81CC-41E27538609C}" ShortID="740277655">
+								<Sound Name="DX_Player1_Hurt_02" ID="{AE6BDC4D-B918-40BD-A7BB-A8F876694262}" ShortID="188441765">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1793,19 +1827,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Hurt02" ID="{62432B6A-6A02-4DDF-B7C1-2AE47308521E}">
+										<AudioFileSource Name="DX_Player1_Hurt_02" ID="{3268984F-ABE6-4DC7-A379-23BCC9C7CFF5}">
 											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Hurt02.wav</AudioFile>
+											<AudioFile>SFX_JP\DX\Player 1\Hurt\DX_Player1_Hurt_02.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="685490735"/>
+												<MediaID ID="782700916"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Hurt02" ID="{62432B6A-6A02-4DDF-B7C1-2AE47308521E}" Platform="Linked"/>
+										<ActiveSource Name="DX_Player1_Hurt_02" ID="{3268984F-ABE6-4DC7-A379-23BCC9C7CFF5}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Player1_Dx_Hurt03" ID="{3F95E6D2-D311-4ACB-81F9-30F400767116}" ShortID="440541221">
+								<Sound Name="DX_Player1_Hurt_03" ID="{54BBE141-7149-42C4-9763-B4BB46BC748D}" ShortID="922418356">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1815,19 +1849,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Hurt03" ID="{0BCB6261-F4A2-4E1E-A61A-1ABB3ABBAB5F}">
+										<AudioFileSource Name="DX_Player1_Hurt_03" ID="{26AB465F-C362-4DE1-9865-A7308812BCA7}">
 											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Hurt03.wav</AudioFile>
+											<AudioFile>SFX_JP\DX\Player 1\Hurt\DX_Player1_Hurt_03.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="317463871"/>
+												<MediaID ID="1066907268"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Hurt03" ID="{0BCB6261-F4A2-4E1E-A61A-1ABB3ABBAB5F}" Platform="Linked"/>
+										<ActiveSource Name="DX_Player1_Hurt_03" ID="{26AB465F-C362-4DE1-9865-A7308812BCA7}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Player1_Dx_Hurt04" ID="{922B8003-4CF8-4955-B387-A24CB09D74E5}" ShortID="992156272">
+								<Sound Name="DX_Player1_Hurt_04" ID="{3C608E76-61E6-4B2F-9ECC-2CB26F69B438}" ShortID="693840551">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1837,19 +1871,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Hurt04" ID="{15FF4D5F-8BB8-4E9F-AFA8-6CEDB28CA6CB}">
+										<AudioFileSource Name="DX_Player1_Hurt_04" ID="{716FE921-76F4-4DF8-A39A-C67A998E3CC9}">
 											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Hurt04.wav</AudioFile>
+											<AudioFile>SFX_JP\DX\Player 1\Hurt\DX_Player1_Hurt_04.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="806100853"/>
+												<MediaID ID="853231008"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Hurt04" ID="{15FF4D5F-8BB8-4E9F-AFA8-6CEDB28CA6CB}" Platform="Linked"/>
+										<ActiveSource Name="DX_Player1_Hurt_04" ID="{716FE921-76F4-4DF8-A39A-C67A998E3CC9}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Player1_Dx_Hurt05" ID="{F9B574A4-F302-4414-8422-CD9DD282F868}" ShortID="181248838">
+								<Sound Name="DX_Player1_Hurt_05" ID="{BEB0637A-3447-4E70-B99B-CB607474A741}" ShortID="520428082">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1859,19 +1893,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Hurt05" ID="{8C60C2E0-7332-4D1C-A88E-4EB263890269}">
+										<AudioFileSource Name="DX_Player1_Hurt_05" ID="{14793799-E3E3-411D-BF2A-305457B6DCCB}">
 											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Hurt05.wav</AudioFile>
+											<AudioFile>SFX_JP\DX\Player 1\Hurt\DX_Player1_Hurt_05.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="575345712"/>
+												<MediaID ID="648979517"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Hurt05" ID="{8C60C2E0-7332-4D1C-A88E-4EB263890269}" Platform="Linked"/>
+										<ActiveSource Name="DX_Player1_Hurt_05" ID="{14793799-E3E3-411D-BF2A-305457B6DCCB}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Player1_Dx_Hurt06" ID="{8D02CEB2-99F3-4D0B-A3BC-949D3682ADEA}" ShortID="109689889">
+								<Sound Name="DX_Player1_Hurt_06" ID="{1663E62E-6D2F-4B79-AAC1-47D2D8D0163E}" ShortID="839802471">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1881,19 +1915,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Hurt06" ID="{B70D9255-9911-4F8C-91CA-13B0B4E015A8}">
+										<AudioFileSource Name="DX_Player1_Hurt_06" ID="{569465C3-0628-4ECA-AA70-45A898CBB256}">
 											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Hurt06.wav</AudioFile>
+											<AudioFile>SFX_JP\DX\Player 1\Hurt\DX_Player1_Hurt_06.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="808099020"/>
+												<MediaID ID="245925600"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Hurt06" ID="{B70D9255-9911-4F8C-91CA-13B0B4E015A8}" Platform="Linked"/>
+										<ActiveSource Name="DX_Player1_Hurt_06" ID="{569465C3-0628-4ECA-AA70-45A898CBB256}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Player1_Dx_Hurt07" ID="{EA50E380-5C3D-4B3B-B545-E124775FD4EF}" ShortID="280863600">
+								<Sound Name="DX_Player1_Hurt_07" ID="{71524714-5DF9-44F2-B89F-48B5D26EDEC0}" ShortID="413342942">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1903,16 +1937,16 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player1_Dx_Hurt07" ID="{72A60E3F-32A7-4B0E-B469-9D04F7B5CCBD}">
+										<AudioFileSource Name="DX_Player1_Hurt_07" ID="{756F1AF3-B852-4A2D-B412-E606A551804B}">
 											<Language>SFX</Language>
-											<AudioFile>SFX_JP\DX\Player1_Dx_Hurt07.wav</AudioFile>
+											<AudioFile>SFX_JP\DX\Player 1\Hurt\DX_Player1_Hurt_07.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="464311797"/>
+												<MediaID ID="248552105"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player1_Dx_Hurt07" ID="{72A60E3F-32A7-4B0E-B469-9D04F7B5CCBD}" Platform="Linked"/>
+										<ActiveSource Name="DX_Player1_Hurt_07" ID="{756F1AF3-B852-4A2D-B412-E606A551804B}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
