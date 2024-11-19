@@ -104,7 +104,17 @@
 				</Event>
 				<Event Name="SA_Lv1_EV_DX_Player1_Die" ID="{BC55EA74-A51A-40D4-B981-BBAE7A5842E2}"/>
 				<Event Name="SA_Lv1_EV_UI_Text_Typing" ID="{C386068A-3C12-4B2D-81EC-C1B84EE3E23F}"/>
-				<Event Name="SA_Lv1_Player1_Damage_Hit" ID="{ACD713BB-D0CF-4DC2-8E16-67E16C9B91D8}"/>
+				<Event Name="SA_Lv1_Player1_Damage_Hit" ID="{ACD713BB-D0CF-4DC2-8E16-67E16C9B91D8}">
+					<ChildrenList>
+						<Action Name="" ID="{B7E9CE42-4498-4DE5-8ABD-0AC46F1C26E9}" ShortID="242881646">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="A_SFX_Lv1_Plater1_Damage_Hit_V1A" ID="{3DFE5DEF-D614-4013-A6F5-7BC3A9161366}" WorkUnitID="{2C701EA1-6752-43D4-9FD2-736F72F36CC7}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="SA_Lv1_EV_DX_Bosslv1_Die" ID="{E03DC371-EC24-4C24-9328-3F5E408B7B46}"/>
 				<Event Name="SA_Lv1_EV_DX_Bosslv1_Hurt" ID="{252E8E06-9091-4E99-9EBA-5000218ACBA6}"/>
 				<Event Name="SA_Lv1_EV_AX_City" ID="{A3851E11-219D-4100-B5D3-BCB5CE322C50}"/>
