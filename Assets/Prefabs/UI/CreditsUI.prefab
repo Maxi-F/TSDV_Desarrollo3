@@ -68,7 +68,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5299912400473223612, guid: 0480a80dfd2dd9545b4270ddc4cc802d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299912400473223612, guid: 0480a80dfd2dd9545b4270ddc4cc802d, type: 3}
       propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299912400473223612, guid: 0480a80dfd2dd9545b4270ddc4cc802d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158691463283287954, guid: 0480a80dfd2dd9545b4270ddc4cc802d, type: 3}
+      propertyPath: creditsVelocity
+      value: 225
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158691463283287954, guid: 0480a80dfd2dd9545b4270ddc4cc802d, type: 3}
+      propertyPath: isInvertedOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9007064494470654481, guid: 0480a80dfd2dd9545b4270ddc4cc802d, type: 3}
