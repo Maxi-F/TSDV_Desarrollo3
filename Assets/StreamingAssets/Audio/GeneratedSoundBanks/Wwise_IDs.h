@@ -15,8 +15,6 @@ namespace AK
     {
         static const AkUniqueID PAUSE_A_MX_TODO_95_BPM_V1A = 1692209436U;
         static const AkUniqueID PLAY_A_MX_TODO_95_BPM_V1A = 2817510498U;
-        static const AkUniqueID SA_LV0_EV_MX_MENU_MAIN = 3137054506U;
-        static const AkUniqueID SA_LV1_EV_AX_CITY = 3773923573U;
         static const AkUniqueID SA_LV1_EV_BOSSLV1_ATTACK_BOMB_A_TICK = 965991614U;
         static const AkUniqueID SA_LV1_EV_BOSSLV1_ATTACK_BOMB_BOSS_HIT = 258404240U;
         static const AkUniqueID SA_LV1_EV_BOSSLV1_ATTACK_BOMB_OUT = 2354958303U;
@@ -51,7 +49,6 @@ namespace AK
         static const AkUniqueID SA_LV1_EV_MINION_DAMAGE_WEAK = 3281992927U;
         static const AkUniqueID SA_LV1_EV_MINION_ENGINE = 2404778933U;
         static const AkUniqueID SA_LV1_EV_MINION_LASERPOINT = 2022848226U;
-        static const AkUniqueID SA_LV1_EV_MX_GAMEPLAY = 3937289600U;
         static const AkUniqueID SA_LV1_EV_OBJ_DESTROY_FENCE = 1439609548U;
         static const AkUniqueID SA_LV1_EV_OBJ_DESTROY_GENERIC = 694517172U;
         static const AkUniqueID SA_LV1_EV_PLAYER1_BIKE_INITIAL_DASH = 29769706U;
