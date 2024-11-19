@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CheatsUICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2700338167047641047, guid: c6a0fb543c525cd48bfbc9d88d9ef2eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

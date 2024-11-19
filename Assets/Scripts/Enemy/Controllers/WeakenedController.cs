@@ -18,7 +18,7 @@ public class WeakenedController : EnemyController
     [SerializeField] private EnemyMovementController movementController;
     [SerializeField] private bool shieldActive;
     [SerializeField] private ParticleSystem damageParticles;
-    
+
     [Header("ShieldProperties")]
     [SerializeField] private float timeToReactivateShield = 4.0f;
     [SerializeField] private float timeToStartReactivatingShield = 2.0f;
@@ -93,9 +93,8 @@ public class WeakenedController : EnemyController
     private IEnumerator ReactivateShield()
     {
         yield return new WaitForSeconds(timeToStartReactivatingShield);
-        shieldController.SetIsActivating(true);
+        shieldController.SetIsActivating(timeToReactivateShield);
         yield return new WaitForSeconds(timeToReactivateShield);
-        shieldController.SetActiveMaterial();
     }
 
     private void ActivateShield()
