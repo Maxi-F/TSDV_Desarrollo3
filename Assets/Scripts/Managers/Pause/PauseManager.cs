@@ -13,46 +13,37 @@ namespace Managers.Pause
         [Header("Events")]
         [SerializeField] private BoolEventChannelSO onHandlePauseEvent;
         [SerializeField] private VoidEventChannelSO onCinematicStarted;
-        [SerializeField] private VoidEventChannelSO onPlayerCinematicLock;
-        [SerializeField] private VoidEventChannelSO onPlayerDeath;
-        [SerializeField] private VoidEventChannelSO onGameplayReset;
         [SerializeField] private VoidEventChannelSO onCinematicEnded;
         
         private float _lastTimeScale;
-        private bool _isPauseBlocked;
+        private bool _isInCinematic;
         private void OnEnable()
         {
             pauseData.isPaused = false;
-            _isPauseBlocked = false;
+            _isInCinematic = false;
 
-            onCinematicStarted?.onEvent.AddListener(HandleBlockPause);
-            onPlayerCinematicLock?.onEvent.AddListener(HandleBlockPause);
-            onPlayerDeath?.onEvent.AddListener(HandleBlockPause);
-            onCinematicEnded?.onEvent.AddListener(HandleUnblockPause);
-            onGameplayReset?.onEvent.AddListener(HandleUnblockPause);
+            onCinematicStarted?.onEvent.AddListener(HandleInCinematic);
+            onCinematicEnded?.onEvent.AddListener(HandleOutOfCinematic);
             onHandlePauseEvent?.onTypedEvent.AddListener(HandlePause);
             inputHandler?.onPauseToggle.AddListener(HandlePause);
         }
 
         private void OnDisable()
         {
-            onCinematicStarted?.onEvent.RemoveListener(HandleBlockPause);
-            onPlayerCinematicLock?.onEvent.RemoveListener(HandleBlockPause);
-            onPlayerDeath?.onEvent.RemoveListener(HandleBlockPause);
-            onGameplayReset?.onEvent.RemoveListener(HandleUnblockPause);
-            onCinematicEnded?.onEvent.RemoveListener(HandleUnblockPause);
+            onCinematicStarted?.onEvent.RemoveListener(HandleInCinematic);
+            onCinematicEnded?.onEvent.RemoveListener(HandleOutOfCinematic);
             onHandlePauseEvent?.onTypedEvent.RemoveListener(HandlePause);
             inputHandler?.onPauseToggle.RemoveListener(HandlePause);
         }
         
-        private void HandleUnblockPause()
+        private void HandleOutOfCinematic()
         {
-            _isPauseBlocked = false;
+            _isInCinematic = false;
         }
 
-        private void HandleBlockPause()
+        private void HandleInCinematic()
         {
-            _isPauseBlocked = true;
+            _isInCinematic = true;
         }
 
         private void HandlePause(bool value)
@@ -72,7 +63,7 @@ namespace Managers.Pause
 
         private void HandlePause()
         {
-            if(!pauseData.isPaused && !_isPauseBlocked)
+            if(!pauseData.isPaused && !_isInCinematic)
                 onHandlePauseEvent.RaiseEvent(true);
         }
     }

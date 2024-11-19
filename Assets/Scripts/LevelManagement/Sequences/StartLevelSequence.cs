@@ -57,7 +57,7 @@ namespace LevelManagement.Sequences
             startSequence.AddPreAction(MoveOtherPlayers());
             startSequence.SetAction(MovePlayerToMiddle());
             startSequence.AddPostAction(HandleStopCinematicCanvas());
-            
+
             return startSequence;
         }
 
@@ -65,7 +65,6 @@ namespace LevelManagement.Sequences
         {
             if (startLevelConfig.isFirstGameplay)
             {
-                onCinematicPlayerLockStart?.RaiseEvent();
                 onNewRoadsVelocity?.RaiseEvent(roadData.roadVelocity);
                 onCameraMovementEvent?.RaiseEvent(startLevelConfig.startCameraData);
                 startLevelConfig.isFirstGameplay = false;

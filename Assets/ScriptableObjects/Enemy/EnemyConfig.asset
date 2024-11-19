@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offScreenPosition: {x: 0, y: 1.16, z: 60.43}
   defaultPosition: {x: 0, y: 1.16, z: 10.56}
-  weakenedPosition: {x: 0, y: 1.16, z: 5}
+  weakenedPosition: {x: 0, y: 0.56, z: 5}
   appearingDuration: 3
   leavingDuration: 2.75
-  weakenedStartDelay: 0.25
+  weakenedStartDelay: 0.5
   weakenedMoveDuration: 2
   recoverMoveDuration: 1.75
   deathAnimationDelay: 0.2

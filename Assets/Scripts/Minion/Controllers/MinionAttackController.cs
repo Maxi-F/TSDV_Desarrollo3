@@ -13,14 +13,6 @@ namespace Minion.Controllers
 
         private bool _isAttacking;
         private Coroutine _attackCoroutine;
-        private Vector3 attackDir;
-
-
-        public Vector3 AttackDir
-        {
-            get { return attackDir; }
-            set { attackDir = value; }
-        }
 
         public void Enter()
         {
@@ -40,8 +32,9 @@ namespace Minion.Controllers
             float timer = 0;
             float chargeDuration = minionConfig.chargeAttackData.length / minionConfig.attackData.speed;
             float startTime = Time.time;
+            Vector3 dir = target.transform.position - transform.position;
 
-            Vector3 destination = transform.position + attackDir.normalized * minionConfig.chargeAttackData.length;
+            Vector3 destination = transform.position + dir.normalized * minionConfig.chargeAttackData.length;
             Vector3 startPosition = transform.position;
             destination.y = startPosition.y;
 

@@ -6,6 +6,6 @@ namespace Attacks.FallingAttack
     public class FallingBlockSO : ScriptableObject
     {
         public Vector3 initPosition;
-        public GameObject[] fallingBlockPrefabs;
+        public GameObject fallingBlockPrefab;
     }
 }

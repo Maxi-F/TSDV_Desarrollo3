@@ -41,6 +41,7 @@ namespace Enemy.Attacks
             SelectRandomAttack();
             yield return new WaitForSeconds(timeBetweenAttacks);
             yield return _actualAttack.Execute();
+            onAttackExecutedEvent?.RaiseEvent();
         }
     }
 }

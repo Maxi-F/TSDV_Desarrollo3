@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4198303488500825913}
   - component: {fileID: 5195960211466743454}
   - component: {fileID: 5927452282430476819}
-  - component: {fileID: 8336885408199261828}
   m_Layer: 6
   m_Name: TwoBarrelsOneBox
   m_TagString: Enemy
@@ -35,7 +34,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8105411955214729536}
-  - {fileID: 3626550372074509311}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &894650323702444357
@@ -72,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionDamage: 15
-  obstacleDestroyer: {fileID: 8336885408199261828}
+  onObstacleTriggeredEvent: {fileID: 11400000, guid: 7106f5096e05ed54685959ed962a6d12, type: 2}
 --- !u!114 &5195960211466743454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,9 +112,9 @@ MonoBehaviour:
   onInternalDeathEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8336885408199261828}
-        m_TargetAssemblyTypeName: ObstacleSystem.ObstacleDestroy, Assembly-CSharp
-        m_MethodName: DestroyObstacle
+      - m_Target: {fileID: 5195960211466743454}
+        m_TargetAssemblyTypeName: ObstacleSystem.ObstacleEventCaller, Assembly-CSharp
+        m_MethodName: HandleEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -135,22 +133,6 @@ MonoBehaviour:
   onInternalInitializeMaxHealthEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8336885408199261828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4250984852401542567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b07ae7657c3bd344ab6dbadc9dc098e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyParticles: {fileID: 3626550372059305663}
-  destroyParticlesSeconds: 2.5
-  model: {fileID: 8432971302396166853}
-  eventCaller: {fileID: 5195960211466743454}
 --- !u!1001 &1231005799972538163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -228,76 +210,4 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7019243173877139059, guid: 70873dd490476e842a7ab14db2f06646, type: 3}
   m_PrefabInstance: {fileID: 1231005799972538163}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8432971302396166853 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7210975456884688374, guid: 70873dd490476e842a7ab14db2f06646, type: 3}
-  m_PrefabInstance: {fileID: 1231005799972538163}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &9094713249032000675
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 9159920980023766398}
-    m_Modifications:
-    - target: {fileID: 5504227616444942172, guid: 8cb6aa49fa2cbf9459219c739dfb428a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5504227616444942172, guid: 8cb6aa49fa2cbf9459219c739dfb428a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5504227616444942172, guid: 8cb6aa49fa2cbf9459219c739dfb428a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5504227616444942172, guid: 8cb6aa49fa2cbf9459219c739dfb428a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.70710677
-      objectReference: {fileID: 0}
-    - target: {fileID: 5504227616444942172, guid: 8cb6aa49fa2cbf9459219c739dfb428a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5504227616444942172, guid: 8cb6aa49fa2cbf9459219c739dfb428a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5504227616444942172, guid: 8cb6aa49fa2cbf9459219c739dfb428a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5504227616444942172, guid: 8cb6aa49fa2cbf9459219c739dfb428a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 5504227616444942172, guid: 8cb6aa49fa2cbf9459219c739dfb428a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5504227616444942172, guid: 8cb6aa49fa2cbf9459219c739dfb428a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5504227616445373308, guid: 8cb6aa49fa2cbf9459219c739dfb428a, type: 3}
-      propertyPath: m_Name
-      value: obstacleDestroy Variant
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8cb6aa49fa2cbf9459219c739dfb428a, type: 3}
---- !u!198 &3626550372059305663 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5504227616429736476, guid: 8cb6aa49fa2cbf9459219c739dfb428a, type: 3}
-  m_PrefabInstance: {fileID: 9094713249032000675}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &3626550372074509311 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5504227616444942172, guid: 8cb6aa49fa2cbf9459219c739dfb428a, type: 3}
-  m_PrefabInstance: {fileID: 9094713249032000675}
   m_PrefabAsset: {fileID: 0}

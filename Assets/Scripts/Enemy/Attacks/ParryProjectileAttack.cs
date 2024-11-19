@@ -62,16 +62,14 @@ namespace Enemy.Attacks
 
             _parryBomb = parryProjectileInstance.GetComponent<ParryBomb>();
 
-            _parryBomb.IsActive = true;
             _parryBomb.SetFirstForce(firstForces[Random.Range(0, firstForces.Count)]);
             _parryBomb.SetFirstObjectToFollow(player);
 
-            yield return new WaitUntil(() => !_parryBomb.IsActive);
+            yield return new WaitUntil(() => !_parryBomb.gameObject.activeInHierarchy);
         }
 
         private void HandleParryFinished(bool wasEnemyHitted)
         {
-            Debug.Log(wasEnemyHitted);
             if (wasEnemyHitted)
                 enemyAgent.ChangeStateToWeakened();
             else

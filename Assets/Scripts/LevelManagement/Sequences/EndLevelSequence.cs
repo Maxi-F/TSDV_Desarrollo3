@@ -14,8 +14,6 @@ namespace LevelManagement.Sequences
         [SerializeField] private string creditsScene = "Credits";
 
         [Header("Events")] 
-        [SerializeField] private VoidEventChannelSO onPlayerLockEvent;
-        [SerializeField] private VoidEventChannelSO onEndCinematicStartEvent;
         [SerializeField] private VoidEventChannelSO onCinematicStartEvent;
         [SerializeField] private VoidEventChannelSO onCinematicPlayerLockStart;
         [SerializeField] private VoidEventChannelSO onStartCinematicCanvas;
@@ -68,8 +66,6 @@ namespace LevelManagement.Sequences
 
         private IEnumerator HandleStartCinematic()
         {
-            onPlayerLockEvent?.RaiseEvent();
-            onEndCinematicStartEvent?.RaiseEvent();
             onCinematicStartEvent?.RaiseEvent();
             onCinematicPlayerLockStart?.RaiseEvent();
             onGameplayUICanvasEvent?.RaiseEvent(false);

@@ -15,7 +15,6 @@ MonoBehaviour:
   obstacleData:
     obstaclesDuration: 20
     obstacleCooldown: 0.15
-    timeToWarn: 1
     minDistance: 1
   roadData:
     roadVelocity: {x: 0, y: 0, z: -60}

@@ -4,7 +4,6 @@ using Events.ScriptableObjects;
 using Health;
 using ParryProjectile;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Attacks.ParryProjectile
 {
@@ -25,12 +24,8 @@ namespace Attacks.ParryProjectile
 
         [Header("Events")]
         [SerializeField] private EventChannelSO<bool> onParryFinished;
-        [SerializeField] private EventChannelSO<bool> onParried;
 
-        [Header("Internal Events")] 
-        [SerializeField] private UnityEvent onDestroyParryBombEvent;
-        
-        public bool IsActive { get; set; }
+        [SerializeField] private EventChannelSO<bool> onParried;
         
         private GameObject _firstObjectToFollow;
         private Vector3 _targetPosition;
@@ -40,7 +35,6 @@ namespace Attacks.ParryProjectile
 
         private float _timeApplyingFollowForce = 0f;
         private bool _isStarted = false;
-        private bool _canCollission = true;
         private float _followForceVelocity;
 
         private Vector3 _direction;
@@ -54,8 +48,6 @@ namespace Attacks.ParryProjectile
         private void Start()
         {
             _rigidbody ??= GetComponent<Rigidbody>();
-             IsActive = true;
-             _canCollission = true;
             _isTargetingPlayer = true;
         }
 
@@ -101,27 +93,20 @@ namespace Attacks.ParryProjectile
                 yield return null;
             }
 
-            if (_canCollission)
-            {
-                _canCollission = false;     
-                onParryFinished.RaiseEvent(false);
-                onDestroyParryBombEvent?.Invoke();
-            };
+            onParryFinished.RaiseEvent(false);
+            gameObject.SetActive(false);
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!_canCollission) return;
-            
             if (other.CompareTag("Enemy") && !_isTargetingPlayer)
             {
                 ShieldController enemy = other.GetComponentInChildren<ShieldController>();
 
                 if (enemy.TryDestroyShield(shieldDamage))
                 {
-                    _canCollission = false;
+                    gameObject.SetActive(false);
                     onParryFinished.RaiseEvent(true);
-                    onDestroyParryBombEvent?.Invoke();
                     return;
                 }
 
@@ -134,10 +119,9 @@ namespace Attacks.ParryProjectile
             {
                 ITakeDamage damageTaker = other.GetComponent<ITakeDamage>();
 
-                _canCollission = false;
                 damageTaker.TryTakeDamage(damage);
                 onParryFinished.RaiseEvent(false);
-                onDestroyParryBombEvent?.Invoke();
+                gameObject.SetActive(false);
             }
         }
 

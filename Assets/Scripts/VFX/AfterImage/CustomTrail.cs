@@ -1,7 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using Events;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -16,21 +13,7 @@ namespace VFX.AfterImage
 
         private bool _shouldSpawnImages;
         private Coroutine _startCoroutine;
-        private List<GameObject> _afterImageObjects;
 
-        public void OnEnable()
-        {
-            _afterImageObjects = new List<GameObject>();
-        }
-
-        public void OnDisable()
-        {
-            foreach (var afterImageObject in _afterImageObjects.ToList())
-            {
-                afterImageObject.SetActive(false);
-                _afterImageObjects.Remove(afterImageObject);
-            }
-        }
 
         public void StartSpawn()
         {
@@ -57,7 +40,6 @@ namespace VFX.AfterImage
                 GameObject afterImage = AfterImagePool.Instance.GetPooledObject();
                 afterImage.transform.SetPositionAndRotation(transform.position + offset, transform.rotation);
                 afterImage.SetActive(true);
-                _afterImageObjects.Add(afterImage);
                 StartCoroutine(FadeOut(afterImage));
             }
         }
@@ -88,7 +70,6 @@ namespace VFX.AfterImage
             }
 
             Destroy(diffuseMaterial);
-            _afterImageObjects.Remove(afterImage);
             afterImage.SetActive(false);
         }
     }

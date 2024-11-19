@@ -2,7 +2,6 @@ using System.Collections;
 using Events;
 using Events.ScriptableObjects;
 using ObstacleSystem;
-using UI;
 using UnityEngine;
 using Utils;
 
@@ -11,7 +10,6 @@ namespace LevelManagement.Sequences
     public class ObstacleSequence : MonoBehaviour
     {
         [SerializeField] private float progressBarMaxValue = 1f;
-        [SerializeField] private WarningTextSO warningData;
         
         [Header("Spawners")]
         [SerializeField] private ObstaclesSpawner obstaclesSpawner;
@@ -21,7 +19,6 @@ namespace LevelManagement.Sequences
         [Header("UI Events")] 
         [SerializeField] private FloatEventChannelSO onProgressBarChangeEvent;
         [SerializeField] private BoolEventChannelSO onProgressBarActiveEvent;
-        [SerializeField] private EventChannelSO<WarningTextSO> onWarning;
         
         private bool _isObstacleSystemDisabled;
         private LevelLoopSO _levelConfig;
@@ -105,17 +102,10 @@ namespace LevelManagement.Sequences
 
             obstaclesSpawner.StartWithCooldown(obstacleCooldown, _levelConfig.obstacleData.minDistance);
 
-            bool hasWarned = false;
             while (timer < obstaclesDuration)
             {
                 timer = Time.time - startTime;
                 onProgressBarChangeEvent?.RaiseEvent(Mathf.Lerp(0, progressBarMaxValue, timer / obstaclesDuration));
-
-                if (!hasWarned && _levelConfig.obstacleData.timeToWarn > obstaclesDuration - timer)
-                {
-                    onWarning?.RaiseEvent(warningData);
-                    hasWarned = true;
-                }
                 yield return null;
             }
 

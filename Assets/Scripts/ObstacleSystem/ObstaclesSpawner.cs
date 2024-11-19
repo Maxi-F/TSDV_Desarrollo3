@@ -15,6 +15,7 @@ namespace ObstacleSystem
     {
         [SerializeField] private GameObjectEventChannelSO onRoadInstantiatedEvent;
         [SerializeField] private GameObjectEventChannelSO onRoadDeletedEvent;
+        [SerializeField] private GameObjectEventChannelSO onObstacleTriggeredEvent;
         [SerializeField] private VoidEventChannelSO onObstaclesDisabled;
         [SerializeField] private GameObjectEventChannelSO onObstacleDestroyed;
         [SerializeField] private MapBoundsSO mapBounds;
@@ -37,6 +38,7 @@ namespace ObstacleSystem
             _spawnedObstacles = new List<GameObject>();
             onRoadInstantiatedEvent?.onGameObjectEvent.AddListener(HandleNewRoadInstance);
             onRoadDeletedEvent?.onGameObjectEvent.AddListener(HandleDeleteObstacle);
+            onObstacleTriggeredEvent?.onGameObjectEvent.AddListener(HandleDeleteObstacle);
             onObstacleDestroyed?.onGameObjectEvent.AddListener(DeleteObstacle);
         }
 
@@ -55,6 +57,7 @@ namespace ObstacleSystem
         {
             onRoadInstantiatedEvent?.onGameObjectEvent.RemoveListener(HandleNewRoadInstance);
             onRoadDeletedEvent?.onGameObjectEvent.RemoveListener(HandleDeleteObstacle);
+            onObstacleTriggeredEvent?.onGameObjectEvent.RemoveListener(HandleDeleteObstacle);
             onObstacleDestroyed?.onGameObjectEvent.RemoveListener(DeleteObstacle);
 
             if (_spawnCoroutine != null)
@@ -163,7 +166,6 @@ namespace ObstacleSystem
             if (_spawnedObstacles == null) return;
             foreach (var spawnedObstacle in _spawnedObstacles.ToList())
             {
-                if(spawnedObstacle == null) continue;
                 DeleteObstacle(spawnedObstacle);
             }
         }

@@ -10,9 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 396650924192947144}
   - component: {fileID: 7635251767426906750}
-  - component: {fileID: 1600891506706725506}
-  - component: {fileID: 2780287947506723910}
-  - component: {fileID: 8538605700224022850}
   m_Layer: 0
   m_Name: LevelSequenceManager
   m_TagString: Untagged
@@ -47,56 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae6419c380900949ab0dfa7f4d3f68e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelConfig: {fileID: 11400000, guid: e4e70fa8cf8c3be4cb4196d776da27c6, type: 2}
+  roadManager: {fileID: 0}
   obstaclesSpawner: {fileID: 0}
-  obstacleSequence: {fileID: 1600891506706725506}
-  minionsSequence: {fileID: 2780287947506723910}
-  bossSequence: {fileID: 8538605700224022850}
---- !u!114 &1600891506706725506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4988299967854156078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9abc4e77051dbf8469932908f26f93a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  progressBarMaxValue: 1
-  warningData: {fileID: 11400000, guid: 5123a6d0b21422b45b8976e51f08d83d, type: 2}
-  obstaclesSpawner: {fileID: 0}
-  onNewRoadManagerVelocity: {fileID: 11400000, guid: 21efa5342df3fb84ab0e65389176d7cf, type: 2}
-  onProgressBarChangeEvent: {fileID: 11400000, guid: e510a2ae5cc7ffb40b5e982f51399a93, type: 2}
-  onProgressBarActiveEvent: {fileID: 11400000, guid: beab834ba12792d4a91e8638176bf181, type: 2}
-  onWarning: {fileID: 11400000, guid: 8dfae64905a75794693d0b402fce18f1, type: 2}
+  enemy: {fileID: 0}
+  enemyHealthBar: {fileID: 0}
+  minionEnemy: {fileID: 0}
   onObstaclesSystemDisabled: {fileID: 11400000, guid: 9b61d8e3cffb1c84f98d7d4315aa3c7f, type: 2}
---- !u!114 &2780287947506723910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4988299967854156078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 542c1c7e4d4d8c84aa48daee69cc2b54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minionManager: {fileID: 0}
-  onAllMinionsDestroyedEvent: {fileID: 11400000, guid: f39644c8bb7ad1d4bbb9e63f25300263, type: 2}
---- !u!114 &8538605700224022850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4988299967854156078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc26e5f7826558542bb91c9a597fdcb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallingBlockSpawner: {fileID: 0}
-  enemyConfig: {fileID: 11400000, guid: 3e495b6192997ef46978af1453840058, type: 2}
-  boss: {fileID: 0}
+  progressBar: {fileID: 0}

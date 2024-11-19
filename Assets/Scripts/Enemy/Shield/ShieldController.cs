@@ -3,7 +3,6 @@ using System.Collections;
 using Events;
 using Health;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Enemy.Shield
 {
@@ -11,50 +10,76 @@ namespace Enemy.Shield
     {
         [SerializeField] private HealthPoints _healthPoints;
 
+        [SerializeField] private Material activatingShieldMaterial;
+        [SerializeField] private Material translucentMaterial;
         [SerializeField] private Material activeMaterial;
-        [SerializeField] private AnimationCurve blinkCurve;
+        [SerializeField] private float twinkleSeconds = 0.5f;
         [SerializeField] private GameObject shieldModel;
+
+        private bool _isActivating = false;
         private bool _isActive = true;
+        private bool _isInCoroutine = false;
         private MeshRenderer _meshRenderer;
+
 
         private void OnEnable()
         {
+            _isActivating = false;
             _isActive = true;
+            _isInCoroutine = false;
 
             _meshRenderer ??= shieldModel.GetComponent<MeshRenderer>();
         }
 
-        private IEnumerator ShieldBlink(float duration)
+        private void Update()
         {
-            float timer = 0;
-            float startTime = Time.time;
-            while (timer < duration)
+            if (_isActivating && !_isInCoroutine)
             {
-                timer = Time.time - startTime;
-                _meshRenderer.enabled = !_meshRenderer.enabled;
-                float blinkDuration = blinkCurve.Evaluate(Mathf.Lerp(0, 1, timer / duration));
-                yield return new WaitForSeconds(blinkDuration);
+                _isInCoroutine = true;
+                StartCoroutine(ChangeMaterials());
             }
-
-            _meshRenderer.enabled = true;
         }
 
-        public void SetIsActivating(float activationDuration)
+        private IEnumerator ChangeMaterials()
         {
-            StartCoroutine(ShieldBlink(activationDuration));
+            bool isTraslucentOn = true;
+            while (_isActivating)
+            {
+                _meshRenderer.material = isTraslucentOn
+                    ? activatingShieldMaterial
+                    : translucentMaterial;
+
+                isTraslucentOn = !isTraslucentOn;
+
+                yield return new WaitForSeconds(twinkleSeconds);
+            }
+
+            _isActivating = false;
+            _isInCoroutine = false;
+        }
+
+        public void SetIsActivating(bool isActivating)
+        {
+            _isActivating = isActivating;
         }
 
         public void SetActiveMaterial()
         {
+            _isActivating = false;
             if (!_meshRenderer) return;
             _meshRenderer.material = activeMaterial;
+        }
+
+        public bool IsActive()
+        {
+            return _isActive;
         }
 
         public void SetActive(bool isActive)
         {
             _isActive = isActive;
 
-            if (!_isActive) _meshRenderer.enabled = false;
+            if (!_isActive) _meshRenderer.material = translucentMaterial;
         }
 
         public bool TryDestroyShield(int parryDamage)

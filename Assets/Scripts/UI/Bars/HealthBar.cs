@@ -53,6 +53,7 @@ namespace UI.Bars
     
         public void HandleInit(int maxValue)
         {
+            Debug.Log($"Handle init {maxValue}");
             slider.maxValue = maxValue;
             slider.value = maxValue;
         }
@@ -64,6 +65,7 @@ namespace UI.Bars
                 slider.gameObject.SetActive(true);
                 _wasTriggered = true;
             }
+            Debug.Log($"Handle take damage {slider.maxValue} {slider.value}");
             slider.value = currentHealth;
         }
     }

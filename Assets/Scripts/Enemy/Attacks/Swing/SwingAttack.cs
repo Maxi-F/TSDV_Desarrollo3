@@ -10,9 +10,7 @@ namespace Enemy.Attacks
     {
         [SerializeField] private Swing swing;
         [SerializeField] private Material laserAttackMaterial;
-
-        [Header("Anim Config")] 
-        [SerializeField] private float preAttackDelay;
+        [Header("Anim Config")]
         [SerializeField] private float initialDelay;
         
         private bool _canStartAttack;
@@ -25,7 +23,6 @@ namespace Enemy.Attacks
 
         public IEnumerator Execute()
         {
-            yield return new WaitForSeconds(preAttackDelay);
             animationHandler.StartLaserAnimation();
             yield return new WaitForSeconds(initialDelay);
             enemyAgent.ChangeStateToLaser();

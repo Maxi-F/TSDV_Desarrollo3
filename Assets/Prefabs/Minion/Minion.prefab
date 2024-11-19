@@ -637,7 +637,7 @@ RectTransform:
   m_Father: {fileID: 7124170545522689955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -0.00000059604645, y: 0}
   m_SizeDelta: {x: 0.000081778, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -772,7 +772,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5381591709375069483
 RectTransform:
   m_ObjectHideFlags: 0
@@ -992,6 +992,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3429272450400946337}
+  - component: {fileID: 6283988101934533380}
   - component: {fileID: 938812201743576552}
   - component: {fileID: 5575126865424349212}
   - component: {fileID: 4310436236341836283}
@@ -1001,7 +1002,6 @@ GameObject:
   - component: {fileID: 4870043625586772548}
   - component: {fileID: 1977581406877134975}
   - component: {fileID: 4097841218994226417}
-  - component: {fileID: 218238986806074504}
   m_Layer: 6
   m_Name: Minion
   m_TagString: Enemy
@@ -1028,6 +1028,27 @@ Transform:
   - {fileID: 5381591709375069483}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6283988101934533380
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9068004531541268373}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.5874913, z: 1}
+  m_Center: {x: 0, y: 0.08457911, z: 0}
 --- !u!114 &938812201743576552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1100,6 +1121,18 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 154755272736235517}
+          m_TargetAssemblyTypeName: Minion.Controllers.MinionMoveController, Assembly-CSharp
+          m_MethodName: OnUpdate
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 154755272736235517}
           m_TargetAssemblyTypeName: Minion.Controllers.MinionController, Assembly-CSharp
           m_MethodName: LookAtTarget
           m_Mode: 1
@@ -1145,7 +1178,19 @@ MonoBehaviour:
           m_CallState: 2
     onUpdate:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 2562709963566903697}
+          m_TargetAssemblyTypeName: Minion.Controllers.MinionController, Assembly-CSharp
+          m_MethodName: LookAtTarget
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     onExit:
       m_PersistentCalls:
         m_Calls: []
@@ -1179,7 +1224,19 @@ MonoBehaviour:
           m_CallState: 2
     onUpdate:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 2562709963566903697}
+          m_TargetAssemblyTypeName: Minion.Controllers.MinionController, Assembly-CSharp
+          m_MethodName: LookAtTarget
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     onExit:
       m_PersistentCalls:
         m_Calls:
@@ -1353,7 +1410,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   minionConfig: {fileID: 11400000, guid: 0a4091bb2b815e646b3a1f5e68314944, type: 2}
-  minionAttackController: {fileID: 2562709963566903697}
 --- !u!114 &4389868529216407606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1383,7 +1439,6 @@ MonoBehaviour:
   minionConfig: {fileID: 11400000, guid: 0a4091bb2b815e646b3a1f5e68314944, type: 2}
   onPlayerMovedEvent: {fileID: 11400000, guid: 6a4bb4062610c7b4fa1d1458d1248c67, type: 2}
   onDashMovementEvent: {fileID: 11400000, guid: bbb7d509b23dc6e44a57ecc08ccba7b3, type: 2}
-  initialDelay: 0.4
 --- !u!114 &2562709963566903697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1444,29 +1499,6 @@ MonoBehaviour:
   prepareAttack: PREPARE_ATTACK
   attack: ATTACK
   getHit: GET_HIT
---- !u!136 &218238986806074504
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9068004531541268373}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.1869524
-  m_Height: 2.3739047
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.14638615, z: -0.020092249}
 --- !u!1001 &156423546122773842
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1675,15 +1707,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8194992990867289334, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8194992990867289334, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8194992990867289334, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8194992990867289334, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1724,10 +1756,6 @@ PrefabInstance:
     - target: {fileID: 8194992990867289334, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8194992990867289334, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
       propertyPath: m_Name

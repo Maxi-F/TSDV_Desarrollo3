@@ -13,7 +13,4 @@ MonoBehaviour:
   m_Name: FallingBlockConfig
   m_EditorClassIdentifier: 
   initPosition: {x: 0, y: 0, z: 0}
-  fallingBlockPrefabs:
-  - {fileID: 2873061450910897065, guid: c02fe28806b8ebe408584f7b7177db58, type: 3}
-  - {fileID: 2873061450910897065, guid: 7c59079b71ffaad44839edb05a6f3513, type: 3}
-  - {fileID: 554173903471282687, guid: faaba40da13857e4c90eb93b90258ce0, type: 3}
+  fallingBlockPrefab: {fileID: 2873061450910897065, guid: c02fe28806b8ebe408584f7b7177db58, type: 3}

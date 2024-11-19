@@ -13,96 +13,25 @@ MonoBehaviour:
   m_Name: CreditsDataConfig
   m_EditorClassIdentifier: 
   credits:
-  - title: 
-    members: []
-    imagePrefab: {fileID: 7660870462147996771, guid: 8fea1f4c603d5614ba95c0c009d2cbc0, type: 3}
-  - title: Programming
+  - title: Artists
     members:
-    - Maximiliano Feldman
-    - Nicolas Laure
-    imagePrefab: {fileID: 0}
-  - title: ' '
-    members: []
-    imagePrefab: {fileID: 0}
-  - title: Art
-    members:
-    - Nicolas Holzinger
     - Fabrizzio Morandi
     - Sasha Szychowski
-    imagePrefab: {fileID: 0}
-  - title: ' '
-    members: []
-    imagePrefab: {fileID: 0}
-  - title: Audio
+    - Nicolas Holzinger
+  - title: Developers
     members:
-    - Alvaro Pedro Cornaggia
-    - Juan Montoya (ZIA)
-    - Jesus Rangel
-    - Tomas Vial
-    imagePrefab: {fileID: 0}
-  - title: ' '
-    members: []
-    imagePrefab: {fileID: 0}
-  - title: QA
+    - Nicolas Laure
+    - Maximiliano Feldman
+  - title: Quality Assurance
     members:
+    - "El Trist\xE1n (Gonza)"
     - Eneas Cardozo
-    - Gonzalo Fernandez
-    - Gonzalo Nataniel Fernandez Ibarra
-    - Valentina Lanus
-    - Federico Javier Loriente Pinto
-    imagePrefab: {fileID: 0}
-  - title: ' '
-    members: []
-    imagePrefab: {fileID: 0}
-  - title: Other assets used
-    members:
-    - VFXs - Cartoon FX Remaster Free - Jean Moreno
-    - Font - Gemunu Libre - Mooniak
-    - 'Font - The Battle Continues - Chris Hansen '
-    - Font - HVD Peace Font - HVD Fonts
-    imagePrefab: {fileID: 0}
-  - title: ' '
-    members: []
-    imagePrefab: {fileID: 0}
-  - title: This game
-    members: []
-    imagePrefab: {fileID: 0}
-  - title: was also possible
-    members: []
-    imagePrefab: {fileID: 0}
-  - title: 'thanks to the support of:'
-    members: []
-    imagePrefab: {fileID: 0}
-  - title: ' '
-    members: []
-    imagePrefab: {fileID: 0}
-  - title: Professors
+    - Federico Loriente
+    - Nano Valen
+  - title: Special Thanks
     members:
     - Sergio Baretto
     - Juan Pablo Varela Aloisio
-    - Ramiro Cabrera
-    - Eugenio Taboada
-    - Nazareno Rivero
-    - Lucia Patetta
-    imagePrefab: {fileID: 0}
-  - title: ' '
-    members: []
-    imagePrefab: {fileID: 0}
-  - title: Teaching Assistants
-    members:
-    - Rocio Gimenez
     - Ignacio Arrastua
-    - Lautaro Lajmanovich
-    - Manuel Sanchez
-    - Lucio Ary Clementino
-    - Florencia Gordano
-    imagePrefab: {fileID: 0}
-  - title: ' '
-    members: []
-    imagePrefab: {fileID: 0}
-  - title: and all Image Campus Staff!
-    members: []
-    imagePrefab: {fileID: 0}
-  - title: 
-    members: []
-    imagePrefab: {fileID: 7660870462147996771, guid: 29c440080b9c7f64cbb1f75ed74d9c62, type: 3}
+    - Rocio Victoria Gimenez
+    - And all Image Campus staff!

@@ -1,4 +1,3 @@
-using Player.Animation;
 using UnityEngine;
 
 namespace Player.Controllers

@@ -69,7 +69,7 @@ namespace Attacks.FallingAttack
             _isSpawning = true;
             for (int i = 0; i < quantity; i++)
             {
-                GameObject fallingBlockInstance = FallingBlockObjectPool.Instance?.GetRandomPooledObject();
+                GameObject fallingBlockInstance = FallingBlockObjectPool.Instance?.GetPooledObject();
                 
                 if (fallingBlockInstance == null)
                 {

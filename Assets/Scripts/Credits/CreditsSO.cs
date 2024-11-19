@@ -9,7 +9,6 @@ namespace Credits
     {
         public string title;
         public string[] members;
-        public GameObject imagePrefab;
     }
 
     [CreateAssetMenu(menuName = "Credits/Data")]

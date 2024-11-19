@@ -10,7 +10,7 @@ namespace Minion.Controllers
     public class MinionChargeAttackController : MinionController
     {
         [SerializeField] private MinionSO minionConfig;
-        [SerializeField] private MinionAttackController minionAttackController;
+
         private LineRenderer _aimLine;
         private Vector3 _dir;
         private bool _isCharging;
@@ -51,7 +51,6 @@ namespace Minion.Controllers
             float barProgress = minionConfig.chargeAttackData.chargeCurve.Evaluate(timer / minionConfig.chargeAttackData.duration);
             Vector3 aimPosition = Vector3.Lerp(transform.position, transform.position + _dir.normalized * minionConfig.chargeAttackData.length, barProgress);
             _aimLine.SetPosition(1, aimPosition);
-            LookAtTarget();
         }
 
         private IEnumerator AttackCoroutine()
@@ -67,7 +66,6 @@ namespace Minion.Controllers
                 yield return null;
             }
 
-            minionAttackController.AttackDir = _dir;
             yield return new WaitForSeconds(minionConfig.chargeAttackData.delayAfterLine);
             _aimLine.enabled = false;
             minionAgent.ChangeStateToAttack();
