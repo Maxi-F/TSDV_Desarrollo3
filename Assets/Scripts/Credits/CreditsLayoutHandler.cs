@@ -10,18 +10,18 @@ namespace Credits
         [SerializeField] private GameObject creditTitle;
         [SerializeField] private GameObject creditText;
         [SerializeField] private GameObject creditLayout;
-        
-        [Header("Credits options")] 
+
+        [Header("Credits options")]
         [SerializeField] private float spacing = 80;
 
         [SerializeField] private float creditsVelocity = 100;
 
         private float _initialYPosition;
-        
+
         void Start()
         {
             _initialYPosition = gameObject.transform.position.y;
-            
+
             foreach (var creditsConfigCredit in creditsConfig.credits)
             {
                 GameObject credit = Instantiate(creditLayout, gameObject.transform);
@@ -30,13 +30,21 @@ namespace Credits
                 creditGroup.spacing = spacing;
                 creditGroup.childControlWidth = true;
 
-                GameObject creditTitleObj = Instantiate(creditTitle, credit.transform);
-                creditTitleObj.GetComponent<TextMeshProUGUI>().text = creditsConfigCredit.title;
-                
+                if (creditsConfigCredit.title != "")
+                {
+                    GameObject creditTitleObj = Instantiate(creditTitle, credit.transform);
+                    creditTitleObj.GetComponent<TextMeshProUGUI>().text = creditsConfigCredit.title;
+                }
+
                 foreach (var member in creditsConfigCredit.members)
                 {
                     GameObject creditTextObj = Instantiate(creditText, credit.transform);
                     creditTextObj.GetComponent<TextMeshProUGUI>().text = member;
+                }
+
+                if (creditsConfigCredit.imagePrefab != null)
+                {
+                    GameObject creditImageObj = Instantiate(creditsConfigCredit.imagePrefab, credit.transform);
                 }
             }
         }
@@ -51,7 +59,7 @@ namespace Credits
         private void Update()
         {
             var vector3 = gameObject.transform.position;
-           
+
             vector3.y += creditsVelocity * Time.deltaTime;
 
             gameObject.transform.position = vector3;
