@@ -18,7 +18,7 @@ MonoBehaviour:
     m_Value: {r: 0.35, g: 0.35, b: 0.35, a: 1}
   highlights:
     m_OverrideState: 1
-    m_Value: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+    m_Value: {r: 0.49621752, g: 0.5017072, b: 0.5566038, a: 1}
   balance:
     m_OverrideState: 1
     m_Value: -7
@@ -71,7 +71,7 @@ MonoBehaviour:
     m_Value: 1.2
   intensity:
     m_OverrideState: 1
-    m_Value: 4.02
+    m_Value: 3.9
   scatter:
     m_OverrideState: 1
     m_Value: 0.55
@@ -80,7 +80,7 @@ MonoBehaviour:
     m_Value: 65472
   tint:
     m_OverrideState: 1
-    m_Value: {r: 0.13679248, g: 0.769481, b: 1, a: 1}
+    m_Value: {r: 0.6127626, g: 0.8682279, b: 0.9622642, a: 1}
   highQualityFiltering:
     m_OverrideState: 0
     m_Value: 0
@@ -126,13 +126,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fa0085f50d5e54f8144f766051a691, type: 3}
   m_Name: FilmGrain
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   type:
     m_OverrideState: 1
     m_Value: 2
   intensity:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0.35
   response:
     m_OverrideState: 1
     m_Value: 0.081

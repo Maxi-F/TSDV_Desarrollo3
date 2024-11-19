@@ -128,7 +128,7 @@ Material:
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
-    - _PolkaDotsOpacity: 1
+    - _PolkaDotsOpacity: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
