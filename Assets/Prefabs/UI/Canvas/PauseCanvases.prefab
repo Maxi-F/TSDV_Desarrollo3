@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7373703925847921517
 RectTransform:
   m_ObjectHideFlags: 0
@@ -180,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1957971612812828981, guid: 59af9112782295943b672e9960a56984, type: 3}
       propertyPath: m_fontSize
-      value: 79.7
+      value: 79.65
       objectReference: {fileID: 0}
     - target: {fileID: 1957971612812828981, guid: 59af9112782295943b672e9960a56984, type: 3}
       propertyPath: m_fontAsset

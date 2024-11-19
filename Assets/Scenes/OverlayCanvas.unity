@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseUI
       objectReference: {fileID: 0}
+    - target: {fileID: 1617110147571470439, guid: 3a715ec63509ef44891816f63e2ea190, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6164988826039075903, guid: 3a715ec63509ef44891816f63e2ea190, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -292,6 +296,10 @@ PrefabInstance:
     - target: {fileID: 5359625925794631857, guid: fe042f579a25bcf429f17d39a1f1a174, type: 3}
       propertyPath: m_Name
       value: TryAgainUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5359625925794631857, guid: fe042f579a25bcf429f17d39a1f1a174, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -698,37 +706,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1162593639158927952, guid: 4cef017080308ce47b26c03ad4d2b108, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3105889350063892925, guid: 4cef017080308ce47b26c03ad4d2b108, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6804621288495530291, guid: 4cef017080308ce47b26c03ad4d2b108, type: 3}
       propertyPath: m_Name
       value: GameplayUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 7250830342406322309, guid: 4cef017080308ce47b26c03ad4d2b108, type: 3}
-      propertyPath: flickDuration
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 7250830342406322309, guid: 4cef017080308ce47b26c03ad4d2b108, type: 3}
-      propertyPath: movementDuration
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7250830342406322309, guid: 4cef017080308ce47b26c03ad4d2b108, type: 3}
-      propertyPath: multiplierFromRoads
-      value: -7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7250830342406322309, guid: 4cef017080308ce47b26c03ad4d2b108, type: 3}
-      propertyPath: intervalSecondsRange.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7250830342406322309, guid: 4cef017080308ce47b26c03ad4d2b108, type: 3}
-      propertyPath: intervalSecondsRange.y
-      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
