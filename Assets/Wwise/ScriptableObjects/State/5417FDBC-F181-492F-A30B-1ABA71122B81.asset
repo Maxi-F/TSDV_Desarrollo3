@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da9c32de472a26d4db09dc3ff728eb8e, type: 3}
+  m_Name: 5417FDBC-F181-492F-A30B-1ABA71122B81
+  m_EditorClassIdentifier: 
+  objectName: Fase_1_Boss
+  id: 2657527206
+  guid: 5417FDBC-F181-492F-A30B-1ABA71122B81
+  WwiseStateGroupReference: {fileID: 11400000, guid: 9111293255bd30a4993a13556cc6a8d6, type: 2}

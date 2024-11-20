@@ -33,6 +33,8 @@ namespace LevelManagement.Sequences
 
         [SerializeField] private Vector3EventChannelSO onNewRoadsVelocity;
         [SerializeField] private CameraDataChannelSO onCameraMovementEvent;
+
+        [Header("Music")] [SerializeField] private AK.Wwise.State firstPhaseState;
         
         private bool _isCinematicCanvasAnimating;
 
@@ -77,6 +79,11 @@ namespace LevelManagement.Sequences
             }
         }
 
+        private void ManageMusic()
+        {
+            AkSoundEngine.SetState(firstPhaseState.GroupId, firstPhaseState.Id);
+        }
+
         public void SkipCinematic()
         {
             onCinematicPlayerLockFinished?.RaiseEvent();
@@ -85,6 +92,7 @@ namespace LevelManagement.Sequences
             onGameplayUICanvasEvent?.RaiseEvent(true);
             onCinematicUICanvasEvent?.RaiseEvent(false);
             onCinematicEnded?.RaiseEvent();
+            ManageMusic();
             
             foreach (var otherPlayer in otherPlayers)
             {
@@ -139,6 +147,7 @@ namespace LevelManagement.Sequences
         {
             onEndCinematicCanvas?.RaiseEvent();
             _isCinematicCanvasAnimating = true;
+            ManageMusic();
             yield return new WaitWhile(() => _isCinematicCanvasAnimating);
             onGameplayUICanvasEvent?.RaiseEvent(true);
             onCinematicUICanvasEvent?.RaiseEvent(false);

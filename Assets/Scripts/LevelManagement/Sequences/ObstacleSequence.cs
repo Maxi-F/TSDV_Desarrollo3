@@ -88,6 +88,11 @@ namespace LevelManagement.Sequences
     
         private IEnumerator ObstacleSequencePreActions()
         {
+            if (_levelConfig.obstacleData.phaseState != null)
+            {
+                AkSoundEngine.SetState(_levelConfig.obstacleData.phaseState.GroupId,
+                    _levelConfig.obstacleData.phaseState.Id);
+            }
             obstaclesSpawner.gameObject.SetActive(true);
             onProgressBarActiveEvent?.RaiseEvent(true);
             onProgressBarChangeEvent?.RaiseEvent(0);

@@ -14,8 +14,7 @@ namespace Scenes
         [Tooltip("Current scene name")] [SerializeField] private string sceneName;
         [Tooltip("Optional scenes to activate with the current scene")] [SerializeField] private string[] optionalScenes = new string[] {};
         [SerializeField] private bool setAsActiveOnBoot = false;
-        [SerializeField] private string initMusic;
-        [SerializeField] private float initMusicVolume;
+        [SerializeField] private AK.Wwise.State musicEvent;
         
         [Header("events")] 
         [SerializeField] private StringEventChannelSo onLoadSceneEvent;
@@ -38,10 +37,11 @@ namespace Scenes
                 StartCoroutine(SetSceneAsActiveScene());
             }
 
-            if (!string.IsNullOrEmpty(initMusic))
+            if (musicEvent.GroupId != 0)
             {
-                AkSoundEngine.StopAll();
-                AkSoundEngine.PostEvent(initMusic, gameObject);
+                Debug.Log(musicEvent.GroupId);
+                Debug.Log(musicEvent.Id);
+                AkSoundEngine.SetState(musicEvent.GroupId, musicEvent.Id);
             }
             
             SubscribeToActions();

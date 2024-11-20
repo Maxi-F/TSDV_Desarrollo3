@@ -13,8 +13,11 @@ namespace LevelManagement.Sequences
         [Header("Game Objects")]
         [SerializeField] private GameObject boss;
 
+        private AK.Wwise.State bossMusicState;
+        
         public void SetupSequence(BossData bossData)
         {
+            bossMusicState = bossData.minionsToBossState;
             boss.SetActive(false);
             boss.transform.position = enemyConfig.defaultPosition;
             fallingBlockSpawner.SetFallingAttackData(bossData.fallingAttackData);
@@ -32,6 +35,7 @@ namespace LevelManagement.Sequences
         private IEnumerator BossBattleAction()
         {
             yield return null;
+            AkSoundEngine.SetState(bossMusicState.GroupId, bossMusicState.Id);
             boss.SetActive(true);
         }
 

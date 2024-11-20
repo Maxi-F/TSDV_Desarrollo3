@@ -93,6 +93,12 @@ MonoBehaviour:
   onGameplayUICanvasEvent: {fileID: 11400000, guid: 320bab34c80c172448a6c8a73219b3fd, type: 2}
   onNewRoadsVelocity: {fileID: 11400000, guid: 21efa5342df3fb84ab0e65389176d7cf, type: 2}
   onCameraMovementEvent: {fileID: 11400000, guid: 90b6045fa5889cc42af5977d80c68a89, type: 2}
+  firstPhaseState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4f5aa20c99144bb489f484a03188ed6a, type: 2}
 --- !u!114 &4611192124218542088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +115,8 @@ MonoBehaviour:
   playerVelocity: 10
   finishZPosition: 44
   creditsScene: Credits
+  onPlayerLockEvent: {fileID: 0}
+  onEndCinematicStartEvent: {fileID: 0}
   onCinematicStartEvent: {fileID: 11400000, guid: 49bed95fec698814188e97e4aef4801b, type: 2}
   onCinematicPlayerLockStart: {fileID: 11400000, guid: b711b8f3d88f6614bb9d23a652188ca8, type: 2}
   onStartCinematicCanvas: {fileID: 11400000, guid: f342628a186bcbe4e929001b50ef74a0, type: 2}

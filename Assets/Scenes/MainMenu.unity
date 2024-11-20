@@ -234,12 +234,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
       propertyPath: initMusic
-      value: PLAY_A_MX_TODO_95_BPM_V1A
+      value: Play_A_Mx_Todo_95_Bpm_V1A
       objectReference: {fileID: 0}
+    - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
+      propertyPath: musicEvent
+      value: Estados_Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
+      propertyPath: musicEventValue
+      value: None
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
+      propertyPath: initMusic.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1887d70822244dd40a628fbfcdd42f97, type: 2}
     - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
       propertyPath: scenesToSubscribeTo.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
+      propertyPath: musicEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c7ae185825a58a4fa217bba5639a19d, type: 2}
     - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
       propertyPath: onHandleCanvasesEvents.Array.size
       value: 1

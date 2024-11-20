@@ -17,6 +17,9 @@ namespace Player
 
         [Header("Dash sounds")] 
         [SerializeField] private string dashSound;
+
+        [Header("Game Over state")] [SerializeField]
+        private AK.Wwise.State gameOverState;
         
         private void OnEnable()
         {
@@ -38,6 +41,11 @@ namespace Player
         public void DashSound()
         {
             AkSoundEngine.PostEvent(dashSound, gameObject);
+        }
+
+        public void DeathSound()
+        {
+            AkSoundEngine.SetState(gameOverState.GroupId, gameOverState.Id);
         }
     }
 }

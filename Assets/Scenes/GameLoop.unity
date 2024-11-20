@@ -420,6 +420,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2011814886892266701, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
+      propertyPath: onInternalDeathEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011814886892266701, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
+      propertyPath: onInternalDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011814886892266701, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
+      propertyPath: onInternalDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1224237593}
+    - target: {fileID: 2011814886892266701, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
+      propertyPath: onInternalDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011814886892266701, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
+      propertyPath: onInternalDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: WonSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011814886892266701, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
+      propertyPath: onInternalDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Enemy.EnemySoundController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011814886892266701, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
+      propertyPath: onInternalDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4678668245326787109, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
       propertyPath: player
       value: 
@@ -435,7 +463,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8961736479340173517, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1224237593}
   m_SourcePrefab: {fileID: 100100000, guid: 8098ae3de085dbd4fb021df7f95f5adb, type: 3}
 --- !u!1001 &386285593
 PrefabInstance:
@@ -592,10 +623,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004944892389013156, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
       propertyPath: onHit.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1900070991}
-    - target: {fileID: 4004944892389013156, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
-      propertyPath: onInternalDeathEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1900070991}
     - target: {fileID: 4645382247631583565, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
@@ -916,6 +943,14 @@ PrefabInstance:
       value: GameLoop
       objectReference: {fileID: 0}
     - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
+      propertyPath: musicEvent
+      value: Estados_Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
+      propertyPath: musicEventValue
+      value: Cinematica
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
       propertyPath: setAsActiveOnBoot
       value: 0
       objectReference: {fileID: 0}
@@ -927,6 +962,10 @@ PrefabInstance:
       propertyPath: scenesToSubscribeTo.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
+      propertyPath: musicEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 77ca2c1391f7dac4f917152c9a408a11, type: 2}
     - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
       propertyPath: onHandleCanvasesEvents.Array.size
       value: 0
@@ -1121,6 +1160,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04cb3bb3ce8700649b43a4c9b6a29908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1224237593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224237589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1cb251b83ea9c9428246415e7dd887c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creditsState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1c7ae185825a58a4fa217bba5639a19d, type: 2}
 --- !u!1 &1224736958
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,6 +1536,10 @@ PrefabInstance:
       propertyPath: loopConfigs.Array.data[3]
       value: 
       objectReference: {fileID: 11400000, guid: 0c0a4a3b8792776478d27d8d450f575d, type: 2}
+    - target: {fileID: 7147819174927887729, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
+      propertyPath: resettedMusicState.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 4f5aa20c99144bb489f484a03188ed6a, type: 2}
     - target: {fileID: 9200447392731979298, guid: 997a42626b659814cb0aa0d749e0b092, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

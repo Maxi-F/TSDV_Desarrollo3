@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneryManager: {fileID: 1074262472}
+  initMusic: Play_A_Mx_Todo_95_Bpm_V1A
   masterVolumeRtpc:
     idInternal: 0
     valueGuidInternal: 

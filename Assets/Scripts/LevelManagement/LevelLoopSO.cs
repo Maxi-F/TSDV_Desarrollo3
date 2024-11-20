@@ -11,6 +11,7 @@ namespace LevelManagement
         public float obstacleCooldown;
         public float timeToWarn = 4.0f;
         public float minDistance;
+        public AK.Wwise.State phaseState;
     }
 
     [Serializable]
@@ -24,6 +25,7 @@ namespace LevelManagement
     {
         public int hitPointsToNextPhase;
         public FallingAttackData fallingAttackData;
+        public AK.Wwise.State minionsToBossState;
     }
 
     [Serializable]

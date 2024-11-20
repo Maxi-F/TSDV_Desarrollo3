@@ -9,10 +9,17 @@ namespace Camera
     {
         [SerializeField] private CameraDataChannelSO onCameraMovementEvent;
 
+        [SerializeField] private AK.Wwise.Event initMusic;
+
         private Coroutine _movementCoroutine;
         private void OnEnable()
         {
             onCameraMovementEvent?.onTypedEvent.AddListener(HandleCameraMovement);
+        }
+
+        private void Start()
+        {
+            AkSoundEngine.PostEvent(initMusic.Name, gameObject);
         }
 
         private void OnDisable()
