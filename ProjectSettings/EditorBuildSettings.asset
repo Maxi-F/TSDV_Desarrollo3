@@ -26,4 +26,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Roads.unity
     guid: c4b78ed17f27d184f8259ffdb7bf40e3
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 2006044aaba2a464cac5567f0eae31d6, type: 2}

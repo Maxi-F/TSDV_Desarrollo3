@@ -8,12 +8,19 @@ namespace Player.Weapon
 {
     public class MeleeWeapon : MonoBehaviour
     {
+        private const string Name = "Attack";
         [Header("Enemy")]
         [SerializeField] private GameObject enemy;
 
         [SerializeField] private int damage;
+        [SerializeField] private Animator animation;
 
-        private List<Collider> hittedEnemies = new List<Collider>();
+        private List<Collider> _hittedEnemies = new List<Collider>();
+
+        private void OnEnable()
+        {
+            animation.SetTrigger(Name);
+        }
 
         private void OnDisable()
         {
@@ -22,33 +29,30 @@ namespace Player.Weapon
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!this.enabled || hittedEnemies.Contains(other))
+            if (!this.enabled || _hittedEnemies.Contains(other) || other.CompareTag("Player"))
                 return;
-
-            if (other.transform.CompareTag("Deflectable"))
+            
+            if (other.transform.TryGetComponent<IDeflectable>(out IDeflectable deflectableInterface))
             {
-                if (other.transform.TryGetComponent<IDeflectable>(out IDeflectable deflectableInterface))
-                {
-                    deflectableInterface.Deflect(enemy);
-                }
-
-                hittedEnemies.Add(other);
+                deflectableInterface.Deflect(enemy);
+                _hittedEnemies.Add(other);
             }
-
-            if (other.transform.CompareTag("Enemy"))
+            
+            if (other.transform.TryGetComponent<ITakeDamage>(out ITakeDamage takeDamageInterface))
             {
-                if (other.transform.TryGetComponent<ITakeDamage>(out ITakeDamage takeDamageInterface))
-                {
-                    takeDamageInterface.TryTakeDamage(damage);
-                }
-
-                hittedEnemies.Add(other);
+                takeDamageInterface.TryTakeDamage(damage);
+                _hittedEnemies.Add(other);
             }
+        }
+        
+        public void SetIsInteractive(bool value)
+        {
+            gameObject.SetActive(value);
         }
 
         public void ResetHittedEnemiesBuffer()
         {
-            hittedEnemies.Clear();
+            _hittedEnemies.Clear();
         }
     }
 }

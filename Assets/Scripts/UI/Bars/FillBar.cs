@@ -15,7 +15,7 @@ namespace UI.Bars
         [Header("Events")]
         [SerializeField] private IntEventChannelSO onTakeDamage;
         [SerializeField] private IntEventChannelSO onSumHealth;
-        [SerializeField] private IntEventChannelSO onResetDamage;
+        [SerializeField] private VoidEventChannelSO onResetDamage;
         [SerializeField] private IntEventChannelSO onInitializeSlider;
 
         private int _maxValue;
@@ -36,7 +36,7 @@ namespace UI.Bars
 
             onSumHealth?.onIntEvent.AddListener(HandleTakeDamage);
             onTakeDamage?.onIntEvent.AddListener(HandleTakeDamage);
-            onResetDamage?.onIntEvent.AddListener(HandleReset);
+            onResetDamage?.onEvent.AddListener(HandleReset);
         }
 
         private void OnDestroy()
@@ -44,10 +44,10 @@ namespace UI.Bars
             onSumHealth?.onIntEvent?.RemoveListener(HandleTakeDamage);
             onTakeDamage?.onIntEvent.RemoveListener(HandleTakeDamage);
             onInitializeSlider?.onIntEvent.RemoveListener(HandleInit);
-            onResetDamage?.onIntEvent.RemoveListener(HandleReset);
+            onResetDamage?.onEvent.RemoveListener(HandleReset);
         }
 
-        public void HandleReset(int currentHp)
+        public void HandleReset()
         {
             fillImage.fillAmount = 1;
         }

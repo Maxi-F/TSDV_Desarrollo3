@@ -1,5 +1,7 @@
+using System.Collections;
 using Events;
 using Health;
+using Player.Animation;
 using UnityEngine;
 
 namespace Player
@@ -9,10 +11,17 @@ namespace Player
         [SerializeField] private Vector3 initPosition;
         [SerializeField] private HealthPoints healthPoints;
         [SerializeField] private PlayerDashController dashController;
+        [SerializeField] private float secondsUntilDisable;
+        [SerializeField] private float explosionSeconds;
+        [SerializeField] private GameObject explosionObject;
+        [SerializeField] private GameObject model;
+        [SerializeField] private PlayerAnimationHandler animatorHandler;
         
         [Header("Events")] 
         [SerializeField] private VoidEventChannelSO onPlayerDeathEvent;
         [SerializeField] private VoidEventChannelSO onGameplayResetEvent;
+        
+        private Coroutine _disablePlayerCoroutine;
         
         private void Awake()
         {
@@ -36,6 +45,11 @@ namespace Player
 
         private void HandleResetPlayer()
         {
+            if(_disablePlayerCoroutine != null)
+                StopCoroutine(_disablePlayerCoroutine);
+            
+            animatorHandler.HandleResetAnimator();
+            model.gameObject.SetActive(true);
             healthPoints.ResetHitPoints();
             dashController.ResetDash();
             transform.position = initPosition;
@@ -44,6 +58,18 @@ namespace Player
 
         private void DisablePlayer()
         {
+            if(_disablePlayerCoroutine != null)
+                StopCoroutine(_disablePlayerCoroutine);
+            
+            _disablePlayerCoroutine = StartCoroutine(DisablePlayerCoroutine());
+        }
+
+        private IEnumerator DisablePlayerCoroutine()
+        {
+            yield return new WaitForSeconds(secondsUntilDisable);
+            explosionObject.gameObject.SetActive(true);
+            model.gameObject.SetActive(false);
+            yield return new WaitForSeconds(explosionSeconds);
             gameObject.SetActive(false);
         }
     }

@@ -17,6 +17,7 @@ public class WeakenedController : EnemyController
     [SerializeField] private ShieldController shieldController;
     [SerializeField] private EnemyMovementController movementController;
     [SerializeField] private bool shieldActive;
+    [SerializeField] private ParticleSystem damageParticles;
 
     [Header("ShieldProperties")]
     [SerializeField] private float timeToReactivateShield = 4.0f;
@@ -61,11 +62,13 @@ public class WeakenedController : EnemyController
 
     private void HandleDamage()
     {
+        damageParticles.Play();
         animationHandler.ReceiveHit();
     }
 
     private void HandleLeave()
     {
+        ActivateShield();
         enemyAgent.ChangeStateToLeave();
     }
 
@@ -90,8 +93,15 @@ public class WeakenedController : EnemyController
     private IEnumerator ReactivateShield()
     {
         yield return new WaitForSeconds(timeToStartReactivatingShield);
-        shieldController.SetIsActivating(true);
+        shieldController.SetIsActivating(timeToReactivateShield);
         yield return new WaitForSeconds(timeToReactivateShield);
+    }
+
+    private void ActivateShield()
+    {
+        healthPoints.SetCanTakeDamage(false);
+        shieldController.SetActive(true);
+        shieldController.ResetShield();
         shieldController.SetActiveMaterial();
     }
 
@@ -107,10 +117,7 @@ public class WeakenedController : EnemyController
             yield return movementController.MoveTo(enemyConfig.weakenedPosition, enemyConfig.defaultPosition, enemyConfig.recoverMoveDuration);
             enemyAgent.ChangeStateToIdle();
         }
-
-        yield break;
     }
-
 
     private IEnumerator BossDeath()
     {

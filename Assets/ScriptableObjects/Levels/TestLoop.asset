@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: TestLoop
   m_EditorClassIdentifier: 
   obstacleData:
-    obstaclesDuration: 0.1
-    obstacleCooldown: 0.25
+    obstaclesDuration: 1
+    obstacleCooldown: 1
     minDistance: 1
   roadData:
     roadVelocity: {x: 0, y: 0, z: -30}
   bossData:
     hitPointsToNextPhase: 99
     fallingAttackData:
-      spawnRadiusFromPlayer: 2
-      timeBetweenSpawns: 0.5
+      spawnRadiusFromPlayer: 1
+      timeBetweenSpawns: 0.1
       spawnCooldown: 2
-      spawnQuantity: 5
-      acceleration: 10
+      spawnQuantity: 20
+      acceleration: 60
   minionsData:
-    managerData: {fileID: 11400000, guid: 91033f8a42d6eca46a3415f50b958ebf, type: 2}
-    spawnerData: {fileID: 11400000, guid: 243747caa98ab304da81a7d8e918fbe4, type: 2}
+    managerData: {fileID: 11400000, guid: 20ce85ed14968184a9a8377370b25fcc, type: 2}
+    spawnerData: {fileID: 11400000, guid: 700dab64cf6657044870a368e20922db, type: 2}

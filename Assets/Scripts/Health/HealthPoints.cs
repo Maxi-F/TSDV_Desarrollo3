@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Events;
 using Unity.Mathematics;
 using UnityEngine;
@@ -8,9 +9,13 @@ namespace Health
 {
     public class HealthPoints : MonoBehaviour, ITakeDamage
     {
+        [SerializeField] private float timeScaleDivision = 20;
+        [SerializeField] private float hitFrameTime = 0.1f;
+        [SerializeField] private float timeUntilFrameActivate = 0.1f;
         [SerializeField] private int maxHealth = 100;
         [SerializeField] private int initHealth = 100;
         [SerializeField] private bool canTakeDamage = true;
+        [SerializeField] private bool shouldFreeze = false;
 
         [Header("events")]
         [SerializeField] private VoidEventChannelSO onDeathEvent;
@@ -27,7 +32,7 @@ namespace Health
         [SerializeField] private UnityEvent<int> onInternalResetEvent;
         [SerializeField] private UnityEvent<int> onInternalTakeDamageEvent;
         [SerializeField] private UnityEvent<int> onInternalInitializeMaxHealthEvent;
-        
+
         public int MaxHealth
         {
             get { return maxHealth; }
@@ -39,14 +44,21 @@ namespace Health
         }
 
         private bool _isInvincible = false;
+        private bool _hasBeenDead = false;
 
         public int CurrentHp { get; private set; }
 
         void Start()
         {
             CurrentHp = initHealth;
+            _hasBeenDead = false;
             onInitializeHealthEvent?.RaiseEvent(CurrentHp);
             RaiseInitMaxHpEvent();
+        }
+
+        private void OnEnable()
+        {
+            _hasBeenDead = false;
         }
 
         private void OnDestroy()
@@ -70,6 +82,7 @@ namespace Health
 
         public void ResetHitPoints()
         {
+            _hasBeenDead = false;
             CurrentHp = maxHealth;
             onResetPointsEvent?.RaiseEvent(CurrentHp);
             onInternalResetEvent?.Invoke(CurrentHp);
@@ -85,10 +98,13 @@ namespace Health
             }
 
             CurrentHp -= damage;
+
+            if (shouldFreeze)
+                StartCoroutine(StunTime());
             
-            
-            if (IsDead())
+            if (IsDead() && !_hasBeenDead)
             {
+                _hasBeenDead = true;
                 onDeathEvent?.RaiseEvent();
                 onInternalDeathEvent?.Invoke();
             }
@@ -101,6 +117,15 @@ namespace Health
 
             return true;
         }
+
+        public IEnumerator StunTime()
+        {
+            yield return new WaitForSecondsRealtime(timeUntilFrameActivate);
+            Time.timeScale /= timeScaleDivision;
+            yield return new WaitForSecondsRealtime(hitFrameTime);
+            Time.timeScale = 1;
+        }
+
 
         public bool IsDead()
         {
