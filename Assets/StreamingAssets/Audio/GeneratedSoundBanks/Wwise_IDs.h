@@ -99,6 +99,8 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID BIKE_SPEED = 2047381990U;
+        static const AkUniqueID MASTER = 4056684167U;
         static const AkUniqueID SA_RTPC_BIKE_BOSSLV1_SPEED = 3673391112U;
         static const AkUniqueID SA_RTPC_BIKE_INITIAL_DASH = 4217154045U;
         static const AkUniqueID SA_RTPC_BIKE_INITIAL_SPEED = 3744839874U;
