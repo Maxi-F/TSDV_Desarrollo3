@@ -12,7 +12,6 @@ namespace Minion
     public class MinionAgent : Agent
     {
         [SerializeField] private GameObject model;
-        [SerializeField] private GameObject aimLine;
         [SerializeField] private GameObject canvas;
         [SerializeField] private float deathTimeOffset;
         [SerializeField] private HealthPoints healthPoints;
@@ -40,7 +39,6 @@ namespace Minion
         {
             base.OnEnable();
             model.gameObject.SetActive(true);
-            aimLine.gameObject.SetActive(true);
             canvas.gameObject.SetActive(true);
             
             Fsm.Enable();
@@ -172,7 +170,6 @@ namespace Minion
             model.gameObject.SetActive(false);
             Fsm.Disable();
             canvas.gameObject.SetActive(false);
-            aimLine.gameObject.SetActive(false);
             yield return new WaitForSeconds(deathTimeOffset);
             onMinionDeletedEvent?.RaiseEvent(this);
         }
