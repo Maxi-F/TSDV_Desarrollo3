@@ -916,6 +916,14 @@ PrefabInstance:
       value: GameLoop
       objectReference: {fileID: 0}
     - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
+      propertyPath: musicEvent
+      value: Estados_Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
+      propertyPath: musicEventValue
+      value: Cinematica
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
       propertyPath: setAsActiveOnBoot
       value: 0
       objectReference: {fileID: 0}
@@ -927,6 +935,10 @@ PrefabInstance:
       propertyPath: scenesToSubscribeTo.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
+      propertyPath: musicEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 77ca2c1391f7dac4f917152c9a408a11, type: 2}
     - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
       propertyPath: onHandleCanvasesEvents.Array.size
       value: 0

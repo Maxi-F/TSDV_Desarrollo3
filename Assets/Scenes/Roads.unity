@@ -439,6 +439,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onCameraMovementEvent: {fileID: 11400000, guid: 90b6045fa5889cc42af5977d80c68a89, type: 2}
+  initMusic:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1887d70822244dd40a628fbfcdd42f97, type: 2}
 --- !u!1001 &1716339084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -665,6 +669,10 @@ PrefabInstance:
     - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
       propertyPath: scenesToSubscribeTo.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
+      propertyPath: musicEvent.WwiseObjectReference
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
