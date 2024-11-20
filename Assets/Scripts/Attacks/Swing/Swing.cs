@@ -14,6 +14,8 @@ namespace Attacks.Swing
         [SerializeField] private List<SwingConfigSO> swingConfigSo = new List<SwingConfigSO>();
         [Header("Anim Config")]
         [SerializeField] private EnemyAnimationHandler animationHandler;
+        [Header("Laser Visual")]
+        [SerializeField] private LaserLength laserVisual;
 
         private float _startingValue;
         private float _finishingValue;
@@ -65,6 +67,9 @@ namespace Attacks.Swing
             laserPivot.transform.position = new Vector3(laserPivot.transform.position.x, animationPivot.transform.position.y, laserPivot.transform.position.z);
             laserObject.transform.localScale = swingConfigSo[_randomIndex].initialLaserScale;
             laserObject.transform.localPosition = swingConfigSo[_randomIndex].initialLaserLocalPosition;
+            laserVisual.UpdateBeamLength(0);
+            laserVisual.UpdateBeamWidth();
+            laserVisual.UpdateStartParticleEmission();
             yield break;
         }
 
@@ -77,14 +82,14 @@ namespace Attacks.Swing
             {
                 timer = Time.time - startingTime;
 
-                float scaleUpValue = Mathf.Lerp(swingConfigSo[_randomIndex].startingSize, swingConfigSo[_randomIndex].finishingSize, swingConfigSo[_randomIndex].laserGrowCurve.Evaluate(timer / swingConfigSo[_randomIndex].growDuration));
+                float growTime = swingConfigSo[_randomIndex].laserGrowCurve.Evaluate(timer / swingConfigSo[_randomIndex].growDuration);
+                float scaleUpValue = Mathf.Lerp(swingConfigSo[_randomIndex].startingSize, swingConfigSo[_randomIndex].finishingSize, growTime);
 
                 Vector3 scale = new Vector3(scaleUpValue, 1, 1);
 
                 laserPivot.transform.right = animationPivot.transform.forward;
-                laserPivot.transform.position = new Vector3(laserPivot.transform.position.x, animationPivot.transform.position.y, laserPivot.transform.position.z);
-                laserObject.transform.localPosition = new Vector3(swingConfigSo[_randomIndex].initialLaserLocalPosition.x + scaleUpValue / 2, 0, 0);
                 laserObject.transform.localScale = scale;
+                laserVisual.UpdateBeamLength(growTime);
                 yield return null;
             }
         }
