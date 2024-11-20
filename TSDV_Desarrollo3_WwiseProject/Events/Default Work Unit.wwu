@@ -28,17 +28,67 @@
 				</Event>
 				<Event Name="SA_Lv1_EV_Obj_Destroy_Fence" ID="{5380C743-C4DD-498D-A08C-072D6E537DDC}"/>
 				<Event Name="SA_Lv1_EV_Obj_Destroy_Generic" ID="{1BBB5BF7-C09E-4346-92F7-C064B67A3F21}"/>
-				<Event Name="SA_Lv1_EV_Player1_Bike_Initial_Engine" ID="{A292B1E4-6837-422D-82E0-417F0EA2BEAF}"/>
+				<Event Name="SA_Lv1_EV_Player1_Bike_Initial_Engine" ID="{A292B1E4-6837-422D-82E0-417F0EA2BEAF}">
+					<ChildrenList>
+						<Action Name="" ID="{2560B84F-D535-4002-8A09-38C09100F045}" ShortID="662654115">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="A_SFX_All_Player1_Objects_Bike_Initial_Engine_V1A_" ID="{06877FAD-5DB9-4C63-918D-C7AB28BECFCE}" WorkUnitID="{97767B1D-16FA-4174-8647-8BD64B0EB4DD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="SA_Lv1_EV_Player1_Healing" ID="{0F2386C9-A81C-4905-9230-45F7BADC9E23}"/>
 				<Event Name="SA_Lv1_EV_Player1_Die_Explotion" ID="{3E97C542-E811-42B3-A527-78D09EF3D4EF}"/>
-				<Event Name="SA_Lv1_EV_Minion_Engine" ID="{AE4267BE-4E3A-471E-90A6-72CC55DE27F0}"/>
+				<Event Name="SA_Lv1_EV_Minion_Engine" ID="{AE4267BE-4E3A-471E-90A6-72CC55DE27F0}">
+					<ChildrenList>
+						<Action Name="" ID="{C01A4B0F-C87B-4868-8E84-78F75CAA5919}" ShortID="986551166">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SA_Lv1_EV_Minion_Engine" ID="{CA7C7230-1A53-4932-ABA4-687FA90E8AEF}" WorkUnitID="{97767B1D-16FA-4174-8647-8BD64B0EB4DD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="SA_Lv1_EV_Minion_Blade" ID="{B06F20D5-5B42-41A9-A149-328E413C28F4}"/>
 				<Event Name="SA_Lv1_EV_Minion_Attack_Dash" ID="{66AAA07B-330D-4B5D-A625-0A0CE65AC523}"/>
 				<Event Name="SA_Lv1_EV_Minion_LaserPoint" ID="{0A52CFDB-77FC-4A3B-9878-D7BE9315BF43}"/>
-				<Event Name="SA_Lv1_EV_Minion_Damage_Explode" ID="{D390C099-E958-4D6B-97C3-23505193747A}"/>
-				<Event Name="SA_Lv1_EV_Minion_Damage_Impact" ID="{A228EB4E-B4F0-4E88-AA40-F01A1880CB6C}"/>
+				<Event Name="SA_Lv1_EV_Minion_Damage_Explode" ID="{D390C099-E958-4D6B-97C3-23505193747A}">
+					<ChildrenList>
+						<Action Name="" ID="{4C1C1B21-4B75-4FAF-A015-32A883CEEB64}" ShortID="975381053">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SA_Lv1_EV_Minion_Damage_Explode" ID="{9CC1B860-8FE6-480A-A18D-14F1D1D859DE}" WorkUnitID="{97767B1D-16FA-4174-8647-8BD64B0EB4DD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SA_Lv1_EV_Minion_Damage_Impact" ID="{A228EB4E-B4F0-4E88-AA40-F01A1880CB6C}">
+					<ChildrenList>
+						<Action Name="" ID="{F089A332-2060-4281-B47F-26475C405B8E}" ShortID="256150133">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SA_Lv1_EV_Minion_Damage_Impact" ID="{AF52590E-1370-40BA-BEA4-5CE66DE5D762}" WorkUnitID="{97767B1D-16FA-4174-8647-8BD64B0EB4DD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="SA_Lv1_EV_Minion_Damage_Weak" ID="{93C824AE-D5AF-4FF3-8CBD-F7805B5D8144}"/>
-				<Event Name="SA_Lv1_EV_BossLv1_Bike_Engine" ID="{98977FE4-BDEA-4532-B346-102BDE0D1D20}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Bike_Engine" ID="{98977FE4-BDEA-4532-B346-102BDE0D1D20}">
+					<ChildrenList>
+						<Action Name="" ID="{E4BC23E4-5C96-449C-92B4-8032192D4503}" ShortID="616537682">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="A_SFX_All_Player1_Objects_Bike_Initial_Engine_V1A_" ID="{06877FAD-5DB9-4C63-918D-C7AB28BECFCE}" WorkUnitID="{97767B1D-16FA-4174-8647-8BD64B0EB4DD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="SA_Lv1_EV_BossLv1_Bike_Engine_Weak" ID="{06576E3B-DD7A-4917-A525-058F4832E4A8}"/>
 				<Event Name="SA_Lv1_EV_BossLv1_Damage_SwordHit" ID="{60F1F7DC-9313-4EBD-8030-3804D8D6AA84}"/>
 				<Event Name="SA_Lv1_EV_BossLv1_Damage_Die_Explotion" ID="{32842BA4-9E41-478A-AF59-E47F8DA111FF}"/>
