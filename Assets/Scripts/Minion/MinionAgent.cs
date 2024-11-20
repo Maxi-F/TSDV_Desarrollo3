@@ -12,6 +12,7 @@ namespace Minion
     public class MinionAgent : Agent
     {
         [SerializeField] private GameObject model;
+        [SerializeField] private GameObject vfx;
         [SerializeField] private GameObject canvas;
         [SerializeField] private float deathTimeOffset;
         [SerializeField] private HealthPoints healthPoints;
@@ -25,7 +26,7 @@ namespace Minion
         [SerializeField] private ActionEventsWrapper chargeAttackEvents;
         [SerializeField] private ActionEventsWrapper attackEvents;
         [SerializeField] private ActionEventsWrapper fallbackEvents;
-        
+
         private GameObject _player;
         private List<State> _attackStates;
         private State _idleState;
@@ -40,6 +41,7 @@ namespace Minion
             base.OnEnable();
             model.gameObject.SetActive(true);
             canvas.gameObject.SetActive(true);
+            vfx.gameObject.SetActive(false);
             
             Fsm.Enable();
         }
@@ -111,10 +113,10 @@ namespace Minion
 
             Transition moveToIdle = new Transition(_moveState, _idleState);
             _moveState.AddTransition(moveToIdle);
-            
+
             Transition chargeToIdle = new Transition(_chargeAttackState, _idleState);
             _chargeAttackState.AddTransition(chargeToIdle);
-            
+
             Transition attackToIdle = new Transition(_attackState, _idleState);
             _attackState.AddTransition(attackToIdle);
 
@@ -124,7 +126,7 @@ namespace Minion
                 _chargeAttackState,
                 _attackState,
             };
-                
+
             return new List<State>
                 ()
                 {
@@ -158,9 +160,9 @@ namespace Minion
         {
             if (healthPoints.CurrentHp <= 0)
             {
-                if(_dieCoroutine != null)
+                if (_dieCoroutine != null)
                     StopCoroutine(_dieCoroutine);
-                
+
                 _dieCoroutine = StartCoroutine(DieCoroutine());
             }
         }
@@ -183,17 +185,16 @@ namespace Minion
         public void DebugCurrentState()
         {
             State currentState = Fsm.GetCurrentState();
-            if(currentState == _idleState)
+            if (currentState == _idleState)
                 Debug.Log("Idle");
-            else if(currentState == _moveState)
+            else if (currentState == _moveState)
                 Debug.Log("Move");
-            else if(currentState == _chargeAttackState)
+            else if (currentState == _chargeAttackState)
                 Debug.Log("Charge");
-            else if(currentState == _fallbackState)
+            else if (currentState == _fallbackState)
                 Debug.Log("Fallback");
-            else if(currentState == _attackState)
+            else if (currentState == _attackState)
                 Debug.Log("Attack");
-                
         }
 
         public bool IsInAttackState()

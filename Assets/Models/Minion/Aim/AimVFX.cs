@@ -8,6 +8,7 @@ public class AimVFX : MonoBehaviour
     [SerializeField] private float aimingDuration = 1;
     [SerializeField] private float alertingDuration = 1;
     [SerializeField] private float releaseDuration = 1;
+    [SerializeField] private GameObject aimLineBeginning;
 
     private static readonly int _aimSpeed = Animator.StringToHash("aiming_speed_multiplier");
     private static readonly int _alertSpeed = Animator.StringToHash("alert_speed_multiplier");
@@ -17,15 +18,37 @@ public class AimVFX : MonoBehaviour
     private static readonly int _alertTrigger = Animator.StringToHash("ALERT");
     private static readonly int _releaseTrigger = Animator.StringToHash("RELEASE");
 
-    public float AimingDuration { get => aimingDuration; set => aimingDuration = value; }
-    public float AlertDuration { get => alertingDuration; set => alertingDuration = value; }
-    public float ReleaseDuration { get => releaseDuration; set => releaseDuration = value; }
+    private static readonly int _startState = Animator.StringToHash("Start");
+
+    public float AimingDuration
+    {
+        get => aimingDuration;
+        set => aimingDuration = value;
+    }
+
+    public float AlertDuration
+    {
+        get => alertingDuration;
+        set => alertingDuration = value;
+    }
+
+    public float ReleaseDuration
+    {
+        get => releaseDuration;
+        set => releaseDuration = value;
+    }
 
     void Update()
     {
         animator.SetFloat(_aimSpeed, 1 / aimingDuration);
         animator.SetFloat(_alertSpeed, 1 / alertingDuration);
         animator.SetFloat(_releaseSpeed, 1 / releaseDuration);
+    }
+
+    public void Reset()
+    {
+        aimLineBeginning.transform.localScale = Vector3.zero;
+        animator.Play(_startState);
     }
 
     public void Aim()
