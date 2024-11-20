@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: -3657109322286029522}
   - component: {fileID: 8569875037951016330}
   - component: {fileID: 4892114609088342519}
+  - component: {fileID: 765996105383918817}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -568,6 +569,21 @@ MonoBehaviour:
   onDamageAvoidedEvent: {fileID: 11400000, guid: 4f9416a5c19eeda4e9b3e6a791d2b357, type: 2}
   onCinematicFinished: {fileID: 11400000, guid: 83f6a3608cca1b64a9e546fae228e30e, type: 2}
   onCinematicStarted: {fileID: 11400000, guid: b711b8f3d88f6614bb9d23a652188ca8, type: 2}
+  onDash:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 765996105383918817}
+        m_TargetAssemblyTypeName: Player.PlayerSoundController, Assembly-CSharp
+        m_MethodName: DashSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6481343404815373606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,6 +610,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6725996320649833956}
         m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 765996105383918817}
+        m_TargetAssemblyTypeName: Player.PlayerSoundController, Assembly-CSharp
+        m_MethodName: AttackSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -710,6 +738,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: c642b6837413f3242af9467e4efa39e5, type: 2}
           m_ObjectArgumentAssemblyTypeName: Utils.RumbleControllerData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 765996105383918817}
+        m_TargetAssemblyTypeName: Player.PlayerSoundController, Assembly-CSharp
+        m_MethodName: HitSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -859,6 +899,24 @@ MonoBehaviour:
   cloneDuration: 0.25
   timeBetweenInstances: 0.04
   offset: {x: 0, y: -1, z: 0}
+--- !u!114 &765996105383918817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4780633370198621073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d302774136f72774596c0cf5f8a782e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  motorSound: SA_LV1_EV_PLAYER1_BIKE_INITIAL_ENGINE
+  hitSound: SA_LV1_PLAYER1_DAMAGE_HIT
+  hitVoice: SA_LV1_EV_DX_PLAYER1_HURT
+  attackSound: SA_LV1_EV_SWORD_WHOOSH
+  attackVoice: SA_LV1_EV_DX_PLAYER1_ATTACK
+  dashSound: SA_LV1_EV_PLAYER1_BIKE_INITIAL_DASH
 --- !u!1 &6811374093388968665
 GameObject:
   m_ObjectHideFlags: 0
