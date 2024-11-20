@@ -70,6 +70,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6164988826039075903}
     m_Modifications:
+    - target: {fileID: 2348087325476569324, guid: 153d6007980fa0b47ae05d085a5ccc6b, type: 3}
+      propertyPath: m_fontSize
+      value: 79.65
+      objectReference: {fileID: 0}
     - target: {fileID: 7373703925847921517, guid: 153d6007980fa0b47ae05d085a5ccc6b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -153,6 +157,10 @@ PrefabInstance:
     - target: {fileID: 7466030995006125901, guid: 153d6007980fa0b47ae05d085a5ccc6b, type: 3}
       propertyPath: m_Name
       value: Canvases
+      objectReference: {fileID: 0}
+    - target: {fileID: 7466030995006125901, guid: 153d6007980fa0b47ae05d085a5ccc6b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
