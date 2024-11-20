@@ -48,6 +48,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5287153825028977737, guid: 9d8d432c7f5a2fb408b6cd5ef1929fb6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b5388feb9071cec439cfdc2090ab4637, type: 2}
+    - target: {fileID: 8185802666536637701, guid: 9d8d432c7f5a2fb408b6cd5ef1929fb6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 154c85d47c5ecae498ac44ee347acea2, type: 2}
     - target: {fileID: 8897631535468698546, guid: 9d8d432c7f5a2fb408b6cd5ef1929fb6, type: 3}
       propertyPath: m_Name
       value: InitMotorcycle3 Variant
