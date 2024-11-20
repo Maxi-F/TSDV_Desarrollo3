@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{EBE969E9-6BC0-45F9-9276-B9A5674CF30C}" SchemaVersion="119">
+	<States>
+		<WorkUnit Name="JJ Game States" ID="{EBE969E9-6BC0-45F9-9276-B9A5674CF30C}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Estados_Music" ID="{3EB367F5-C750-4FB6-AE97-682BAD1AA65E}">
+					<ChildrenList>
+						<State Name="None" ID="{B5B8941E-3CE4-41AE-BC40-7BE224114A25}"/>
+						<State Name="Cinematica" ID="{5304E50E-5B9E-4E43-8840-8482C8FCB3E1}"/>
+						<State Name="Fase_1" ID="{06B84ED9-4BD1-4A99-80DF-E85684029AA1}"/>
+						<State Name="Fase_1_Boss" ID="{5417FDBC-F181-492F-A30B-1ABA71122B81}"/>
+						<State Name="Fase_2" ID="{EC5AC355-9F7F-4FEA-9C8F-E939098A622B}"/>
+						<State Name="Fase_2_Boss" ID="{D97E98CE-0AB5-445B-A8A6-B6F2AA4D9B5D}"/>
+						<State Name="Fase_3" ID="{5928FAC7-8148-4658-B58A-03ED288DFD3F}"/>
+						<State Name="Fase_3_Boss" ID="{86013C37-95E6-43C5-ACB3-0E057A707346}"/>
+						<State Name="Game_Over" ID="{C7054D7A-9DCA-4393-83F9-20259E38E215}"/>
+						<State Name="Menu_Credits" ID="{A599708C-4733-4611-B2FB-3E69E1F82331}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

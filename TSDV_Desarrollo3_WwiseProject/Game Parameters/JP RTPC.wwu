@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F756C646-C901-4325-893E-325230E1CCC9}" SchemaVersion="119">
+	<GameParameters>
+		<WorkUnit Name="JP RTPC" ID="{F756C646-C901-4325-893E-325230E1CCC9}" PersistMode="Standalone"/>
+	</GameParameters>
+</WwiseDocument>
