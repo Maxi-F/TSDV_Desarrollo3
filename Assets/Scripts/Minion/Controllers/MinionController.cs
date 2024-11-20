@@ -12,22 +12,20 @@ namespace Minion.Controllers
 
         protected HealthPoints _healthPoints;
         protected Collider _collider;
-        
+
         public void LookAtTarget()
         {
-            Vector3 rotation = Quaternion.LookRotation(target.transform.position).eulerAngles;
-            rotation.x = 0f;
-            rotation.z = 0f;
-            
-            minionAgent.GetModel().transform.rotation = Quaternion.Euler(rotation);
+            Vector3 targetPos = target.transform.position;
+            targetPos.y = minionAgent.GetModel().transform.position.y;
+            minionAgent.GetModel().transform.LookAt(targetPos, Vector3.up);
         }
-        
+
         protected virtual void OnEnable()
         {
             _healthPoints ??= GetComponent<HealthPoints>();
             _collider ??= GetComponent<Collider>();
             minionAgent ??= GetComponent<MinionAgent>();
-            
+
             target = minionAgent.GetPlayer();
         }
     }
