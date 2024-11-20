@@ -97,7 +97,7 @@ public class WeakenedController : EnemyController
         yield return new WaitForSeconds(timeToReactivateShield);
     }
 
-    private void ActivateShield()
+    public void ActivateShield()
     {
         healthPoints.SetCanTakeDamage(false);
         shieldController.SetActive(true);
