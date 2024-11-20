@@ -6,6 +6,7 @@ using Managers;
 using MapBounds;
 using Player.Controllers;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Player
 {
@@ -41,6 +42,9 @@ namespace Player
         [SerializeField] private VoidEventChannelSO onDamageAvoidedEvent;
         [SerializeField] private VoidEventChannelSO onCinematicFinished;
         [SerializeField] private VoidEventChannelSO onCinematicStarted;
+
+        [Header("Internal events")] 
+        [SerializeField] private UnityEvent onDash;
         
         private PlayerMovementController _movementController;
         private HealthPoints _healthPoints;
@@ -133,6 +137,7 @@ namespace Player
             _dashDir = _movementController.CurrentDir;
             playerAgent.ChangeStateToDash();
             onDashUsedEvent.RaiseEvent();
+            onDash?.Invoke();
             while (timer < dashDuration)
             {
                 float dashTime = Mathf.Lerp(0, 1, timer / dashDuration);

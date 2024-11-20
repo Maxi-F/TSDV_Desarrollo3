@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E67C0F54-52A1-4539-96BE-663B4CCE34BB}" SchemaVersion="119">
+	<GameParameters>
+		<WorkUnit Name="Tomy RTPC" ID="{E67C0F54-52A1-4539-96BE-663B4CCE34BB}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="Bike_Speed" ID="{A1D30AF3-2A4D-4A3A-93A4-17EDB64AD294}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

@@ -234,7 +234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
       propertyPath: initMusic
-      value: SA_EV_LV0_MX_MENU_MAIN
+      value: PLAY_A_MX_TODO_95_BPM_V1A
       objectReference: {fileID: 0}
     - target: {fileID: 8516856103388622650, guid: 65e5f6d121e9e014c998b48c5e16648e, type: 3}
       propertyPath: scenesToSubscribeTo.Array.size

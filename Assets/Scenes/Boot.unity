@@ -169,6 +169,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneryManager: {fileID: 1074262472}
+  masterVolumeRtpc:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a737ffb1f06dded41917b12a5b609a24, type: 2}
+  masterVolumePrefsId: Master
+  defaultVolume: 10
+  hasModifiedVolumePrefId: masterFlag
 --- !u!114 &460891773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,7 +438,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413251191}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31742d9add994ea4e8f8a89b928d4cb2, type: 3}
   m_Name: 

@@ -2064,6 +2064,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1455226110250857486, guid: 37b996a305f86494790905cd27a3620f, type: 3}
+      propertyPath: rumblePref
+      value: rumbleMultiplier
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455226110250857486, guid: 37b996a305f86494790905cd27a3620f, type: 3}
+      propertyPath: rumbleFlagPref
+      value: rumbleFlag
+      objectReference: {fileID: 0}
     - target: {fileID: 7276040671816083838, guid: 37b996a305f86494790905cd27a3620f, type: 3}
       propertyPath: m_Name
       value: RumbleControllerManager
