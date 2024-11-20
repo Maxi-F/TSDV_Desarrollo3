@@ -106,11 +106,11 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _LightOpacity: 0.536
+    - _LightOpacity: 0
     - _LightScale: 1
     - _Metallic: 0
     - _OcclusionStrength: 1
-    - _Opacity: 0.438
+    - _Opacity: 0
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0

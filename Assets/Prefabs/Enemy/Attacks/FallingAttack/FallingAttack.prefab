@@ -155,10 +155,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7360055294922511000}
     m_Modifications:
-    - target: {fileID: 2216457190038444398, guid: 2ef4f60044f76a6429166c0d2f79f8d6, type: 3}
-      propertyPath: m_Name
-      value: targetSprite
-      objectReference: {fileID: 0}
     - target: {fileID: 4812216499189370697, guid: 2ef4f60044f76a6429166c0d2f79f8d6, type: 3}
       propertyPath: m_Name
       value: FallingAttackTargetModel

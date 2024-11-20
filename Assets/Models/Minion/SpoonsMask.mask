@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SpoonsMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Controllers
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_back_wire_1
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_back_wire_1/cntrl_back_wire_1
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_back_wire_1/cntrl_back_wire_1/grp_cntrl_back_wire_2
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_back_wire_1/cntrl_back_wire_1/grp_cntrl_back_wire_2/cntrl_back_wire_2
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_fans
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_fans/cntrl_fans
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_fans/cntrl_fans/grp_cntrl_spoon_1
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_fans/cntrl_fans/grp_cntrl_spoon_1/cntrl_spoon_1
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_fans/cntrl_fans/grp_cntrl_spoon_2
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_fans/cntrl_fans/grp_cntrl_spoon_2/cntrl_spoon_2
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_fans/cntrl_fans/grp_cntrl_spoon_3
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_fans/cntrl_fans/grp_cntrl_spoon_3/cntrl_spoon_3
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_fans/cntrl_fans/grp_cntrl_spoon_4
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_fans/cntrl_fans/grp_cntrl_spoon_4/cntrl_spoon_4
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_front_wire_1
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_front_wire_1/cntrl_front_wire_1
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_front_wire_1/cntrl_front_wire_1/grp_cntrl_front_wire_2
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_front_wire_1/cntrl_front_wire_1/grp_cntrl_front_wire_2/cntrl_front_wire_2
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_front_wire_1/cntrl_front_wire_1/grp_cntrl_front_wire_2/cntrl_front_wire_2/grp_cntrl_front_wire_3
+    m_Weight: 0
+  - m_Path: Controllers/grp_cntrl_main/cntrl_main/grp_cntrl_placement/cntrl_placement/grp_cntrl_top_inclination/cntrl_top_inclination/grp_cntrl_cog/cntrl_cog/grp_cntrl_front_wire_1/cntrl_front_wire_1/grp_cntrl_front_wire_2/cntrl_front_wire_2/grp_cntrl_front_wire_3/cntrl_front_wire_3
+    m_Weight: 0
+  - m_Path: Joints
+    m_Weight: 0
+  - m_Path: Joints/bnh_base
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bn_back_wire_1
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bn_back_wire_1/bn_back_wire_2
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bn_back_wire_1/bn_back_wire_2/bn_back_wire_3
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bn_back_wire_1/bn_back_wire_2/bn_back_wire_3/bne_back_wire
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bn_front_wire_1
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bn_front_wire_1/bn_front_wire_2
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bn_front_wire_1/bn_front_wire_2/bn_front_wire_3
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bn_front_wire_1/bn_front_wire_2/bn_front_wire_3/bn_front_wire_4
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bn_front_wire_1/bn_front_wire_2/bn_front_wire_3/bn_front_wire_4/bne_front_wire
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bnh_fans
+    m_Weight: 1
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bnh_fans/bn_spoon1_base
+    m_Weight: 1
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bnh_fans/bn_spoon1_base/bn_spoon1_fold
+    m_Weight: 1
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bnh_fans/bn_spoon1_base/bn_spoon1_fold/bn_spoon1_scoop
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bnh_fans/bn_spoon1_base/bn_spoon1_fold/bn_spoon1_scoop/bne_spoon1_end
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bnh_fans/bn_spoon2_base
+    m_Weight: 1
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bnh_fans/bn_spoon2_base/bn_spoon2_fold
+    m_Weight: 1
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bnh_fans/bn_spoon2_base/bn_spoon2_fold/bn_spoon2_scoop
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bnh_fans/bn_spoon2_base/bn_spoon2_fold/bn_spoon2_scoop/bne_spoon2_end
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bnh_fans/bn_spoon3_base
+    m_Weight: 1
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bnh_fans/bn_spoon3_base/bn_spoon3_fold
+    m_Weight: 1
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bnh_fans/bn_spoon3_base/bn_spoon3_fold/bn_spoon3_scoop
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bnh_fans/bn_spoon3_base/bn_spoon3_fold/bn_spoon3_scoop/bne_spoon3_end
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bnh_fans/bn_spoon4_base
+    m_Weight: 1
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bnh_fans/bn_spoon4_base/bn_spoon4_fold
+    m_Weight: 1
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bnh_fans/bn_spoon4_base/bn_spoon4_fold/bn_spoon4_scoop
+    m_Weight: 0
+  - m_Path: Joints/bnh_base/bnh_top/bnh_COG/bnh_fans/bn_spoon4_base/bn_spoon4_fold/bn_spoon4_scoop/bne_spoon4_end
+    m_Weight: 0
+  - m_Path: minion_a:Geo_Minion_A
+    m_Weight: 0
+  - m_Path: minion_a:Geo_Minion_A/minion_a:cable_1
+    m_Weight: 0
+  - m_Path: minion_a:Geo_Minion_A/minion_a:cable_2
+    m_Weight: 0
+  - m_Path: minion_a:Geo_Minion_A/minion_a:cinta_1
+    m_Weight: 0
+  - m_Path: minion_a:Geo_Minion_A/minion_a:cinta_2
+    m_Weight: 0
+  - m_Path: minion_a:Geo_Minion_A/minion_a:cucharas
+    m_Weight: 0
+  - m_Path: minion_a:Geo_Minion_A/minion_a:cucharas/minion_a:cuchara_1
+    m_Weight: 0
+  - m_Path: minion_a:Geo_Minion_A/minion_a:cucharas/minion_a:cuchara_2
+    m_Weight: 0
+  - m_Path: minion_a:Geo_Minion_A/minion_a:cucharas/minion_a:cuchara_3
+    m_Weight: 0
+  - m_Path: minion_a:Geo_Minion_A/minion_a:cucharas/minion_a:cuchara_4
+    m_Weight: 0
+  - m_Path: minion_a:Geo_Minion_A/minion_a:manija
+    m_Weight: 0
+  - m_Path: minion_a:Geo_Minion_A/minion_a:pCylinder2
+    m_Weight: 0
+  - m_Path: minion_a:Geo_Minion_A/minion_a:taza
+    m_Weight: 0
