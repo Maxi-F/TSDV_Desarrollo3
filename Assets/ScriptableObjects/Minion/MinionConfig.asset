@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minionPrefab: {fileID: 9068004531541268373, guid: 454833c9036f8164b92e7c7279a2b863, type: 3}
   chargeAttackData:
-    duration: 0.75
+    duration: 0.6
     length: 7
     chargeCurve:
       serializedVersion: 2
@@ -40,6 +40,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+    alertDuration: 0.2
     delayAfterLine: 0.2
   attackData:
     damage: 15

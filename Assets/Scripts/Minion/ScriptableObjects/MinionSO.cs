@@ -11,6 +11,7 @@ namespace Minion.ScriptableObjects
         public float duration;
         public float length;
         public AnimationCurve chargeCurve;
+        public float alertDuration;
         public float delayAfterLine;
     }
 

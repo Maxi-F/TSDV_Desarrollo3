@@ -11,19 +11,11 @@ namespace Minion.Controllers
     {
         [SerializeField] private MinionSO minionConfig;
         [SerializeField] private MinionAttackController minionAttackController;
-        private LineRenderer _aimLine;
+        [SerializeField] private AimVFX aimLineHandler;
         private Vector3 _dir;
         private bool _isCharging;
 
         private Coroutine _chargeCoroutine;
-
-        protected override void OnEnable()
-        {
-            _aimLine ??= gameObject.transform.Find("AimLine").gameObject.GetComponent<LineRenderer>();
-            _aimLine.enabled = false;
-
-            base.OnEnable();
-        }
 
         private void OnDisable()
         {
@@ -38,19 +30,13 @@ namespace Minion.Controllers
 
         private void StartAimLine()
         {
-            _aimLine.SetPosition(0, transform.position);
-            _aimLine.SetPosition(1, transform.position);
-            _aimLine.enabled = true;
+            aimLineHandler.Aim();
         }
 
-        private void SetNewAimPosition(float timer)
+        private void SetNewAimPosition()
         {
             _dir = target.transform.position - transform.position;
             _dir.y = 0;
-
-            float barProgress = minionConfig.chargeAttackData.chargeCurve.Evaluate(timer / minionConfig.chargeAttackData.duration);
-            Vector3 aimPosition = Vector3.Lerp(transform.position, transform.position + _dir.normalized * minionConfig.chargeAttackData.length, barProgress);
-            _aimLine.SetPosition(1, aimPosition);
             LookAtTarget();
         }
 
@@ -63,13 +49,15 @@ namespace Minion.Controllers
             while (timer < minionConfig.chargeAttackData.duration)
             {
                 timer = Time.time - startTime;
-                SetNewAimPosition(timer);
+                SetNewAimPosition();
                 yield return null;
             }
 
+            aimLineHandler.Alert();
             minionAttackController.AttackDir = _dir;
+            yield return new WaitForSeconds(minionConfig.chargeAttackData.alertDuration);
+            aimLineHandler.Release();
             yield return new WaitForSeconds(minionConfig.chargeAttackData.delayAfterLine);
-            _aimLine.enabled = false;
             minionAgent.ChangeStateToAttack();
         }
     }

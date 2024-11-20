@@ -4,26 +4,65 @@ using UnityEngine;
 
 public class AimVFX : MonoBehaviour
 {
-    [SerializeField] Animator animator;
-    [SerializeField] float aimingDuration = 1;
-    [SerializeField] float alertingDuration = 1;
-    [SerializeField] float releaseDuration = 1;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Animator animator;
+    [SerializeField] private float aimingDuration = 1;
+    [SerializeField] private float alertingDuration = 1;
+    [SerializeField] private float releaseDuration = 1;
+    [SerializeField] private GameObject aimLineBeginning;
+
+    private static readonly int _aimSpeed = Animator.StringToHash("aiming_speed_multiplier");
+    private static readonly int _alertSpeed = Animator.StringToHash("alert_speed_multiplier");
+    private static readonly int _releaseSpeed = Animator.StringToHash("release_speed_multiplier");
+
+    private static readonly int _aimTrigger = Animator.StringToHash("AIM");
+    private static readonly int _alertTrigger = Animator.StringToHash("ALERT");
+    private static readonly int _releaseTrigger = Animator.StringToHash("RELEASE");
+
+    private static readonly int _startState = Animator.StringToHash("Start");
+
+    public float AimingDuration
     {
-        
+        get => aimingDuration;
+        set => aimingDuration = value;
     }
 
-    // Update is called once per frame
+    public float AlertDuration
+    {
+        get => alertingDuration;
+        set => alertingDuration = value;
+    }
+
+    public float ReleaseDuration
+    {
+        get => releaseDuration;
+        set => releaseDuration = value;
+    }
+
     void Update()
     {
-        animator.SetFloat("aiming_speed_multiplier", 1/aimingDuration);
-        animator.SetFloat("alert_speed_multiplier", 1/alertingDuration);
-        animator.SetFloat("release_speed_multiplier", 1/releaseDuration);
-
+        animator.SetFloat(_aimSpeed, 1 / aimingDuration);
+        animator.SetFloat(_alertSpeed, 1 / alertingDuration);
+        animator.SetFloat(_releaseSpeed, 1 / releaseDuration);
     }
+
+    public void Reset()
+    {
+        aimLineBeginning.transform.localScale = Vector3.zero;
+        animator.Play(_startState);
+    }
+
     public void Aim()
     {
-        animator.SetTrigger("AIM");
+        animator.SetTrigger(_aimTrigger);
+    }
+
+    public void Alert()
+    {
+        animator.SetTrigger(_alertTrigger);
+    }
+
+    public void Release()
+    {
+        animator.SetTrigger(_releaseTrigger);
     }
 }
