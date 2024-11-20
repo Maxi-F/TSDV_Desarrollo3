@@ -34,6 +34,8 @@ namespace LevelManagement
         [SerializeField] private VoidEventChannelSO onResetGameplayEvent;
         [SerializeField] private StringEventChannelSo onOpenSceneEvent;
 
+        [Header("Music")] [SerializeField] private AK.Wwise.State resettedMusicState;
+        
         private int _loopConfigIndex;
         private LevelLoopSO _actualLoopConfig;
         private StartLevelSequence _startLevelSequence;

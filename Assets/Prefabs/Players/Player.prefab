@@ -782,13 +782,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Utils.RumbleController, Assembly-CSharp
-        m_MethodName: StartRumble
-        m_Mode: 2
+      - m_Target: {fileID: 765996105383918817}
+        m_TargetAssemblyTypeName: Player.PlayerSoundController, Assembly-CSharp
+        m_MethodName: DeathSound
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: c642b6837413f3242af9467e4efa39e5, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Utils.RumbleControllerData, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -917,6 +917,12 @@ MonoBehaviour:
   attackSound: SA_LV1_EV_SWORD_WHOOSH
   attackVoice: SA_LV1_EV_DX_PLAYER1_ATTACK
   dashSound: SA_LV1_EV_PLAYER1_BIKE_INITIAL_DASH
+  gameOverState:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 59c21a7e21ff781478382859ae916459, type: 2}
 --- !u!1 &6811374093388968665
 GameObject:
   m_ObjectHideFlags: 0
