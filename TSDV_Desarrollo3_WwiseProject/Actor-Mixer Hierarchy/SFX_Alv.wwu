@@ -7,69 +7,34 @@
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<ActorMixer Name="Text UI Glitch" ID="{CAE1EFA0-87FB-4747-94DC-73E5DC92F25E}" ShortID="71958565">
-					<PropertyList>
-						<Property Name="Lowpass" Type="int16">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{0B5AB287-B475-47FA-9CB0-791E23F84754}">
-										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="20"/>
-											<Property Name="Min" Type="Real64" Value="-20"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-						<Property Name="Pitch" Type="int32">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{B63256A7-6E7C-4602-A429-5761FAF033BA}">
-										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="100"/>
-											<Property Name="Min" Type="Real64" Value="-100"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-						<Property Name="Volume" Type="Real64">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{154BE9E1-4C32-48AA-A351-5175B8DACDF5}">
-										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="1"/>
-											<Property Name="Min" Type="Real64" Value="-1"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-					</PropertyList>
+				<ActorMixer Name="Enemy" ID="{179BFB67-BC49-4D71-904B-EC35C214197F}" ShortID="545770724">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="UI" ID="{89C2E468-AEBB-4BD6-97C2-7EC34E45715D}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+							<ObjectRef Name="Enemies" ID="{5D790E1A-1721-4BFD-A0FD-9862C1A6E1BC}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="A_SFX_Lv1_Plater1_Damage_Hit_V1A" ID="{3DFE5DEF-D614-4013-A6F5-7BC3A9161366}" ShortID="369819953">
+						<ActorMixer Name="Boss Explosion" ID="{31A9B5CA-BB22-44D3-AD9C-0E9B7A023664}" ShortID="494209960">
 							<PropertyList>
-								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
-								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
-								<Property Name="MaxSoundPerInstance" Type="int16">
-									<ValueList>
-										<Value>2</Value>
-									</ValueList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{908943FF-A920-405A-89C9-2DF7BACD74C3}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
 								</Property>
-								<Property Name="UseMaxSoundPerInstance" Type="bool">
+								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>True</Value>
+										<Value>3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -82,23 +47,439 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="A_SFX_Lv1_Plater1_Damage_Hit_V1A" ID="{E4F9EABA-93B7-4A20-8064-81B5B4119C58}">
+								<Sound Name="A_SFX_Lv1_Boss_Damage_Die_V1A" ID="{09AA2C82-BE53-4156-9B43-66A28197785A}" ShortID="374931715">
 									<PropertyList>
-										<Property Name="LoopBegin" Type="Real64" Value="0.081892069757107"/>
-										<Property Name="LoopEnd" Type="Real64" Value="1.3603357032058"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{C0C78267-D570-429C-92E8-9A5AE2A0C414}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="6"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3FDE2FBD-A6B8-448B-A59A-08636B37EDF5}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="50"/>
+															<Property Name="Min" Type="Real64" Value="-50"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{30F7E3B5-6B5F-47EE-9D9A-621B2853896D}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="6"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>A_SFX_Lv1_Plater1_Damage_Hit_V1A.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="343134345"/>
-									</MediaIDList>
-								</AudioFileSource>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="A_SFX_Lv1_Boss_Damage_Die_V1A" ID="{99A4BF12-2FF4-4F31-B05D-26DB207945B3}">
+											<Language>SFX</Language>
+											<AudioFile>A_SFX_Lv1_Boss_Damage_Die_V1A.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="260491875"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="A_SFX_Lv1_Boss_Damage_Die_V1A" ID="{99A4BF12-2FF4-4F31-B05D-26DB207945B3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="A_SFX_Lv1_Plater1_Damage_Hit_V1A" ID="{E4F9EABA-93B7-4A20-8064-81B5B4119C58}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+						</ActorMixer>
+						<ActorMixer Name="Boss Falling Attack" ID="{EAA2FFFE-3B03-4332-8548-5ED6ECCC6E18}" ShortID="534168231">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Debris Break" ID="{5FCC1239-D358-462D-AA23-BCE4B9FECE92}" ShortID="796476658">
+									<PropertyList>
+										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Enemies" ID="{5D790E1A-1721-4BFD-A0FD-9862C1A6E1BC}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1A" ID="{705B54B9-A2B2-4E84-A82D-4970567E99A8}" ShortID="429828943">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1A" ID="{552943ED-4E32-471E-89B7-0ECA9DD5FBAC}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.110725213063365"/>
+														<Property Name="LoopEnd" Type="Real64" Value="2.00428460904152"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1A.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="706869466"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1A" ID="{552943ED-4E32-471E-89B7-0ECA9DD5FBAC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1B" ID="{9EC8C15E-969B-4935-8019-F27C4F230285}" ShortID="926925303">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1B" ID="{C47D733B-DFB8-4A74-BA9A-C0F94DE3B17A}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.110984118476396"/>
+														<Property Name="LoopEnd" Type="Real64" Value="2.00663962456345"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1B.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="898494322"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1B" ID="{C47D733B-DFB8-4A74-BA9A-C0F94DE3B17A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1C" ID="{907AE548-AC95-4B72-819C-C354AB1D3E61}" ShortID="483432919">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-40</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1C" ID="{B11F9877-8C39-41D7-A9A7-20AD798A5BC3}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.11490289279539"/>
+														<Property Name="LoopEnd" Type="Real64" Value="1.48072625866803"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1C.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="248615674"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1C" ID="{B11F9877-8C39-41D7-A9A7-20AD798A5BC3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="Boss Weak" ID="{5F019324-C475-4220-9CEA-589DBE6B3F24}" ShortID="199888894">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Damage Sword Hit" ID="{3A06625E-7C99-4135-AE5B-CBD7E9E8C820}" ShortID="843231641">
+									<PropertyList>
+										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="A_SFX_Lv1_Boss_Damage_SwordHit_V1A" ID="{EA269092-D660-4705-A440-FA0BA8970750}" ShortID="71621699">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="A_SFX_Lv1_Boss_Damage_SwordHit_V1A" ID="{DC5D2451-BFD5-4BD3-811E-F0E7611C52C5}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.0449478496190445"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>A_SFX_Lv1_Boss_Damage_SwordHit_V1A.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="323593469"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="A_SFX_Lv1_Boss_Damage_SwordHit_V1A" ID="{DC5D2451-BFD5-4BD3-811E-F0E7611C52C5}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="A_SFX_Lv1_Boss_Damage_SwordHit_V1B" ID="{33B1FAE9-C2AD-49A1-A4E2-D25AD36EC45D}" ShortID="549399377">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="A_SFX_Lv1_Boss_Damage_SwordHit_V1B" ID="{4B38724B-0038-4A44-8FB6-0B36C9834760}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.0299590701199836"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>A_SFX_Lv1_Boss_Damage_SwordHit_V1B.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1051539432"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="A_SFX_Lv1_Boss_Damage_SwordHit_V1B" ID="{4B38724B-0038-4A44-8FB6-0B36C9834760}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="A_SFX_Lv1_Boss_Damage_SwordHit_V1C" ID="{DB05F7C1-7F99-4EFD-BEEE-EC6E5253D365}" ShortID="311423803">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="A_SFX_Lv1_Boss_Damage_SwordHit_V1C" ID="{52140302-488C-4304-AB42-7BD6D4B6D544}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.0251204763071688"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>A_SFX_Lv1_Boss_Damage_SwordHit_V1C.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1048150723"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="A_SFX_Lv1_Boss_Damage_SwordHit_V1C" ID="{52140302-488C-4304-AB42-7BD6D4B6D544}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="A_SFX_Lv1_Boss_Damage_SwordHit_V1D" ID="{E9124871-4BF2-434C-B29C-3C56469DA97E}" ShortID="120093864">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="A_SFX_Lv1_Boss_Damage_SwordHit_V1D" ID="{71279318-963A-4DF6-B289-41C60DD3C4D4}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0.0400448208431198"/>
+														<Property Name="LoopEnd" Type="Real64" Value="1.3022819169577"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>A_SFX_Lv1_Boss_Damage_SwordHit_V1D.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="485936694"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="A_SFX_Lv1_Boss_Damage_SwordHit_V1D" ID="{71279318-963A-4DF6-B289-41C60DD3C4D4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="UI" ID="{07B56952-2012-4701-B60D-86DB01545CC3}" ShortID="945014774">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="UI" ID="{89C2E468-AEBB-4BD6-97C2-7EC34E45715D}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="Text UI Glitch" ID="{CAE1EFA0-87FB-4747-94DC-73E5DC92F25E}" ShortID="71958565">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{0B5AB287-B475-47FA-9CB0-791E23F84754}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="20"/>
+													<Property Name="Min" Type="Real64" Value="-20"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{B63256A7-6E7C-4602-A429-5761FAF033BA}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="50"/>
+													<Property Name="Min" Type="Real64" Value="-50"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{154BE9E1-4C32-48AA-A351-5175B8DACDF5}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="UI" ID="{89C2E468-AEBB-4BD6-97C2-7EC34E45715D}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="A_SFX_Lv1_Plater1_Damage_Hit_V1A" ID="{3DFE5DEF-D614-4013-A6F5-7BC3A9161366}" ShortID="369819953">
+									<PropertyList>
+										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+										<Property Name="MaxSoundPerInstance" Type="int16">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="UseMaxSoundPerInstance" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="A_SFX_Lv1_Plater1_Damage_Hit_V1A" ID="{E4F9EABA-93B7-4A20-8064-81B5B4119C58}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.081892069757107"/>
+												<Property Name="LoopEnd" Type="Real64" Value="1.3603357032058"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>A_SFX_Lv1_Plater1_Damage_Hit_V1A.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="343134345"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="A_SFX_Lv1_Plater1_Damage_Hit_V1A" ID="{E4F9EABA-93B7-4A20-8064-81B5B4119C58}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</ActorMixer>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>
