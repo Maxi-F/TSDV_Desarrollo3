@@ -6,7 +6,7 @@
 				<SoundBank Name="Main" ID="{D44615AD-DA43-4A91-A8D5-9FB23EFAF91E}">
 					<ObjectInclusionList>
 						<ObjectRef Name="SFX_Tomy" ID="{97767B1D-16FA-4174-8647-8BD64B0EB4DD}" WorkUnitID="{97767B1D-16FA-4174-8647-8BD64B0EB4DD}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Nico Drake" ID="{7C1E7E5B-A033-41CD-BB77-FB89D8B59559}" WorkUnitID="{7C1E7E5B-A033-41CD-BB77-FB89D8B59559}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Nico Drake MX" ID="{7C1E7E5B-A033-41CD-BB77-FB89D8B59559}" WorkUnitID="{7C1E7E5B-A033-41CD-BB77-FB89D8B59559}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SFX ALV" ID="{2C701EA1-6752-43D4-9FD2-736F72F36CC7}" WorkUnitID="{2C701EA1-6752-43D4-9FD2-736F72F36CC7}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="SFX_Jesus" ID="{F060A375-A346-4535-A35F-31DC7B315A5D}" WorkUnitID="{F060A375-A346-4535-A35F-31DC7B315A5D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Default Work Unit" ID="{8D5748B0-01A1-4537-803B-3895EEF4F562}" WorkUnitID="{8D5748B0-01A1-4537-803B-3895EEF4F562}" Origin="Manual" Filter="7"/>

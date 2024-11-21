@@ -100,11 +100,14 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID BIKE_SPEED = 2047381990U;
+        static const AkUniqueID DIALOGUE_CTRL = 2762069477U;
         static const AkUniqueID MASTER = 4056684167U;
+        static const AkUniqueID MUSIC_CTRL = 3814908706U;
         static const AkUniqueID SA_RTPC_BIKE_BOSSLV1_SPEED = 3673391112U;
         static const AkUniqueID SA_RTPC_BIKE_INITIAL_DASH = 4217154045U;
         static const AkUniqueID SA_RTPC_BIKE_INITIAL_SPEED = 3744839874U;
         static const AkUniqueID SA_RTPC_BOSSLV1_TICK = 4244705786U;
+        static const AkUniqueID SFX_CTRL = 3611335002U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
@@ -116,10 +119,16 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID AX = 1886858530U;
+        static const AkUniqueID CINEMATICS = 877642339U;
         static const AkUniqueID DX = 1836525785U;
+        static const AkUniqueID ENEMIES = 2242381963U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MX = 1685527054U;
+        static const AkUniqueID OBJECTS = 1695690031U;
+        static const AkUniqueID PLAYER1 = 2188949039U;
         static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID UI = 1551306167U;
+        static const AkUniqueID WEAPONS = 1467963052U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES
