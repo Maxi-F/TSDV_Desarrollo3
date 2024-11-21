@@ -105,6 +105,7 @@ namespace Health
             if (IsDead() && !_hasBeenDead)
             {
                 _hasBeenDead = true;
+                onTakeDamageEvent?.RaiseEvent(0);
                 onDeathEvent?.RaiseEvent();
                 onInternalDeathEvent?.Invoke();
             }
