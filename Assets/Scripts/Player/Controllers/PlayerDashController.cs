@@ -187,7 +187,7 @@ namespace Player
             float timeInCooldown = 0f;
             while (timeInCooldown <= dashCoolDown)
             {
-                onDashRechargeEvent.RaiseEvent(timeInCooldown);
+                onDashRechargeEvent.RaiseEvent(timeInCooldown / dashCoolDown);
                 yield return new WaitWhile(() => pauseData.isPaused);
                 timeInCooldown += Time.unscaledDeltaTime;
             }

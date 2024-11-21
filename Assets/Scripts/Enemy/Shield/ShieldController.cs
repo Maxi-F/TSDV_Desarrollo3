@@ -9,18 +9,15 @@ namespace Enemy.Shield
 {
     public class ShieldController : MonoBehaviour
     {
-        [SerializeField] private HealthPoints _healthPoints;
+        [FormerlySerializedAs("_healthPoints")] [SerializeField] private HealthPoints healthPoints;
 
         [SerializeField] private Material activeMaterial;
         [SerializeField] private AnimationCurve blinkCurve;
         [SerializeField] private GameObject shieldModel;
-        private bool _isActive = true;
         private MeshRenderer _meshRenderer;
 
         private void OnEnable()
         {
-            _isActive = true;
-
             _meshRenderer ??= shieldModel.GetComponent<MeshRenderer>();
         }
 
@@ -52,18 +49,16 @@ namespace Enemy.Shield
 
         public void SetActive(bool isActive)
         {
-            _isActive = isActive;
-
-            if (!_isActive) _meshRenderer.enabled = false;
+            _meshRenderer.enabled = isActive;
         }
 
         public bool TryDestroyShield(int parryDamage)
         {
-            _healthPoints.TryTakeDamage(parryDamage);
+            healthPoints.TryTakeDamage(parryDamage);
 
-            if (_healthPoints.IsDead())
+            if (healthPoints.IsDead())
             {
-                _healthPoints.SetCanTakeDamage(false);
+                healthPoints.SetCanTakeDamage(false);
                 return true;
             }
 
@@ -72,8 +67,8 @@ namespace Enemy.Shield
 
         public void ResetShield()
         {
-            _healthPoints.SetCanTakeDamage(true);
-            _healthPoints.ResetHitPoints();
+            healthPoints.SetCanTakeDamage(true);
+            healthPoints.ResetHitPoints();
         }
     }
 }
