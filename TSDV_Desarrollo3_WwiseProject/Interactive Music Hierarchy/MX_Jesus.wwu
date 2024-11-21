@@ -9,7 +9,23 @@
 			<ChildrenList>
 				<MusicSwitchContainer Name="A_Mx_Todo_95_Bpm_V1A" ID="{1C7AB2C0-D97D-4CA7-A667-1E9701CBA287}" ShortID="123136255">
 					<PropertyList>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Tempo" Type="Real64" Value="95"/>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -1830,6 +1846,19 @@
 						<ObjectList Name="Arguments">
 							<Reference>
 								<ObjectRef Name="Estados_Music" ID="{3EB367F5-C750-4FB6-AE97-682BAD1AA65E}" WorkUnitID="{EBE969E9-6BC0-45F9-9276-B9A5674CF30C}"/>
+							</Reference>
+						</ObjectList>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{61202372-332F-444D-9050-76EB646C0EEA}" ShortID="315178532">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+												<ObjectRef Name="Music_Comp" ID="{C45E2B16-E0CE-4D5C-9C0B-2341746A8EC6}" WorkUnitID="{D83E249B-CB6D-4DB7-B77D-39AE7C2D0B25}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
 							</Reference>
 						</ObjectList>
 						<ObjectList Name="Entries">

@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{D83E249B-CB6D-4DB7-B77D-39AE7C2D0B25}" SchemaVersion="119">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{D83E249B-CB6D-4DB7-B77D-39AE7C2D0B25}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{D83E249B-CB6D-4DB7-B77D-39AE7C2D0B25}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="Player1_DX_Comp" ID="{557DE64B-1600-4FD6-816A-D8804619AA3A}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+					<PropertyList>
+						<Property Name="AttackTime" Type="Real32" Value="0.07"/>
+						<Property Name="OutputGain" Type="Real32" Value="2.6"/>
+						<Property Name="Ratio" Type="Real32" Value="2"/>
+						<Property Name="ReleaseTime" Type="Real32" Value="0.24"/>
+						<Property Name="Threshold" Type="Real32" Value="-27.4"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="DX_Player1_Attack" ID="{94B5C1CA-3F6F-4B2E-B491-23CD4D6412BC}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+					<PropertyList>
+						<Property Name="AttackTime" Type="Real32" Value="0.05"/>
+						<Property Name="OutputGain" Type="Real32" Value="3.8"/>
+						<Property Name="Ratio" Type="Real32" Value="2"/>
+						<Property Name="ReleaseTime" Type="Real32" Value="0.18"/>
+						<Property Name="Threshold" Type="Real32" Value="-18.7"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="Music_Comp" ID="{C45E2B16-E0CE-4D5C-9C0B-2341746A8EC6}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+					<PropertyList>
+						<Property Name="AttackTime" Type="Real32" Value="0.22"/>
+						<Property Name="OutputGain" Type="Real32" Value="2.6"/>
+						<Property Name="Ratio" Type="Real32" Value="6.7"/>
+						<Property Name="ReleaseTime" Type="Real32" Value="0.33"/>
+						<Property Name="Threshold" Type="Real32" Value="-14.2"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>
