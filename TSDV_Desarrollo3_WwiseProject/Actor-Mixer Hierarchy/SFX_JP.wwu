@@ -1165,6 +1165,12 @@
 												<Value>2</Value>
 											</ValueList>
 										</Property>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1527,6 +1533,21 @@
 											</ChildrenList>
 										</RandomSequenceContainer>
 									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{9AB33629-AE31-4F87-AFE5-5FF609DE7B68}" ShortID="758750830">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+																<ObjectRef Name="Dash_Compressor" ID="{BB7BB5D8-5512-4747-9413-87AFD6F933BA}" WorkUnitID="{D83E249B-CB6D-4DB7-B77D-39AE7C2D0B25}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</BlendContainer>
 							</ChildrenList>
 						</ActorMixer>

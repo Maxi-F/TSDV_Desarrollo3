@@ -30,6 +30,23 @@
 						<Property Name="Threshold" Type="Real32" Value="-14.2"/>
 					</PropertyList>
 				</Effect>
+				<Effect Name="General_Peak_Limiter" ID="{87A67BCF-0EA1-4A24-81AE-EE7F6155C248}" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3"/>
+				<Effect Name="General_Compressor" ID="{B7AA7D2A-D563-4E51-B9E4-EFF4758B4260}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+					<PropertyList>
+						<Property Name="OutputGain" Type="Real32" Value="2.1"/>
+						<Property Name="Ratio" Type="Real32" Value="2"/>
+						<Property Name="Threshold" Type="Real32" Value="-15.2"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="Dash_Compressor" ID="{BB7BB5D8-5512-4747-9413-87AFD6F933BA}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+					<PropertyList>
+						<Property Name="AttackTime" Type="Real32" Value="0.15"/>
+						<Property Name="OutputGain" Type="Real32" Value="3.3"/>
+						<Property Name="Ratio" Type="Real32" Value="2.9"/>
+						<Property Name="ReleaseTime" Type="Real32" Value="0.27"/>
+						<Property Name="Threshold" Type="Real32" Value="-34.5"/>
+					</PropertyList>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>
