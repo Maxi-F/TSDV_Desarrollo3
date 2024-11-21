@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7C1E7E5B-A033-41CD-BB77-FB89D8B59559}" SchemaVersion="119">
+	<InteractiveMusic>
+		<WorkUnit Name="MX Developers" ID="{7C1E7E5B-A033-41CD-BB77-FB89D8B59559}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="12"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+		</WorkUnit>
+	</InteractiveMusic>
+</WwiseDocument>

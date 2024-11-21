@@ -2,6 +2,10 @@
 <WwiseDocument Type="WorkUnit" ID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}" SchemaVersion="119">
 	<AudioObjects>
 		<WorkUnit Name="SFX_JP" ID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="4"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<BlendContainer Name="UI" ID="{85375028-D27E-4573-AE92-51969D662A50}" ShortID="615991362">
 					<ReferenceList>

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{2C701EA1-6752-43D4-9FD2-736F72F36CC7}" SchemaVersion="119">
 	<AudioObjects>
-		<WorkUnit Name="SFX ALV" ID="{2C701EA1-6752-43D4-9FD2-736F72F36CC7}" PersistMode="Standalone">
+		<WorkUnit Name="SFX_Alv" ID="{2C701EA1-6752-43D4-9FD2-736F72F36CC7}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="2"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<ActorMixer Name="Text UI Glitch" ID="{CAE1EFA0-87FB-4747-94DC-73E5DC92F25E}" ShortID="71958565">
 					<PropertyList>

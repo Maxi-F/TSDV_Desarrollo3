@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{43BAF8DC-FD8A-46C4-AFDF-D0E6F40B9270}" SchemaVersion="119">
 	<InteractiveMusic>
-		<WorkUnit Name="JJ_Mx" ID="{43BAF8DC-FD8A-46C4-AFDF-D0E6F40B9270}" PersistMode="Standalone">
+		<WorkUnit Name="MX_Jesus" ID="{43BAF8DC-FD8A-46C4-AFDF-D0E6F40B9270}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="9"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<MusicSwitchContainer Name="A_Mx_Todo_95_Bpm_V1A" ID="{1C7AB2C0-D97D-4CA7-A667-1E9701CBA287}" ShortID="123136255">
 					<PropertyList>
