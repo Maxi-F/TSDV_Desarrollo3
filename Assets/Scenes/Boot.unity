@@ -169,14 +169,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneryManager: {fileID: 1074262472}
-  initMusic: Play_A_Mx_Todo_95_Bpm_V1A
   masterVolumeRtpc:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: a737ffb1f06dded41917b12a5b609a24, type: 2}
   masterVolumePrefsId: Master
-  defaultVolume: 10
   hasModifiedVolumePrefId: masterFlag
+  defaultVolume: 10
+  musicVolumeRtpc:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: df89053165aa3bd4aabab9a45be9ad52, type: 2}
+  sfxVolumeRtpc:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9efa7b513b2397441b583994e0d91f99, type: 2}
+  musicVolumePref: Music
+  musicVolumeFlagPref: musicFlag
+  sfxVolumePref: Sfx
+  sfxFlagPref: sfxFlag
 --- !u!114 &460891773
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,8 +15,9 @@ namespace UI.Sliders
         private void OnEnable()
         {
             float masterVolumePref = PlayerPrefs.GetFloat(prefsId);
-
-            if (masterVolumePref != 0)
+            bool hasBeenModified = PlayerPrefs.GetInt(modifiedFlagId) == 1;
+            
+            if (hasBeenModified)
             {
                 slider.value = masterVolumePref;
             }
