@@ -33,7 +33,7 @@
 						<Action Name="" ID="{2560B84F-D535-4002-8A09-38C09100F045}" ShortID="662654115">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="A_SFX_All_Player1_Objects_Bike_Initial_Engine_V1A_" ID="{06877FAD-5DB9-4C63-918D-C7AB28BECFCE}" WorkUnitID="{97767B1D-16FA-4174-8647-8BD64B0EB4DD}"/>
+									<ObjectRef Name="A_SFX_All_Player1_Objects_Bike_Initial_Engine_V1A_" ID="{06877FAD-5DB9-4C63-918D-C7AB28BECFCE}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -46,7 +46,7 @@
 						<Action Name="" ID="{C01A4B0F-C87B-4868-8E84-78F75CAA5919}" ShortID="986551166">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SA_Lv1_EV_Minion_Engine" ID="{CA7C7230-1A53-4932-ABA4-687FA90E8AEF}" WorkUnitID="{97767B1D-16FA-4174-8647-8BD64B0EB4DD}"/>
+									<ObjectRef Name="SA_Lv1_EV_Minion_Engine" ID="{CA7C7230-1A53-4932-ABA4-687FA90E8AEF}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -60,7 +60,7 @@
 						<Action Name="" ID="{4C1C1B21-4B75-4FAF-A015-32A883CEEB64}" ShortID="975381053">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SA_Lv1_EV_Minion_Damage_Explode" ID="{9CC1B860-8FE6-480A-A18D-14F1D1D859DE}" WorkUnitID="{97767B1D-16FA-4174-8647-8BD64B0EB4DD}"/>
+									<ObjectRef Name="SA_Lv1_EV_Minion_Damage_Explode" ID="{9CC1B860-8FE6-480A-A18D-14F1D1D859DE}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -71,7 +71,7 @@
 						<Action Name="" ID="{F089A332-2060-4281-B47F-26475C405B8E}" ShortID="256150133">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SA_Lv1_EV_Minion_Damage_Impact" ID="{AF52590E-1370-40BA-BEA4-5CE66DE5D762}" WorkUnitID="{97767B1D-16FA-4174-8647-8BD64B0EB4DD}"/>
+									<ObjectRef Name="SA_Lv1_EV_Minion_Damage_Impact" ID="{AF52590E-1370-40BA-BEA4-5CE66DE5D762}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -83,7 +83,7 @@
 						<Action Name="" ID="{E4BC23E4-5C96-449C-92B4-8032192D4503}" ShortID="616537682">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="A_SFX_All_Player1_Objects_Bike_Initial_Engine_V1A_" ID="{06877FAD-5DB9-4C63-918D-C7AB28BECFCE}" WorkUnitID="{97767B1D-16FA-4174-8647-8BD64B0EB4DD}"/>
+									<ObjectRef Name="A_SFX_All_Player1_Objects_Bike_Initial_Engine_V1A_" ID="{06877FAD-5DB9-4C63-918D-C7AB28BECFCE}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -95,7 +95,7 @@
 						<Action Name="" ID="{756F0AAF-B2AC-4A40-886B-68E7F907E523}" ShortID="620482374">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Damage Sword Hit" ID="{3A06625E-7C99-4135-AE5B-CBD7E9E8C820}" WorkUnitID="{2C701EA1-6752-43D4-9FD2-736F72F36CC7}"/>
+									<ObjectRef Name="Damage Sword Hit" ID="{3A06625E-7C99-4135-AE5B-CBD7E9E8C820}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -106,7 +106,7 @@
 						<Action Name="" ID="{0F838530-CD82-4A2D-9353-F3DC70839891}" ShortID="536146831">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="A_SFX_Lv1_Boss_Damage_Die_V1A" ID="{09AA2C82-BE53-4156-9B43-66A28197785A}" WorkUnitID="{2C701EA1-6752-43D4-9FD2-736F72F36CC7}"/>
+									<ObjectRef Name="A_SFX_Lv1_Boss_Damage_Die_V1A" ID="{09AA2C82-BE53-4156-9B43-66A28197785A}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -128,7 +128,7 @@
 						<Action Name="" ID="{1603FFEF-DDFB-4460-B951-6F89D26753CB}" ShortID="663332985">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Debris Break" ID="{5FCC1239-D358-462D-AA23-BCE4B9FECE92}" WorkUnitID="{2C701EA1-6752-43D4-9FD2-736F72F36CC7}"/>
+									<ObjectRef Name="Debris Break" ID="{5FCC1239-D358-462D-AA23-BCE4B9FECE92}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -167,7 +167,7 @@
 						<Action Name="" ID="{B7E9CE42-4498-4DE5-8ABD-0AC46F1C26E9}" ShortID="242881646">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="A_SFX_Lv1_Plater1_Damage_Hit_V1A" ID="{3DFE5DEF-D614-4013-A6F5-7BC3A9161366}" WorkUnitID="{2C701EA1-6752-43D4-9FD2-736F72F36CC7}"/>
+									<ObjectRef Name="A_SFX_Lv1_Plater1_Damage_Hit_V1A" ID="{3DFE5DEF-D614-4013-A6F5-7BC3A9161366}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -191,7 +191,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Dx_Cx_Intro" ID="{F61CD296-2B49-4B38-93D0-815CFC011CEF}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+									<ObjectRef Name="Dx_Cinematics" ID="{F61CD296-2B49-4B38-93D0-815CFC011CEF}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
