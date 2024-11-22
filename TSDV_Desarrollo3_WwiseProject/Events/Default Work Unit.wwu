@@ -63,14 +63,41 @@
 						<Action Name="" ID="{C01A4B0F-C87B-4868-8E84-78F75CAA5919}" ShortID="986551166">
 							<ReferenceList>
 								<Reference Name="Target">
+									<ObjectRef Name="A_SFX_Lv1_Enemy_Minion_A_Engine_IdleV1A" ID="{9F2BF662-B522-428B-B500-73DE19F53149}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8499EB61-8995-4567-8935-C068AF218915}" ShortID="526855021">
+							<ReferenceList>
+								<Reference Name="Target">
 									<ObjectRef Name="SA_Lv1_EV_Minion_Engine_Blade" ID="{CA7C7230-1A53-4932-ABA4-687FA90E8AEF}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="SA_Lv1_EV_Minion_Blade" ID="{B06F20D5-5B42-41A9-A149-328E413C28F4}"/>
-				<Event Name="SA_Lv1_EV_Minion_Attack_Dash" ID="{66AAA07B-330D-4B5D-A625-0A0CE65AC523}"/>
+				<Event Name="SA_Lv1_EV_Minion_Blade" ID="{B06F20D5-5B42-41A9-A149-328E413C28F4}">
+					<ChildrenList>
+						<Action Name="" ID="{D1C06606-A58E-47D9-8B50-EE3C29FA63D5}" ShortID="1052874473">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SA_Lv1_EV_Minion_Engine_Blade" ID="{CA7C7230-1A53-4932-ABA4-687FA90E8AEF}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SA_Lv1_EV_Minion_Attack_Dash" ID="{66AAA07B-330D-4B5D-A625-0A0CE65AC523}">
+					<ChildrenList>
+						<Action Name="" ID="{DA674777-CF03-4B54-8EF7-AA939B085ECA}" ShortID="907820346">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="A_SFX_Lv1_Enemy_Minion_A_Attack_Dash_1A" ID="{F62E669E-A77A-4313-8574-B8F68AB79E3B}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="SA_Lv1_EV_Minion_LaserPoint" ID="{0A52CFDB-77FC-4A3B-9878-D7BE9315BF43}"/>
 				<Event Name="SA_Lv1_EV_Minion_Damage_Explode" ID="{D390C099-E958-4D6B-97C3-23505193747A}">
 					<ChildrenList>

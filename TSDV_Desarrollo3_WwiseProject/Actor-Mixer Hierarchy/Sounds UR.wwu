@@ -1752,6 +1752,28 @@
 														<ActiveSource Name="SA_Lv1_EV_Minion_Damage_Impact" ID="{5FC76F86-A27C-4C0E-A7DD-0F3BFE5753A3}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
+												<Sound Name="A_SFX_Lv1_Enemy_Minion_A_Attack_Dash_1A" ID="{F62E669E-A77A-4313-8574-B8F68AB79E3B}" ShortID="852632204">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="A_SFX_Lv1_Enemy_Minion_A_Attack_Dash_1A" ID="{EA507764-CA51-4F53-B986-229250CBAD6A}">
+															<Language>SFX</Language>
+															<AudioFile>SFX_JP\SFX\Enemies\A_SFX_Lv1_Enemy_Minion_A_Attack_Dash_1A.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="66228883"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="A_SFX_Lv1_Enemy_Minion_A_Attack_Dash_1A" ID="{EA507764-CA51-4F53-B986-229250CBAD6A}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
 										</ActorMixer>
 										<ActorMixer Name="Enemy minion die" ID="{71619D9F-E9F4-4A9F-B73E-F096F56155B4}" ShortID="789071320">
@@ -1893,6 +1915,31 @@
 													</ChildrenList>
 													<ActiveSourceList>
 														<ActiveSource Name="SA_Lv1_EV_Minion_Engine" ID="{4D1DA9F5-E765-44DD-9AE5-1C1900B8CA83}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="A_SFX_Lv1_Enemy_Minion_A_Engine_IdleV1A" ID="{9F2BF662-B522-428B-B500-73DE19F53149}" ShortID="323583393">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="A_SFX_Lv1_Enemy_Minion_A_Engine_IdleV1A" ID="{E06AD3F5-B074-487B-8979-43CB60000925}">
+															<Language>SFX</Language>
+															<AudioFile>SFX_JP\SFX\Enemies\A_SFX_Lv1_Enemy_Minion_A_Engine_IdleV1A.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="190685214"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="A_SFX_Lv1_Enemy_Minion_A_Engine_IdleV1A" ID="{E06AD3F5-B074-487B-8979-43CB60000925}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
