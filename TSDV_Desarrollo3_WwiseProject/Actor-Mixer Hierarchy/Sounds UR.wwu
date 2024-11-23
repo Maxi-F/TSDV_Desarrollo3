@@ -1099,7 +1099,15 @@
 				<ActorMixer Name="DX" ID="{79758F97-08CD-459C-8801-0DFAB0EEB7B5}" ShortID="82857957">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="2"/>
+						<Property Name="HdrActiveRange" Type="Real64">
+							<ValueList>
+								<Value>14</Value>
+							</ValueList>
+						</Property>
+						<Property Name="HdrEnableEnvelope" Type="bool" Value="True"/>
+						<Property Name="HdrEnvelopeSensitivity" Type="Real64" Value="30"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
+						<Property Name="OverrideHdrEnvelope" Type="bool" Value="True"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -1135,9 +1143,10 @@
 									<ChildrenList>
 										<Sound Name="A_SFX_CX_Narration_Intro" ID="{4D3DACE5-D3E2-4A4C-84BC-F4599C9D00B4}" ShortID="231886734">
 											<PropertyList>
-												<Property Name="Volume" Type="Real64">
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>-2</Value>
+														<Value>2</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1153,6 +1162,202 @@
 												<AudioFileSource Name="A_SFX_CX_Narration_Intro" ID="{1206D0B8-27A5-4127-870B-FECC0E2F5305}">
 													<Language>SFX</Language>
 													<AudioFile>SFX_JP\DX\A_SFX_CX_Narration_Intro.wav</AudioFile>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="HdrEnvelope">
+															<Curve Name="" ID="{83E21051-79F6-42B3-BE9B-B86060FA3E1C}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0.00520019745454192</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.1</XPos>
+																		<YPos>0.189526423811913</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.76</XPos>
+																		<YPos>0.00672382116317749</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.85</XPos>
+																		<YPos>0.000115253860712983</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.851</XPos>
+																		<YPos>0.20251</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>6.40713</XPos>
+																		<YPos>0.18719</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>6.58</XPos>
+																		<YPos>0.0470164865255356</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>7.11</XPos>
+																		<YPos>0.00119774148333818</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>7.18</XPos>
+																		<YPos>0.246896401047707</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>8.18</XPos>
+																		<YPos>0.000901478691957891</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>8.45</XPos>
+																		<YPos>0.257036864757538</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>8.55</XPos>
+																		<YPos>0.0173697452992201</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>9.68</XPos>
+																		<YPos>0.21622759103775</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>11.06</XPos>
+																		<YPos>0.00158433488104492</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>11.22</XPos>
+																		<YPos>0.291336745023727</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>11.24</XPos>
+																		<YPos>0.105187922716141</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.6</XPos>
+																		<YPos>0.0122196869924664</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.69</XPos>
+																		<YPos>0.248020157217979</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>13.01</XPos>
+																		<YPos>0.0087232394143939</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>14.99</XPos>
+																		<YPos>0.154710859060287</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>16.63</XPos>
+																		<YPos>0.000782294315285981</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>16.81</XPos>
+																		<YPos>0.295882105827332</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>16.9</XPos>
+																		<YPos>0.102563142776489</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>17.38</XPos>
+																		<YPos>0.000673967821057886</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>17.63</XPos>
+																		<YPos>0.291982084512711</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>18.16</XPos>
+																		<YPos>0.00347934733144939</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>18.2</XPos>
+																		<YPos>0.23919689655304</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>18.66</XPos>
+																		<YPos>0.0229494702070951</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>18.74</XPos>
+																		<YPos>0.308449536561966</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>18.91</XPos>
+																		<YPos>0.0407277569174767</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>19.46</XPos>
+																		<YPos>0.00265190936625004</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>19.5</XPos>
+																		<YPos>0.201104164123535</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>22.11</XPos>
+																		<YPos>0.0119927562773228</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>22.16</XPos>
+																		<YPos>0.310687094926834</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>22.5</XPos>
+																		<YPos>0.00165526068303734</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>23.83</XPos>
+																		<YPos>0.182103976607323</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>24.0520625</XPos>
+																		<YPos>0.00241563632152975</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
 													<MediaIDList>
 														<MediaID ID="740595115"/>
 													</MediaIDList>
@@ -1174,11 +1379,6 @@
 											</ModifierList>
 										</Property>
 										<Property Name="OverrideOutput" Type="bool" Value="True"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>3</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1198,6 +1398,11 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
+												</Property>
 												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 												<Property Name="MaxSoundPerInstance" Type="int16">
 													<ValueList>
@@ -1208,11 +1413,6 @@
 												<Property Name="UseMaxSoundPerInstance" Type="bool">
 													<ValueList>
 														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>1</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -1258,6 +1458,13 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="DX_Player1_Attack_Bat_02" ID="{C8A4AB03-21FA-4514-AADE-0E2992739B75}">
+															<PropertyList>
+																<Property Name="VolumeOffset" Type="Real64">
+																	<ValueList>
+																		<Value>2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>SFX_JP\DX\Player 1\Attack Bat\DX_Player1_Attack_Bat_02.wav</AudioFile>
 															<MediaIDList>
@@ -1280,6 +1487,13 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="DX_Player1_Attack_Bat_03" ID="{0CBEF907-A92E-4952-BA8E-B3CC02EA3213}">
+															<PropertyList>
+																<Property Name="VolumeOffset" Type="Real64">
+																	<ValueList>
+																		<Value>2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>SFX_JP\DX\Player 1\Attack Bat\DX_Player1_Attack_Bat_03.wav</AudioFile>
 															<MediaIDList>
@@ -1302,6 +1516,13 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="DX_Player1_Attack_Bat_04" ID="{940686CA-9736-46E5-86CA-887024380372}">
+															<PropertyList>
+																<Property Name="VolumeOffset" Type="Real64">
+																	<ValueList>
+																		<Value>2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>SFX_JP\DX\Player 1\Attack Bat\DX_Player1_Attack_Bat_04.wav</AudioFile>
 															<MediaIDList>
@@ -1324,6 +1545,13 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="DX_Player1_Attack_Bat_05" ID="{DDCF6DA8-E110-40C5-946D-3E15D529F7C6}">
+															<PropertyList>
+																<Property Name="VolumeOffset" Type="Real64">
+																	<ValueList>
+																		<Value>-0.3</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>SFX_JP\DX\Player 1\Attack Bat\DX_Player1_Attack_Bat_05.wav</AudioFile>
 															<MediaIDList>
@@ -1368,6 +1596,13 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="DX_Player1_Attack_Bat_07" ID="{0415DC6B-9069-4A1B-AB41-A82D8662AEE0}">
+															<PropertyList>
+																<Property Name="VolumeOffset" Type="Real64">
+																	<ValueList>
+																		<Value>1.8</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>SFX_JP\DX\Player 1\Attack Bat\DX_Player1_Attack_Bat_07.wav</AudioFile>
 															<MediaIDList>
@@ -1390,6 +1625,13 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="DX_Player1_Attack_Bat_08" ID="{5BAA1278-CCB5-4CFB-A7F4-96B7F59D2A92}">
+															<PropertyList>
+																<Property Name="VolumeOffset" Type="Real64">
+																	<ValueList>
+																		<Value>2</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>SFX_JP\DX\Player 1\Attack Bat\DX_Player1_Attack_Bat_08.wav</AudioFile>
 															<MediaIDList>
@@ -1412,6 +1654,13 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="DX_Player1_Attack_Bat_09" ID="{1358ECEB-F195-453D-82CA-C937F31F497D}">
+															<PropertyList>
+																<Property Name="VolumeOffset" Type="Real64">
+																	<ValueList>
+																		<Value>2.4</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>SFX_JP\DX\Player 1\Attack Bat\DX_Player1_Attack_Bat_09.wav</AudioFile>
 															<MediaIDList>
@@ -1454,6 +1703,11 @@
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
+												</Property>
 												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 												<Property Name="MaxSoundPerInstance" Type="int16">
 													<ValueList>
@@ -1487,6 +1741,13 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="DX_Player1_Hurt_01" ID="{69BB8F33-0D6C-4A1E-8658-77A6C26A3DA6}">
+															<PropertyList>
+																<Property Name="VolumeOffset" Type="Real64">
+																	<ValueList>
+																		<Value>3</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>SFX_JP\DX\Player 1\Hurt\DX_Player1_Hurt_01.wav</AudioFile>
 															<MediaIDList>
@@ -1663,6 +1924,208 @@
 											</Reference>
 										</ObjectList>
 									</ObjectLists>
+								</ActorMixer>
+								<ActorMixer Name="UI" ID="{3D870691-7396-4F35-BFA3-61BE3A01C94F}" ShortID="114123060">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="DX_Alert_Warning" ID="{9AB3445E-86A9-479D-8D8B-D4715733E645}" ShortID="763171831">
+											<PropertyList>
+												<Property Name="HdrActiveRange" Type="Real64">
+													<ValueList>
+														<Value>20</Value>
+													</ValueList>
+												</Property>
+												<Property Name="HdrEnableEnvelope" Type="bool" Value="True"/>
+												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>5</Value>
+													</ValueList>
+												</Property>
+												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>1</Value>
+													</ValueList>
+												</Property>
+												<Property Name="UseMaxSoundPerInstance" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="DX" ID="{8A0CE30A-AF48-4EB1-A697-F934DFC1BE5F}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="DX_Alert_Warning" ID="{DAAEA338-B7CC-4A8C-8A29-43B3FD715B99}">
+													<PropertyList>
+														<Property Name="VolumeOffset" Type="Real64">
+															<ValueList>
+																<Value>0.7</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\DX\Computer\DX_Alert_Warning.wav</AudioFile>
+													<PropertyCurveList>
+														<PropertyCurve PropertyName="HdrEnvelope">
+															<Curve Name="" ID="{1DA779B5-A39B-4AB5-8328-8A465ABAFE18}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="1"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0.0107773980125785</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.18</XPos>
+																		<YPos>0.0547920390963554</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.25</XPos>
+																		<YPos>0.203466728329659</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.41</XPos>
+																		<YPos>0.0780257135629654</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.57</XPos>
+																		<YPos>0.0989041030406952</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.6</XPos>
+																		<YPos>0.0313602201640606</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.71932</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.14</XPos>
+																		<YPos>2.37454273133153E-07</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.35</XPos>
+																		<YPos>0.241680637001991</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.49</XPos>
+																		<YPos>0.0619006231427193</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.56</XPos>
+																		<YPos>0.117030330002308</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.67842</XPos>
+																		<YPos>0.04961</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.85364</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2.29</XPos>
+																		<YPos>0.000105074897874147</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2.35</XPos>
+																		<YPos>0.037926722317934</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2.41</XPos>
+																		<YPos>0.260228902101517</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2.59</XPos>
+																		<YPos>0.108534157276154</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2.97</XPos>
+																		<YPos>0.00155595189426094</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.53</XPos>
+																		<YPos>0.000300856860121712</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.6</XPos>
+																		<YPos>0.18797767162323</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.7</XPos>
+																		<YPos>0.291601806879044</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.85484</XPos>
+																		<YPos>0.12655</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.91</XPos>
+																		<YPos>0.190022721886635</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>3.93</XPos>
+																		<YPos>0.105860985815525</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>4.35283333333333</XPos>
+																		<YPos>0.000456816167570651</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</PropertyCurve>
+													</PropertyCurveList>
+													<MediaIDList>
+														<MediaID ID="164828003"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="DX_Alert_Warning" ID="{DAAEA338-B7CC-4A8C-8A29-43B3FD715B99}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
 								</ActorMixer>
 							</ChildrenList>
 						</ActorMixer>
@@ -2962,28 +3425,6 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="DX_Alert_Warning" ID="{9AB3445E-86A9-479D-8D8B-D4715733E645}" ShortID="763171831">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="DX_Alert_Warning" ID="{DAAEA338-B7CC-4A8C-8A29-43B3FD715B99}">
-													<Language>SFX</Language>
-													<AudioFile>SFX_JP\DX\Computer\DX_Alert_Warning.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="164828003"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="DX_Alert_Warning" ID="{DAAEA338-B7CC-4A8C-8A29-43B3FD715B99}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
 										<Sound Name="SFX_UI_Alert" ID="{6DC7FFEA-4DAA-4915-9ADA-C3B8B66D7A34}" ShortID="362100726">
 											<ReferenceList>
 												<Reference Name="Conversion">

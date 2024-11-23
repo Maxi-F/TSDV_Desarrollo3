@@ -15,10 +15,10 @@
 				<Effect Name="DX_Player1_Attack" ID="{94B5C1CA-3F6F-4B2E-B491-23CD4D6412BC}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
 					<PropertyList>
 						<Property Name="AttackTime" Type="Real32" Value="0.05"/>
-						<Property Name="OutputGain" Type="Real32" Value="3.8"/>
+						<Property Name="OutputGain" Type="Real32" Value="0.2"/>
 						<Property Name="Ratio" Type="Real32" Value="2"/>
 						<Property Name="ReleaseTime" Type="Real32" Value="0.18"/>
-						<Property Name="Threshold" Type="Real32" Value="-18.7"/>
+						<Property Name="Threshold" Type="Real32" Value="-20.7"/>
 					</PropertyList>
 				</Effect>
 				<Effect Name="Music_Comp" ID="{C45E2B16-E0CE-4D5C-9C0B-2341746A8EC6}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
