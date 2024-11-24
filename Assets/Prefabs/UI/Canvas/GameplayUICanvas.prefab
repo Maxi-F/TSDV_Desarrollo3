@@ -2681,6 +2681,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   fadeDuration: 0
+  warningSoundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1f5bed8647c9be14bad56204ecf7a4e8, type: 2}
 --- !u!1 &7450131387197977897
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ namespace UI
         [SerializeField] private AnimationCurve fadeIn;
         [SerializeField] private AnimationCurve fadeOut;
         [SerializeField] private float fadeDuration;
+        [SerializeField] private AK.Wwise.Event warningSoundEvent;
         
         private Coroutine _warningCoroutine;
 
@@ -31,13 +32,14 @@ namespace UI
         {
             if(_warningCoroutine != null)
                 StopCoroutine(_warningCoroutine);
-
-            Debug.Log("Hi?");
+            
             _warningCoroutine = StartCoroutine(HandleWarningCoroutine(warningData));
         }
 
         private IEnumerator HandleWarningCoroutine(WarningTextSO warningData)
         {
+            warningSoundEvent?.Post(gameObject);
+            
             float startTime = Time.time;
             float timer = 0;
             bool isEnabled = true;
