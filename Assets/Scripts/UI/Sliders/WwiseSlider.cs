@@ -11,6 +11,8 @@ namespace UI.Sliders
         [SerializeField] private string prefsId;
         [SerializeField] private string modifiedFlagId;
         [SerializeField] private Slider slider;
+
+        [SerializeField] private AK.Wwise.Event sliderSound;
         
         private void OnEnable()
         {
@@ -36,6 +38,8 @@ namespace UI.Sliders
             
             AkSoundEngine.SetRTPCValue(rtpc.Name, sliderValue);
             PlayerPrefs.SetFloat(prefsId, sliderValue);
+
+            AkSoundEngine.PostEvent(sliderSound.Id, gameObject);
         }
     }
 }

@@ -903,6 +903,10 @@ MonoBehaviour:
   prefsId: Master
   modifiedFlagId: masterFlag
   slider: {fileID: 5638828288167800591}
+  sliderSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: beaeac69a45d42943abb29b82d9885fa, type: 2}
 --- !u!1 &984865188636233392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,6 +1725,10 @@ MonoBehaviour:
   prefsId: Sfx
   modifiedFlagId: sfxFlag
   slider: {fileID: 1122895116494511256}
+  sliderSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: beaeac69a45d42943abb29b82d9885fa, type: 2}
 --- !u!1 &3483063656410751055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1981,6 +1989,10 @@ MonoBehaviour:
   prefsId: Music
   modifiedFlagId: musicFlag
   slider: {fileID: 3979507048264559121}
+  sliderSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: beaeac69a45d42943abb29b82d9885fa, type: 2}
 --- !u!1 &4224442695519542162
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,6 +2138,10 @@ MonoBehaviour:
   rumblePrefId: rumbleMultiplier
   modifiedFlagId: rumbleFlag
   slider: {fileID: 5727599848531895489}
+  sliderSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: beaeac69a45d42943abb29b82d9885fa, type: 2}
 --- !u!1 &4232118774613021785
 GameObject:
   m_ObjectHideFlags: 0
@@ -3847,6 +3863,10 @@ MonoBehaviour:
   prefsId: Dialogue
   modifiedFlagId: dialogueFlag
   slider: {fileID: 4607929357784932984}
+  sliderSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: beaeac69a45d42943abb29b82d9885fa, type: 2}
 --- !u!1 &8708718336605967981
 GameObject:
   m_ObjectHideFlags: 0
@@ -4232,15 +4252,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6551305020060322156, guid: 65d0ba2c823992940a6615e162ae28e9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.8
+      value: 0.657
       objectReference: {fileID: 0}
     - target: {fileID: 6551305020060322156, guid: 65d0ba2c823992940a6615e162ae28e9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.15
+      value: 0.154
       objectReference: {fileID: 0}
     - target: {fileID: 6551305020060322156, guid: 65d0ba2c823992940a6615e162ae28e9, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.2
+      value: 0.381
       objectReference: {fileID: 0}
     - target: {fileID: 6551305020060322156, guid: 65d0ba2c823992940a6615e162ae28e9, type: 3}
       propertyPath: m_AnchorMin.y

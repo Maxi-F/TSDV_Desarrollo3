@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 276366346817855368}
   - component: {fileID: 7623607187078295899}
   - component: {fileID: 6684959702442021139}
+  - component: {fileID: 2416226327096511341}
   m_Layer: 5
   m_Name: ButtonStringEventRaiser
   m_TagString: Untagged
@@ -294,3 +295,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702a637f3f0d44347a3306f3283edf1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2416226327096511341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126959789858904626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d86023d1c83761478c3454616ebeee5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: beaeac69a45d42943abb29b82d9885fa, type: 2}
+  onSoundEvent: {fileID: 11400000, guid: 0baa8ab6393b516479161926223e3f47, type: 2}
