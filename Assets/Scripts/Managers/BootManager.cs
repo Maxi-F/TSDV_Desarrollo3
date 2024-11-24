@@ -22,10 +22,13 @@ namespace Managers
         private void Awake()
         {
             sceneryManager.InitScenes();
+        }
 
+        private void Start()
+        {
             CheckRtpc(masterVolumePrefsId, hasModifiedVolumePrefId, masterVolumeRtpc, true);
-            CheckRtpc(musicVolumePref, musicVolumeFlagPref, musicVolumeRtpc, false);
-            CheckRtpc(sfxVolumePref, sfxFlagPref, sfxVolumeRtpc, false);
+            CheckRtpc(musicVolumePref, musicVolumeFlagPref, musicVolumeRtpc, true);
+            CheckRtpc(sfxVolumePref, sfxFlagPref, sfxVolumeRtpc, true);
         }
 
         private void CheckRtpc(string valuePref, string flagPref, AK.Wwise.RTPC rtpc, bool shouldBeSetted)
@@ -33,11 +36,14 @@ namespace Managers
             bool hasBeenModified = PlayerPrefs.GetInt(flagPref) == 1;
             float value = PlayerPrefs.GetFloat(valuePref);
 
+            Debug.Log(hasBeenModified ? value : defaultVolume);
+            
             if(shouldBeSetted)
                 AkSoundEngine.SetRTPCValue(rtpc.Name, hasBeenModified ? value : defaultVolume);
-            else if (!hasBeenModified) return;
-
-            AkSoundEngine.SetRTPCValue(rtpc.Name, value);
+            else if (hasBeenModified)
+            {
+                AkSoundEngine.SetRTPCValue(rtpc.Name, value);
+            };
         }
     }
 }

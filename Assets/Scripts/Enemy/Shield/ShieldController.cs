@@ -13,13 +13,7 @@ namespace Enemy.Shield
 
         [SerializeField] private Material activeMaterial;
         [SerializeField] private AnimationCurve blinkCurve;
-        [SerializeField] private GameObject shieldModel;
-        private MeshRenderer _meshRenderer;
-
-        private void OnEnable()
-        {
-            _meshRenderer ??= shieldModel.GetComponent<MeshRenderer>();
-        }
+        [SerializeField] private MeshRenderer meshRenderer;
 
         private IEnumerator ShieldBlink(float duration)
         {
@@ -28,12 +22,12 @@ namespace Enemy.Shield
             while (timer < duration)
             {
                 timer = Time.time - startTime;
-                _meshRenderer.enabled = !_meshRenderer.enabled;
+                meshRenderer.enabled = !meshRenderer.enabled;
                 float blinkDuration = blinkCurve.Evaluate(Mathf.Lerp(0, 1, timer / duration));
                 yield return new WaitForSeconds(blinkDuration);
             }
 
-            _meshRenderer.enabled = true;
+            meshRenderer.enabled = true;
         }
 
         public void SetIsActivating(float activationDuration)
@@ -43,13 +37,13 @@ namespace Enemy.Shield
 
         public void SetActiveMaterial()
         {
-            if (!_meshRenderer) return;
-            _meshRenderer.material = activeMaterial;
+            if (!meshRenderer) return;
+            meshRenderer.material = activeMaterial;
         }
 
         public void SetActive(bool isActive)
         {
-            _meshRenderer.enabled = isActive;
+            meshRenderer.enabled = isActive;
         }
 
         public bool TryDestroyShield(int parryDamage)

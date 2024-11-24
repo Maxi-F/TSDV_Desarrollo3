@@ -175,7 +175,7 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: a737ffb1f06dded41917b12a5b609a24, type: 2}
   masterVolumePrefsId: Master
   hasModifiedVolumePrefId: masterFlag
-  defaultVolume: 10
+  defaultVolume: 50
   musicVolumeRtpc:
     idInternal: 0
     valueGuidInternal: 
