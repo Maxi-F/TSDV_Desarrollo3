@@ -4,13 +4,15 @@ using Events;
 using Health;
 using Minion.ScriptableObjects;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Minion.Controllers
 {
     public class MinionAttackController : MinionController
     {
         [SerializeField] private MinionSO minionConfig;
-
+        [SerializeField] private UnityEvent onAttack;
+        
         private bool _isAttacking;
         private Coroutine _attackCoroutine;
         private Vector3 attackDir;
@@ -47,6 +49,8 @@ namespace Minion.Controllers
 
             _healthPoints.SetCanTakeDamage(false);
             _collider.isTrigger = true;
+            
+            onAttack?.Invoke();
 
             while (timer < chargeDuration)
             {

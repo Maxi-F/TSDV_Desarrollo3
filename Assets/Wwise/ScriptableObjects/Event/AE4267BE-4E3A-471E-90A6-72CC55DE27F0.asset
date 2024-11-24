@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9539a63b5a4fc444bb6ce473d55bb2bc, type: 3}
+  m_Name: AE4267BE-4E3A-471E-90A6-72CC55DE27F0
+  m_EditorClassIdentifier: 
+  objectName: SA_Lv1_EV_Minion_Engine
+  id: 2404778933
+  guid: AE4267BE-4E3A-471E-90A6-72CC55DE27F0
