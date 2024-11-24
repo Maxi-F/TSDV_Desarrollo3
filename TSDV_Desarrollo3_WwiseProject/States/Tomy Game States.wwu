@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F8F702B4-3D0D-4D91-92E9-1995B46B5F0E}" SchemaVersion="119">
 	<States>
-		<WorkUnit Name="Tomy Game States" ID="{F8F702B4-3D0D-4D91-92E9-1995B46B5F0E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Tomy Game States" ID="{F8F702B4-3D0D-4D91-92E9-1995B46B5F0E}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="19"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

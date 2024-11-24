@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{2DF965CD-3201-4E86-870A-81BB9DDBE733}" SchemaVersion="119">
 	<Switches>
-		<WorkUnit Name="Alv Switches" ID="{2DF965CD-3201-4E86-870A-81BB9DDBE733}" PersistMode="Standalone"/>
+		<WorkUnit Name="Alv Switches" ID="{2DF965CD-3201-4E86-870A-81BB9DDBE733}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="2"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>
