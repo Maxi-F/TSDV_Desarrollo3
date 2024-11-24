@@ -1,11 +1,16 @@
 using System;
+using Managers;
 using UnityEngine;
 
 namespace Player
 {
     public class PlayerSoundController : MonoBehaviour
     {
-        [SerializeField] private string motorSound;
+        [Header("Pause Data")] 
+        [SerializeField] private PauseSO pauseData;
+        
+        [Header("Motor sounds")]
+        [SerializeField] private AK.Wwise.Event motorSound;
         
         [Header("Hit Sounds")]
         [SerializeField] private string hitSound;
@@ -23,7 +28,22 @@ namespace Player
         
         private void OnEnable()
         {
-            AkSoundEngine.PostEvent(motorSound, gameObject);
+            pauseData?.onPause.AddListener(HandlePause);
+            motorSound.Post(gameObject);
+        }
+
+        private void OnDisable()
+        {
+            pauseData?.onPause.RemoveListener(HandlePause);
+        }
+
+        private void HandlePause(bool isPaused)
+        {
+            Debug.Log("here?");
+            if (isPaused)
+                motorSound.Stop(gameObject);
+            else
+                motorSound.Post(gameObject);
         }
 
         public void HitSound()

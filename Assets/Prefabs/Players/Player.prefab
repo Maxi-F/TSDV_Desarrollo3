@@ -911,7 +911,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d302774136f72774596c0cf5f8a782e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  motorSound: SA_LV1_EV_PLAYER1_BIKE_INITIAL_ENGINE
+  pauseData: {fileID: 11400000, guid: 050aabf23c6e8a747ba6431bbbb165f5, type: 2}
+  motorSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bfce091287b9bb844ace7a62ee4fbe5e, type: 2}
   hitSound: SA_LV1_PLAYER1_DAMAGE_HIT
   hitVoice: SA_LV1_EV_DX_PLAYER1_HURT
   attackSound: SA_LV1_EV_SWORD_WHOOSH
