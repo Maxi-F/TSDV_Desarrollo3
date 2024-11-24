@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Events;
+using Events.ScriptableObjects;
 using Input;
 using Managers;
 using TMPro;
@@ -33,10 +34,11 @@ namespace UI.Gameplay
         [Header("Text Config")]
         [SerializeField] private TextMeshProUGUI text;
 
-        [Header("Events")] [SerializeField] private Vector3EventChannelSO onNewRoadsVelocityEvent;
+        [Header("Events")] 
+        [SerializeField] private Vector3EventChannelSO onNewRoadsVelocityEvent;
+        [SerializeField] private EventChannelSO<YMovementState> onYMovementStateChange;
         
         [Header("Metadata")]
-        [SerializeField] private InputHandlerSO inputHandler;
         [SerializeField] private PauseSO pauseData;
         
         private bool _isFlicking;
@@ -45,7 +47,6 @@ namespace UI.Gameplay
         private Coroutine _movementCoroutine;
         private int _textValue;
         private int _initTextValue;
-        private SpeedometerValues _speedometerState;
         
         private void OnEnable()
         {
@@ -53,18 +54,17 @@ namespace UI.Gameplay
             _isMoving = false;
             _textValue = Int32.Parse(text.text);
             _initTextValue = _textValue;
-            _speedometerState = SpeedometerValues.Normal;
             
-            inputHandler?.onPlayerMove.AddListener(HandleMovement);
             onNewRoadsVelocityEvent?.onVectorEvent.AddListener(HandleNewStableValue);
+            onYMovementStateChange?.onTypedEvent.AddListener(HanldeMovementChange);
         }
 
         private void OnDisable()
         {
-            inputHandler?.onPlayerMove.RemoveListener(HandleMovement);
             onNewRoadsVelocityEvent?.onVectorEvent.RemoveListener(HandleNewStableValue);
+            onYMovementStateChange?.onTypedEvent.RemoveListener(HanldeMovementChange);
         }
-        
+
         private void HandleNewStableValue(Vector3 newValue)
         {
             _initTextValue = (int)(newValue.z * multiplierFromRoads);
@@ -72,29 +72,25 @@ namespace UI.Gameplay
             text.text = _textValue.ToString();
         }
 
-        private void HandleMovement(Vector2 movement)
+        private void HanldeMovementChange(YMovementState value)
         {
-            if (movement.y < 0)
+            switch (value)
             {
-                if(_speedometerState != SpeedometerValues.Downwards)
+                case YMovementState.Downwards:
                     HandleMovementChange(downwardsValue);
-                _speedometerState = SpeedometerValues.Downwards;
-            } else if (movement.y > 0)
-            {
-                if(_speedometerState != SpeedometerValues.Upwards)
+                    break;
+                case YMovementState.Upwards:
                     HandleMovementChange(upwardsValue);
-                _speedometerState = SpeedometerValues.Upwards;
-            }
-            else
-            {
-                if(_movementCoroutine != null)
-                    StopCoroutine(_movementCoroutine);
+                    break;
+                case YMovementState.Normal:
+                    if(_movementCoroutine != null)
+                        StopCoroutine(_movementCoroutine);
                 
-                _textValue = _initTextValue;
-                text.text = _textValue.ToString();
-                _speedometerState = SpeedometerValues.Normal;
-                _isMoving = false;
-                _isFlicking = false;
+                    _textValue = _initTextValue;
+                    text.text = _textValue.ToString();
+                    _isMoving = false;
+                    _isFlicking = false;
+                    break;
             }
         }
 
