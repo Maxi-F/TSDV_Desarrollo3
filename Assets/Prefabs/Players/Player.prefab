@@ -885,6 +885,21 @@ MonoBehaviour:
   animatorHandler: {fileID: 977276183979043023}
   onPlayerDeathEvent: {fileID: 11400000, guid: 1609b932e078810448a25604c23359d3, type: 2}
   onGameplayResetEvent: {fileID: 11400000, guid: ab870950ec2b0124da9411e0e9f8faa6, type: 2}
+  onExplosion:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 765996105383918817}
+        m_TargetAssemblyTypeName: Player.PlayerSoundController, Assembly-CSharp
+        m_MethodName: ExplosionSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4892114609088342519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -924,11 +939,30 @@ MonoBehaviour:
   initMotorValue: 50
   motorDiff: 10
   onMovementStateChange: {fileID: 11400000, guid: e6b8f0b36674c7942b1b837307b25416, type: 2}
-  hitSound: SA_LV1_PLAYER1_DAMAGE_HIT
-  hitVoice: SA_LV1_EV_DX_PLAYER1_HURT
-  attackSound: SA_LV1_EV_SWORD_WHOOSH
-  attackVoice: SA_LV1_EV_DX_PLAYER1_ATTACK
-  dashSound: SA_LV1_EV_PLAYER1_BIKE_INITIAL_DASH
+  hitSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3d6e8e7041025d34fa89ba4ac82ba2a7, type: 2}
+  hitVoice:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5954c3dccf4b8784a83dd4bcf97b5180, type: 2}
+  attackSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 452da8822e2b4664c98317ed578d5f66, type: 2}
+  attackVoice:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ec7a7947841501d48bf7cefe59fc735d, type: 2}
+  dashSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4e1fe500150372c41993bc8b81b7f795, type: 2}
+  dieSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 647ca7414c3bfcf4a888600faaead03c, type: 2}
   gameOverState:
     idInternal: 0
     valueGuidInternal: 
