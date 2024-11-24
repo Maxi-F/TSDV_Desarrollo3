@@ -176,6 +176,10 @@ MonoBehaviour:
   masterVolumePrefsId: Master
   hasModifiedVolumePrefId: masterFlag
   defaultVolume: 50
+  dialogueVolumeRtpc:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d1ad884726e55c34eaf523115819fc09, type: 2}
   musicVolumeRtpc:
     idInternal: 0
     valueGuidInternal: 
@@ -188,6 +192,8 @@ MonoBehaviour:
   musicVolumeFlagPref: musicFlag
   sfxVolumePref: Sfx
   sfxFlagPref: sfxFlag
+  dialogueVolumePref: Dialogue
+  dialogueFlag: dialogueFlag
 --- !u!114 &460891773
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,13 +12,16 @@ namespace Managers
         [SerializeField] private string hasModifiedVolumePrefId;
         [SerializeField] private float defaultVolume = 50.0f;
 
+        [SerializeField] private AK.Wwise.RTPC dialogueVolumeRtpc;
         [SerializeField] private AK.Wwise.RTPC musicVolumeRtpc;
         [SerializeField] private AK.Wwise.RTPC sfxVolumeRtpc;
         [SerializeField] private string musicVolumePref;
         [SerializeField] private string musicVolumeFlagPref;
         [SerializeField] private string sfxVolumePref;
         [SerializeField] private string sfxFlagPref;
-
+        [SerializeField] private string dialogueVolumePref;
+        [SerializeField] private string dialogueFlag;
+        
         private void Awake()
         {
             sceneryManager.InitScenes();
@@ -29,6 +32,7 @@ namespace Managers
             CheckRtpc(masterVolumePrefsId, hasModifiedVolumePrefId, masterVolumeRtpc, true);
             CheckRtpc(musicVolumePref, musicVolumeFlagPref, musicVolumeRtpc, true);
             CheckRtpc(sfxVolumePref, sfxFlagPref, sfxVolumeRtpc, true);
+            CheckRtpc(dialogueVolumePref, dialogueFlag, dialogueVolumeRtpc, true);
         }
 
         private void CheckRtpc(string valuePref, string flagPref, AK.Wwise.RTPC rtpc, bool shouldBeSetted)
