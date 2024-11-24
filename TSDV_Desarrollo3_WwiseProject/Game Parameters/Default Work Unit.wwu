@@ -7,7 +7,6 @@
 				<GameParameter Name="SA_RTPC_Bike_Initial_Dash" ID="{74F00097-5DFE-4A8B-A3BE-EB090996F3C0}"/>
 				<GameParameter Name="SA_RTPC_Bike_BossLv1_Speed" ID="{C35598DA-A424-4EB9-8743-F21B16E270AB}"/>
 				<GameParameter Name="SA_RTPC_BossLv1_Tick" ID="{B23BEC36-3304-41A1-8809-104B05CBE2B9}"/>
-				<GameParameter Name="Master" ID="{8B2D8E75-42D4-47C2-890D-0BB8D8B5207E}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

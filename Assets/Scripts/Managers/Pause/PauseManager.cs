@@ -17,6 +17,10 @@ namespace Managers.Pause
         [SerializeField] private VoidEventChannelSO onPlayerDeath;
         [SerializeField] private VoidEventChannelSO onGameplayReset;
         [SerializeField] private VoidEventChannelSO onCinematicEnded;
+
+        [Header("Music")] 
+        [SerializeField] private AK.Wwise.Event pauseMusicEvent;
+        [SerializeField] private AK.Wwise.Event unpauseMusicEvent;
         
         private float _lastTimeScale;
         private bool _isPauseBlocked;
@@ -57,15 +61,17 @@ namespace Managers.Pause
 
         private void HandlePause(bool value)
         {
-            pauseData.isPaused = value;
+            pauseData.SetIsPaused(value);
 
             if (pauseData.isPaused)
             {
+                AkSoundEngine.PostEvent(pauseMusicEvent.Id, gameObject);
                 _lastTimeScale = Time.timeScale;
                 Time.timeScale = 0;
             }
             else
             {
+                AkSoundEngine.PostEvent(unpauseMusicEvent.Id, gameObject);
                 Time.timeScale = _lastTimeScale;
             }
         }

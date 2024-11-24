@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{BDE13E2E-2F23-4A7B-B33F-110A6DC6F56B}" SchemaVersion="119">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{BDE13E2E-2F23-4A7B-B33F-110A6DC6F56B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{BDE13E2E-2F23-4A7B-B33F-110A6DC6F56B}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="test mix" ID="{522E3458-DE68-4FEC-B062-47FA18F5D5C8}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_A_Mx_Todo_95_Bpm_V1A" ID="{DFA90515-08A0-4BE9-BE31-37D6CC82D898}" WorkUnitID="{8D5748B0-01A1-4537-803B-3895EEF4F562}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SA_Lv1_EV_DX_CX_Intro" ID="{FEBC5567-73BD-46D8-A48A-508751E791B7}" WorkUnitID="{8D5748B0-01A1-4537-803B-3895EEF4F562}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SA_Lv1_EV_DX_UI_Warning" ID="{8EB8397B-4B62-46D1-B74D-3E55A311B31A}" WorkUnitID="{8D5748B0-01A1-4537-803B-3895EEF4F562}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SA_Lv1_EV_DX_Player1_Attack" ID="{F111E325-1259-4C96-81B6-6D3C7492190B}" WorkUnitID="{8D5748B0-01A1-4537-803B-3895EEF4F562}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SA_Lv1_EV_DX_Player1_Hurt" ID="{0274D93C-13BB-43B9-AEE8-3E5679536CAC}" WorkUnitID="{8D5748B0-01A1-4537-803B-3895EEF4F562}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SA_Lv1_EV_DX_Player1_Die" ID="{BC55EA74-A51A-40D4-B981-BBAE7A5842E2}" WorkUnitID="{8D5748B0-01A1-4537-803B-3895EEF4F562}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Menu_Credits" ID="{A599708C-4733-4611-B2FB-3E69E1F82331}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

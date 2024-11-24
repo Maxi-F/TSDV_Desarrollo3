@@ -3,6 +3,7 @@ using Events;
 using Health;
 using Player.Animation;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Player
 {
@@ -20,6 +21,7 @@ namespace Player
         [Header("Events")] 
         [SerializeField] private VoidEventChannelSO onPlayerDeathEvent;
         [SerializeField] private VoidEventChannelSO onGameplayResetEvent;
+        [SerializeField] private UnityEvent onExplosion;
         
         private Coroutine _disablePlayerCoroutine;
         
@@ -67,6 +69,7 @@ namespace Player
         private IEnumerator DisablePlayerCoroutine()
         {
             yield return new WaitForSeconds(secondsUntilDisable);
+            onExplosion?.Invoke();
             explosionObject.gameObject.SetActive(true);
             model.gameObject.SetActive(false);
             yield return new WaitForSeconds(explosionSeconds);

@@ -33,34 +33,78 @@
 						<Action Name="" ID="{2560B84F-D535-4002-8A09-38C09100F045}" ShortID="662654115">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="A_SFX_All_Player1_Objects_Bike_Initial_Engine_V1A_" ID="{06877FAD-5DB9-4C63-918D-C7AB28BECFCE}" WorkUnitID="{97767B1D-16FA-4174-8647-8BD64B0EB4DD}"/>
+									<ObjectRef Name="A_SFX_All_Player1_Objects_Bike_Initial_Engine_V1A_" ID="{06877FAD-5DB9-4C63-918D-C7AB28BECFCE}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="SA_Lv1_EV_Player1_Healing" ID="{0F2386C9-A81C-4905-9230-45F7BADC9E23}"/>
-				<Event Name="SA_Lv1_EV_Player1_Die_Explotion" ID="{3E97C542-E811-42B3-A527-78D09EF3D4EF}"/>
-				<Event Name="SA_Lv1_EV_Minion_Engine" ID="{AE4267BE-4E3A-471E-90A6-72CC55DE27F0}">
+				<Event Name="SA_Lv1_EV_Player1_Die_Explotion" ID="{3E97C542-E811-42B3-A527-78D09EF3D4EF}">
 					<ChildrenList>
-						<Action Name="" ID="{C01A4B0F-C87B-4868-8E84-78F75CAA5919}" ShortID="986551166">
+						<Action Name="" ID="{9600A84C-0992-496B-93D1-B6854BC9E715}" ShortID="66443123">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SA_Lv1_EV_Minion_Engine" ID="{CA7C7230-1A53-4932-ABA4-687FA90E8AEF}" WorkUnitID="{97767B1D-16FA-4174-8647-8BD64B0EB4DD}"/>
+									<ObjectRef Name="A_SFX_Player1_Die_ExplotionV1A" ID="{15A2984E-BEF0-40D3-83B9-D92E81F9A91E}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5BDD7018-240C-4611-A4F6-749AD55F6E3F}" ShortID="771979950">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DX Hurt Objects" ID="{65B5E1FA-43DF-4B00-80D5-BD720ACAC88E}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="SA_Lv1_EV_Minion_Blade" ID="{B06F20D5-5B42-41A9-A149-328E413C28F4}"/>
-				<Event Name="SA_Lv1_EV_Minion_Attack_Dash" ID="{66AAA07B-330D-4B5D-A625-0A0CE65AC523}"/>
+				<Event Name="SA_Lv1_EV_Minion_Engine" ID="{AE4267BE-4E3A-471E-90A6-72CC55DE27F0}">
+					<ChildrenList>
+						<Action Name="" ID="{C01A4B0F-C87B-4868-8E84-78F75CAA5919}" ShortID="986551166">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="A_SFX_Lv1_Enemy_Minion_A_Engine_IdleV1A" ID="{9F2BF662-B522-428B-B500-73DE19F53149}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8499EB61-8995-4567-8935-C068AF218915}" ShortID="526855021">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SA_Lv1_EV_Minion_Engine_Blade" ID="{CA7C7230-1A53-4932-ABA4-687FA90E8AEF}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SA_Lv1_EV_Minion_Blade" ID="{B06F20D5-5B42-41A9-A149-328E413C28F4}">
+					<ChildrenList>
+						<Action Name="" ID="{D1C06606-A58E-47D9-8B50-EE3C29FA63D5}" ShortID="1052874473">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SA_Lv1_EV_Minion_Engine_Blade" ID="{CA7C7230-1A53-4932-ABA4-687FA90E8AEF}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SA_Lv1_EV_Minion_Attack_Dash" ID="{66AAA07B-330D-4B5D-A625-0A0CE65AC523}">
+					<ChildrenList>
+						<Action Name="" ID="{DA674777-CF03-4B54-8EF7-AA939B085ECA}" ShortID="907820346">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="A_SFX_Lv1_Enemy_Minion_A_Attack_Dash_1A" ID="{F62E669E-A77A-4313-8574-B8F68AB79E3B}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="SA_Lv1_EV_Minion_LaserPoint" ID="{0A52CFDB-77FC-4A3B-9878-D7BE9315BF43}"/>
 				<Event Name="SA_Lv1_EV_Minion_Damage_Explode" ID="{D390C099-E958-4D6B-97C3-23505193747A}">
 					<ChildrenList>
 						<Action Name="" ID="{4C1C1B21-4B75-4FAF-A015-32A883CEEB64}" ShortID="975381053">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SA_Lv1_EV_Minion_Damage_Explode" ID="{9CC1B860-8FE6-480A-A18D-14F1D1D859DE}" WorkUnitID="{97767B1D-16FA-4174-8647-8BD64B0EB4DD}"/>
+									<ObjectRef Name="SA_Lv1_EV_Minion_Damage_Explode" ID="{9CC1B860-8FE6-480A-A18D-14F1D1D859DE}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -71,27 +115,57 @@
 						<Action Name="" ID="{F089A332-2060-4281-B47F-26475C405B8E}" ShortID="256150133">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="SA_Lv1_EV_Minion_Damage_Impact" ID="{AF52590E-1370-40BA-BEA4-5CE66DE5D762}" WorkUnitID="{97767B1D-16FA-4174-8647-8BD64B0EB4DD}"/>
+									<ObjectRef Name="SA_Lv1_EV_Minion_Damage_Impact" ID="{AF52590E-1370-40BA-BEA4-5CE66DE5D762}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="SA_Lv1_EV_Minion_Damage_Weak" ID="{93C824AE-D5AF-4FF3-8CBD-F7805B5D8144}"/>
+				<Event Name="SA_Lv1_EV_Minion_Damage_Weak" ID="{93C824AE-D5AF-4FF3-8CBD-F7805B5D8144}">
+					<ChildrenList>
+						<Action Name="" ID="{5CE4CBB2-C73F-447E-B748-DAEBBBA1138A}" ShortID="890494717">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="A_SFX_Lv1_Enemy_Minion_A_Damage_Weak_Loop_1A" ID="{9788E3D3-B1C6-4DDF-B35F-19DF8D7D4B72}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="SA_Lv1_EV_BossLv1_Bike_Engine" ID="{98977FE4-BDEA-4532-B346-102BDE0D1D20}">
 					<ChildrenList>
 						<Action Name="" ID="{E4BC23E4-5C96-449C-92B4-8032192D4503}" ShortID="616537682">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="A_SFX_All_Player1_Objects_Bike_Initial_Engine_V1A_" ID="{06877FAD-5DB9-4C63-918D-C7AB28BECFCE}" WorkUnitID="{97767B1D-16FA-4174-8647-8BD64B0EB4DD}"/>
+									<ObjectRef Name="A_SFX_All_Player1_Objects_Bike_Initial_Engine_V1A_" ID="{06877FAD-5DB9-4C63-918D-C7AB28BECFCE}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="SA_Lv1_EV_BossLv1_Bike_Engine_Weak" ID="{06576E3B-DD7A-4917-A525-058F4832E4A8}"/>
-				<Event Name="SA_Lv1_EV_BossLv1_Damage_SwordHit" ID="{60F1F7DC-9313-4EBD-8030-3804D8D6AA84}"/>
-				<Event Name="SA_Lv1_EV_BossLv1_Damage_Die_Explotion" ID="{32842BA4-9E41-478A-AF59-E47F8DA111FF}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Damage_SwordHit" ID="{60F1F7DC-9313-4EBD-8030-3804D8D6AA84}">
+					<ChildrenList>
+						<Action Name="" ID="{756F0AAF-B2AC-4A40-886B-68E7F907E523}" ShortID="620482374">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Damage Sword Hit" ID="{3A06625E-7C99-4135-AE5B-CBD7E9E8C820}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SA_Lv1_EV_BossLv1_Damage_Die_Explotion" ID="{32842BA4-9E41-478A-AF59-E47F8DA111FF}">
+					<ChildrenList>
+						<Action Name="" ID="{0F838530-CD82-4A2D-9353-F3DC70839891}" ShortID="536146831">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="A_SFX_Lv1_Boss_Damage_Die_V1A" ID="{09AA2C82-BE53-4156-9B43-66A28197785A}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="SA_Lv1_EV_BossLv1_Bike_Engine_Escape" ID="{9FFBCB14-33EB-46CC-9547-41169B381333}"/>
 				<Event Name="SA_Lv1_EV_BossLv1_Movement_Swing" ID="{657E4587-05A1-4734-A4C1-D91B2626AB4B}"/>
 				<Event Name="SA_Lv1_EV_BossLv1_Attack_Laser_On" ID="{0FC500CB-287A-471A-9136-A5B5A3EFD3D5}"/>
@@ -103,11 +177,31 @@
 				<Event Name="SA_Lv1_EV_BossLv1_Attack_Launcher_Plasma" ID="{8A553341-BE7C-42A1-8F4E-10CEE172D5BB}"/>
 				<Event Name="SA_Lv1_EV_BossLv1_Attack_Launcher_Explotions" ID="{1612A7E0-D52B-4F68-9B2E-AC999B6F8389}"/>
 				<Event Name="SA_Lv1_EV_BossLv1_Attack_Debris" ID="{4C9AD5C8-0C27-45DB-A06F-B9427C46D06B}"/>
-				<Event Name="SA_Lv1_EV_BossLv1_Attack_Debris_Break" ID="{965B5360-C6F5-4E09-8123-C884B0F6AE99}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Attack_Debris_Break" ID="{965B5360-C6F5-4E09-8123-C884B0F6AE99}">
+					<ChildrenList>
+						<Action Name="" ID="{1603FFEF-DDFB-4460-B951-6F89D26753CB}" ShortID="663332985">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Debris Break" ID="{5FCC1239-D358-462D-AA23-BCE4B9FECE92}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="SA_Lv1_EV_BossLv1_Attack_Bomb_Out" ID="{2530A09D-9089-47B7-9046-7B34DCB3F401}"/>
 				<Event Name="SA_Lv1_EV_BossLv1_Attack_Bomb_Player_Hit" ID="{F3490A39-A194-462F-87CD-2A8619E13800}"/>
 				<Event Name="SA_Lv1_EV_BossLv1_Attack_Bomb_Boss_Hit" ID="{B4C11D7E-3D9A-4904-AE6D-D9FB77B13640}"/>
-				<Event Name="SA_Lv1_EV_DX_UI_Warning" ID="{8EB8397B-4B62-46D1-B74D-3E55A311B31A}"/>
+				<Event Name="SA_Lv1_EV_DX_UI_Warning" ID="{8EB8397B-4B62-46D1-B74D-3E55A311B31A}">
+					<ChildrenList>
+						<Action Name="" ID="{3E7386BC-D4AA-4374-97B6-D0AC85DC32B0}" ShortID="87189098">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DX_Alert_Warning" ID="{9AB3445E-86A9-479D-8D8B-D4715733E645}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="SA_Lv1_EV_DX_Player1_Attack" ID="{F111E325-1259-4C96-81B6-6D3C7492190B}">
 					<ChildrenList>
 						<Action Name="" ID="{AB4769C6-EEB2-4212-9FDD-78B40D9B3289}" ShortID="178119409">
@@ -137,7 +231,7 @@
 						<Action Name="" ID="{B7E9CE42-4498-4DE5-8ABD-0AC46F1C26E9}" ShortID="242881646">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="A_SFX_Lv1_Plater1_Damage_Hit_V1A" ID="{3DFE5DEF-D614-4013-A6F5-7BC3A9161366}" WorkUnitID="{2C701EA1-6752-43D4-9FD2-736F72F36CC7}"/>
+									<ObjectRef Name="A_SFX_Lv1_Plater1_Damage_Hit_V1A" ID="{3DFE5DEF-D614-4013-A6F5-7BC3A9161366}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -158,10 +252,15 @@
 						<Action Name="" ID="{54C7FA5E-9857-4781-A2BA-D745ED1A89C9}" ShortID="479660029">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Dx_Cx_Intro" ID="{F61CD296-2B49-4B38-93D0-815CFC011CEF}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+									<ObjectRef Name="Dx_Cinematics" ID="{F61CD296-2B49-4B38-93D0-815CFC011CEF}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

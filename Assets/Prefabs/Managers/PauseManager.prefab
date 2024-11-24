@@ -52,3 +52,11 @@ MonoBehaviour:
   onPlayerDeath: {fileID: 11400000, guid: 1609b932e078810448a25604c23359d3, type: 2}
   onGameplayReset: {fileID: 11400000, guid: ab870950ec2b0124da9411e0e9f8faa6, type: 2}
   onCinematicEnded: {fileID: 11400000, guid: 9f9b493eaa207164b9413b5af5fee35b, type: 2}
+  pauseMusicEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 51449693c21d19142bad32f3807b9a10, type: 2}
+  unpauseMusicEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e66cddc48be89054d94d81390b013202, type: 2}

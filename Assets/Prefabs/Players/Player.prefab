@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 8569875037951016330}
   - component: {fileID: 4892114609088342519}
   - component: {fileID: 765996105383918817}
+  - component: {fileID: 2323143666000183156}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -884,6 +885,21 @@ MonoBehaviour:
   animatorHandler: {fileID: 977276183979043023}
   onPlayerDeathEvent: {fileID: 11400000, guid: 1609b932e078810448a25604c23359d3, type: 2}
   onGameplayResetEvent: {fileID: 11400000, guid: ab870950ec2b0124da9411e0e9f8faa6, type: 2}
+  onExplosion:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 765996105383918817}
+        m_TargetAssemblyTypeName: Player.PlayerSoundController, Assembly-CSharp
+        m_MethodName: ExplosionSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4892114609088342519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -911,18 +927,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d302774136f72774596c0cf5f8a782e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  motorSound: SA_LV1_EV_PLAYER1_BIKE_INITIAL_ENGINE
-  hitSound: SA_LV1_PLAYER1_DAMAGE_HIT
-  hitVoice: SA_LV1_EV_DX_PLAYER1_HURT
-  attackSound: SA_LV1_EV_SWORD_WHOOSH
-  attackVoice: SA_LV1_EV_DX_PLAYER1_ATTACK
-  dashSound: SA_LV1_EV_PLAYER1_BIKE_INITIAL_DASH
+  pauseData: {fileID: 11400000, guid: 050aabf23c6e8a747ba6431bbbb165f5, type: 2}
+  motorSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bfce091287b9bb844ace7a62ee4fbe5e, type: 2}
+  motorRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 12638027f27905240bec290035d3983b, type: 2}
+  initMotorValue: 50
+  motorDiff: 10
+  onMovementStateChange: {fileID: 11400000, guid: e6b8f0b36674c7942b1b837307b25416, type: 2}
+  hitSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3d6e8e7041025d34fa89ba4ac82ba2a7, type: 2}
+  hitVoice:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5954c3dccf4b8784a83dd4bcf97b5180, type: 2}
+  attackSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 452da8822e2b4664c98317ed578d5f66, type: 2}
+  attackVoice:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ec7a7947841501d48bf7cefe59fc735d, type: 2}
+  dashSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4e1fe500150372c41993bc8b81b7f795, type: 2}
+  dieSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 647ca7414c3bfcf4a888600faaead03c, type: 2}
   gameOverState:
     idInternal: 0
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 59c21a7e21ff781478382859ae916459, type: 2}
+--- !u!114 &2323143666000183156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4780633370198621073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f19e6e6a63800429e4c84c2163bdcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onMovementStateChange: {fileID: 11400000, guid: e6b8f0b36674c7942b1b837307b25416, type: 2}
+  inputHandler: {fileID: 11400000, guid: 4902f51743585ca40aec021ece06aa06, type: 2}
 --- !u!1 &6811374093388968665
 GameObject:
   m_ObjectHideFlags: 0

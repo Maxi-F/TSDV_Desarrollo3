@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{DD348506-864B-41DC-9451-C55A025EB177}" SchemaVersion="119">
 	<GameParameters>
-		<WorkUnit Name="JJ RTPC" ID="{DD348506-864B-41DC-9451-C55A025EB177}" PersistMode="Standalone"/>
+		<WorkUnit Name="JJ RTPC" ID="{DD348506-864B-41DC-9451-C55A025EB177}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="9"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

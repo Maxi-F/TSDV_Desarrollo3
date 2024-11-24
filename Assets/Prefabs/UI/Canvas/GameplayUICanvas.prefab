@@ -1898,7 +1898,7 @@ MonoBehaviour:
   movementDuration: 0.25
   text: {fileID: 1876097537717926706}
   onNewRoadsVelocityEvent: {fileID: 11400000, guid: 1e327bfbe0d547b49bb2ca3a9cba1d2f, type: 2}
-  inputHandler: {fileID: 11400000, guid: 4902f51743585ca40aec021ece06aa06, type: 2}
+  onYMovementStateChange: {fileID: 11400000, guid: e6b8f0b36674c7942b1b837307b25416, type: 2}
   pauseData: {fileID: 11400000, guid: 050aabf23c6e8a747ba6431bbbb165f5, type: 2}
 --- !u!1 &5945041438210384587
 GameObject:
@@ -2681,6 +2681,10 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   fadeDuration: 0
+  warningSoundEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1f5bed8647c9be14bad56204ecf7a4e8, type: 2}
 --- !u!1 &7450131387197977897
 GameObject:
   m_ObjectHideFlags: 0

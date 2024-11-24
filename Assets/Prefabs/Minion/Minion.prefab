@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 1977581406877134975}
   - component: {fileID: 4097841218994226417}
   - component: {fileID: 218238986806074504}
+  - component: {fileID: 8196298000710031540}
   m_Layer: 6
   m_Name: Minion
   m_TagString: Enemy
@@ -661,6 +662,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8196298000710031540}
+        m_TargetAssemblyTypeName: Minion.MinionSoundController, Assembly-CSharp
+        m_MethodName: DieSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onInternalResetEvent:
     m_PersistentCalls:
       m_Calls:
@@ -679,9 +692,9 @@ MonoBehaviour:
   onInternalTakeDamageEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UI.HealthBar, Assembly-CSharp
-        m_MethodName: HandleTakeDamage
+      - m_Target: {fileID: 8196298000710031540}
+        m_TargetAssemblyTypeName: Minion.MinionSoundController, Assembly-CSharp
+        m_MethodName: HitSound
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -766,6 +779,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   minionConfig: {fileID: 11400000, guid: 0a4091bb2b815e646b3a1f5e68314944, type: 2}
+  onAttack:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8196298000710031540}
+        m_TargetAssemblyTypeName: Minion.MinionSoundController, Assembly-CSharp
+        m_MethodName: AttackSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4870043625586772548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -835,6 +863,38 @@ CapsuleCollider:
   m_Height: 2.3739047
   m_Direction: 1
   m_Center: {x: 0, y: 0.14638615, z: -0.020092249}
+--- !u!114 &8196298000710031540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9068004531541268373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2f58f9c5c1e6aa43ad1799a87d045c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 57190dd7ec2485b49a0093f5c97c4560, type: 2}
+  hitSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 597c13d98f509b147ba49a14ee4fabf9, type: 2}
+  weakSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8d15e9616985a3743ba2cde3781d00c0, type: 2}
+  dieSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d1e7f27683f160646ac356f529593d22, type: 2}
+  attackSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 654a1c1938a881f4aa1a9dd400625cb6, type: 2}
 --- !u!1001 &126009549454722255
 PrefabInstance:
   m_ObjectHideFlags: 0

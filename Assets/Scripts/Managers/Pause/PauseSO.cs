@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Managers
 {
@@ -6,10 +7,12 @@ namespace Managers
     public class PauseSO : ScriptableObject
     {
         public bool isPaused;
-
+        public UnityEvent<bool> onPause;
+        
         public void SetIsPaused(bool value)
         {
             isPaused = value;
+            onPause?.Invoke(value);
         }
     }
 }

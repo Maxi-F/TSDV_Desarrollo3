@@ -2,6 +2,10 @@
 <WwiseDocument Type="WorkUnit" ID="{EBE969E9-6BC0-45F9-9276-B9A5674CF30C}" SchemaVersion="119">
 	<States>
 		<WorkUnit Name="JJ Game States" ID="{EBE969E9-6BC0-45F9-9276-B9A5674CF30C}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="9"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
 			<ChildrenList>
 				<StateGroup Name="Estados_Music" ID="{3EB367F5-C750-4FB6-AE97-682BAD1AA65E}">
 					<ChildrenList>

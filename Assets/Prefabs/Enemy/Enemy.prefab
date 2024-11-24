@@ -673,6 +673,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 453574315884602139}
     - target: {fileID: 4991249550616943721, guid: d43615b12d6a40d4faec0d162fbb550c, type: 3}
+      propertyPath: healthPoints
+      value: 
+      objectReference: {fileID: 3269783526113023923}
+    - target: {fileID: 4991249550616943721, guid: d43615b12d6a40d4faec0d162fbb550c, type: 3}
+      propertyPath: meshRenderer
+      value: 
+      objectReference: {fileID: 8291366173887997431}
+    - target: {fileID: 4991249550616943721, guid: d43615b12d6a40d4faec0d162fbb550c, type: 3}
       propertyPath: _healthPoints
       value: 
       objectReference: {fileID: 3269783526113023923}
@@ -787,6 +795,11 @@ MonoBehaviour:
 --- !u!4 &7242222450462948032 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7759332051241287578, guid: d43615b12d6a40d4faec0d162fbb550c, type: 3}
+  m_PrefabInstance: {fileID: 1094134541066028378}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8291366173887997431 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8953151706161569965, guid: d43615b12d6a40d4faec0d162fbb550c, type: 3}
   m_PrefabInstance: {fileID: 1094134541066028378}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1516747265251615360

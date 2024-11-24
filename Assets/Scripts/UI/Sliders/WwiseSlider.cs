@@ -11,12 +11,15 @@ namespace UI.Sliders
         [SerializeField] private string prefsId;
         [SerializeField] private string modifiedFlagId;
         [SerializeField] private Slider slider;
+
+        [SerializeField] private AK.Wwise.Event sliderSound;
         
         private void OnEnable()
         {
             float masterVolumePref = PlayerPrefs.GetFloat(prefsId);
-
-            if (masterVolumePref != 0)
+            bool hasBeenModified = PlayerPrefs.GetInt(modifiedFlagId) == 1;
+            
+            if (hasBeenModified)
             {
                 slider.value = masterVolumePref;
             }
@@ -35,6 +38,8 @@ namespace UI.Sliders
             
             AkSoundEngine.SetRTPCValue(rtpc.Name, sliderValue);
             PlayerPrefs.SetFloat(prefsId, sliderValue);
+
+            AkSoundEngine.PostEvent(sliderSound.Id, gameObject);
         }
     }
 }

@@ -6,20 +6,48 @@ namespace Managers
     {
         [SerializeField] private SceneryManager sceneryManager;
 
-        [Header("Prefs")] [SerializeField] private AK.Wwise.RTPC masterVolumeRtpc;
+        [Header("Prefs")] 
+        [SerializeField] private AK.Wwise.RTPC masterVolumeRtpc;
         [SerializeField] private string masterVolumePrefsId;
-        [SerializeField] private float defaultVolume = 50.0f;
         [SerializeField] private string hasModifiedVolumePrefId;
+        [SerializeField] private float defaultVolume = 50.0f;
 
-
+        [SerializeField] private AK.Wwise.RTPC dialogueVolumeRtpc;
+        [SerializeField] private AK.Wwise.RTPC musicVolumeRtpc;
+        [SerializeField] private AK.Wwise.RTPC sfxVolumeRtpc;
+        [SerializeField] private string musicVolumePref;
+        [SerializeField] private string musicVolumeFlagPref;
+        [SerializeField] private string sfxVolumePref;
+        [SerializeField] private string sfxFlagPref;
+        [SerializeField] private string dialogueVolumePref;
+        [SerializeField] private string dialogueFlag;
+        
         private void Awake()
         {
             sceneryManager.InitScenes();
+        }
 
-            bool hasModifiedVolume = PlayerPrefs.GetInt(hasModifiedVolumePrefId) == 1;
-            float masterVolumePref = PlayerPrefs.GetFloat(masterVolumePrefsId);
+        private void Start()
+        {
+            CheckRtpc(masterVolumePrefsId, hasModifiedVolumePrefId, masterVolumeRtpc, true);
+            CheckRtpc(musicVolumePref, musicVolumeFlagPref, musicVolumeRtpc, true);
+            CheckRtpc(sfxVolumePref, sfxFlagPref, sfxVolumeRtpc, true);
+            CheckRtpc(dialogueVolumePref, dialogueFlag, dialogueVolumeRtpc, true);
+        }
 
-            AkSoundEngine.SetRTPCValue(masterVolumeRtpc.Name, hasModifiedVolume ? masterVolumePref : defaultVolume);
+        private void CheckRtpc(string valuePref, string flagPref, AK.Wwise.RTPC rtpc, bool shouldBeSetted)
+        {
+            bool hasBeenModified = PlayerPrefs.GetInt(flagPref) == 1;
+            float value = PlayerPrefs.GetFloat(valuePref);
+
+            Debug.Log(hasBeenModified ? value : defaultVolume);
+            
+            if(shouldBeSetted)
+                AkSoundEngine.SetRTPCValue(rtpc.Name, hasBeenModified ? value : defaultVolume);
+            else if (hasBeenModified)
+            {
+                AkSoundEngine.SetRTPCValue(rtpc.Name, value);
+            };
         }
     }
 }
