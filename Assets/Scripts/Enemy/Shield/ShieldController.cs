@@ -9,11 +9,14 @@ namespace Enemy.Shield
 {
     public class ShieldController : MonoBehaviour
     {
-        [FormerlySerializedAs("_healthPoints")] [SerializeField] private HealthPoints healthPoints;
+        [FormerlySerializedAs("_healthPoints")] [SerializeField]
+        private HealthPoints healthPoints;
 
         [SerializeField] private Material activeMaterial;
         [SerializeField] private AnimationCurve blinkCurve;
         [SerializeField] private MeshRenderer meshRenderer;
+
+        private Coroutine _shieldBlinkCoroutine;
 
         private IEnumerator ShieldBlink(float duration)
         {
@@ -32,7 +35,19 @@ namespace Enemy.Shield
 
         public void SetIsActivating(float activationDuration)
         {
-            StartCoroutine(ShieldBlink(activationDuration));
+            TryStopActivation();
+            _shieldBlinkCoroutine = StartCoroutine(ShieldBlink(activationDuration));
+        }
+
+        public bool TryStopActivation()
+        {
+            if (_shieldBlinkCoroutine != null)
+            {
+                StopCoroutine(_shieldBlinkCoroutine);
+                return true;
+            }
+
+            return false;
         }
 
         public void SetActiveMaterial()

@@ -59,7 +59,9 @@ public class WeakenedController : EnemyController
             StopCoroutine(_weakenedSequenceCoroutine);
 
         Sequence deathSequence = new Sequence();
+        deathSequence.AddPreAction(ShutDownShield());
         deathSequence.SetAction(BossDeath());
+
         animationHandler.StartDeath();
         StartCoroutine(deathSequence.Execute());
     }
@@ -113,6 +115,14 @@ public class WeakenedController : EnemyController
         shieldController.SetActive(true);
         shieldController.ResetShield();
         shieldController.SetActiveMaterial();
+    }
+
+    private IEnumerator ShutDownShield()
+    {
+        healthPoints.SetCanTakeDamage(false);
+        shieldController.TryStopActivation();
+        shieldController.SetActive(false);
+        yield break;
     }
 
     private IEnumerator ToggleShield(bool isActive)
