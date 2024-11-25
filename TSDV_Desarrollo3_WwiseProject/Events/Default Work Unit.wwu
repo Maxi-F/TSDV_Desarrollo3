@@ -50,6 +50,13 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{5BDD7018-240C-4611-A4F6-749AD55F6E3F}" ShortID="771979950">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="DX Hurt Objects" ID="{65B5E1FA-43DF-4B00-80D5-BD720ACAC88E}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>

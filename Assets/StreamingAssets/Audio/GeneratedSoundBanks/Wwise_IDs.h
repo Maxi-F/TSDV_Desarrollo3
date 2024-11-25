@@ -122,6 +122,7 @@ namespace AK
         static const AkUniqueID CINEMATICS = 877642339U;
         static const AkUniqueID DX = 1836525785U;
         static const AkUniqueID ENEMIES = 2242381963U;
+        static const AkUniqueID EXPLOTIONS = 2335599710U;
         static const AkUniqueID HDR = 931844945U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MX = 1685527054U;

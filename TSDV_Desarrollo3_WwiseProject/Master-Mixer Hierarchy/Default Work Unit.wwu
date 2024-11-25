@@ -148,11 +148,37 @@
 										<Property Name="OverrideColor" Type="bool" Value="True"/>
 									</PropertyList>
 									<ChildrenList>
-										<Bus Name="UI" ID="{89C2E468-AEBB-4BD6-97C2-7EC34E45715D}"/>
-										<Bus Name="AX" ID="{E229412A-D3AE-493C-A0DA-45DBDF706848}"/>
-										<Bus Name="Objects" ID="{5C93EDC0-EC71-41C1-8CC8-B2B6BDB4FECE}"/>
-										<Bus Name="Weapons" ID="{4ADA3BE9-411E-4A90-A458-D9B00A642407}"/>
-										<Bus Name="Enemies" ID="{5D790E1A-1721-4BFD-A0FD-9862C1A6E1BC}"/>
+										<Bus Name="UI" ID="{89C2E468-AEBB-4BD6-97C2-7EC34E45715D}">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="13"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+										</Bus>
+										<Bus Name="AX" ID="{E229412A-D3AE-493C-A0DA-45DBDF706848}">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="2"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+										</Bus>
+										<Bus Name="Objects" ID="{5C93EDC0-EC71-41C1-8CC8-B2B6BDB4FECE}">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="9"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+										</Bus>
+										<Bus Name="Weapons" ID="{4ADA3BE9-411E-4A90-A458-D9B00A642407}">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="11"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+										</Bus>
+										<Bus Name="Enemies" ID="{5D790E1A-1721-4BFD-A0FD-9862C1A6E1BC}">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="10"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+										</Bus>
+										<Bus Name="Explotions" ID="{7B544E49-CD5B-42FC-ABC6-E5028E178970}"/>
 									</ChildrenList>
 									<ObjectLists>
 										<ObjectList Name="RTPC">
