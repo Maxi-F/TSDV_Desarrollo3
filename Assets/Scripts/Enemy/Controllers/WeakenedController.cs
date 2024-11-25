@@ -33,6 +33,8 @@ public class WeakenedController : EnemyController
     [SerializeField] private IntEventChannelSO onEnemyDamageEvent;
     [SerializeField] private VoidEventChannelSO onEnemyShouldLeaveEvent;
 
+    private Coroutine _weakenedSequenceCoroutine;
+
     private void OnEnable()
     {
         healthPoints.SetCanTakeDamage(false);
@@ -53,6 +55,9 @@ public class WeakenedController : EnemyController
 
     private void HandleDeath()
     {
+        if (_weakenedSequenceCoroutine != null)
+            StopCoroutine(_weakenedSequenceCoroutine);
+
         Sequence deathSequence = new Sequence();
         deathSequence.SetAction(BossDeath());
         animationHandler.StartDeath();
@@ -69,6 +74,8 @@ public class WeakenedController : EnemyController
     private void HandleLeave()
     {
         ActivateShield();
+        if (_weakenedSequenceCoroutine != null)
+            StopCoroutine(_weakenedSequenceCoroutine);
         enemyAgent.ChangeStateToLeave();
     }
 
@@ -81,7 +88,10 @@ public class WeakenedController : EnemyController
         weakenedSequence.SetAction(ReactivateShield());
         weakenedSequence.AddPostAction(ToggleShield(true));
 
-        StartCoroutine(weakenedSequence.Execute());
+        if (_weakenedSequenceCoroutine != null)
+            StopCoroutine(_weakenedSequenceCoroutine);
+
+        _weakenedSequenceCoroutine = StartCoroutine(weakenedSequence.Execute());
     }
 
     private IEnumerator PlayWeakenedAnimation()
