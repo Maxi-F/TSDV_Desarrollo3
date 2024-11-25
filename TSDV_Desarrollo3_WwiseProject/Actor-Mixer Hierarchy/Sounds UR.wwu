@@ -1002,6 +1002,15 @@
 							</ReferenceList>
 							<ChildrenList>
 								<ActorMixer Name="Bike" ID="{1445CA45-9BFD-4E51-B82B-6647389619C2}" ShortID="440671830">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{90693A05-95D3-44FC-B01D-35390B33E2C7}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -1014,6 +1023,13 @@
 										<Sound Name="A_SFX_All_Player1_Objects_Bike_Initial_Engine_V1A_" ID="{06877FAD-5DB9-4C63-918D-C7AB28BECFCE}" ShortID="71010398">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{A25C2C1C-057B-4661-B554-C6A7EC2F42EF}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-7</Value>
@@ -1047,7 +1063,7 @@
 																</PropertyList>
 																<ReferenceList>
 																	<Reference Name="ControlInput">
-																		<ObjectRef Name="Bike_Speed" ID="{A1D30AF3-2A4D-4A3A-93A4-17EDB64AD294}" WorkUnitID="{E67C0F54-52A1-4539-96BE-663B4CCE34BB}"/>
+																		<ObjectRef Name="SA_RTPC_Bike_Initial_Speed" ID="{FD679715-F310-473A-A1F7-F27ECD2B3F1A}" WorkUnitID="{E67C0F54-52A1-4539-96BE-663B4CCE34BB}"/>
 																	</Reference>
 																	<Reference Name="Curve">
 																		<Custom>
@@ -1067,13 +1083,18 @@
 																						<Flags>0</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>42.4816</XPos>
-																						<YPos>5</YPos>
+																						<XPos>43.28396</XPos>
+																						<YPos>252</YPos>
+																						<Flags>0</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>95</XPos>
+																						<YPos>1464</YPos>
 																						<Flags>0</Flags>
 																					</Point>
 																					<Point>
 																						<XPos>100</XPos>
-																						<YPos>1550</YPos>
+																						<YPos>1464</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
@@ -2216,6 +2237,21 @@
 													</ActiveSourceList>
 												</Sound>
 												<Sound Name="A_SFX_Lv1_Enemy_Minion_A_Attack_Dash_1A" ID="{F62E669E-A77A-4313-8574-B8F68AB79E3B}" ShortID="852632204">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{1F15CF00-2893-4CE7-92FC-A3585644F18E}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="252"/>
+																			<Property Name="Min" Type="Real64" Value="-253"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
 															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -2315,6 +2351,15 @@
 											</ChildrenList>
 										</ActorMixer>
 										<ActorMixer Name="Enemy minion motor" ID="{6971B429-9D08-4617-85AB-E2C953C8B4A5}" ShortID="570617579">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{4CEFDADB-F353-4568-82AE-A755BF8F5FA7}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -2349,7 +2394,7 @@
 														</Property>
 														<Property Name="Volume" Type="Real64">
 															<ValueList>
-																<Value>-9</Value>
+																<Value>-3</Value>
 															</ValueList>
 														</Property>
 													</PropertyList>
@@ -2383,6 +2428,18 @@
 												<Sound Name="A_SFX_Lv1_Enemy_Minion_A_Engine_IdleV1A" ID="{9F2BF662-B522-428B-B500-73DE19F53149}" ShortID="323583393">
 													<PropertyList>
 														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{39DA1B02-AFDF-4217-BBD9-FDC02F903C0E}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>5</Value>
+															</ValueList>
+														</Property>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Conversion">
