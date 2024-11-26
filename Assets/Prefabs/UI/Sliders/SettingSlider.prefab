@@ -385,6 +385,7 @@ GameObject:
   - component: {fileID: 2877440698571860268}
   - component: {fileID: 4124051764012354884}
   - component: {fileID: 4161349205433261757}
+  - component: {fileID: 5480568920482241419}
   m_Layer: 5
   m_Name: Volume
   m_TagString: Untagged
@@ -521,10 +522,23 @@ MonoBehaviour:
   prefsId: Master
   modifiedFlagId: masterFlag
   slider: {fileID: 2631864412254740240}
+--- !u!114 &5480568920482241419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7471505292020751893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f812b2f0fbde34ca8732b0555d4975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   sliderSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: beaeac69a45d42943abb29b82d9885fa, type: 2}
+  soundCooldown: 0.1
 --- !u!1 &7482496068276340673
 GameObject:
   m_ObjectHideFlags: 0
