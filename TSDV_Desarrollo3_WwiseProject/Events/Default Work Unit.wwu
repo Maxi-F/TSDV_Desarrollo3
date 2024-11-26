@@ -3,12 +3,12 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{8D5748B0-01A1-4537-803B-3895EEF4F562}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="SA_Lv1_EV_UI_Buttons_Main" ID="{AF0FD82E-7075-407B-A992-4451A9AFC2EF}">
+				<Event Name="SA_Lv1_EV_UI_Hover_Main" ID="{AF0FD82E-7075-407B-A992-4451A9AFC2EF}">
 					<ChildrenList>
 						<Action Name="" ID="{C0ED8C10-E7E1-490F-A43F-1E23363CBBD3}" ShortID="577232135">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="UI_Main" ID="{062A2628-3654-4E70-98B7-28E5E427177F}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+									<ObjectRef Name="Hover Spray" ID="{E0AC6EA5-CE98-4047-AB82-6CB55AA5EF92}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -325,6 +325,19 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="SA_Lv1_EV_UI_Click_Main" ID="{9F001A29-12DD-45EC-88AE-99A01CEC508D}">
+					<ChildrenList>
+						<Action Name="" ID="{E6F8C2DA-40F0-49C1-8ED5-BB784890ADC9}" ShortID="165429211">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Click" ID="{07873B12-37AB-4416-9875-4192837E1A7A}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SA_Lv1_EV_UI_Hover_Visor" ID="{BFD25B94-8015-4306-8164-BD092E80391D}"/>
+				<Event Name="SA_Lv1_EV_UI_Click_Visor" ID="{C9615E17-66D7-4D93-946B-4DE74899B3D2}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

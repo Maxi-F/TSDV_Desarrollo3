@@ -12,7 +12,11 @@
 						<Property Name="Max" Type="Real64" Value="175"/>
 					</PropertyList>
 				</GameParameter>
-				<GameParameter Name="SA_RTPC_Bike_Initial_Speed" ID="{FD679715-F310-473A-A1F7-F27ECD2B3F1A}"/>
+				<GameParameter Name="SA_RTPC_Bike_Initial_Speed" ID="{FD679715-F310-473A-A1F7-F27ECD2B3F1A}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

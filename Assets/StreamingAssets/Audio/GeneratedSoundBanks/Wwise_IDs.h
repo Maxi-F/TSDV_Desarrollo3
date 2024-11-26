@@ -56,7 +56,10 @@ namespace AK
         static const AkUniqueID SA_LV1_EV_PLAYER1_DIE_EXPLOTION = 876086836U;
         static const AkUniqueID SA_LV1_EV_PLAYER1_HEALING = 4117304617U;
         static const AkUniqueID SA_LV1_EV_SWORD_WHOOSH = 3314116518U;
-        static const AkUniqueID SA_LV1_EV_UI_BUTTONS_MAIN = 3778692734U;
+        static const AkUniqueID SA_LV1_EV_UI_CLICK_MAIN = 3353602479U;
+        static const AkUniqueID SA_LV1_EV_UI_CLICK_VISOR = 2385151657U;
+        static const AkUniqueID SA_LV1_EV_UI_HOVER_MAIN = 743223205U;
+        static const AkUniqueID SA_LV1_EV_UI_HOVER_VISOR = 4269603799U;
         static const AkUniqueID SA_LV1_EV_UI_TEXT_TYPING = 1221627396U;
         static const AkUniqueID SA_LV1_PLAYER1_DAMAGE_HIT = 1161613028U;
         static const AkUniqueID UNPAUSE_A_MX_TODO_95_BPM_V1A = 659047857U;
