@@ -361,6 +361,7 @@ MonoBehaviour:
   canvas: {fileID: 7381978238491646055}
   deathTimeOffset: 1.1
   healthPoints: {fileID: 5575126865424349212}
+  collider: {fileID: 218238986806074504}
   onMinionDeletedEvent: {fileID: 11400000, guid: 7767544c749c3594abcb1520bca52614, type: 2}
   idleEvents:
     onEnter:
