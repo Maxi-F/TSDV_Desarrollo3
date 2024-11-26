@@ -8,7 +8,7 @@ namespace Utils
         public TMP_Text version;
         void Start()
         {
-            version.text = $"Version: {Application.version}";
+            version.text = Application.version;
         }
     }
 }
