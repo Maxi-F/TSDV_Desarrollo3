@@ -33,7 +33,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="SA_RTPC_Bike_Initial_Speed" ID="{FD679715-F310-473A-A1F7-F27ECD2B3F1A}"/>
-							<Value>8.34018096356355E-312</Value>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Bike_Speed" ID="{A1D30AF3-2A4D-4A3A-93A4-17EDB64AD294}"/>

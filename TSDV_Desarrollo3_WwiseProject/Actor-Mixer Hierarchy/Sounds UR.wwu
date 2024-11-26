@@ -1023,6 +1023,7 @@
 										<Sound Name="A_SFX_All_Player1_Objects_Bike_Initial_Engine_V1A_" ID="{06877FAD-5DB9-4C63-918D-C7AB28BECFCE}" ShortID="71010398">
 											<PropertyList>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
@@ -1054,6 +1055,47 @@
 												</AudioFileSource>
 											</ChildrenList>
 											<ObjectLists>
+												<ObjectList Name="Effects">
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{3D0564E4-6D5D-41D8-85B0-8DA2498E51E0}" ShortID="80376155">
+																<ReferenceList>
+																	<Reference Name="Effect" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
+																		<ObjectRef Name="Special_Effect_1" ID="{83317D8A-9D4C-438E-BE8C-BC7D27CAD1B0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{87FF0321-6FC7-4D36-A5FF-2C6218FE6151}" ShortID="59047805">
+																<ReferenceList>
+																	<Reference Name="Effect">
+																		<Custom>
+																			<Effect Name="Guitar Distortion (Custom)" ID="{BA5767F5-A102-4D6A-B776-FBA5293CF7F3}" ShortID="477827583" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+																				<PropertyList>
+																					<Property Name="PreEQBand1Enable" Type="bool" Value="True"/>
+																					<Property Name="PreEQBand1Frequency" Type="Real32" Value="3584"/>
+																					<Property Name="PreEQBand1Gain" Type="Real32" Value="3"/>
+																					<Property Name="PreEQBand3Enable" Type="bool" Value="True"/>
+																					<Property Name="PreEQBand3FilterType" Type="int32" Value="6"/>
+																					<Property Name="PreEQBand3Frequency" Type="Real32" Value="82"/>
+																					<Property Name="PreEQBand3QFactor" Type="Real32" Value="6.7"/>
+																				</PropertyList>
+																			</Effect>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{36A4A9EC-B29F-48E1-82D8-87094DCD9E65}" ShortID="928728256"/>
+														</Local>
+													</Reference>
+												</ObjectList>
 												<ObjectList Name="RTPC">
 													<Reference>
 														<Local>
@@ -1074,27 +1116,18 @@
 																				<PointList>
 																					<Point>
 																						<XPos>0</XPos>
-																						<YPos>-532</YPos>
+																						<YPos>51</YPos>
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>27.33965</XPos>
-																						<YPos>0</YPos>
+																						<XPos>46.66805</XPos>
+																						<YPos>544</YPos>
 																						<Flags>0</Flags>
-																					</Point>
-																					<Point>
-																						<XPos>43.28396</XPos>
-																						<YPos>252</YPos>
-																						<Flags>0</Flags>
-																					</Point>
-																					<Point>
-																						<XPos>95</XPos>
-																						<YPos>1464</YPos>
-																						<Flags>0</Flags>
+																						<SegmentShape>Exp1</SegmentShape>
 																					</Point>
 																					<Point>
 																						<XPos>100</XPos>
-																						<YPos>1464</YPos>
+																						<YPos>2289</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
