@@ -801,30 +801,25 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="DX_Alert_Warning" ID="{9AB3445E-86A9-479D-8D8B-D4715733E645}" ShortID="763171831">
+										<RandomSequenceContainer Name="DX_Alert_Waning" ID="{F027161B-2EBF-478E-9114-736EC0560F97}" ShortID="659148787">
 											<PropertyList>
-												<Property Name="HdrActiveRange" Type="Real64">
-													<ValueList>
-														<Value>20</Value>
-													</ValueList>
-												</Property>
-												<Property Name="HdrEnableEnvelope" Type="bool" Value="True"/>
-												<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>5</Value>
+														<Value>6</Value>
 													</ValueList>
 												</Property>
-												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
-												<Property Name="MaxSoundPerInstance" Type="int16">
-													<ValueList>
-														<Value>1</Value>
-													</ValueList>
-												</Property>
-												<Property Name="UseMaxSoundPerInstance" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{49734054-B331-4FC6-924E-8F5A9D439CEF}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="25"/>
+																	<Property Name="Min" Type="Real64" Value="-25"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
 												</Property>
 											</PropertyList>
 											<ReferenceList>
@@ -832,165 +827,144 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="HDR" ID="{630E41E4-68FE-42BA-87D1-799B9ACCAD12}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="DX_Alert_Warning" ID="{DAAEA338-B7CC-4A8C-8A29-43B3FD715B99}">
-													<PropertyList>
-														<Property Name="VolumeOffset" Type="Real64">
-															<ValueList>
-																<Value>0.7</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>SFX_JP\DX\Computer\DX_Alert_Warning.wav</AudioFile>
-													<PropertyCurveList>
-														<PropertyCurve PropertyName="HdrEnvelope">
-															<Curve Name="" ID="{1DA779B5-A39B-4AB5-8328-8A465ABAFE18}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="1"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>0.0107773980125785</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>0.18</XPos>
-																		<YPos>0.0547920390963554</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>0.25</XPos>
-																		<YPos>0.203466728329659</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>0.41</XPos>
-																		<YPos>0.0780257135629654</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>0.57</XPos>
-																		<YPos>0.0989041030406952</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>0.6</XPos>
-																		<YPos>0.0313602201640606</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>0.71932</XPos>
-																		<YPos>0</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>1.14</XPos>
-																		<YPos>2.37454273133153E-07</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>1.35</XPos>
-																		<YPos>0.241680637001991</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>1.49</XPos>
-																		<YPos>0.0619006231427193</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>1.56</XPos>
-																		<YPos>0.117030330002308</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>1.67842</XPos>
-																		<YPos>0.04961</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>1.85364</XPos>
-																		<YPos>0</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>2.29</XPos>
-																		<YPos>0.000105074897874147</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>2.35</XPos>
-																		<YPos>0.037926722317934</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>2.41</XPos>
-																		<YPos>0.260228902101517</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>2.59</XPos>
-																		<YPos>0.108534157276154</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>2.97</XPos>
-																		<YPos>0.00155595189426094</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>3.53</XPos>
-																		<YPos>0.000300856860121712</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>3.6</XPos>
-																		<YPos>0.18797767162323</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>3.7</XPos>
-																		<YPos>0.291601806879044</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>3.85484</XPos>
-																		<YPos>0.12655</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>3.91</XPos>
-																		<YPos>0.190022721886635</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>3.93</XPos>
-																		<YPos>0.105860985815525</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>4.35283333333333</XPos>
-																		<YPos>0.000456816167570651</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</PropertyCurve>
-													</PropertyCurveList>
-													<MediaIDList>
-														<MediaID ID="164828003"/>
-													</MediaIDList>
-												</AudioFileSource>
+												<Sound Name="A_SFX_Lv1_Ui_Notification_Warning_V01A" ID="{D68D2AC7-6355-4FFC-860F-D120A0611D3D}" ShortID="736329698">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="A_SFX_Lv1_Ui_Notification_Warning_V01A" ID="{5748E29B-1A54-4F7C-A230-E229E18AF5DA}">
+															<Language>SFX</Language>
+															<AudioFile>SFX_JP\DX\Computer\Warning\A_SFX_Lv1_Ui_Notification_Warning_V01A.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1068390612"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="A_SFX_Lv1_Ui_Notification_Warning_V01A" ID="{5748E29B-1A54-4F7C-A230-E229E18AF5DA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="A_SFX_Lv1_Ui_Notification_Warning_V02A" ID="{44EF4AE9-B685-491F-B9FA-523E75DBCDEC}" ShortID="1061748754">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="A_SFX_Lv1_Ui_Notification_Warning_V02A" ID="{F4D1D804-A4D1-4F60-B215-85E874F0CE05}">
+															<Language>SFX</Language>
+															<AudioFile>SFX_JP\DX\Computer\Warning\A_SFX_Lv1_Ui_Notification_Warning_V02A.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="620217046"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="A_SFX_Lv1_Ui_Notification_Warning_V02A" ID="{F4D1D804-A4D1-4F60-B215-85E874F0CE05}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="A_SFX_Lv1_Ui_Notification_Warning_V03A" ID="{267FD721-2EB3-4EC4-97A0-EBDFBDA6BD91}" ShortID="613010541">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="A_SFX_Lv1_Ui_Notification_Warning_V03A" ID="{38933C4C-53AE-4027-8507-481A23579F52}">
+															<Language>SFX</Language>
+															<AudioFile>SFX_JP\DX\Computer\Warning\A_SFX_Lv1_Ui_Notification_Warning_V03A.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="680070831"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="A_SFX_Lv1_Ui_Notification_Warning_V03A" ID="{38933C4C-53AE-4027-8507-481A23579F52}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="A_SFX_Lv1_Ui_Notification_Warning_V04A" ID="{4D27744F-1AE6-41CC-81D4-717EEFEDFA32}" ShortID="47082756">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="A_SFX_Lv1_Ui_Notification_Warning_V04A" ID="{61A1E262-E4CE-4F17-9A59-F0A2FA66F951}">
+															<Language>SFX</Language>
+															<AudioFile>SFX_JP\DX\Computer\Warning\A_SFX_Lv1_Ui_Notification_Warning_V04A.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="332062948"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="A_SFX_Lv1_Ui_Notification_Warning_V04A" ID="{61A1E262-E4CE-4F17-9A59-F0A2FA66F951}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="A_SFX_Lv1_Ui_Notification_Warning_V05A" ID="{9CE5F1D9-F690-4DE5-A0E7-008A8F2D8F02}" ShortID="577112731">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="A_SFX_Lv1_Ui_Notification_Warning_V05A" ID="{D89D80BC-8C37-4F8E-A30F-8B7143230814}">
+															<Language>SFX</Language>
+															<AudioFile>SFX_JP\DX\Computer\Warning\A_SFX_Lv1_Ui_Notification_Warning_V05A.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="973692963"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="A_SFX_Lv1_Ui_Notification_Warning_V05A" ID="{D89D80BC-8C37-4F8E-A30F-8B7143230814}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="A_SFX_Lv1_Ui_Notification_Warning_V06A" ID="{6465B1E3-AD48-42EC-844A-17A87621D77C}" ShortID="986347774">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="A_SFX_Lv1_Ui_Notification_Warning_V06A" ID="{0F3D4ACA-52AF-408A-B827-6AABD4955735}">
+															<Language>SFX</Language>
+															<AudioFile>SFX_JP\DX\Computer\Warning\A_SFX_Lv1_Ui_Notification_Warning_V06A.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="161105161"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="A_SFX_Lv1_Ui_Notification_Warning_V06A" ID="{0F3D4ACA-52AF-408A-B827-6AABD4955735}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="DX_Alert_Warning" ID="{DAAEA338-B7CC-4A8C-8A29-43B3FD715B99}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
+										</RandomSequenceContainer>
 									</ChildrenList>
 								</ActorMixer>
 							</ChildrenList>
