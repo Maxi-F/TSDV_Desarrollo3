@@ -574,6 +574,10 @@ PrefabInstance:
       propertyPath: initScenes.Array.data[2]
       value: Roads
       objectReference: {fileID: 0}
+    - target: {fileID: 6288261650114330022, guid: d1b9efb00f169a74eba642e6c29ec261, type: 3}
+      propertyPath: stopSfxEvent.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: dc9cf9f7049b4724ab64460945a342bd, type: 2}
     - target: {fileID: 7888415006632084745, guid: d1b9efb00f169a74eba642e6c29ec261, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2978884

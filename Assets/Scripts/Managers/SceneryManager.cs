@@ -12,7 +12,7 @@ namespace Managers
     public class SceneryManager : MonoBehaviour
     {
         [SerializeField] private ScenesDataConfig scenesDataConfig;
-
+        
         [Tooltip("Scenes that are on boot")] 
         [SerializeField] private string[] initScenes;
 

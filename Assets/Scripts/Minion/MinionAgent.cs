@@ -16,6 +16,7 @@ namespace Minion
         [SerializeField] private GameObject canvas;
         [SerializeField] private float deathTimeOffset;
         [SerializeField] private HealthPoints healthPoints;
+        [SerializeField] private Collider collider;
 
         [Header("Events")]
         [SerializeField] private MinionAgentEventChannelSO onMinionDeletedEvent;
@@ -42,7 +43,8 @@ namespace Minion
             model.gameObject.SetActive(true);
             canvas.gameObject.SetActive(true);
             vfx.gameObject.SetActive(false);
-            
+            healthPoints.SetCanTakeDamage(true);
+            collider.enabled = true;
             Fsm.Enable();
         }
 
@@ -170,6 +172,8 @@ namespace Minion
         private IEnumerator DieCoroutine()
         {
             model.gameObject.SetActive(false);
+            healthPoints.SetCanTakeDamage(false);
+            collider.enabled = false;
             Fsm.Disable();
             canvas.gameObject.SetActive(false);
             yield return new WaitForSeconds(deathTimeOffset);

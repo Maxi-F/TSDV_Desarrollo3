@@ -1,4 +1,5 @@
 using System.Collections;
+using Events;
 using LevelManagement.Sequences;
 using ObstacleSystem;
 using UnityEngine;
@@ -15,6 +16,8 @@ namespace LevelManagement
         [SerializeField] private MinionsSequence minionsSequence;
         [SerializeField] private BossSequence bossSequence;
         
+        [SerializeField] private FloatEventChannelSO onPlayerNewMotorValue;
+        
         private LevelLoopSO _levelConfig;
         private Coroutine _actualLoopSequence;
 
@@ -27,6 +30,7 @@ namespace LevelManagement
         public void SetupLevelLoop(LevelLoopSO loopConfig)
         {
             _levelConfig = loopConfig;
+            onPlayerNewMotorValue?.RaiseEvent(_levelConfig.playerData.motorRtpcValue);
 
             obstacleSequence.SetupSequence(_levelConfig.roadData);
             minionsSequence.SetupSequence(_levelConfig.minionsData);

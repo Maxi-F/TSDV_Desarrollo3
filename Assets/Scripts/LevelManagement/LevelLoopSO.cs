@@ -44,6 +44,12 @@ namespace LevelManagement
         public MinionsManagerSO managerData;
         public MinionSpawnerSO spawnerData;
     }
+
+    [Serializable]
+    public class PlayerData
+    {
+        public float motorRtpcValue;
+    }
     
     [CreateAssetMenu(menuName = "Level Loop Config", fileName = "LevelLoopConfig", order = 0)]
     public class LevelLoopSO : ScriptableObject
@@ -52,5 +58,6 @@ namespace LevelManagement
         public RoadData roadData;
         public BossData bossData;
         public MinionsData minionsData;
+        public PlayerData playerData;
     }
 }

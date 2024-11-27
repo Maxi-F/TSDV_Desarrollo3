@@ -10,6 +10,8 @@ namespace Attacks.ParryProjectile
 {
     public class ParryBomb : MonoBehaviour, IDeflectable
     {
+        [SerializeField] private float deflectionCooldownStartTime = 0.2f;
+        
         [Header("Second Force Properties")]
         [SerializeField] private float secondForceAcceleration;
 
@@ -40,23 +42,21 @@ namespace Attacks.ParryProjectile
 
         private float _timeApplyingFollowForce = 0f;
         private bool _isStarted = false;
-        private bool _canCollission = true;
+        private bool _canCollission;
+        private bool _canDeflect;
         private float _followForceVelocity;
 
         private Vector3 _direction;
-
-        public void SetFirstForce(ParryProjectileFirstForce config)
-        {
-            _parryProjectileConfig = config;
-            SetTargetPosition(config.finalPosition);
-        }
-
+        
         private void Start()
         {
             _rigidbody ??= GetComponent<Rigidbody>();
              IsActive = true;
              _canCollission = true;
+             _canDeflect = false;
             _isTargetingPlayer = true;
+
+            StartCoroutine(HandleDeflectionCooldown());
         }
 
         private void FixedUpdate()
@@ -66,6 +66,18 @@ namespace Attacks.ParryProjectile
                 StartCoroutine(ApplyAngularForce());
                 _isStarted = true;
             }
+        }
+        
+        public void SetFirstForce(ParryProjectileFirstForce config)
+        {
+            _parryProjectileConfig = config;
+            SetTargetPosition(config.finalPosition);
+        }
+        
+        private IEnumerator HandleDeflectionCooldown()
+        {
+            yield return new WaitForSeconds(deflectionCooldownStartTime);
+            _canDeflect = true;
         }
 
         private IEnumerator ApplyAngularForce()
@@ -154,6 +166,8 @@ namespace Attacks.ParryProjectile
 
         public void Deflect(GameObject newObjectToFollow)
         {
+            if (!_canDeflect) return;
+            
             _timeApplyingFollowForce = 0f;
             _rigidbody.velocity = GetDirection(newObjectToFollow.transform.position) * startVelocityInParry;
 

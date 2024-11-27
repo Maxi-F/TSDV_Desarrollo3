@@ -392,6 +392,32 @@
 				</Event>
 				<Event Name="SA_Lv1_EV_UI_Hover_Visor" ID="{BFD25B94-8015-4306-8164-BD092E80391D}"/>
 				<Event Name="SA_Lv1_EV_UI_Click_Visor" ID="{C9615E17-66D7-4D93-946B-4DE74899B3D2}"/>
+				<Event Name="Stop_All_Sfx" ID="{E03253EB-CEC0-44AD-B324-7FF8C02D4E33}">
+					<ChildrenList>
+						<Action Name="" ID="{41A0000B-0BA8-44AF-A981-21630BF7C7D6}" ShortID="447910342">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX" ID="{5A0B76FE-3A03-4117-ACF3-23EBA85A37B4}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{427806A7-AA57-4F36-BF51-A1CF08CF568A}" ShortID="666681642">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DX" ID="{79758F97-08CD-459C-8801-0DFAB0EEB7B5}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
