@@ -16,8 +16,11 @@ namespace Player
         [SerializeField] private float motorChangeDuration;
         [SerializeField] private float initMotorValue;
         [SerializeField] private float motorDiff;
+        
+        [Header("Motor Events")]
         [SerializeField] private EventChannelSO<YMovementState> onMovementStateChange;
         [SerializeField] private FloatEventChannelSO onNewMotorValue;
+        [SerializeField] private VoidEventChannelSO onGameplayReset;
         
         [Header("Hit Sounds")]
         [SerializeField] private AK.Wwise.Event hitSound;
@@ -36,6 +39,7 @@ namespace Player
 
         private float _motorValue;
         private Coroutine _motorValueChangeCoroutine;
+        private bool _isMotorSoundRunning;
         
         private void Start()
         {
@@ -44,18 +48,27 @@ namespace Player
 
         private void OnEnable()
         {
+            _isMotorSoundRunning = false;
             _motorValue = initMotorValue;
             onMovementStateChange?.onTypedEvent.AddListener(HandleMovementChange);
             onNewMotorValue?.onFloatEvent.AddListener(HandleNewMotorValue);
-            motorSound.Post(gameObject);
+            onGameplayReset?.onEvent.AddListener(HandleReset);
+            HandleStartMotorSound();
         }
 
         private void OnDisable()
         {
             onMovementStateChange?.onTypedEvent.RemoveListener(HandleMovementChange);
             onNewMotorValue?.onFloatEvent.RemoveListener(HandleNewMotorValue);
+            onGameplayReset?.onEvent.RemoveListener(HandleReset);
         }
-        
+
+        private void HandleReset()
+        {
+            _motorValue = initMotorValue;
+            HandleStartMotorSound();
+        }
+
         private void HandleNewMotorValue(float newMotorValue)
         {
             if(_motorValueChangeCoroutine != null)
@@ -89,6 +102,15 @@ namespace Player
                 movementState == YMovementState.Downwards ? _motorValue - motorDiff : _motorValue);
         }
 
+        public void HandleStartMotorSound()
+        {
+            if (!_isMotorSoundRunning)
+            {
+                motorSound.Post(gameObject);
+                _isMotorSoundRunning = true;
+            }
+        }
+        
         public void HitSound()
         {
             hitSound.Post(gameObject);
@@ -114,6 +136,8 @@ namespace Player
         public void ExplosionSound()
         {
             dieSound.Post(gameObject);
+            motorSound.Stop(gameObject);
+            _isMotorSoundRunning = false;
         }
     }
 }

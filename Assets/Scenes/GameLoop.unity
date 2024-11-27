@@ -587,8 +587,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 765996105383918817, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
       propertyPath: initMotorValue
-      value: 25
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 765996105383918817, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
+      propertyPath: onGameplayReset
+      value: 
+      objectReference: {fileID: 11400000, guid: ab870950ec2b0124da9411e0e9f8faa6, type: 2}
     - target: {fileID: 765996105383918817, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
       propertyPath: onNewMotorValue
       value: 
