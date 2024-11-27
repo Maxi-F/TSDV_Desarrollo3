@@ -120,18 +120,6 @@
 								</Bus>
 								<Bus Name="SFX BUS" ID="{D5B0D699-2354-4EE6-9B74-19505A657A38}">
 									<ChildrenList>
-										<Bus Name="UI" ID="{89C2E468-AEBB-4BD6-97C2-7EC34E45715D}">
-											<PropertyList>
-												<Property Name="Color" Type="int16" Value="13"/>
-												<Property Name="OverrideColor" Type="bool" Value="True"/>
-											</PropertyList>
-										</Bus>
-										<Bus Name="Objects" ID="{5C93EDC0-EC71-41C1-8CC8-B2B6BDB4FECE}">
-											<PropertyList>
-												<Property Name="Color" Type="int16" Value="9"/>
-												<Property Name="OverrideColor" Type="bool" Value="True"/>
-											</PropertyList>
-										</Bus>
 										<Bus Name="Weapons" ID="{4ADA3BE9-411E-4A90-A458-D9B00A642407}">
 											<PropertyList>
 												<Property Name="Color" Type="int16" Value="11"/>
@@ -193,6 +181,59 @@
 									</ObjectLists>
 								</Bus>
 							</ChildrenList>
+						</Bus>
+						<Bus Name="UI" ID="{89C2E468-AEBB-4BD6-97C2-7EC34E45715D}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="13"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Bus Name="Objects" ID="{5C93EDC0-EC71-41C1-8CC8-B2B6BDB4FECE}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="9"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</Bus>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{0A218E29-46F3-4045-A131-455AC764CC4A}" ShortID="282268290">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="BusVolume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="SFX_Ctrl" ID="{3A832021-26AB-4CB4-A488-B51D2B63AB08}" WorkUnitID="{A836A78C-76CD-42DC-AB2C-83D437ED0BD5}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{5F402715-663B-41E6-A1C4-E7E36DC2C173}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</Bus>
 					</ChildrenList>
 					<ObjectLists>
