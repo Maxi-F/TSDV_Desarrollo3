@@ -62,6 +62,7 @@ namespace AK
         static const AkUniqueID SA_LV1_EV_UI_HOVER_VISOR = 4269603799U;
         static const AkUniqueID SA_LV1_EV_UI_TEXT_TYPING = 1221627396U;
         static const AkUniqueID SA_LV1_PLAYER1_DAMAGE_HIT = 1161613028U;
+        static const AkUniqueID STOP_ALL_SFX = 971107033U;
         static const AkUniqueID UNPAUSE_A_MX_TODO_95_BPM_V1A = 659047857U;
     } // namespace EVENTS
 
