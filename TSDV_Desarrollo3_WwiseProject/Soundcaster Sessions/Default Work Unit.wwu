@@ -18,6 +18,10 @@
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="SA_Lv1_EV_Sword_Whoosh" ID="{9E050181-9575-41B4-81F2-4DC4D17ACFBE}" WorkUnitID="{8D5748B0-01A1-4537-803B-3895EEF4F562}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="SA_Lv1_EV_DX_Player1_Attack" ID="{F111E325-1259-4C96-81B6-6D3C7492190B}" WorkUnitID="{8D5748B0-01A1-4537-803B-3895EEF4F562}"/>
 							<Position X="2" Y="0"/>
 						</Module>
@@ -28,6 +32,22 @@
 						<Module>
 							<ObjectRef Name="SA_Lv1_EV_DX_Player1_Die" ID="{BC55EA74-A51A-40D4-B981-BBAE7A5842E2}" WorkUnitID="{8D5748B0-01A1-4537-803B-3895EEF4F562}"/>
 							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SA_Lv1_EV_BossLv1_Bike_Engine" ID="{98977FE4-BDEA-4532-B346-102BDE0D1D20}" WorkUnitID="{8D5748B0-01A1-4537-803B-3895EEF4F562}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SA_Lv1_EV_Player1_Bike_Initial_Dash" ID="{03F6D999-A5D1-40CD-ADD6-A5E31899938A}" WorkUnitID="{8D5748B0-01A1-4537-803B-3895EEF4F562}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SA_Lv1_EV_Sword_Whoosh" ID="{9E050181-9575-41B4-81F2-4DC4D17ACFBE}" WorkUnitID="{8D5748B0-01A1-4537-803B-3895EEF4F562}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="SA_Lv1_EV_Player1_Bike_Initial_Engine" ID="{A292B1E4-6837-422D-82E0-417F0EA2BEAF}" WorkUnitID="{8D5748B0-01A1-4537-803B-3895EEF4F562}"/>
+							<Position X="3" Y="3"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
