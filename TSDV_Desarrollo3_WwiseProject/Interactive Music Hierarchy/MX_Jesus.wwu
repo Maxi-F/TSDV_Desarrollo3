@@ -42,7 +42,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="MX" ID="{E7A3BF64-B78E-4C63-BEE2-EFF5D1EE92FF}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+							<ObjectRef Name="MX BUS" ID="{F8F43FF9-3FD2-4371-8DFB-F5D916436488}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
 						</Reference>
 						<Reference Name="TransitionRoot">
 							<Custom>

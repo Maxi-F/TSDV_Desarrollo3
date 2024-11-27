@@ -308,6 +308,16 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{A1FE3E01-ECF9-4CDE-8F16-E6ED4363E8E4}" ShortID="48501897">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX" ID="{5A0B76FE-3A03-4117-ACF3-23EBA85A37B4}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="UnPause_A_Mx_Todo_95_Bpm_V1A" ID="{F55F5C19-BE67-4E03-9AB1-DF5C6313B178}">
@@ -320,6 +330,16 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="A_Mx_Todo_95_Bpm_V1A" ID="{1C7AB2C0-D97D-4CA7-A667-1E9701CBA287}" WorkUnitID="{43BAF8DC-FD8A-46C4-AFDF-D0E6F40B9270}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B19D0A94-ECC4-40B6-958F-036CC9B16757}" ShortID="964439078">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX" ID="{5A0B76FE-3A03-4117-ACF3-23EBA85A37B4}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -122,16 +122,14 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID AX = 1886858530U;
-        static const AkUniqueID CINEMATICS = 877642339U;
-        static const AkUniqueID DX = 1836525785U;
+        static const AkUniqueID DX_BUS = 1748021847U;
         static const AkUniqueID ENEMIES = 2242381963U;
         static const AkUniqueID EXPLOTIONS = 2335599710U;
         static const AkUniqueID HDR = 931844945U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
-        static const AkUniqueID MX = 1685527054U;
+        static const AkUniqueID MX_BUS = 3027868960U;
         static const AkUniqueID OBJECTS = 1695690031U;
-        static const AkUniqueID PLAYER1 = 2188949039U;
-        static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID SFX_BUS = 1502772432U;
         static const AkUniqueID UI = 1551306167U;
         static const AkUniqueID WEAPONS = 1467963052U;
     } // namespace BUSSES

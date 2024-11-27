@@ -36,13 +36,25 @@
 							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="Music_Ctrl" ID="{15869878-0E65-481A-8AF7-290F08312FAF}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="Bike_Speed" ID="{A1D30AF3-2A4D-4A3A-93A4-17EDB64AD294}"/>
 							<Value>47.509765625</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SFX_Ctrl" ID="{3A832021-26AB-4CB4-A488-B51D2B63AB08}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Dialogue_Ctrl" ID="{B4856E98-F043-4E99-8E8C-060E782F5EA8}"/>
+							<Value>50</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="None" ID="{6F49448A-B2E1-49B9-BF83-F04DD367D196}"/>
-						<CurrentStateRef Name="Fase_1" ID="{06B84ED9-4BD1-4A99-80DF-E85684029AA1}"/>
+						<CurrentStateRef Name="Menu_Credits" ID="{A599708C-4733-4611-B2FB-3E69E1F82331}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
