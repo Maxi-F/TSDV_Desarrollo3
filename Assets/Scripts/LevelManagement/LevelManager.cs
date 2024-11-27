@@ -27,7 +27,6 @@ namespace LevelManagement
         [SerializeField] private IntEventChannelSO onEnemyDamageEvent;
         [SerializeField] private VoidEventChannelSO onEnemyShouldLeaveEvent;
         [SerializeField] private VoidEventChannelSO onEnemyLeftEvent;
-
         [SerializeField] private VoidEventChannelSO onEnemyDeathEvent;
         [SerializeField] private VoidEventChannelSO onPlayerDeathEvent;
         [SerializeField] private BoolEventChannelSO onTryAgainCanvasEvent;

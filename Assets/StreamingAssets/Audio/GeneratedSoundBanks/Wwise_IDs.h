@@ -56,9 +56,13 @@ namespace AK
         static const AkUniqueID SA_LV1_EV_PLAYER1_DIE_EXPLOTION = 876086836U;
         static const AkUniqueID SA_LV1_EV_PLAYER1_HEALING = 4117304617U;
         static const AkUniqueID SA_LV1_EV_SWORD_WHOOSH = 3314116518U;
-        static const AkUniqueID SA_LV1_EV_UI_BUTTONS_MAIN = 3778692734U;
+        static const AkUniqueID SA_LV1_EV_UI_CLICK_MAIN = 3353602479U;
+        static const AkUniqueID SA_LV1_EV_UI_CLICK_VISOR = 2385151657U;
+        static const AkUniqueID SA_LV1_EV_UI_HOVER_MAIN = 743223205U;
+        static const AkUniqueID SA_LV1_EV_UI_HOVER_VISOR = 4269603799U;
         static const AkUniqueID SA_LV1_EV_UI_TEXT_TYPING = 1221627396U;
         static const AkUniqueID SA_LV1_PLAYER1_DAMAGE_HIT = 1161613028U;
+        static const AkUniqueID STOP_ALL_SFX = 971107033U;
         static const AkUniqueID UNPAUSE_A_MX_TODO_95_BPM_V1A = 659047857U;
     } // namespace EVENTS
 
@@ -119,15 +123,14 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID AX = 1886858530U;
-        static const AkUniqueID CINEMATICS = 877642339U;
-        static const AkUniqueID DX = 1836525785U;
+        static const AkUniqueID DX_BUS = 1748021847U;
         static const AkUniqueID ENEMIES = 2242381963U;
+        static const AkUniqueID EXPLOTIONS = 2335599710U;
         static const AkUniqueID HDR = 931844945U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
-        static const AkUniqueID MX = 1685527054U;
+        static const AkUniqueID MX_BUS = 3027868960U;
         static const AkUniqueID OBJECTS = 1695690031U;
-        static const AkUniqueID PLAYER1 = 2188949039U;
-        static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID SFX_BUS = 1502772432U;
         static const AkUniqueID UI = 1551306167U;
         static const AkUniqueID WEAPONS = 1467963052U;
     } // namespace BUSSES

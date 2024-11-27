@@ -3,18 +3,28 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{8D5748B0-01A1-4537-803B-3895EEF4F562}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="SA_Lv1_EV_UI_Buttons_Main" ID="{AF0FD82E-7075-407B-A992-4451A9AFC2EF}">
+				<Event Name="SA_Lv1_EV_UI_Hover_Main" ID="{AF0FD82E-7075-407B-A992-4451A9AFC2EF}">
 					<ChildrenList>
 						<Action Name="" ID="{C0ED8C10-E7E1-490F-A43F-1E23363CBBD3}" ShortID="577232135">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="UI_Main" ID="{062A2628-3654-4E70-98B7-28E5E427177F}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+									<ObjectRef Name="Hover Spray" ID="{E0AC6EA5-CE98-4047-AB82-6CB55AA5EF92}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="SA_Lv1_EV_Sword_Whoosh" ID="{9E050181-9575-41B4-81F2-4DC4D17ACFBE}"/>
+				<Event Name="SA_Lv1_EV_Sword_Whoosh" ID="{9E050181-9575-41B4-81F2-4DC4D17ACFBE}">
+					<ChildrenList>
+						<Action Name="" ID="{33F75AF0-A7DA-49CC-92DB-84D082D67D5B}" ShortID="117488573">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bat Neon" ID="{5B8D40A3-C7E5-4205-8CAF-7CA0452AD1D3}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="SA_Lv1_EV_Player1_Bike_Initial_Dash" ID="{03F6D999-A5D1-40CD-ADD6-A5E31899938A}">
 					<ChildrenList>
 						<Action Name="" ID="{FF55974F-7580-4613-AFAD-82B2E80DE177}" ShortID="784446186">
@@ -50,6 +60,13 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{5BDD7018-240C-4611-A4F6-749AD55F6E3F}" ShortID="771979950">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="DX Hurt Objects" ID="{65B5E1FA-43DF-4B00-80D5-BD720ACAC88E}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
@@ -301,6 +318,28 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{A1FE3E01-ECF9-4CDE-8F16-E6ED4363E8E4}" ShortID="48501897">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX" ID="{5A0B76FE-3A03-4117-ACF3-23EBA85A37B4}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{27AB033F-A7DC-404C-9BBD-24428E9A437E}" ShortID="101974038">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DX" ID="{79758F97-08CD-459C-8801-0DFAB0EEB7B5}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="UnPause_A_Mx_Todo_95_Bpm_V1A" ID="{F55F5C19-BE67-4E03-9AB1-DF5C6313B178}">
@@ -313,6 +352,67 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="A_Mx_Todo_95_Bpm_V1A" ID="{1C7AB2C0-D97D-4CA7-A667-1E9701CBA287}" WorkUnitID="{43BAF8DC-FD8A-46C4-AFDF-D0E6F40B9270}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B19D0A94-ECC4-40B6-958F-036CC9B16757}" ShortID="964439078">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX" ID="{5A0B76FE-3A03-4117-ACF3-23EBA85A37B4}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4D9DD4DB-B905-4DE2-9CDF-89E97CF0FD34}" ShortID="115555417">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DX" ID="{79758F97-08CD-459C-8801-0DFAB0EEB7B5}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SA_Lv1_EV_UI_Click_Main" ID="{9F001A29-12DD-45EC-88AE-99A01CEC508D}">
+					<ChildrenList>
+						<Action Name="" ID="{E6F8C2DA-40F0-49C1-8ED5-BB784890ADC9}" ShortID="165429211">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Click" ID="{07873B12-37AB-4416-9875-4192837E1A7A}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SA_Lv1_EV_UI_Hover_Visor" ID="{BFD25B94-8015-4306-8164-BD092E80391D}"/>
+				<Event Name="SA_Lv1_EV_UI_Click_Visor" ID="{C9615E17-66D7-4D93-946B-4DE74899B3D2}"/>
+				<Event Name="Stop_All_Sfx" ID="{E03253EB-CEC0-44AD-B324-7FF8C02D4E33}">
+					<ChildrenList>
+						<Action Name="" ID="{41A0000B-0BA8-44AF-A981-21630BF7C7D6}" ShortID="447910342">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SFX" ID="{5A0B76FE-3A03-4117-ACF3-23EBA85A37B4}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{427806A7-AA57-4F36-BF51-A1CF08CF568A}" ShortID="666681642">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DX" ID="{79758F97-08CD-459C-8801-0DFAB0EEB7B5}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

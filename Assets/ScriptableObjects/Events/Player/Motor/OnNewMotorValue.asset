@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9539a63b5a4fc444bb6ce473d55bb2bc, type: 3}
-  m_Name: AF0FD82E-7075-407B-A992-4451A9AFC2EF
+  m_Script: {fileID: 11500000, guid: 902884aedffb44b489c51c625bb7747b, type: 3}
+  m_Name: OnNewMotorValue
   m_EditorClassIdentifier: 
-  objectName: SA_Lv1_EV_UI_Hover_Main
-  id: 743223205
-  guid: AF0FD82E-7075-407B-A992-4451A9AFC2EF
+  onEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onFloatEvent:
+    m_PersistentCalls:
+      m_Calls: []

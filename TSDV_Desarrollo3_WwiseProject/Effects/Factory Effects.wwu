@@ -1607,10 +1607,12 @@
 						</Effect>
 						<Effect Name="Special_Effect_1" ID="{83317D8A-9D4C-438E-BE8C-BC7D27CAD1B0}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
 							<PropertyList>
-								<Property Name="DelayTime" Type="Real32" Value="10"/>
+								<Property Name="DelayTime" Type="Real32" Value="24.9"/>
 								<Property Name="DryLevel" Type="Real32" Value="0"/>
-								<Property Name="ModDepth" Type="Real32" Value="80"/>
-								<Property Name="ModFrequency" Type="Real32" Value="2"/>
+								<Property Name="EnableLFO" Type="bool" Value="False"/>
+								<Property Name="FeedBackLevel" Type="Real32" Value="0.6"/>
+								<Property Name="ModDepth" Type="Real32" Value="100"/>
+								<Property Name="ModFrequency" Type="Real32" Value="3.9"/>
 								<Property Name="ModPWM" Type="Real32" Value="0"/>
 							</PropertyList>
 						</Effect>
@@ -1679,9 +1681,10 @@
 						<Effect Name="Fear_no_Evil" ID="{A1F17D99-0801-4F32-B74E-ADB2D9ACC556}" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
 							<PropertyList>
 								<Property Name="DryLevel" Type="Real32" Value="-3"/>
-								<Property Name="Voice1Pitch" Type="Real32" Value="-100"/>
+								<Property Name="Voice1Pitch" Type="Real32" Value="1100"/>
 								<Property Name="Voice2Enable" Type="bool" Value="True"/>
-								<Property Name="Voice2Pitch" Type="Real32" Value="100"/>
+								<Property Name="Voice2Pitch" Type="Real32" Value="800"/>
+								<Property Name="WindowSize" Type="int32" Value="2304"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Secret_message" ID="{2F5DE612-1AAD-4A84-8FB4-3E66521C920E}" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
@@ -1905,11 +1908,12 @@
 						</Effect>
 						<Effect Name="Very_Bad_Connection" ID="{0C5A674D-5EC0-45A6-87A7-3885B3196DCD}" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
 							<PropertyList>
-								<Property Name="ModFrequency" Type="Real32" Value="1376.52"/>
+								<Property Name="ModDepth" Type="Real32" Value="27.9"/>
+								<Property Name="ModFrequency" Type="Real32" Value="7614.04"/>
 								<Property Name="ModPWM" Type="Real32" Value="1"/>
 								<Property Name="ModPhaseOffset" Type="Real32" Value="-180"/>
-								<Property Name="ModSmoothing" Type="Real32" Value="100"/>
-								<Property Name="ModWaveform" Type="int32" Value="2"/>
+								<Property Name="ModSmoothing" Type="Real32" Value="48"/>
+								<Property Name="ModWaveform" Type="int32" Value="1"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Aliasing" ID="{4CCC0D23-78CD-4B09-A62B-D3CB5E071A2F}" PluginName="Wwise Tremolo" CompanyID="0" PluginID="131" PluginType="3">
@@ -1965,7 +1969,9 @@
 							<ChildrenList>
 								<Effect Name="Chipmunk" ID="{54F9F04F-0D14-46AB-B38B-21CFD2EB46F6}" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">
 									<PropertyList>
-										<Property Name="Pitch" Type="Real32" Value="1200"/>
+										<Property Name="DelayTime" Type="Real32" Value="19"/>
+										<Property Name="DryLevel" Type="Real32" Value="-35"/>
+										<Property Name="Pitch" Type="Real32" Value="400"/>
 									</PropertyList>
 								</Effect>
 								<Effect Name="Monsterize" ID="{99F80B38-1C45-42CE-9BCD-E94F3885DCAA}" PluginName="Wwise Pitch Shifter" CompanyID="0" PluginID="136" PluginType="3">

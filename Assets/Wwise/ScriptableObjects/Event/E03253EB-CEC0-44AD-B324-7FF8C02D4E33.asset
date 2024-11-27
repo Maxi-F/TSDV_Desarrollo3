@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9539a63b5a4fc444bb6ce473d55bb2bc, type: 3}
-  m_Name: AF0FD82E-7075-407B-A992-4451A9AFC2EF
+  m_Name: E03253EB-CEC0-44AD-B324-7FF8C02D4E33
   m_EditorClassIdentifier: 
-  objectName: SA_Lv1_EV_UI_Hover_Main
-  id: 743223205
-  guid: AF0FD82E-7075-407B-A992-4451A9AFC2EF
+  objectName: Stop_All_Sfx
+  id: 971107033
+  guid: E03253EB-CEC0-44AD-B324-7FF8C02D4E33
