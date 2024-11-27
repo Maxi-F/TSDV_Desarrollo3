@@ -51,6 +51,7 @@ MonoBehaviour:
   obstacleSequence: {fileID: 1600891506706725506}
   minionsSequence: {fileID: 2780287947506723910}
   bossSequence: {fileID: 8538605700224022850}
+  onPlayerNewMotorValue: {fileID: 11400000, guid: 97ccbf7a468d85c4bb0fa9b6d4f17895, type: 2}
 --- !u!114 &1600891506706725506
 MonoBehaviour:
   m_ObjectHideFlags: 0

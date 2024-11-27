@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using Events;
 using Events.ScriptableObjects;
 using Managers;
 using UnityEngine;
@@ -7,15 +9,15 @@ namespace Player
 {
     public class PlayerSoundController : MonoBehaviour
     {
-        [Header("Pause Data")] 
-        [SerializeField] private PauseSO pauseData;
-        
         [Header("Motor")]
         [SerializeField] private AK.Wwise.Event motorSound;
         [SerializeField] private AK.Wwise.RTPC motorRTPC;
+        [SerializeField] private AnimationCurve motorSoundCurve;
+        [SerializeField] private float motorChangeDuration;
         [SerializeField] private float initMotorValue;
         [SerializeField] private float motorDiff;
         [SerializeField] private EventChannelSO<YMovementState> onMovementStateChange;
+        [SerializeField] private FloatEventChannelSO onNewMotorValue;
         
         [Header("Hit Sounds")]
         [SerializeField] private AK.Wwise.Event hitSound;
@@ -33,7 +35,8 @@ namespace Player
         [SerializeField] private AK.Wwise.State gameOverState;
 
         private float _motorValue;
-
+        private Coroutine _motorValueChangeCoroutine;
+        
         private void Start()
         {
             AkSoundEngine.SetRTPCValue(motorRTPC.Id, _motorValue);
@@ -42,15 +45,41 @@ namespace Player
         private void OnEnable()
         {
             _motorValue = initMotorValue;
-            pauseData?.onPause.AddListener(HandlePause);
             onMovementStateChange?.onTypedEvent.AddListener(HandleMovementChange);
+            onNewMotorValue?.onFloatEvent.AddListener(HandleNewMotorValue);
             motorSound.Post(gameObject);
         }
 
         private void OnDisable()
         {
-            pauseData?.onPause.RemoveListener(HandlePause);
             onMovementStateChange?.onTypedEvent.RemoveListener(HandleMovementChange);
+            onNewMotorValue?.onFloatEvent.RemoveListener(HandleNewMotorValue);
+        }
+        
+        private void HandleNewMotorValue(float newMotorValue)
+        {
+            if(_motorValueChangeCoroutine != null)
+                StopCoroutine(_motorValueChangeCoroutine);
+
+            _motorValueChangeCoroutine = StartCoroutine(ChangeMotorValue(newMotorValue));
+        }
+
+        private IEnumerator ChangeMotorValue(float newMotorValue)
+        {
+            float startValue = _motorValue;
+            float startTime = Time.time;
+            float passedTime = 0;
+
+            while (passedTime < motorChangeDuration)
+            {
+                passedTime = Time.time - startTime;
+                float valueChangePercentage = motorSoundCurve.Evaluate(passedTime / motorChangeDuration);
+                _motorValue = Mathf.Lerp(startValue, newMotorValue, valueChangePercentage);
+                AkSoundEngine.SetRTPCValue(motorRTPC.Id, _motorValue);
+                yield return null;
+            }
+
+            _motorValue = newMotorValue;
         }
 
         private void HandleMovementChange(YMovementState movementState)
@@ -58,14 +87,6 @@ namespace Player
             AkSoundEngine.SetRTPCValue(motorRTPC.Id,
                 movementState == YMovementState.Upwards ? _motorValue + motorDiff :
                 movementState == YMovementState.Downwards ? _motorValue - motorDiff : _motorValue);
-        }
-
-        private void HandlePause(bool isPaused)
-        {
-            if (isPaused)
-                motorSound.Stop(gameObject);
-            else
-                motorSound.Post(gameObject);
         }
 
         public void HitSound()

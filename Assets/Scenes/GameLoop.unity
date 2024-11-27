@@ -583,7 +583,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 765996105383918817, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
       propertyPath: motorDiff
-      value: 45
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 765996105383918817, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
+      propertyPath: initMotorValue
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 765996105383918817, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
+      propertyPath: onNewMotorValue
+      value: 
+      objectReference: {fileID: 11400000, guid: 97ccbf7a468d85c4bb0fa9b6d4f17895, type: 2}
+    - target: {fileID: 765996105383918817, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
+      propertyPath: motorChangeDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 765996105383918817, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
+      propertyPath: motorSoundCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 765996105383918817, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
+      propertyPath: motorSoundCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 765996105383918817, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
+      propertyPath: motorSoundCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 765996105383918817, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
+      propertyPath: motorSoundCurve.m_Curve.Array.data[1].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 765996105383918817, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
+      propertyPath: motorSoundCurve.m_Curve.Array.data[1].outSlope
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 936739446926610039, guid: 3083adca6baa6e84f9ab522107f1414b, type: 3}
       propertyPath: m_LocalPosition.x
