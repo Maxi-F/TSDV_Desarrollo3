@@ -1507,6 +1507,11 @@
 								<MusicSegment Name="A_Mx_Menu_Main_95_Bpm_V1A" ID="{650538B3-D1FC-45B5-A3E9-F38CEE616B89}" ShortID="676353659">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="40421.1458333333"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">

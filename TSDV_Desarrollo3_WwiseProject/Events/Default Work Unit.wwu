@@ -191,8 +191,28 @@
 				<Event Name="SA_Lv1_EV_BossLv1_Attack_Laser_Off" ID="{B57CF0A6-F259-4C46-8DB1-62E0B9156138}"/>
 				<Event Name="SA_Lv1_EV_BossLv1_Attack_Laser_Hover" ID="{3351C885-BF3D-4089-9286-8A17B5FC25EA}"/>
 				<Event Name="SA_Lv1_EV_BossLv1_Attack_Laser_Burn" ID="{F97DD7C4-54A7-454C-8696-1BCDD6CFFA3D}"/>
-				<Event Name="SA_Lv1_EV_BossLv1_Attack_Launcher_Plasma" ID="{8A553341-BE7C-42A1-8F4E-10CEE172D5BB}"/>
-				<Event Name="SA_Lv1_EV_BossLv1_Attack_Launcher_Explotions" ID="{1612A7E0-D52B-4F68-9B2E-AC999B6F8389}"/>
+				<Event Name="SA_Lv1_EV_BossLv1_Attack_Launcher_Plasma" ID="{8A553341-BE7C-42A1-8F4E-10CEE172D5BB}">
+					<ChildrenList>
+						<Action Name="" ID="{77BB0731-34FD-432A-B654-864061B3FD65}" ShortID="777934403">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SA_Lv1_EV_BossLv1_Attack_Launcher_Plasma" ID="{5B0F0D72-CFEE-4FBB-8574-9E46CFCD9ACC}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="SA_Lv1_EV_BossLv1_Attack_Launcher_Explotions" ID="{1612A7E0-D52B-4F68-9B2E-AC999B6F8389}">
+					<ChildrenList>
+						<Action Name="" ID="{C7B22BE2-8500-454E-AFCC-408531D957C9}" ShortID="1044248530">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="A_SFX_Lv1_Enemy_Boss_Attack_Launcher_Explotions" ID="{92C64479-C98C-4C7C-8D27-54088508079E}" WorkUnitID="{4C185826-5AD7-4E51-A8C1-DA5A055F4B93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="SA_Lv1_EV_BossLv1_Attack_Debris" ID="{4C9AD5C8-0C27-45DB-A06F-B9427C46D06B}"/>
 				<Event Name="SA_Lv1_EV_BossLv1_Attack_Debris_Break" ID="{965B5360-C6F5-4E09-8123-C884B0F6AE99}">
 					<ChildrenList>

@@ -985,6 +985,11 @@
 							<PropertyList>
 								<Property Name="Color" Type="int16" Value="8"/>
 								<Property Name="OverrideColor" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1005,417 +1010,6 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<ActorMixer Name="Initial Bike Dash" ID="{3C252A12-D13E-44A7-BF41-DA737D39194C}" ShortID="579506269">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>4</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Objects" ID="{5C93EDC0-EC71-41C1-8CC8-B2B6BDB4FECE}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<BlendContainer Name="Initial Bike Dash" ID="{1E8FFD8C-97AE-4110-8343-57E46E8A8A28}" ShortID="516009855">
-													<PropertyList>
-														<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
-														<Property Name="MaxSoundPerInstance" Type="int16">
-															<ValueList>
-																<Value>2</Value>
-															</ValueList>
-														</Property>
-														<Property Name="OverrideEffect" Type="bool" Value="True"/>
-														<Property Name="Volume" Type="Real64">
-															<ValueList>
-																<Value>4</Value>
-															</ValueList>
-														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<RandomSequenceContainer Name="Dash Hit" ID="{A012316B-BF8D-4321-BF76-09FB0F67DB7B}" ShortID="513596495">
-															<PropertyList>
-																<Property Name="Lowpass" Type="int16">
-																	<ModifierList>
-																		<ModifierInfo>
-																			<Modifier Name="" ID="{9A4D2436-4DCD-467A-9B38-AB8B57D004AF}">
-																				<PropertyList>
-																					<Property Name="Enabled" Type="bool" Value="True"/>
-																					<Property Name="Max" Type="Real64" Value="60"/>
-																					<Property Name="Min" Type="Real64" Value="-60"/>
-																				</PropertyList>
-																			</Modifier>
-																		</ModifierInfo>
-																	</ModifierList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<Sound Name="Player1_Dash_Hit01" ID="{B3DAB759-5BD1-4B1D-9565-01CB825C7977}" ShortID="670881944">
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="Player1_Dash_Hit01" ID="{6C3F0E65-A9B0-4AB7-B9C5-A38CE8CDF7E5}">
-																			<Language>SFX</Language>
-																			<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Hit01.wav</AudioFile>
-																			<MediaIDList>
-																				<MediaID ID="856387675"/>
-																			</MediaIDList>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="Player1_Dash_Hit01" ID="{6C3F0E65-A9B0-4AB7-B9C5-A38CE8CDF7E5}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="Player1_Dash_Hit02" ID="{CD17AE28-A101-40D1-B4EB-15FE40729A6E}" ShortID="555839019">
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="Player1_Dash_Hit02" ID="{A80F64A3-6BC1-4AD2-8445-BBF230D24B64}">
-																			<Language>SFX</Language>
-																			<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Hit02.wav</AudioFile>
-																			<MediaIDList>
-																				<MediaID ID="729590492"/>
-																			</MediaIDList>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="Player1_Dash_Hit02" ID="{A80F64A3-6BC1-4AD2-8445-BBF230D24B64}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="Player1_Dash_Hit03" ID="{2D708AA1-FE25-4C15-84E6-E82871535A89}" ShortID="485853094">
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="Player1_Dash_Hit03" ID="{80D2540A-F0AE-4090-9403-586FC66B1EDB}">
-																			<Language>SFX</Language>
-																			<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Hit03.wav</AudioFile>
-																			<MediaIDList>
-																				<MediaID ID="162804114"/>
-																			</MediaIDList>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="Player1_Dash_Hit03" ID="{80D2540A-F0AE-4090-9403-586FC66B1EDB}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-															</ChildrenList>
-														</RandomSequenceContainer>
-														<RandomSequenceContainer Name="Dash Whoosh" ID="{8D4F8D98-3EDD-40CE-9A19-220060050504}" ShortID="205767902">
-															<PropertyList>
-																<Property Name="Lowpass" Type="int16">
-																	<ModifierList>
-																		<ModifierInfo>
-																			<Modifier Name="" ID="{F5E0DEFA-EEC2-42F9-9573-58C420E79D53}"/>
-																		</ModifierInfo>
-																	</ModifierList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<Sound Name="Player1_Dash_Whoosh01" ID="{30274D1D-AA4A-43E6-9B93-2E865393505D}" ShortID="100630622">
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="Player1_Dash_Whoosh01" ID="{5B7A31D6-7622-46E0-A85F-08B17763275D}">
-																			<Language>SFX</Language>
-																			<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Whoosh01.wav</AudioFile>
-																			<MediaIDList>
-																				<MediaID ID="27936786"/>
-																			</MediaIDList>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="Player1_Dash_Whoosh01" ID="{5B7A31D6-7622-46E0-A85F-08B17763275D}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="Player1_Dash_Whoosh02" ID="{DDB12561-AB8A-46C3-A68E-DAF1336E1F0E}" ShortID="1030742788">
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="Player1_Dash_Whoosh02" ID="{C96BB3DA-2780-4D32-92FA-71C2469E0748}">
-																			<Language>SFX</Language>
-																			<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Whoosh02.wav</AudioFile>
-																			<MediaIDList>
-																				<MediaID ID="370275101"/>
-																			</MediaIDList>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="Player1_Dash_Whoosh02" ID="{C96BB3DA-2780-4D32-92FA-71C2469E0748}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="Player1_Dash_Whoosh03" ID="{DE55E02E-5C80-4CFA-88FA-5DC8F22D24AC}" ShortID="891140945">
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="Player1_Dash_Whoosh03" ID="{A1B92E8A-6698-41E4-B024-4B03445A696E}">
-																			<Language>SFX</Language>
-																			<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Whoosh03.wav</AudioFile>
-																			<MediaIDList>
-																				<MediaID ID="696701539"/>
-																			</MediaIDList>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="Player1_Dash_Whoosh03" ID="{A1B92E8A-6698-41E4-B024-4B03445A696E}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-															</ChildrenList>
-														</RandomSequenceContainer>
-														<RandomSequenceContainer Name="Dash Electric" ID="{AF7ED1D9-7042-49FC-9DB2-F3349E5D1333}" ShortID="125447617">
-															<PropertyList>
-																<Property Name="Pitch" Type="int32">
-																	<ModifierList>
-																		<ModifierInfo>
-																			<Modifier Name="" ID="{267D8155-7836-4A3C-8DF6-3A0AE852A309}">
-																				<PropertyList>
-																					<Property Name="Enabled" Type="bool" Value="True"/>
-																					<Property Name="Max" Type="Real64" Value="50"/>
-																					<Property Name="Min" Type="Real64" Value="-50"/>
-																				</PropertyList>
-																			</Modifier>
-																		</ModifierInfo>
-																	</ModifierList>
-																</Property>
-															</PropertyList>
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<Sound Name="Player1_Dash_Elect01" ID="{CA0B45D6-F551-4ACB-B888-142A307FEE15}" ShortID="574945006">
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="Player1_Dash_Elect01" ID="{7573D553-F353-4AE5-AFDC-7F8F5FF5AC3B}">
-																			<Language>SFX</Language>
-																			<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Elect01.wav</AudioFile>
-																			<MediaIDList>
-																				<MediaID ID="667940222"/>
-																			</MediaIDList>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="Player1_Dash_Elect01" ID="{7573D553-F353-4AE5-AFDC-7F8F5FF5AC3B}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="Player1_Dash_Elect02" ID="{B07422F5-3695-4DC6-915C-CF14C7629D8B}" ShortID="1056110386">
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="Player1_Dash_Elect02" ID="{D3157E75-E211-4AC2-A108-4E5B9D0175F3}">
-																			<Language>SFX</Language>
-																			<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Elect02.wav</AudioFile>
-																			<MediaIDList>
-																				<MediaID ID="575744213"/>
-																			</MediaIDList>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="Player1_Dash_Elect02" ID="{D3157E75-E211-4AC2-A108-4E5B9D0175F3}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="Player1_Dash_Elect03" ID="{72C7FA36-384F-4321-9DA4-8FDD6FE85D09}" ShortID="83462883">
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="Player1_Dash_Elect03" ID="{61B1871B-157A-4D0F-AB2A-7037937525FF}">
-																			<Language>SFX</Language>
-																			<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Elect03.wav</AudioFile>
-																			<MediaIDList>
-																				<MediaID ID="300228750"/>
-																			</MediaIDList>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="Player1_Dash_Elect03" ID="{61B1871B-157A-4D0F-AB2A-7037937525FF}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-															</ChildrenList>
-														</RandomSequenceContainer>
-														<RandomSequenceContainer Name="Dash EFM" ID="{A68C8124-0776-40A6-9CC1-B7292B4458F6}" ShortID="1049341721">
-															<ReferenceList>
-																<Reference Name="Conversion">
-																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-																</Reference>
-																<Reference Name="OutputBus">
-																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-																</Reference>
-															</ReferenceList>
-															<ChildrenList>
-																<Sound Name="Player1_Dash_EFM01" ID="{52E3F6F7-C1CD-44AA-9155-FD0868E761A6}" ShortID="501300035">
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="Player1_Dash_EFM01" ID="{98B46F02-919A-487D-B6B0-DB4C3C67B295}">
-																			<Language>SFX</Language>
-																			<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_EFM01.wav</AudioFile>
-																			<MediaIDList>
-																				<MediaID ID="258818327"/>
-																			</MediaIDList>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="Player1_Dash_EFM01" ID="{98B46F02-919A-487D-B6B0-DB4C3C67B295}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="Player1_Dash_EFM02" ID="{FA0E874E-1096-4AD5-B226-F12AF7CC3BDA}" ShortID="747413057">
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="Player1_Dash_EFM02" ID="{CC61CEF9-31C6-4042-9176-3407384266F2}">
-																			<Language>SFX</Language>
-																			<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_EFM02.wav</AudioFile>
-																			<MediaIDList>
-																				<MediaID ID="468788329"/>
-																			</MediaIDList>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="Player1_Dash_EFM02" ID="{CC61CEF9-31C6-4042-9176-3407384266F2}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-																<Sound Name="Player1_Dash_EFM03" ID="{69DBB5E1-30E0-4AF3-BCA3-16ECA9779403}" ShortID="69406767">
-																	<ReferenceList>
-																		<Reference Name="Conversion">
-																			<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
-																		</Reference>
-																		<Reference Name="OutputBus">
-																			<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
-																		</Reference>
-																	</ReferenceList>
-																	<ChildrenList>
-																		<AudioFileSource Name="Player1_Dash_EFM03" ID="{C37AD26A-A52F-41F7-9BBB-4E145FF6D9DF}">
-																			<Language>SFX</Language>
-																			<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_EFM03.wav</AudioFile>
-																			<MediaIDList>
-																				<MediaID ID="911770248"/>
-																			</MediaIDList>
-																		</AudioFileSource>
-																	</ChildrenList>
-																	<ActiveSourceList>
-																		<ActiveSource Name="Player1_Dash_EFM03" ID="{C37AD26A-A52F-41F7-9BBB-4E145FF6D9DF}" Platform="Linked"/>
-																	</ActiveSourceList>
-																</Sound>
-															</ChildrenList>
-														</RandomSequenceContainer>
-													</ChildrenList>
-													<ObjectLists>
-														<ObjectList Name="Effects">
-															<Reference>
-																<Local>
-																	<EffectSlot Name="" ID="{9AB33629-AE31-4F87-AFE5-5FF609DE7B68}" ShortID="758750830">
-																		<ReferenceList>
-																			<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
-																				<ObjectRef Name="Dash_Compressor" ID="{BB7BB5D8-5512-4747-9413-87AFD6F933BA}" WorkUnitID="{D83E249B-CB6D-4DB7-B77D-39AE7C2D0B25}"/>
-																			</Reference>
-																		</ReferenceList>
-																	</EffectSlot>
-																</Local>
-															</Reference>
-														</ObjectList>
-													</ObjectLists>
-												</BlendContainer>
-											</ChildrenList>
-										</ActorMixer>
 										<Sound Name="A_SFX_LV1_Objects_Fence_Destoy_V1A" ID="{CF7A85ED-470A-436F-A572-5D3C19FC5982}" ShortID="768041042">
 											<PropertyList>
 												<Property Name="Highpass" Type="int16">
@@ -1581,6 +1175,393 @@
 												<ActiveSource Name="A_SFX_LV1_Objects_Generic_Destoy_V1A" ID="{2E5B3E00-1581-4E3D-991C-437A54765D25}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<BlendContainer Name="Initial Bike Dash" ID="{1E8FFD8C-97AE-4110-8343-57E46E8A8A28}" ShortID="516009855">
+											<PropertyList>
+												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+												<Property Name="MaxSoundPerInstance" Type="int16">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX BUS" ID="{D5B0D699-2354-4EE6-9B74-19505A657A38}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="Dash Hit" ID="{A012316B-BF8D-4321-BF76-09FB0F67DB7B}" ShortID="513596495">
+													<PropertyList>
+														<Property Name="Lowpass" Type="int16">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{9A4D2436-4DCD-467A-9B38-AB8B57D004AF}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="60"/>
+																			<Property Name="Min" Type="Real64" Value="-60"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Player1_Dash_Hit01" ID="{B3DAB759-5BD1-4B1D-9565-01CB825C7977}" ShortID="670881944">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Player1_Dash_Hit01" ID="{6C3F0E65-A9B0-4AB7-B9C5-A38CE8CDF7E5}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Hit01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="856387675"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Player1_Dash_Hit01" ID="{6C3F0E65-A9B0-4AB7-B9C5-A38CE8CDF7E5}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Player1_Dash_Hit02" ID="{CD17AE28-A101-40D1-B4EB-15FE40729A6E}" ShortID="555839019">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Player1_Dash_Hit02" ID="{A80F64A3-6BC1-4AD2-8445-BBF230D24B64}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Hit02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="729590492"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Player1_Dash_Hit02" ID="{A80F64A3-6BC1-4AD2-8445-BBF230D24B64}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Player1_Dash_Hit03" ID="{2D708AA1-FE25-4C15-84E6-E82871535A89}" ShortID="485853094">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Player1_Dash_Hit03" ID="{80D2540A-F0AE-4090-9403-586FC66B1EDB}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Hit03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="162804114"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Player1_Dash_Hit03" ID="{80D2540A-F0AE-4090-9403-586FC66B1EDB}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="Dash Whoosh" ID="{8D4F8D98-3EDD-40CE-9A19-220060050504}" ShortID="205767902">
+													<PropertyList>
+														<Property Name="Lowpass" Type="int16">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{F5E0DEFA-EEC2-42F9-9573-58C420E79D53}"/>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Player1_Dash_Whoosh01" ID="{30274D1D-AA4A-43E6-9B93-2E865393505D}" ShortID="100630622">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Player1_Dash_Whoosh01" ID="{5B7A31D6-7622-46E0-A85F-08B17763275D}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Whoosh01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="27936786"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Player1_Dash_Whoosh01" ID="{5B7A31D6-7622-46E0-A85F-08B17763275D}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Player1_Dash_Whoosh02" ID="{DDB12561-AB8A-46C3-A68E-DAF1336E1F0E}" ShortID="1030742788">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Player1_Dash_Whoosh02" ID="{C96BB3DA-2780-4D32-92FA-71C2469E0748}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Whoosh02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="370275101"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Player1_Dash_Whoosh02" ID="{C96BB3DA-2780-4D32-92FA-71C2469E0748}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Player1_Dash_Whoosh03" ID="{DE55E02E-5C80-4CFA-88FA-5DC8F22D24AC}" ShortID="891140945">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Player1_Dash_Whoosh03" ID="{A1B92E8A-6698-41E4-B024-4B03445A696E}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Whoosh03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="696701539"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Player1_Dash_Whoosh03" ID="{A1B92E8A-6698-41E4-B024-4B03445A696E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="Dash Electric" ID="{AF7ED1D9-7042-49FC-9DB2-F3349E5D1333}" ShortID="125447617">
+													<PropertyList>
+														<Property Name="Pitch" Type="int32">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{267D8155-7836-4A3C-8DF6-3A0AE852A309}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="50"/>
+																			<Property Name="Min" Type="Real64" Value="-50"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Player1_Dash_Elect01" ID="{CA0B45D6-F551-4ACB-B888-142A307FEE15}" ShortID="574945006">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Player1_Dash_Elect01" ID="{7573D553-F353-4AE5-AFDC-7F8F5FF5AC3B}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Elect01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="667940222"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Player1_Dash_Elect01" ID="{7573D553-F353-4AE5-AFDC-7F8F5FF5AC3B}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Player1_Dash_Elect02" ID="{B07422F5-3695-4DC6-915C-CF14C7629D8B}" ShortID="1056110386">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Player1_Dash_Elect02" ID="{D3157E75-E211-4AC2-A108-4E5B9D0175F3}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Elect02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="575744213"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Player1_Dash_Elect02" ID="{D3157E75-E211-4AC2-A108-4E5B9D0175F3}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Player1_Dash_Elect03" ID="{72C7FA36-384F-4321-9DA4-8FDD6FE85D09}" ShortID="83462883">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Player1_Dash_Elect03" ID="{61B1871B-157A-4D0F-AB2A-7037937525FF}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_Elect03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="300228750"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Player1_Dash_Elect03" ID="{61B1871B-157A-4D0F-AB2A-7037937525FF}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="Dash EFM" ID="{A68C8124-0776-40A6-9CC1-B7292B4458F6}" ShortID="1049341721">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Player1_Dash_EFM01" ID="{52E3F6F7-C1CD-44AA-9155-FD0868E761A6}" ShortID="501300035">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Player1_Dash_EFM01" ID="{98B46F02-919A-487D-B6B0-DB4C3C67B295}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_EFM01.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="258818327"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Player1_Dash_EFM01" ID="{98B46F02-919A-487D-B6B0-DB4C3C67B295}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Player1_Dash_EFM02" ID="{FA0E874E-1096-4AD5-B226-F12AF7CC3BDA}" ShortID="747413057">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Player1_Dash_EFM02" ID="{CC61CEF9-31C6-4042-9176-3407384266F2}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_EFM02.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="468788329"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Player1_Dash_EFM02" ID="{CC61CEF9-31C6-4042-9176-3407384266F2}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Player1_Dash_EFM03" ID="{69DBB5E1-30E0-4AF3-BCA3-16ECA9779403}" ShortID="69406767">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Player1_Dash_EFM03" ID="{C37AD26A-A52F-41F7-9BBB-4E145FF6D9DF}">
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_JP\SFX\Initial Bike\Player1_Dash_EFM03.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="911770248"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Player1_Dash_EFM03" ID="{C37AD26A-A52F-41F7-9BBB-4E145FF6D9DF}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Effects">
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{9AB33629-AE31-4F87-AFE5-5FF609DE7B68}" ShortID="758750830">
+																<ReferenceList>
+																	<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+																		<ObjectRef Name="Dash_Compressor" ID="{BB7BB5D8-5512-4747-9413-87AFD6F933BA}" WorkUnitID="{D83E249B-CB6D-4DB7-B77D-39AE7C2D0B25}"/>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+										</BlendContainer>
 									</ChildrenList>
 								</ActorMixer>
 								<ActorMixer Name="Tomy" ID="{D227CACB-B87E-4012-8EB0-1660C57FFA6F}" ShortID="109967281">
@@ -2169,6 +2150,28 @@
 												</RandomSequenceContainer>
 											</ChildrenList>
 										</BlendContainer>
+										<Sound Name="SA_Lv1_EV_BossLv1_Attack_Launcher_Plasma" ID="{5B0F0D72-CFEE-4FBB-8574-9E46CFCD9ACC}" ShortID="243672399">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SA_Lv1_EV_BossLv1_Attack_Launcher_Plasma" ID="{39A56203-A643-4B64-89B0-F1430D6048C1}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\SFX\Weapons\Laser Plasma\SA_Lv1_EV_BossLv1_Attack_Launcher_Plasma.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="897101000"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="SA_Lv1_EV_BossLv1_Attack_Launcher_Plasma" ID="{39A56203-A643-4B64-89B0-F1430D6048C1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</ActorMixer>
 							</ChildrenList>
@@ -2623,6 +2626,18 @@
 													</ReferenceList>
 													<ChildrenList>
 														<Sound Name="A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1A" ID="{705B54B9-A2B2-4E84-A82D-4970567E99A8}" ShortID="429828943">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>8</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Weight" Type="Real64">
+																	<ValueList>
+																		<Value>44</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -2650,6 +2665,18 @@
 															</ActiveSourceList>
 														</Sound>
 														<Sound Name="A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1B" ID="{9EC8C15E-969B-4935-8019-F27C4F230285}" ShortID="926925303">
+															<PropertyList>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>9</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Weight" Type="Real64">
+																	<ValueList>
+																		<Value>44</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -2683,6 +2710,16 @@
 																		<Value>-40</Value>
 																	</ValueList>
 																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>8</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Weight" Type="Real64">
+																	<ValueList>
+																		<Value>39</Value>
+																	</ValueList>
+																</Property>
 															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
@@ -2708,6 +2745,84 @@
 															</ChildrenList>
 															<ActiveSourceList>
 																<ActiveSource Name="A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1C" ID="{B11F9877-8C39-41D7-A9A7-20AD798A5BC3}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1D" ID="{78D1DE6C-6D4F-4346-9B8B-41E10600A7F5}" ShortID="51064197">
+															<PropertyList>
+																<Property Name="Lowpass" Type="int16">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{113A59B4-8613-4005-A4B5-7AC31B38755C}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="5"/>
+																					<Property Name="Min" Type="Real64" Value="-6"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="Pitch" Type="int32">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{C8C53476-BF35-42F9-9CA9-0B21E92544EE}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="278"/>
+																					<Property Name="Min" Type="Real64" Value="-227"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>7</Value>
+																	</ValueList>
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{C03BAF27-27AC-4B1A-B03A-8770102CCC07}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="2"/>
+																					<Property Name="Min" Type="Real64" Value="-2"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="Weight" Type="Real64">
+																	<ValueList>
+																		<Value>80</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="SFX BUS" ID="{D5B0D699-2354-4EE6-9B74-19505A657A38}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1A" ID="{0929CC3C-B81D-4F35-8685-614C87125098}">
+																	<PropertyList>
+																		<Property Name="VolumeOffset" Type="Real64">
+																			<ValueList>
+																				<Value>2</Value>
+																			</ValueList>
+																		</Property>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>SFX_JP\SFX\Objects\A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1A.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="27133106"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="A_SFX_Lv1_Enemy_Boss_Attack_Debris_BreakV1A" ID="{0929CC3C-B81D-4F35-8685-614C87125098}" Platform="Linked"/>
 															</ActiveSourceList>
 														</Sound>
 													</ChildrenList>
@@ -2927,6 +3042,28 @@
 												<ActiveSource Name="A_SFX_Player1_Die_ExplotionV1A" ID="{28634DB5-6D2C-49FE-AFAC-F28A23A8B61B}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<Sound Name="A_SFX_Lv1_Enemy_Boss_Attack_Launcher_Explotions" ID="{92C64479-C98C-4C7C-8D27-54088508079E}" ShortID="417316202">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX BUS" ID="{D5B0D699-2354-4EE6-9B74-19505A657A38}" WorkUnitID="{3B3043F8-C38F-464E-8E3A-209CCA1A938F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="A_SFX_Lv1_Enemy_Boss_Attack_Launcher_Explotions" ID="{C7D391A9-A967-4652-A30B-9C09587ED34F}">
+													<Language>SFX</Language>
+													<AudioFile>SFX_JP\SFX\Explotions\A_SFX_Lv1_Enemy_Boss_Attack_Launcher_Explotions.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="657660503"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="A_SFX_Lv1_Enemy_Boss_Attack_Launcher_Explotions" ID="{C7D391A9-A967-4652-A30B-9C09587ED34F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</ActorMixer>
 							</ChildrenList>
@@ -3113,6 +3250,20 @@
 													</ReferenceList>
 													<ChildrenList>
 														<BlendContainer Name="Click" ID="{07873B12-37AB-4416-9875-4192837E1A7A}" ShortID="1059569268">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{A8C669C9-56C8-4C08-88B6-03EF104279E9}"/>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="Volume" Type="Real64">
+																	<ValueList>
+																		<Value>4</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
 															<ReferenceList>
 																<Reference Name="Conversion">
 																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{83CE98A2-2293-4CA0-B6BB-4F8A1EAFD760}"/>
@@ -3124,6 +3275,11 @@
 															<ChildrenList>
 																<RandomSequenceContainer Name="Switch" ID="{6F83D765-EA4C-472D-86CB-A388D17A77CE}" ShortID="770152399">
 																	<PropertyList>
+																		<Property Name="Highpass" Type="int16">
+																			<ValueList>
+																				<Value>25</Value>
+																			</ValueList>
+																		</Property>
 																		<Property Name="Pitch" Type="int32">
 																			<ModifierList>
 																				<ModifierInfo>
@@ -3276,7 +3432,13 @@
 																		<Property Name="Pitch" Type="int32">
 																			<ModifierList>
 																				<ModifierInfo>
-																					<Modifier Name="" ID="{61F2985D-2D8F-47F7-BBE2-BA0E6CD77910}"/>
+																					<Modifier Name="" ID="{61F2985D-2D8F-47F7-BBE2-BA0E6CD77910}">
+																						<PropertyList>
+																							<Property Name="Enabled" Type="bool" Value="True"/>
+																							<Property Name="Max" Type="Real64" Value="531"/>
+																							<Property Name="Min" Type="Real64" Value="-455"/>
+																						</PropertyList>
+																					</Modifier>
 																				</ModifierInfo>
 																			</ModifierList>
 																		</Property>
@@ -3406,6 +3568,24 @@
 														</BlendContainer>
 														<RandomSequenceContainer Name="Hover Spray" ID="{E0AC6EA5-CE98-4047-AB82-6CB55AA5EF92}" ShortID="189279171">
 															<PropertyList>
+																<Property Name="Highpass" Type="int16">
+																	<ModifierList>
+																		<ModifierInfo>
+																			<Modifier Name="" ID="{1AB3CA38-CC8D-47AC-B03F-0A38CFC6B04E}">
+																				<PropertyList>
+																					<Property Name="Enabled" Type="bool" Value="True"/>
+																					<Property Name="Max" Type="Real64" Value="18"/>
+																					<Property Name="Min" Type="Real64" Value="-13"/>
+																				</PropertyList>
+																			</Modifier>
+																		</ModifierInfo>
+																	</ModifierList>
+																</Property>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>12</Value>
+																	</ValueList>
+																</Property>
 																<Property Name="Pitch" Type="int32">
 																	<ModifierList>
 																		<ModifierInfo>
@@ -3421,7 +3601,7 @@
 																</Property>
 																<Property Name="Volume" Type="Real64">
 																	<ValueList>
-																		<Value>-3</Value>
+																		<Value>2</Value>
 																	</ValueList>
 																</Property>
 															</PropertyList>
@@ -3577,6 +3757,39 @@
 																					<Property Name="RoomShape" Type="Real32" Value="28"/>
 																					<Property Name="RoomSize" Type="Real32" Value="-13"/>
 																					<Property Name="StereoWidth" Type="Real32" Value="28"/>
+																				</PropertyList>
+																			</Effect>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{6B74CB22-9B97-4508-9C21-5B9A0F8EB86D}" ShortID="203001042">
+																<ReferenceList>
+																	<Reference Name="Effect">
+																		<Custom>
+																			<Effect Name="Flanger (Custom)" ID="{DF05412A-1983-4BF2-A066-95A77153D285}" ShortID="905304059" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3"/>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</EffectSlot>
+														</Local>
+													</Reference>
+													<Reference>
+														<Local>
+															<EffectSlot Name="" ID="{B1E94A3E-DEF8-41C1-9278-245CA059E22D}" ShortID="180299053">
+																<ReferenceList>
+																	<Reference Name="Effect">
+																		<Custom>
+																			<Effect Name="Compressor (Custom)" ID="{6C76D9EF-F5CE-4A93-9455-8D49F9E9A6CF}" ShortID="454705340" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+																				<PropertyList>
+																					<Property Name="AttackTime" Type="Real32" Value="0.06"/>
+																					<Property Name="OutputGain" Type="Real32" Value="2.2"/>
+																					<Property Name="ReleaseTime" Type="Real32" Value="0.24"/>
+																					<Property Name="Threshold" Type="Real32" Value="-54.7"/>
 																				</PropertyList>
 																			</Effect>
 																		</Custom>
